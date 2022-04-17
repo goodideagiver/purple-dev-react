@@ -2,7 +2,8 @@ import './main.css';
 
 // import { useState } from 'react';
 import NavTop from './components/UI/navTop/NavTop';
-import Modal from './components/modal/Modal';
+import Content from './components/content/content';
+// import Modal from './components/modal/Modal';
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 					{ name: 'Contact' },
 				]}
 			></NavTop>
+			<Content />
 			{/* <Modal title='Siema z rana' /> */}
 		</>
 	);
