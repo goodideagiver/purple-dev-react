@@ -4,10 +4,10 @@
 body {
 	font-family: 'Lato', sans-serif;
 	background: var(--bg-primary);
-	color: var(--font-primary);
 }
 
 * {
+	color: var(--font-primary);
 	padding: 0;
 	box-sizing: border-box;
 	margin: 0;
