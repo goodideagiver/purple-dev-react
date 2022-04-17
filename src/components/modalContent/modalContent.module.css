@@ -14,10 +14,9 @@
 	transition: 0.3s;
 	color: var(--font-primary);
 	z-index: 1040;
-}
-
-.content:hover {
+	border: 1px var(--color-primary) solid;
 	box-shadow: var(--shadow-elevation-high);
+	max-height: 90%;
 }
 
 .header {
