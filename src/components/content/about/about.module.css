@@ -1,0 +1,59 @@
+.picture {
+	width: 100px;
+	height: 100px;
+	border-radius: 1rem;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.grid {
+	display: flex;
+	/* grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); */
+	gap: 1rem;
+	margin-top: 2rem;
+	flex-wrap: wrap;
+}
+
+.cell {
+	flex: 1 1 300px;
+	border: 1px solid var(--color-primary);
+	padding: var(--padding-base);
+	border-radius: var(--border-radius-sm);
+}
+
+.technologies {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.technologies img {
+	width: min(50px, 100%);
+}
+
+.cardInnerPadding {
+	padding: 1rem 0;
+}
+
+.skills {
+	display: flex;
+	gap: 1rem;
+	list-style: none;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.skills li {
+	flex: 1 1 30%;
+	text-align: center;
+	background-color: var(--bg-secondary);
+	padding: 1rem;
+	border-radius: var(--border-radius-sm);
+}
