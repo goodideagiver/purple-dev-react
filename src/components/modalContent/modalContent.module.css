@@ -1,0 +1,43 @@
+@import url('../../variables.css');
+
+.content {
+	width: min(90%, 40rem);
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--bg-primary);
+	border-radius: var(--border-radius-sm);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.header {
+	background-color: var(--bg-tertiary);
+	padding: var(--padding-base);
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.children {
+	padding: var(--padding-base);
+}
+
+.close {
+	background-color: var(--btn-danger);
+	border: 0;
+	width: 2rem;
+	height: 2rem;
+	border-radius: var(--border-radius-base);
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.close:hover {
+	transform: scale(0.95);
+	box-shadow: var(--shadow-elevation-medium);
+	background-color: red;
+}

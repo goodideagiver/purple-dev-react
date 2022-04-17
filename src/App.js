@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Modal from './components/modal/Modal';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Modal title='Powitanie'>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+				distinctio accusantium quia, cumque nam delectus quam alias
+				omnis praesentium laboriosam dolorum inventore, quisquam quos
+				harum magni recusandae mollitia modi quae.
+			</p>
+		</Modal>
+	);
 }
 
 export default App;

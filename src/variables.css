@@ -1,0 +1,53 @@
+:root {
+	/* Border radius variables */
+	--border-radius-base: 2rem;
+	--border-radius-sm: 0.7rem;
+	--border-radius-lg: 3rem;
+	--border-radius-xl: 4rem;
+
+	/* Padding variables */
+	--min-padding: 1.5rem;
+	--padding-base: 2rem;
+	--padding-large: 3rem;
+	--padding-xlarge: 4rem;
+	--padding-xxlarge: 5rem;
+
+	/* Project color palette */
+	--color-primary: #a66fff;
+
+	/* Bg color palette */
+	--bg-primary: #1f1f1f;
+	--bg-secondary: #2f2f2f;
+	--bg-tertiary: #3f3f3f;
+
+	/* Buttons colors */
+	--btn-primary: #a66fff;
+	--btn-secondary: #2f2f2f;
+	--btn-danger: #c24141;
+
+	/* font colors */
+	--font-primary: #fff;
+	--font-secondary: #fff;
+	--font-tertiary: #fff;
+
+	/* box shadow */
+	--shadow-color: rgba(0, 0, 0, 0.5);
+	--shadow-elevation-low: 0.2px 0.2px 0.3px hsl(var(--shadow-color) / 0.34),
+		0.4px 0.4px 0.6px -1.5px hsl(var(--shadow-color) / 0.29),
+		0.9px 0.8px 1.2px -3.1px hsl(var(--shadow-color) / 0.25);
+	--shadow-elevation-medium: 0.2px 0.2px 0.3px hsl(var(--shadow-color) / 0.28),
+		0.5px 0.5px 0.7px -0.8px hsl(var(--shadow-color) / 0.26),
+		1.1px 1px 1.5px -1.5px hsl(var(--shadow-color) / 0.24),
+		2.3px 2.1px 3.2px -2.3px hsl(var(--shadow-color) / 0.22),
+		4.5px 4.2px 6.4px -3.1px hsl(var(--shadow-color) / 0.2);
+	--shadow-elevation-high: 0.2px 0.2px 0.3px hsl(var(--shadow-color) / 0.26),
+		0.8px 0.8px 1.2px -0.3px hsl(var(--shadow-color) / 0.25),
+		1.4px 1.4px 2px -0.7px hsl(var(--shadow-color) / 0.24),
+		2.2px 2.1px 3.1px -1px hsl(var(--shadow-color) / 0.23),
+		3.4px 3.2px 4.8px -1.4px hsl(var(--shadow-color) / 0.22),
+		5px 4.7px 7.1px -1.7px hsl(var(--shadow-color) / 0.21),
+		7.3px 6.9px 10.4px -2.1px hsl(var(--shadow-color) / 0.2),
+		10.5px 9.9px 14.9px -2.4px hsl(var(--shadow-color) / 0.19),
+		14.7px 13.8px 20.9px -2.8px hsl(var(--shadow-color) / 0.18),
+		20px 18.8px 28.4px -3.1px hsl(var(--shadow-color) / 0.17);
+}
