@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 
 const Modal = props => {
 	return ReactDOM.createPortal(
-		<div className={styles.modal}>
+		<>
 			<ModalContent
 				modalCloseHandler={props.modalCloseHandler}
 				title={props.title}
@@ -15,7 +15,7 @@ const Modal = props => {
 				{props.children}
 			</ModalContent>
 			<Backdrop modalCloseHandler={props.modalCloseHandler} />
-		</div>,
+		</>,
 		document.getElementById('overlay-root')
 	);
 };
