@@ -1,27 +1,32 @@
 .picture {
 	width: 100px;
 	height: 100px;
-	border-radius: 1rem;
+	border-radius: var(--border-radius-sm);
 }
 
 .header {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+	border: 1px solid var(--color-primary);
+	border-radius: var(--border-radius-sm);
+	padding: var(--padding-base);
+	flex-wrap: wrap;
 }
 
 .grid {
 	display: flex;
 	/* grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); */
-	gap: 1rem;
+	gap: 2rem;
+	margin: auto;
 	margin-top: 2rem;
 	flex-wrap: wrap;
 }
 
 .cell {
-	flex: 1 1 300px;
-	border: 1px solid var(--color-primary);
+	flex: 1 1 240px;
 	padding: var(--padding-base);
+	border: 1px solid var(--color-primary);
 	border-radius: var(--border-radius-sm);
 }
 
@@ -56,4 +61,9 @@
 	background-color: var(--bg-secondary);
 	padding: 1rem;
 	border-radius: var(--border-radius-sm);
+}
+
+.header,
+.cell {
+	box-shadow: var(--shadow-elevation-medium);
 }

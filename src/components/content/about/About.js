@@ -9,7 +9,7 @@ import React from 'react';
 
 const About = () => {
 	return (
-		<div>
+		<>
 			<header className={styles.header}>
 				<img
 					alt='furry'
@@ -36,10 +36,17 @@ const About = () => {
 				<div className={styles.cell}>
 					<h3>About me</h3>
 					<p className={styles.cardInnerPadding}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Sit voluptatem vitae fuga nihil corrupti optio dolorem,
-						amet temporibus est ad magnam aliquam quod illum fugit
-						numquam et expedita animi impedit.
+						Hello, my name is Karol.
+					</p>
+					<p className={styles.cardInnerPadding}>
+						In the past I used to create 2D animation and design 2D
+						graphics, the skills developped while doing that helped
+						me a lot in learning web programming.
+					</p>
+					<p className={styles.cardInnerPadding}>
+						I'm trying to commit daily to my{' '}
+						{<a href='https://github.com/goodideagiver'>GitHub</a>}{' '}
+						in order to recieve the best results.
 					</p>
 				</div>
 				<div className={styles.cell}>
@@ -52,11 +59,11 @@ const About = () => {
 						<li>HTML</li>
 						<li>Photoshop</li>
 						<li>English</li>
-						<li>Polish</li>
+						<li>Photography</li>
 					</ul>
 				</div>
 			</main>
-		</div>
+		</>
 	);
 };
 

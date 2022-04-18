@@ -1,4 +1,8 @@
 :root {
+	/* Dimensions */
+	--website-width: 1200px;
+	--modal-width: 40rem;
+
 	/* Border radius variables */
 	--border-radius-base: 2rem;
 	--border-radius-sm: 0.7rem;
@@ -32,21 +36,18 @@
 
 	/* box shadow */
 	--shadow-color: 0deg 0% 0%;
-  --shadow-elevation-low:
-    0.2px 0.2px 0.3px hsl(var(--shadow-color) / 0.11),
-    0.4px 0.4px 0.6px -1.3px hsl(var(--shadow-color) / 0.1),
-    0.9px 0.9px 1.4px -2.5px hsl(var(--shadow-color) / 0.1);
-  --shadow-elevation-medium:
-    0.2px 0.2px 0.3px hsl(var(--shadow-color) / 0.11),
-    0.8px 0.7px 1.2px -0.8px hsl(var(--shadow-color) / 0.11),
-    1.9px 1.8px 2.9px -1.7px hsl(var(--shadow-color) / 0.11),
-    4.7px 4.3px 7.1px -2.5px hsl(var(--shadow-color) / 0.11);
-  --shadow-elevation-high:
-    0.2px 0.2px 0.3px hsl(var(--shadow-color) / 0.12),
-    1.5px 1.4px 2.3px -0.4px hsl(var(--shadow-color) / 0.12),
-    3px 2.8px 4.6px -0.8px hsl(var(--shadow-color) / 0.12),
-    5.3px 4.9px 8.1px -1.3px hsl(var(--shadow-color) / 0.12),
-    9.1px 8.4px 13.8px -1.7px hsl(var(--shadow-color) / 0.12),
-    14.9px 13.8px 22.7px -2.1px hsl(var(--shadow-color) / 0.12),
-    23.6px 21.7px 35.8px -2.5px hsl(var(--shadow-color) / 0.11);
+	--shadow-elevation-low: 0.2px 0.2px 0.3px hsl(var(--shadow-color) / 0.11),
+		0.4px 0.4px 0.6px -1.3px hsl(var(--shadow-color) / 0.1),
+		0.9px 0.9px 1.4px -2.5px hsl(var(--shadow-color) / 0.1);
+	--shadow-elevation-medium: 0.2px 0.2px 0.3px hsl(var(--shadow-color) / 0.11),
+		0.8px 0.7px 1.2px -0.8px hsl(var(--shadow-color) / 0.11),
+		1.9px 1.8px 2.9px -1.7px hsl(var(--shadow-color) / 0.11),
+		4.7px 4.3px 7.1px -2.5px hsl(var(--shadow-color) / 0.11);
+	--shadow-elevation-high: 0.2px 0.2px 0.3px hsl(var(--shadow-color) / 0.12),
+		1.5px 1.4px 2.3px -0.4px hsl(var(--shadow-color) / 0.12),
+		3px 2.8px 4.6px -0.8px hsl(var(--shadow-color) / 0.12),
+		5.3px 4.9px 8.1px -1.3px hsl(var(--shadow-color) / 0.12),
+		9.1px 8.4px 13.8px -1.7px hsl(var(--shadow-color) / 0.12),
+		14.9px 13.8px 22.7px -2.1px hsl(var(--shadow-color) / 0.12),
+		23.6px 21.7px 35.8px -2.5px hsl(var(--shadow-color) / 0.11);
 }
