@@ -1,3 +1,5 @@
+import closeIcon from './close_white_24dp.svg';
+
 import styles from './modalContent.module.css';
 
 const ModalContent = props => {
@@ -8,7 +10,9 @@ const ModalContent = props => {
 				<button
 					onClick={props.modalCloseHandler}
 					className={styles.close}
-				></button>
+				>
+					<img src={closeIcon} alt='close icon' />
+				</button>
 			</header>
 			<main className={styles.children}>{props.children}</main>
 		</div>

@@ -3,7 +3,7 @@ import './main.css';
 import { useState } from 'react';
 import NavTop from './components/UI/navTop/NavTop';
 import Content from './components/content/content';
-// import Modal from './components/modal/Modal';
+import Modal from './components/modal/Modal';
 
 function App() {
 	const [visibleSection, setVisibleSection] = useState(1);
@@ -27,7 +27,12 @@ function App() {
 				]}
 			></NavTop>
 			<Content activeSection={visibleSection} />
-			{/* <Modal title='Siema z rana' /> */}
+			<Modal title='Siema z rana'>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+				Obcaecati tempora delectus recusandae nam doloremque dolores ad
+				distinctio quia. Doloremque, qui quasi id odio dolore ullam
+				sapiente magni eveniet est ducimus.
+			</Modal>
 		</>
 	);
 }

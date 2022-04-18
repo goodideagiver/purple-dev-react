@@ -35,15 +35,32 @@
 .close {
 	background-color: var(--btn-danger);
 	border: 0;
-	width: 2rem;
-	height: 2rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0.2rem;
 	border-radius: var(--border-radius-base);
 	cursor: pointer;
 	transition: 0.3s;
+	font-size: 2rem;
 }
 
 .close:hover {
 	transform: scale(0.95);
 	box-shadow: var(--shadow-elevation-medium);
 	background-color: red;
+}
+
+@supports (backdrop-filter: blur(10px)) {
+	.children {
+		background-color: rgba(20, 20, 20, 0.4);
+	}
+	.header {
+		background-color: rgba(80, 80, 80, 0.4);
+	}
+	.content {
+		background-color: transparent;
+		/* border: 0; */
+		backdrop-filter: blur(10px);
+		/* box-shadow: 0 0 0 1px white; */
+	}
 }
