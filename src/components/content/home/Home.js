@@ -23,12 +23,24 @@ const Home = props => {
 						Contact me
 					</Button>
 					<Button variant='danger'>Delete</Button>
-					<Button variant=''>Normal button</Button>
+					<Button>Normal button</Button>
 					<Button variant='secondary'>Secondary button</Button>
 				</div>
-				<div></div>
+				<div>Slider</div>
 			</section>
-			<section></section>
+			<section>
+				<header>
+					<h2>Projects</h2>
+					<p>Here you can find a list of my best projects</p>
+				</header>
+				<ul>
+					<li>Website</li>
+					<li>Website</li>
+					<li>Website</li>
+					<li>Website</li>
+					<li>Website</li>
+				</ul>
+			</section>
 		</>
 	);
 };

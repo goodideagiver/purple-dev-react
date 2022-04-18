@@ -1,5 +1,3 @@
-import styles from './modal.module.css';
-
 import Backdrop from '../modalBackdrop/Backrop';
 import ModalContent from '../modalContent/ModalContent';
 
