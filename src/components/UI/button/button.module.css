@@ -1,8 +1,8 @@
 .button {
 	background-color: transparent;
-	padding: 0.8rem;
+	padding: 1rem;
 	font-size: 1rem;
-	border: 1px white solid;
+	border: 2px white solid;
 	border-radius: var(--border-radius-sm);
 	cursor: pointer;
 	transition: 0.1s;
@@ -52,5 +52,5 @@
 }
 
 .secondary {
-	border-color: var(--btn-secondary);
+	border-color: transparent;
 }

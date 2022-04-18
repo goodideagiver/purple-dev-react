@@ -6,13 +6,13 @@ import ReactDOM from 'react-dom';
 const Modal = props => {
 	return ReactDOM.createPortal(
 		<>
+			<Backdrop modalCloseHandler={props.modalCloseHandler} />
 			<ModalContent
 				modalCloseHandler={props.modalCloseHandler}
 				title={props.title}
 			>
 				{props.children}
 			</ModalContent>
-			<Backdrop modalCloseHandler={props.modalCloseHandler} />
 		</>,
 		document.getElementById('overlay-root')
 	);
