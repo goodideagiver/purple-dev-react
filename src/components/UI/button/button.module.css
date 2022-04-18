@@ -7,7 +7,7 @@
 	cursor: pointer;
 	transition: 0.1s;
 	font-weight: bold;
-	margin: 0.5rem;
+	/* margin: 0.5rem; */
 	position: relative;
 }
 
@@ -39,6 +39,10 @@
 	box-shadow: var(--shadow-elevation-high);
 	background-size: 100%, 100%;
 	transition: 0.3s;
+	border-radius: 5rem;
+	width: fit-content;
+	margin: auto;
+	padding: 1.2rem 2rem;
 }
 
 .special:hover {
