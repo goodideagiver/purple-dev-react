@@ -7,6 +7,11 @@ import Modal from './components/modal/Modal';
 
 function App() {
 	const [visibleSection, setVisibleSection] = useState(1);
+	const [modalVisible, setModalVisible] = useState(false);
+
+	const toggleModal = () => {
+		setModalVisible(modalVisible ? false : true);
+	};
 
 	return (
 		<>
@@ -19,20 +24,22 @@ function App() {
 					{ name: 'About', callback: () => setVisibleSection(1) },
 					{
 						name: 'Github',
-						callback: () =>
-							(window.location.href =
-								'https://github.com/goodideagiver'),
+						callback: toggleModal,
 					},
 					{ name: 'Contact', callback: () => setVisibleSection(2) },
 				]}
 			></NavTop>
 			<Content activeSection={visibleSection} />
-			<Modal title='Siema z rana'>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-				Obcaecati tempora delectus recusandae nam doloremque dolores ad
-				distinctio quia. Doloremque, qui quasi id odio dolore ullam
-				sapiente magni eveniet est ducimus.
-			</Modal>
+			{modalVisible && (
+				<Modal
+					modalCloseHandler={toggleModal}
+					title='My GitHub profile'
+				>
+					You can check out more of my work on my{' '}
+					{<a href='https://github.com/goodideagiver'>GitHub</a>}{' '}
+					profile.
+				</Modal>
+			)}
 		</>
 	);
 }
