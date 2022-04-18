@@ -18,6 +18,8 @@
 
 	/* Project color palette */
 	--color-primary: #a66fff;
+	--color-secondary: #2a1c40;
+	--color-complementary: #ca0cb1;
 
 	/* Bg color palette */
 	--bg-primary: #1f1f1f;
@@ -26,8 +28,8 @@
 
 	/* Buttons colors */
 	--btn-primary: #a66fff;
-	--btn-secondary: #2f2f2f;
-	--btn-danger: #c24141;
+	--btn-secondary: #6b6767;
+	--btn-danger: #d72222;
 
 	/* font colors */
 	--font-primary: #fff;

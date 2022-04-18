@@ -29,7 +29,7 @@ function App() {
 					{ name: 'Contact', callback: () => setVisibleSection(2) },
 				]}
 			></NavTop>
-			<Content activeSection={visibleSection} />
+			<Content activeSection={visibleSection} setVisibleSection={setVisibleSection} />
 			{modalVisible && (
 				<Modal
 					modalCloseHandler={toggleModal}
