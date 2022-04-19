@@ -14,10 +14,14 @@ const ProjectCard = ({ title, shortDesc, desc, link, color }) => {
 		>
 			<p className={styles.subTitle}>{shortDesc}</p>
 			<h3 className={styles.title}>{title}</h3>
-			<div className={styles.desc}>
-				<p>{desc}</p>
-			</div>
-			<Button className={styles.button} variant='special'>Check out</Button>
+			<ul className={styles.desc}>
+				{desc.map(item => (
+					<li>{item}</li>
+				))}
+			</ul>
+			<Button className={styles.button} variant='special'>
+				Check out
+			</Button>
 		</div>
 	);
 };

@@ -4,23 +4,25 @@
 	padding: 2rem;
 	border: 1px var(--color-primary) solid;
 	border-radius: 1rem;
-	gap: 2rem;
 	flex: 0 0 min(300px, 100%);
-	justify-content: space-between;
+	justify-content: flex-start;
 }
 
 .subTitle {
 	opacity: 0.8;
 	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
 }
 
 .title {
 	font-size: 1.8rem;
+	margin-bottom: 1rem;
 }
 
 .desc {
 	padding-left: 0.5rem;
 	padding-right: 1rem;
+	flex-grow: 1;
 }
 
 .link {
@@ -34,4 +36,5 @@
 
 .button {
 	margin: 0 auto 0 auto;
+	margin-top: 2rem;
 }

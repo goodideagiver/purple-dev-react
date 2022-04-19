@@ -1,0 +1,25 @@
+.root {
+	display: grid;
+	gap: 2rem;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	grid-template-columns: 30% 30% 30%;
+	height: min(250px, 90vh);
+}
+
+.switchSlide {
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	transform: scale(0.8);
+	opacity: 0.6;
+	transition: 0.2s;
+	height: 100%;
+	width: 100%;
+	border: 1px purple solid;
+}
+
+.switchSlide:hover {
+	opacity: 1;
+}

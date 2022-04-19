@@ -7,24 +7,24 @@ import ProjectCard from '../projectCard/ProjectCard';
 const ProjectCards = () => {
 	const cardData = [
 		{
-			title: 'Instagram copy',
-			shortDesc: 'fakeinsta',
-			desc: 'I wanted to practice OOP programming in JS and prove myself in that language, so I made an Instagram copy',
+			title: 'Fakeinsta',
+			shortDesc: 'Instagram copy',
+			desc: ['OOP', 'Custom Components', 'Async'],
 			link: 'https://github.com/goodideagiver/fakeinsta',
 			color: '#a66fff30',
 		},
 		{
-			title: 'fodsfo',
-			shortDesc: 'siema z rana',
-			desc: 'najlepsza siema lorem ipsum kup to pan i wez mi daj',
-			link: 'foobar.com',
+			title: 'Web app',
+			shortDesc: 'Polite email builder',
+			desc: ['DOM manipulation', 'Vanilla JavaScript'],
+			link: 'https://goodideagiver.github.io/polite-email-builder/',
 			color: '#6284ff21',
 		},
 		{
-			title: 'fo342o',
-			shortDesc: 'siema z rana',
-			desc: 'najlepsza siema lorem ipsum kup to pan i wez mi daj',
-			link: 'foobar.com',
+			title: 'Website',
+			shortDesc: 'Adot.pl',
+			desc: ['Graphic designer website'],
+			link: 'https://www.adot.pl/',
 			color: '#ff00001f',
 		},
 	];
