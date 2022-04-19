@@ -3,12 +3,10 @@ import Button from '../../../UI/button/Button';
 import React from 'react';
 
 import styles from './myGoals.module.css';
-
-import { useContext } from 'react';
-import ActiveSection from '../../../../store/active-section';
+import { ActiveSectionContext } from '../../../../store/active-section';
 
 const MyGoals = props => {
-	const { setVisibleSection } = useContext(ActiveSection);
+	const { setVisibleSection } = ActiveSectionContext();
 	const showContactHandler = () => setVisibleSection('contact');
 
 	return (
