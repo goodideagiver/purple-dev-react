@@ -1,18 +1,18 @@
-import Button from '../../UI/button/Button';
+// import Button from '../../UI/button/Button';
 
 import React from 'react';
 import MyGoals from './myGoals/MyGoals';
 
 import styles from './home.module.css';
 
-const Home = props => {
-	const showContactHandler = () => props.showContactHandler(2);
 
+
+const Home = props => {
 	return (
 		<>
 			<h1>purpleblack.dev</h1>
 			<section className={styles.nextTo}>
-				<MyGoals showContactHandler={showContactHandler} />
+				<MyGoals />
 				<div>Slider</div>
 			</section>
 			<section className={styles.nextTo}>

@@ -21,15 +21,31 @@ const NavTop = props => {
 	if (!isMobile) {
 		return (
 			<nav className={styles.nav}>
-				{props.navButtons.map(button => (
-					<button
-						key={button.name}
-						className={styles.button}
-						onClick={button.callback}
-					>
-						{button.name}
-					</button>
-				))}
+				{props.navButtons.map(button => {
+					if (button.type === 'anchor') {
+						return (
+							<a
+								key={button.name}
+								className={styles.button}
+								onClick={button.callback}
+								href={button.link}
+								target='_blank'
+								rel='noreferrer'
+							>
+								{button.name}
+							</a>
+						);
+					}
+					return (
+						<button
+							key={button.name}
+							className={styles.button}
+							onClick={button.callback}
+						>
+							{button.name}
+						</button>
+					);
+				})}
 			</nav>
 		);
 	}

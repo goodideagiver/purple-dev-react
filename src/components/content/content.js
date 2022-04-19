@@ -4,14 +4,17 @@ import About from './about/About';
 import Contact from './contact/Contact';
 import Home from './home/Home';
 
-const Content = ({ activeSection, setVisibleSection }) => {
+import { useContext } from 'react';
+import ActiveSection from '../../store/active-section';
+
+const Content = () => {
+	const { visibleSection } = useContext(ActiveSection);
+
 	return (
 		<main className={styles.padding}>
-			{activeSection === 0 && (
-				<Home showContactHandler={setVisibleSection} />
-			)}
-			{activeSection === 1 && <About />}
-			{activeSection === 2 && <Contact />}
+			{visibleSection === 'home' && <Home />}
+			{visibleSection === 'about' && <About />}
+			{visibleSection === 'contact' && <Contact />}
 		</main>
 	);
 };
