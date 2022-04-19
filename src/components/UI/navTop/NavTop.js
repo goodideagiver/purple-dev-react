@@ -1,13 +1,14 @@
 import Button from '../../UI/button/Button';
-import Modal from '../../modal/Modal';
 
 import { useState, useEffect } from 'react';
 
 import styles from './navTop.module.css';
+import NavMenu from '../navMenu/NavMenu';
+import NavButtons from '../navButtons/NavButtons';
 
 const NavTop = props => {
-	const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
-	const [mobileModalOpen, setmobileModalOpen] = useState(false);
+	const [menuOpen, setMenuOpen] = useState(false);
+	const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
 
 	useEffect(() => {
 		window.addEventListener('resize', () =>
@@ -15,60 +16,16 @@ const NavTop = props => {
 		);
 	}, []);
 
-	const modalToggle = () =>
-		setmobileModalOpen(mobileModalOpen ? false : true);
-
-	if (!isMobile) {
-		return (
-			<nav className={styles.nav}>
-				{props.navButtons.map(button => {
-					if (button.type === 'anchor') {
-						return (
-							<a
-								key={button.name}
-								className={styles.button}
-								onClick={button.callback}
-								href={button.link}
-								target='_blank'
-								rel='noreferrer'
-							>
-								{button.name}
-							</a>
-						);
-					}
-					return (
-						<button
-							key={button.name}
-							className={styles.button}
-							onClick={button.callback}
-						>
-							{button.name}
-						</button>
-					);
-				})}
-			</nav>
-		);
-	}
+	const menuToggle = () => setMenuOpen(menuOpen ? false : true);
+	const menuClose = () => setMenuOpen(false)
 
 	return (
-		<>
-			<nav className={`${styles.nav} ${styles.center}`}>
-				<Button onClick={modalToggle}>Menu</Button>
-			</nav>
-			{mobileModalOpen && (
-				<Modal modalCloseHandler={modalToggle} title='Siema'>
-					{props.navButtons.map(button => (
-						<button
-							key={button.name}
-							className={styles.button}
-							onClick={button.callback}
-						>
-							{button.name}
-						</button>
-					))}
-				</Modal>
-			)}
-		</>
+		<nav className={styles.nav}>
+			<h1>purpleblack.dev</h1>
+			{!isMobile && <NavButtons />}
+			<Button onClick={menuToggle}>Menu</Button>
+			{menuOpen && <NavMenu onMenuClose={menuClose} />}
+		</nav>
 	);
 };
 

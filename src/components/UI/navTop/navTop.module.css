@@ -11,18 +11,7 @@
 	color: var(--font-primary);
 }
 
-.button {
-	font-size: 1.2rem;
-	padding: var(--min-padding);
-	cursor: pointer;
-	background-color: transparent;
-	border: 0;
-	text-decoration: none;
-}
 
-.button:hover {
-	transform: scale(0.95);
-}
 
 .center {
 	justify-content: center;

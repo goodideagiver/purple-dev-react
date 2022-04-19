@@ -1,0 +1,37 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	border: 1px var(--color-primary) solid;
+	border-radius: 1rem;
+	gap: 2rem;
+	flex: 0 0 min(300px, 100%);
+	justify-content: space-between;
+}
+
+.subTitle {
+	opacity: 0.8;
+	font-size: 1.2rem;
+}
+
+.title {
+	font-size: 1.8rem;
+}
+
+.desc {
+	padding-left: 0.5rem;
+	padding-right: 1rem;
+}
+
+.link {
+	margin-top: 1.2rem;
+	width: 100%;
+	text-align: center;
+	border: 1px solid white;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+.button {
+	margin: 0 auto 0 auto;
+}

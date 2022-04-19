@@ -20,27 +20,7 @@ function App() {
 			<ActiveSection.Provider
 				value={{ visibleSection, setVisibleSection }}
 			>
-				<NavTop
-					navButtons={[
-						{
-							name: 'Home',
-							callback: () => setVisibleSection('home'),
-						},
-						{
-							name: 'About',
-							callback: () => setVisibleSection('about'),
-						},
-						{
-							name: 'Github',
-							type: 'anchor',
-							link: 'https://github.com/goodideagiver',
-						},
-						{
-							name: 'Contact',
-							callback: () => setVisibleSection('contact'),
-						},
-					]}
-				></NavTop>
+				<NavTop />
 				<Content />
 				{modalVisible && (
 					<Modal

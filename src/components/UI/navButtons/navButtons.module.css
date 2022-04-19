@@ -1,0 +1,13 @@
+.button {
+	font-size: 1.2rem;
+	padding: var(--min-padding);
+	cursor: pointer;
+	background-color: transparent;
+	border: 0;
+	text-decoration: none;
+	text-align: center;
+}
+
+.button:hover {
+	transform: scale(0.95);
+}
