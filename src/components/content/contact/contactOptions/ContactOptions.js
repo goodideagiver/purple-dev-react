@@ -5,7 +5,7 @@ import styles from './contactOptions.module.css';
 const ContactOptions = () => {
 	return (
 		<div>
-			<h2>Contact me here</h2>
+			<h2>Contact me</h2>
 			<ul className={styles.list}>
 				<li>
 					<a href='foo'>
