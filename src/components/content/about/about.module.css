@@ -70,7 +70,16 @@
 	);
 }
 
-.header,
+.header
 .cell {
 	box-shadow: var(--shadow-elevation-medium);
+}
+
+.learning {
+	opacity: 0.6;
+}
+
+.developer {
+	color: var(--color-primary);
+	margin-bottom: 0.25rem;
 }

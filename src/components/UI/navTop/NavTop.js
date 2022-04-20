@@ -17,13 +17,15 @@ const NavTop = props => {
 	}, []);
 
 	const menuToggle = () => setMenuOpen(menuOpen ? false : true);
-	const menuClose = () => setMenuOpen(false)
+	const menuClose = () => setMenuOpen(false);
 
 	return (
 		<nav className={styles.nav}>
 			<h1>purpleblack.dev</h1>
 			{!isMobile && <NavButtons />}
-			<Button onClick={menuToggle}>Menu</Button>
+			<Button variant='nav' onClick={menuToggle}>
+				<span class='material-icons-round'>menu</span>
+			</Button>
 			{menuOpen && <NavMenu onMenuClose={menuClose} />}
 		</nav>
 	);

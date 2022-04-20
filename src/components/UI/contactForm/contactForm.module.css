@@ -1,0 +1,68 @@
+.root {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+}
+
+.root input,
+textarea {
+	background-color: transparent;
+	padding: 1rem;
+	border: 1px var(--color-primary) solid;
+	font-family: inherit;
+	border-radius: var(--border-radius-sm);
+	flex: 1 1 240px;
+	resize: none;
+}
+
+.root input {
+	border-style: none none solid none;
+	border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+}
+
+.invalid input,
+.invalid textarea {
+	border-color: red;
+}
+
+.formRow {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.formRow label {
+	opacity: 0.6;
+}
+
+.formRow > * {
+	flex: 1 1 100%;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 2rem;
+	width: 100%;
+}
+
+.invalidMsg {
+	padding: 2rem;
+	background-color: var(--bg-tertiary);
+	border-radius: var(--border-radius-sm);
+	box-shadow: var(--shadow-elevation-high);
+}
+
+.invalidMsg p:not(:first-child) {
+	padding-left: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+.root input:hover,
+.root textarea:hover {
+	background-color: var(--bg-secondary);
+}

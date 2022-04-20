@@ -28,17 +28,23 @@
 	background-color: var(--btn-primary);
 	color: var(--font-primary);
 	border: 0;
-	background: rgb(98, 134, 222);
+	background: rgba(98, 133, 222, 0.313);
 	background: linear-gradient(
 		90deg,
 		var(--btn-primary) 0%,
 		var(--color-complementary) 100%
 	);
+	background-image: linear-gradient(
+		120deg,
+		#836a4c,
+		#723b80,
+		rgb(150, 32, 32)
+	);
 	background-repeat: repeat;
 	background-position: left;
 	box-shadow: var(--shadow-elevation-high);
-	background-size: 100%, 100%;
-	transition: 0.3s;
+	background-size: 200%, 100%;
+	transition: background-position 0.4s, color 0.1s;
 	border-radius: 5rem;
 	width: fit-content;
 	margin: auto;
@@ -46,9 +52,8 @@
 }
 
 .special:hover {
+	color: var(--color-complementary);
 	background-position: right;
-	background-size: 150%, 200%;
-	transform: scale(0.95);
 }
 
 .danger {
@@ -57,4 +62,8 @@
 
 .secondary {
 	border-color: transparent;
+}
+
+.nav {
+	border: 0;
 }
