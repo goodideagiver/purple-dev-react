@@ -30,7 +30,9 @@ const Slider = () => {
 				</button>
 			) : (
 				<button className={style.switchSlide} onClick={prevSlide}>
-					<div>Kuniec lewo</div>
+					<div className={style.repeatBtn}>
+						<span className='material-icons-round'>west</span>
+					</div>
 				</button>
 			)}
 			<Slide img={sliderPhotos[activePhoto]} />
@@ -40,7 +42,9 @@ const Slider = () => {
 				</button>
 			) : (
 				<button className={style.switchSlide} onClick={nextSlide}>
-					<div> Kuniec prawo</div>
+					<div className={style.repeatBtn}>
+						<span className='material-icons-round'>east</span>
+					</div>
 				</button>
 			)}
 		</div>

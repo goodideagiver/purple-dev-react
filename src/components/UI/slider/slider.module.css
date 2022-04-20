@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp');
+
 .root {
 	display: grid;
-	gap: 2rem;
+	gap: 0.1rem;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
@@ -12,14 +14,20 @@
 	background-color: transparent;
 	border: 0;
 	cursor: pointer;
-	transform: scale(0.8);
+	transform: scale(0.6);
 	opacity: 0.6;
 	transition: 0.2s;
 	height: 100%;
 	width: 100%;
-	border: 1px purple solid;
 }
 
 .switchSlide:hover {
 	opacity: 1;
+}
+
+.repeatBtn span {
+	font-size: 5rem;
+	border: solid white 4px;
+	padding: 2rem;
+	border-radius: 5rem;
 }
