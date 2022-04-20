@@ -56,6 +56,11 @@ textarea {
 	border-radius: var(--border-radius-sm);
 }
 
+.invalidMsg p:not(:first-child) {
+	padding-left: 0.5rem;
+	margin-top: 0.5rem;
+}
+
 .root input:hover,
 .root textarea:hover {
 	background-color: var(--bg-secondary);

@@ -43,10 +43,11 @@ const ContactForm = () => {
 		<div className={styles.root}>
 			{isFormValid === false && (
 				<div className={styles.invalidMsg}>
-					<p>
-						Sorry, but you can't send me a message that is empty or
-						without introducing yourself 😉
-					</p>
+					<p>Oh no! There is something wrong with your input 🤨</p>
+					{!name.trim().length && <p>❌ Name field is empty.</p>}
+					{!message.trim().length && (
+						<p>❌ Message field is empty.</p>
+					)}
 				</div>
 			)}
 			<form
