@@ -6,6 +6,7 @@ import parcel from './technologies/parcel.png';
 import styles from './about.module.css';
 
 import React from 'react';
+import timeSince from '../../../helpers/timeSince';
 
 const About = () => {
 	return (
@@ -18,7 +19,10 @@ const About = () => {
 				/>
 				<div>
 					<h2>Karol</h2>
-					<p>Frontend Developer</p>
+					<p className={styles.developer}>Frontend Developer</p>
+					<p className={styles.learning}>
+						{timeSince(new Date(2021, 9, 10))} of learning frontend{' '}
+					</p>
 				</div>
 			</header>
 			<main className={`${styles.grid}`}>
