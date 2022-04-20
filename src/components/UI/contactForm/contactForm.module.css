@@ -1,0 +1,22 @@
+.root {
+	padding: 1rem;
+}
+
+.root input,
+textarea {
+	background-color: transparent;
+	padding: 1rem;
+	border: 1px var(--color-primary) solid;
+	font-family: inherit;
+}
+
+.invalid input,
+.invalid textarea {
+	border: red 5px solid;
+}
+
+.formRow {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}

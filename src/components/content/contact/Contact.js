@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import ContactForm from '../../UI/contactForm/ContactForm';
 
 const Contact = () => {
-  return (
-    <div>Contact</div>
-  )
-}
+	return (
+		<>
+			<ContactForm />
+		</>
+	);
+};
 
-export default Contact
+export default Contact;
