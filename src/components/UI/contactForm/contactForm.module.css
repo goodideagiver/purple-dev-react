@@ -19,7 +19,7 @@ textarea {
 
 .root input {
 	border-style: none none solid none;
-	border-radius: 0;
+	border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
 }
 
 .invalid input,
@@ -54,4 +54,9 @@ textarea {
 	padding: 2rem;
 	background-color: var(--bg-tertiary);
 	border-radius: var(--border-radius-sm);
+}
+
+.root input:hover,
+.root textarea:hover {
+	background-color: var(--bg-secondary);
 }

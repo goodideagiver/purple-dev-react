@@ -58,3 +58,7 @@
 .secondary {
 	border-color: transparent;
 }
+
+.nav {
+	border: 0;
+}
