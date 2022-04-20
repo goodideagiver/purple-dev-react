@@ -70,7 +70,7 @@
 	);
 }
 
-.header,
+.header
 .cell {
 	box-shadow: var(--shadow-elevation-medium);
 }
