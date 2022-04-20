@@ -17,9 +17,14 @@ textarea {
 	resize: none;
 }
 
+.root input {
+	border-style: none none solid none;
+	border-radius: 0;
+}
+
 .invalid input,
 .invalid textarea {
-	border: red 5px solid;
+	border-color: red;
 }
 
 .formRow {
@@ -27,6 +32,10 @@ textarea {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	gap: 1rem;
+}
+
+.formRow label {
+	opacity: 0.6;
 }
 
 .formRow > * {
