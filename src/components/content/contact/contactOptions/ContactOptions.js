@@ -1,17 +1,29 @@
 import React from 'react';
 
+import styles from './contactOptions.module.css';
+
 const ContactOptions = () => {
 	return (
 		<div>
-			<ul>
+			<h2>Hey! You want to contact me?</h2>
+			<ul className={styles.list}>
 				<li>
-					<a href='foo'>Discord</a>
+					<a href='foo'>
+						<span class='material-icons-round'>keyboard</span>
+						<p>Discord</p>
+					</a>
 				</li>
 				<li>
-					<a href='foo'>Mail</a>
+					<a href='foo'>
+						<span className='material-icons-round'>email</span>
+						<p>E-mail</p>
+					</a>
 				</li>
 				<li>
-					<a href='foo'>LinkedIn</a>
+					<a href='foo'>
+						<span class='material-icons-round'>work</span>
+						<p>Linkedin</p>
+					</a>
 				</li>
 			</ul>
 		</div>

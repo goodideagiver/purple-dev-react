@@ -1,0 +1,35 @@
+.list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-top: 2rem;
+}
+
+.list a {
+	padding: 2rem 3rem;
+	display: block;
+	text-align: center;
+	border: var(--color-primary) solid 1px;
+	border-radius: var(--border-radius-sm);
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.list a span {
+	font-size: 2rem;
+}
+
+.list a p {
+	flex-grow: 1;
+}
+
+.list a:hover {
+	background-color: var(--bg-secondary);
+}
