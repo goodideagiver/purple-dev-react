@@ -11,10 +11,8 @@ const ContactForm = () => {
 
 	useEffect(() => {
 		const formCheckDelay = setTimeout(() => {
-			if (name.trim().length || message.trim().length) {
-				if (name.trim().length !== 0 || message.trim().length !== 0) {
-					setIsFormValid(true);
-				}
+			if (name.trim().length && message.trim().length) {
+				setIsFormValid(true);
 			}
 		}, 500);
 		return () => {
