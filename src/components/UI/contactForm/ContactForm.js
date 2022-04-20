@@ -11,9 +11,11 @@ const ContactForm = () => {
 
 	useEffect(() => {
 		const formCheckDelay = setTimeout(() => {
-			setIsFormValid(
-				(name.trim().length > 0 && message.trim().length > 0) === true
-			);
+			if (name.trim().length || message.trim().length) {
+				if (name.trim().length !== 0 || message.trim().length !== 0) {
+					setIsFormValid(true);
+				}
+			}
 		}, 500);
 		return () => {
 			clearTimeout(formCheckDelay);
@@ -22,6 +24,22 @@ const ContactForm = () => {
 
 	const userInputNameHandler = ev => setName(ev.target.value);
 	const userInputMessageHandler = ev => setMessage(ev.target.value);
+
+	const checkFormValid = () => {
+		if (name.trim().length > 0 && message.trim().length > 0) {
+			setIsFormValid(true);
+		} else {
+			setIsFormValid(false);
+		}
+	};
+
+	const sendEmailHandler = ev => {
+		ev.preventDefault();
+		checkFormValid();
+		if (isFormValid) {
+			//send email
+		}
+	};
 
 	return (
 		<div className={styles.root}>
@@ -43,6 +61,7 @@ const ContactForm = () => {
 				<div className={styles.formRow}>
 					<label htmlFor='message'>Your message</label>
 					<textarea
+						required
 						value={message}
 						placeholder='Type your message here'
 						id='message'
@@ -51,7 +70,9 @@ const ContactForm = () => {
 						onInput={userInputMessageHandler}
 					></textarea>
 				</div>
-				<Button type='send'>Send</Button>
+				<Button onClick={sendEmailHandler} type='send'>
+					Send
+				</Button>
 			</form>
 		</div>
 	);
