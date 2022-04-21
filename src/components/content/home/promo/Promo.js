@@ -26,7 +26,7 @@ const Promo = () => {
 						<p className={st.number}>{id + 1}</p>
 						<div className={st.cell}>
 							<h3>{data.name}</h3>
-							<p>{data.desc}</p>
+							<p className={st.desc}>{data.desc}</p>
 						</div>
 					</li>
 				))}
