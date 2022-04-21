@@ -1,0 +1,60 @@
+.welcome {
+	/* background-image: url('../../../../img/home/forest.png'); */
+	background-size: cover;
+	height: min(85vh);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: min(8rem, 10%);
+}
+
+.welcome * {
+	/* color: black; */
+	display: block;
+}
+
+.button {
+	margin: 0;
+}
+
+.devText {
+	align-self: flex-start;
+	font-size: clamp(10px, 2rem, 5vw);
+}
+
+.bigText {
+	font-size: clamp(20px, 10rem, 10vw);
+	margin-bottom: 2rem;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	z-index: 2;
+}
+
+.programmer {
+	opacity: 0.3;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	z-index: -1;
+	object-fit: cover;
+	width: 100%;
+}
+
+.overlay {
+	opacity: 1;
+	z-index: 0;
+	background: linear-gradient(to bottom, transparent 80%, var(--bg-primary));
+	pointer-events: none;
+}
+
+@media (min-width: 800px) {
+	.programmer {
+		object-position: 5vw;
+	}
+}
