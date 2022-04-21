@@ -1,0 +1,23 @@
+.desktopNav {
+	position: fixed;
+	height: 100%;
+	right: 0;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	background: black;
+	z-index: 50;
+}
+
+.backdrop {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.209);
+}
+
+.close {
+	border-radius: 0;
+}

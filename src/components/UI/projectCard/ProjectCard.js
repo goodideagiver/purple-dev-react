@@ -16,7 +16,7 @@ const ProjectCard = ({ title, shortDesc, desc, link, color }) => {
 			<h3 className={styles.title}>{title}</h3>
 			<ul className={styles.desc}>
 				{desc.map(item => (
-					<li>{item}</li>
+					<li key={item}>{item}</li>
 				))}
 			</ul>
 			<Button className={styles.button} variant='special'>

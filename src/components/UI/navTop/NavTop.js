@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import styles from './navTop.module.css';
 import NavMenu from '../navMenu/NavMenu';
 import NavButtons from '../navButtons/NavButtons';
+import DesktopNavMenu from '../navMenu/desktopNavMenu/DesktopNavMenu';
 
 const NavTop = props => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -24,9 +25,12 @@ const NavTop = props => {
 			<h1>purpleblack.dev</h1>
 			{!isMobile && <NavButtons />}
 			<Button variant='nav' onClick={menuToggle}>
-				<span class='material-icons-round'>menu</span>
+				<span className='material-icons-round'>menu</span>
 			</Button>
-			{menuOpen && <NavMenu onMenuClose={menuClose} />}
+			{menuOpen && isMobile && <NavMenu onMenuClose={menuClose} />}
+			{menuOpen && !isMobile && (
+				<DesktopNavMenu onMenuClose={menuClose} />
+			)}
 		</nav>
 	);
 };

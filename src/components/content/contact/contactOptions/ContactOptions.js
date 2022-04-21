@@ -9,7 +9,7 @@ const ContactOptions = () => {
 			<ul className={styles.list}>
 				<li>
 					<a href='foo'>
-						<span class='material-icons-round'>keyboard</span>
+						<span className='material-icons-round'>keyboard</span>
 						<p>Discord</p>
 					</a>
 				</li>
@@ -21,7 +21,7 @@ const ContactOptions = () => {
 				</li>
 				<li>
 					<a href='foo'>
-						<span class='material-icons-round'>work</span>
+						<span className='material-icons-round'>work</span>
 						<p>Linkedin</p>
 					</a>
 				</li>

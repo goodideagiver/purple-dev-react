@@ -9,7 +9,7 @@ import styles from './navMenu.module.css';
 const NavMenu = props => {
 	return ReactDOM.createPortal(
 		<>
-			<nav className={styles['menu-wrapper']}>
+			<nav className={`${styles['menu-wrapper']} ${props.className}`}>
 				<div className={styles.grow}>
 					<Button
 						className={styles.close}
