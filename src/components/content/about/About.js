@@ -7,6 +7,7 @@ import styles from './about.module.css';
 
 import React from 'react';
 import timeSince from '../../../helpers/timeSince';
+import Roadmap from './roadmap/Roadmap';
 
 const About = () => {
 	return (
@@ -66,6 +67,7 @@ const About = () => {
 						<li>Photography</li>
 					</ul>
 				</div>
+				<Roadmap className={styles.cell} />
 			</main>
 		</>
 	);

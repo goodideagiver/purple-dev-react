@@ -24,7 +24,7 @@
 }
 
 .cell {
-	flex: 1 1 240px;
+	flex: 1 1 340px;
 	padding: var(--padding-base);
 	border: 1px solid var(--color-primary);
 	border-radius: var(--border-radius-sm);
@@ -70,8 +70,7 @@
 	);
 }
 
-.header
-.cell {
+.header .cell {
 	box-shadow: var(--shadow-elevation-medium);
 }
 
