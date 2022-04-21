@@ -1,0 +1,43 @@
+.root {
+	background-color: var(--color-secondary);
+	margin-bottom: 8rem;
+	background-image: linear-gradient(43deg, #4159d038, #c850c03c, #ffcd7031);
+	background-repeat: repeat;
+}
+
+.list {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	padding: min(5rem, 2vh);
+	flex-wrap: wrap;
+}
+
+.list li {
+	display: flex;
+}
+
+.cell {
+	flex-basis: calc(1200px / 3);
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-content: flex-start;
+}
+
+.cell h3 {
+	font-size: 1.8rem;
+}
+
+.number {
+	padding: 1rem;
+	color: var(--color-primary);
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+
+@media (max-width: 620px) {
+	.list li {
+		width: 100%;
+	}
+}

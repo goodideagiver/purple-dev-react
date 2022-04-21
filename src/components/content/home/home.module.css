@@ -5,3 +5,9 @@
 	justify-content: space-between;
 	margin-top: 3rem;
 }
+
+.sectionWidth {
+	max-width: var(--website-width);
+	margin: auto;
+	margin-bottom: 10rem;
+}

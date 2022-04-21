@@ -1,5 +1,5 @@
 .padding {
-	padding: var(--padding-base);
-	max-width: var(--website-width);
+	padding: var(--padding-base) 0;
+	/* max-width: var(--website-width); */
 	margin: auto;
 }

@@ -1,21 +1,23 @@
 // import Button from '../../UI/button/Button';
 
 import Slider from '../../UI/slider/Slider';
-import styles from './home.module.css';
+import st from './home.module.css';
 import ProjectCards from '../../UI/projectCards/ProjectCards';
 import Welcome from './welcome/Welcome';
+import Promo from './promo/Promo';
 
 const Home = props => {
 	return (
 		<>
-			<section>
+			<section className={st.sectionWidth}>
 				<Welcome />
 			</section>
-			<section className={styles.nextTo}>
+			<Promo />
+			<section className={`${st.nextTo} ${st.sectionWidth}`}>
 				<div>PLACEHOLDER</div>
 				<Slider />
 			</section>
-			<section className={styles.nextTo}>
+			<section className={`${st.nextTo} ${st.sectionWidth}`}>
 				<ProjectCards />
 			</section>
 		</>
