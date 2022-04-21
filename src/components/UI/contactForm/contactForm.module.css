@@ -36,6 +36,7 @@ textarea {
 
 .formRow label {
 	opacity: 0.6;
+	padding: 1rem;
 }
 
 .formRow > * {

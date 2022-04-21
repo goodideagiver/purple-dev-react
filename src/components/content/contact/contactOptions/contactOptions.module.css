@@ -12,7 +12,7 @@
 	padding: 1rem;
 	display: block;
 	text-align: center;
-	/* border: var(--color-primary) solid 1px; */
+	border: rgba(255, 255, 255, 0.1) solid 1px;
 	border-radius: var(--border-radius-sm);
 	font-size: 1.2rem;
 	font-weight: bold;
@@ -34,4 +34,24 @@
 
 .list a:hover {
 	background-color: var(--bg-secondary);
+	background: #0099f7; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #f11712, #0099f7);
+	background: linear-gradient(
+		to right,
+		var(--color-primary),
+		#651fc6,
+		var(--color-primary)
+	);
+	animation: 10s bg-scroll infinite linear;
+	background-size: 400%;
+	background-repeat: repeat-x;
+}
+
+@keyframes bg-scroll {
+	from {
+		background-position: left;
+	}
+	to {
+		background-position: 400%;
+	}
 }
