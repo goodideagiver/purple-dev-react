@@ -23,7 +23,9 @@ const NavTop = props => {
 	return (
 		<nav className={styles.nav}>
 			<h1>purpleblack.dev</h1>
-			{!isMobile && <NavButtons />}
+			{!isMobile && (
+				<NavButtons names={['Home', 'GitHub', 'About', 'Contact']} />
+			)}
 			<Button variant='nav' onClick={menuToggle}>
 				<span className='material-icons-round'>menu</span>
 			</Button>

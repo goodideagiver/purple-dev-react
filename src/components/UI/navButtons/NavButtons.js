@@ -22,7 +22,7 @@ const NavButtons = ({ names, onClick }) => {
 			},
 		},
 		{
-			name: 'Github',
+			name: 'GitHub',
 			type: 'anchor',
 			link: 'https://github.com/goodideagiver',
 		},
@@ -37,31 +37,39 @@ const NavButtons = ({ names, onClick }) => {
 
 	return (
 		<>
-			{buttonsData.map(button => {
-				if (button.type === 'anchor') {
+			{buttonsData
+				.filter(el => {
+					if (names) {
+						return names.find(nam => nam === el.name);
+					} else {
+						return el;
+					}
+				})
+				.map(button => {
+					if (button.type === 'anchor') {
+						return (
+							<a
+								key={button.name}
+								className={styles.button}
+								onClick={button.callback}
+								href={button.link}
+								target='_blank'
+								rel='noreferrer'
+							>
+								{button.name}
+							</a>
+						);
+					}
 					return (
-						<a
+						<button
 							key={button.name}
 							className={styles.button}
 							onClick={button.callback}
-							href={button.link}
-							target='_blank'
-							rel='noreferrer'
 						>
 							{button.name}
-						</a>
+						</button>
 					);
-				}
-				return (
-					<button
-						key={button.name}
-						className={styles.button}
-						onClick={button.callback}
-					>
-						{button.name}
-					</button>
-				);
-			})}
+				})}
 		</>
 	);
 };
