@@ -9,9 +9,9 @@ import React from 'react';
 import timeSince from '../../../helpers/timeSince';
 import Roadmap from './roadmap/Roadmap';
 
-const About = () => {
+const About = ({ className }) => {
 	return (
-		<>
+		<div className={className}>
 			<header className={styles.header}>
 				<img
 					alt='furry'
@@ -69,7 +69,7 @@ const About = () => {
 				</div>
 				<Roadmap className={styles.cell} />
 			</main>
-		</>
+		</div>
 	);
 };
 

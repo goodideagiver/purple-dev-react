@@ -13,8 +13,12 @@ const Content = () => {
 	return (
 		<main className={styles.padding}>
 			{visibleSection === 'home' && <Home />}
-			{visibleSection === 'about' && <About />}
-			{visibleSection === 'contact' && <Contact />}
+			{visibleSection === 'about' && (
+				<About className={styles.maxWidth} />
+			)}
+			{visibleSection === 'contact' && (
+				<Contact className={styles.maxWidth} />
+			)}
 		</main>
 	);
 };
