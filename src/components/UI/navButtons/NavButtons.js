@@ -3,7 +3,7 @@ import React from 'react';
 import { ActiveSectionContext } from '../../../store/active-section';
 import styles from './navButtons.module.css';
 
-const NavButtons = ({ names, onClick }) => {
+const NavButtons = ({ visibleButtonNames, onClick }) => {
 	const { setVisibleSection } = ActiveSectionContext();
 
 	const buttonsData = [
@@ -39,8 +39,8 @@ const NavButtons = ({ names, onClick }) => {
 		<>
 			{buttonsData
 				.filter(el => {
-					if (names) {
-						return names.find(nam => nam === el.name);
+					if (visibleButtonNames) {
+						return visibleButtonNames.find(nam => nam === el.name);
 					} else {
 						return el;
 					}
