@@ -8,3 +8,18 @@
 	max-width: var(--website-width);
 	margin: auto;
 }
+
+.section-appear {
+	animation: appear 1s forwards;
+}
+
+@keyframes appear {
+	from {
+		transform: scale(0.95) translate(0, -50px);
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}

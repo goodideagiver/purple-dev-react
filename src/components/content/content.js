@@ -14,10 +14,14 @@ const Content = () => {
 		<main className={styles.padding}>
 			{visibleSection === 'home' && <Home />}
 			{visibleSection === 'about' && (
-				<About className={styles.maxWidth} />
+				<About
+					className={`${styles.maxWidth} ${styles['section-appear']}`}
+				/>
 			)}
 			{visibleSection === 'contact' && (
-				<Contact className={styles.maxWidth} />
+				<Contact
+					className={`${styles.maxWidth} ${styles['section-appear']}`}
+				/>
 			)}
 		</main>
 	);
