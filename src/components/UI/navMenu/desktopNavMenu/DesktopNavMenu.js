@@ -16,8 +16,12 @@ const DesktopNavMenu = ({ onMenuClose }) => {
 
 	return ReactDOM.createPortal(
 		<>
-			<nav className={styles.desktopNav}>
-				<Button className={styles.close} onClick={onMenuClose} variant='nav'>
+			<nav className={`${styles.desktopNav} ${styles.show}`}>
+				<Button
+					className={styles.close}
+					onClick={onMenuClose}
+					variant='nav'
+				>
 					<span className='material-symbols'>close</span>
 				</Button>
 				<NavButtons onClick={onMenuClose} />
@@ -25,7 +29,7 @@ const DesktopNavMenu = ({ onMenuClose }) => {
 			<div
 				onClick={backdropClickHandler}
 				ref={backdrop}
-				className={styles.backdrop}
+				className={`${styles.backdrop} ${styles['backdrop-show']}`}
 			/>
 		</>,
 		document.getElementById('overlay-root')

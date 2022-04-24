@@ -4,6 +4,7 @@
 }
 
 .maxWidth {
+	padding: 0 var(--padding-base);
 	max-width: var(--website-width);
 	margin: auto;
 }
