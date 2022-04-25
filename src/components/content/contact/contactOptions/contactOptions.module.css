@@ -56,3 +56,9 @@
 		background-position: 400%;
 	}
 }
+
+@media (max-width: 400px) {
+	.list li {
+		flex-basis: 100%;
+	}
+}
