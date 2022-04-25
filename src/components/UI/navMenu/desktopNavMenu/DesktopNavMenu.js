@@ -1,6 +1,8 @@
 import NavButtons from '../../navButtons/NavButtons';
 import styles from './desktopNavMenu.module.css';
 
+import { MdClose } from 'react-icons/md';
+
 import ReactDOM from 'react-dom';
 import Button from '../../button/Button';
 import { useRef } from 'react';
@@ -22,7 +24,7 @@ const DesktopNavMenu = ({ onMenuClose }) => {
 					onClick={onMenuClose}
 					variant='nav'
 				>
-					<span className='material-symbols'>close</span>
+					<MdClose />
 				</Button>
 				<NavButtons onClick={onMenuClose} />
 			</nav>

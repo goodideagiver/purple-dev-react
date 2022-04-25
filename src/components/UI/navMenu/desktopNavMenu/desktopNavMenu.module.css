@@ -5,8 +5,23 @@
 	top: 0;
 	display: flex;
 	flex-direction: column;
-	background: black;
-	z-index: 50;
+	background: var(--bg-secondary);
+	z-index: 6000;
+	gap: 1rem;
+}
+
+.desktopNav * {
+	color: var(--font-primary);
+}
+
+.desktopNav button,
+.desktopNav a {
+	padding: 1rem 5rem;
+}
+
+.desktopNav button:hover,
+.desktopNav a:hover {
+	background-color: rgba(0, 0, 0, 0.1);
 }
 
 .backdrop {
@@ -15,11 +30,18 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background-color: rgba(0, 0, 0, 0.509);
+	background-color: rgba(0, 0, 0, 0.709);
+	z-index: 5000;
 }
 
 .close {
+	color: var(--btn-danger);
 	border-radius: 0;
+	font-size: 1.5rem;
+}
+
+.close * {
+	color: var(--btn-danger);
 }
 
 .show {

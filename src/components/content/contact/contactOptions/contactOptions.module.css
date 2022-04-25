@@ -22,6 +22,7 @@
 	gap: 1rem;
 	align-items: center;
 	flex-wrap: wrap;
+	color: var(--font-primary);
 }
 
 .list a span {

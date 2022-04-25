@@ -9,9 +9,12 @@
 	align-items: center;
 	padding: var(--padding-base);
 	border-radius: var(--border-radius-sm);
-	color: var(--font-primary);
 	position: relative;
 	z-index: 2;
+}
+
+.nav * {
+	color: var(--font-primary);
 }
 
 .center {

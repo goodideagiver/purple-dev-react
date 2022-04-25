@@ -30,6 +30,10 @@
 	border-radius: var(--border-radius-sm);
 }
 
+.cell a {
+	color: var(--color-primary);
+}
+
 .technologies {
 	display: flex;
 	align-items: center;
