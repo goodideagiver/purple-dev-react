@@ -9,6 +9,7 @@
 	font-weight: bold;
 	/* margin: 0.5rem; */
 	position: relative;
+	color: var(--font-primary);
 }
 
 .button:disabled {

@@ -71,3 +71,18 @@
 		opacity: 1;
 	}
 }
+
+.title {
+	text-align: center;
+}
+
+.separator {
+	height: 1px;
+	background-color: gray;
+	margin: 0 1rem;
+	background: linear-gradient(
+		to right,
+		rgba(128, 128, 128, 0.468),
+		transparent
+	);
+}
