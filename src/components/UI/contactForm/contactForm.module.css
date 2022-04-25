@@ -8,6 +8,7 @@
 
 .root input,
 textarea {
+	color: var(--font-primary);
 	background-color: transparent;
 	padding: 1rem;
 	border: 1px var(--color-primary) solid;
