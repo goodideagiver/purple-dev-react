@@ -62,6 +62,7 @@ const About = ({ className }) => {
 						<li>JavaScript</li>
 						<li>CSS</li>
 						<li>HTML</li>
+						<li>RWD</li>
 						<li>Photoshop</li>
 						<li>English</li>
 						<li>Photography</li>
