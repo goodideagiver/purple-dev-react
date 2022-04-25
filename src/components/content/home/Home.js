@@ -9,7 +9,7 @@ import Promo from './promo/Promo';
 const Home = props => {
 	return (
 		<>
-			<section className={st.sectionWidth}>
+			<section className={`${st.sectionWidth} ${st.homeAnim}`}>
 				<Welcome />
 			</section>
 			<Promo />
