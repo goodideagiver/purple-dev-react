@@ -6,8 +6,22 @@
 	border: 0;
 	text-decoration: none;
 	text-align: center;
+	display: flex;
+	justify-content: center;
+	gap: 0.2rem;
 }
 
-.button:hover {
-	color: rgba(255, 255, 255, 0.8);
+/* .button,
+.button * {
+	transition: color 0.2s;
+} */
+
+.button:hover,
+.button:hover * {
+	color: var(--color-primary);
+}
+
+.icon {
+	display: grid;
+	place-items: center;
 }

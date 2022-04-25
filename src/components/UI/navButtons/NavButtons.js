@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { AiOutlineLink } from 'react-icons/ai';
+
 import { ActiveSectionContext } from '../../../store/active-section';
 import styles from './navButtons.module.css';
 
@@ -56,7 +58,10 @@ const NavButtons = ({ visibleButtonNames, onClick }) => {
 								target='_blank'
 								rel='noreferrer'
 							>
-								{button.name}
+								<span className={styles.icon}>
+									<AiOutlineLink />
+								</span>
+								<span>{button.name}</span>
 							</a>
 						);
 					}
