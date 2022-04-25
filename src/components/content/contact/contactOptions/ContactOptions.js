@@ -2,6 +2,9 @@ import React from 'react';
 
 import styles from './contactOptions.module.css';
 
+import { FaDiscord, FaLinkedin } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+
 const ContactOptions = () => {
 	return (
 		<div>
@@ -9,19 +12,25 @@ const ContactOptions = () => {
 			<ul className={styles.list}>
 				<li>
 					<a href='foo'>
-						<span className='material-icons-round'>keyboard</span>
+						<span>
+							<FaDiscord />
+						</span>
 						<p>Discord</p>
 					</a>
 				</li>
 				<li>
 					<a href='foo'>
-						<span className='material-icons-round'>email</span>
+						<span>
+							<MdEmail />
+						</span>
 						<p>E-mail</p>
 					</a>
 				</li>
 				<li>
 					<a href='foo'>
-						<span className='material-icons-round'>work</span>
+						<span>
+							<FaLinkedin />
+						</span>
 						<p>Linkedin</p>
 					</a>
 				</li>
