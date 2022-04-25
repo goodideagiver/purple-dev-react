@@ -66,4 +66,7 @@
 
 .nav {
 	border: 0;
+	font-size: 1.5rem;
+	display: grid;
+	place-items: center;
 }

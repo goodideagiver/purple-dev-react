@@ -2,6 +2,8 @@ import Button from '../../UI/button/Button';
 
 import { useState, useEffect } from 'react';
 
+import { MdMenu } from 'react-icons/md';
+
 import styles from './navTop.module.css';
 import NavMenu from '../navMenu/NavMenu';
 import NavButtons from '../navButtons/NavButtons';
@@ -29,7 +31,7 @@ const NavTop = props => {
 				/>
 			)}
 			<Button variant='nav' onClick={menuToggle}>
-				<span className='material-icons-round'>menu</span>
+				<MdMenu />
 			</Button>
 			{menuOpen && isMobile && <NavMenu onMenuClose={menuClose} />}
 			{menuOpen && !isMobile && (
