@@ -8,6 +8,7 @@ import styles from './about.module.css';
 import React from 'react';
 import timeSince from '../../../helpers/timeSince';
 import Roadmap from './roadmap/Roadmap';
+import EmploymentHistory from './employmentHistory/EmploymentHistory';
 
 const About = ({ className }) => {
 	return (
@@ -69,6 +70,7 @@ const About = ({ className }) => {
 					</ul>
 				</div>
 				<Roadmap className={styles.cell} />
+				<EmploymentHistory className={`${styles.cardInnerPadding} ${styles.cell}`} />
 			</main>
 		</div>
 	);

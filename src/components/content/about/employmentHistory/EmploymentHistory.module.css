@@ -1,0 +1,9 @@
+.history {
+	flex-basis: 100%;
+	display: grid;
+	place-items: center;
+}
+
+.man-pointing {
+	width: 100%;
+}
