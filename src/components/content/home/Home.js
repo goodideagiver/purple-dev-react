@@ -5,8 +5,9 @@ import st from './home.module.css';
 import ProjectCards from '../../UI/projectCards/ProjectCards';
 import Welcome from './welcome/Welcome';
 import Promo from './promo/Promo';
+import AboutMeCTA from '../../UI/aboutMeCTA/AboutMeCTA';
 
-const Home = props => {
+const Home = (props) => {
 	return (
 		<>
 			<section className={`${st.sectionWidth} ${st.homeAnim}`}>
@@ -14,11 +15,11 @@ const Home = props => {
 			</section>
 			<Promo />
 			<section className={`${st.nextTo} ${st.sectionWidth}`}>
-				<div>PLACEHOLDER</div>
-				<Slider />
+				<div>SIEMAZHOLDER</div>
 			</section>
 			<section className={`${st.nextTo} ${st.sectionWidth}`}>
 				<ProjectCards />
+				<AboutMeCTA />
 			</section>
 		</>
 	);
