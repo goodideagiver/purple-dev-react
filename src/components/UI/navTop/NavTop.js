@@ -9,7 +9,7 @@ import NavMenu from '../navMenu/NavMenu';
 import NavButtons from '../navButtons/NavButtons';
 import DesktopNavMenu from '../navMenu/desktopNavMenu/DesktopNavMenu';
 
-const NavTop = props => {
+const NavTop = (props) => {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
 
@@ -30,7 +30,11 @@ const NavTop = props => {
 					visibleButtonNames={['Home', 'GitHub', 'About', 'Contact']}
 				/>
 			)}
-			<Button variant='nav' onClick={menuToggle}>
+			<Button
+				aria-label='side menu toggle'
+				variant='nav'
+				onClick={menuToggle}
+			>
 				<MdMenu />
 			</Button>
 			{menuOpen && isMobile && <NavMenu onMenuClose={menuClose} />}

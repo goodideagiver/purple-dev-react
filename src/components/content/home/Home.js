@@ -1,6 +1,3 @@
-// import Button from '../../UI/button/Button';
-
-import Slider from '../../UI/slider/Slider';
 import st from './home.module.css';
 import ProjectCards from '../../UI/projectCards/ProjectCards';
 import Welcome from './welcome/Welcome';
@@ -14,9 +11,6 @@ const Home = (props) => {
 				<Welcome />
 			</section>
 			<Promo />
-			<section className={`${st.nextTo} ${st.sectionWidth}`}>
-				<div>SIEMAZHOLDER</div>
-			</section>
 			<section className={`${st.nextTo} ${st.sectionWidth}`}>
 				<ProjectCards />
 				<AboutMeCTA />

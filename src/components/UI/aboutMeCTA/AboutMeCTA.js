@@ -17,9 +17,7 @@ const AboutMeCTA = (props) => {
 				<img src={programmer} alt="Karol's face from shoulders up" />
 			</div>
 			<div className={classes.text}>
-				<h2 className={classes.title}>
-					Do you want to know more about me?
-				</h2>
+				<h2 className={classes.title}>More about me</h2>
 				<p>Click the button below to read more.</p>
 				<Button onClick={buttonClickHandler}>About me</Button>
 			</div>

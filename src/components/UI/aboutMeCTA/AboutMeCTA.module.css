@@ -8,10 +8,6 @@
 	max-width: 90vw;
 	flex-wrap: wrap;
 	justify-content: center;
-	/* box-shadow: var(--shadow-elevation-high); */
-	/* background-color: var(--bg-secondary);
-	background-color: #a4508b;
-	background-image: linear-gradient(326deg, #9a367cd2 0%, #43075ece 74%); */
 	max-width: var(--website-width);
 	width: min(100%, --website-width);
 }

@@ -21,9 +21,20 @@ const ProjectCards = () => {
 			color: '#6284ff21',
 		},
 		{
-			title: 'Website',
-			shortDesc: 'Adot.pl',
-			desc: ['Graphic designer website'],
+			title: 'loremipsum',
+			shortDesc: 'loremipsum',
+			desc: ['loremipsum'],
+			link: 'https://www.adot.pl/',
+			color: '#ff00001f',
+		},
+		{
+			title: 'Advanced to do list',
+			shortDesc: 'Web app',
+			desc: [
+				'Sort list items by name',
+				'Edit list items text',
+				'Drag and drop list entry',
+			],
 			link: 'https://www.adot.pl/',
 			color: '#ff00001f',
 		},
@@ -31,7 +42,7 @@ const ProjectCards = () => {
 
 	return (
 		<div className={styles.flex}>
-			{cardData.map(card => (
+			{cardData.map((card) => (
 				<ProjectCard {...card} key={card.title} />
 			))}
 		</div>
