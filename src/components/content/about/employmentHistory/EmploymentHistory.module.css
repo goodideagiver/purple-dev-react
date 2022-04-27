@@ -4,6 +4,10 @@
 	place-items: center;
 }
 
+.history h3 {
+	width: 100%;
+}
+
 .man-pointing {
 	width: 100%;
 }

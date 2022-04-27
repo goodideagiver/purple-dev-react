@@ -70,7 +70,7 @@ const About = ({ className }) => {
 					</ul>
 				</div>
 				<Roadmap className={styles.cell} />
-				<EmploymentHistory className={`${styles.cardInnerPadding} ${styles.cell}`} />
+				<EmploymentHistory className={` ${styles.cell}`} />
 			</main>
 		</div>
 	);
