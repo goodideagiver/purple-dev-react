@@ -19,7 +19,11 @@ const ProjectCard = ({ title, shortDesc, desc, link, color }) => {
 					<li key={item}>{item}</li>
 				))}
 			</ul>
-			<Button className={styles.button} variant='callToAction'>
+			<Button
+				link={link}
+				className={styles.button}
+				variant='callToAction'
+			>
 				Check out
 			</Button>
 		</div>
