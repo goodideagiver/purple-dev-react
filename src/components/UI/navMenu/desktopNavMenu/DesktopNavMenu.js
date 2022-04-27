@@ -10,7 +10,7 @@ import { useRef } from 'react';
 const DesktopNavMenu = ({ onMenuClose }) => {
 	const backdrop = useRef();
 
-	const backdropClickHandler = e => {
+	const backdropClickHandler = (e) => {
 		if (e.target === backdrop.current) {
 			onMenuClose();
 		}
@@ -28,7 +28,9 @@ const DesktopNavMenu = ({ onMenuClose }) => {
 				</Button>
 				<h2 className={styles.title}>purpleblack.dev</h2>
 				<div className={styles.separator} />
-				<NavButtons onClick={onMenuClose} />
+				<div className={styles.btnContainer}>
+					<NavButtons onClick={onMenuClose} />
+				</div>
 			</nav>
 			<div
 				onClick={backdropClickHandler}
