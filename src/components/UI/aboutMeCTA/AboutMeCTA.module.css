@@ -1,15 +1,15 @@
 .about-me {
 	border-radius: var(--border-radius-base);
-	padding: 2rem;
-	margin: var(--min-padding);
+	/* padding: 2rem; */
+	/* margin: var(--min-padding); */
 	gap: 2rem;
 	display: flex;
-	margin: 1rem auto;
+	/* margin: 1rem auto; */
 	max-width: 90vw;
 	flex-wrap: wrap;
 	justify-content: center;
 	max-width: var(--website-width);
-	width: min(100%, --website-width);
+	flex: 1 1 500px;
 }
 
 .image img {
@@ -22,6 +22,7 @@
 .image {
 	border-radius: 50rem;
 	overflow: hidden;
+	filter: grayscale(0.5);
 }
 
 .text {

@@ -1,0 +1,36 @@
+.funnyQuote {
+	flex: 1 1 200px;
+	/* width: 100px; */
+}
+
+.blockQuote {
+	font-size: 1.3rem;
+	font-style: italic;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.quoteTextContainer {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.quote {
+	flex-shrink: 1;
+}
+
+.comment {
+	margin-top: 1rem;
+	opacity: 0.5;
+}
+
+.icon {
+	font-size: 2rem;
+	opacity: 0.5;
+}
+
+.icon:last-child {
+	display: flex;
+	align-items: flex-end;
+}

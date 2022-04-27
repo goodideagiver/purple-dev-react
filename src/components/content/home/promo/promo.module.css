@@ -8,9 +8,11 @@
 .list {
 	list-style: none;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	padding: min(5rem, 2vh);
 	flex-wrap: wrap;
+	max-width: var(--website-width);
+	margin: auto;
 }
 
 .list li {

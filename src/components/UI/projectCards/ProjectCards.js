@@ -21,8 +21,8 @@ const ProjectCards = () => {
 			color: '#6284ff21',
 		},
 		{
-			title: 'loremipsum',
-			shortDesc: 'loremipsum',
+			title: 'Adot.pl',
+			shortDesc: 'Digital artist website',
 			desc: ['loremipsum'],
 			link: 'https://www.adot.pl/',
 			color: '#ff00001f',

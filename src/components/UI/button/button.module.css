@@ -71,3 +71,7 @@
 	display: grid;
 	place-items: center;
 }
+
+.callToAction {
+	background-color: var(--btn-primary);
+}
