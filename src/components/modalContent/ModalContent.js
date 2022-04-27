@@ -1,7 +1,5 @@
 import Button from '../UI/button/Button';
 
-import closeIcon from './close_white_24dp.svg';
-
 import styles from './modalContent.module.css';
 
 import { GrClose } from 'react-icons/gr';
