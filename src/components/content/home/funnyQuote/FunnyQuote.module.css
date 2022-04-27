@@ -23,6 +23,7 @@
 .comment {
 	margin-top: 1rem;
 	opacity: 0.5;
+	text-align: center;
 }
 
 .icon {
@@ -33,4 +34,9 @@
 .icon:last-child {
 	display: flex;
 	align-items: flex-end;
+}
+
+.author {
+	margin-top: 1rem;
+	font-size: 0.9em;
 }
