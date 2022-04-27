@@ -19,7 +19,9 @@ const AboutMeCTA = (props) => {
 			<div className={classes.text}>
 				<h2 className={classes.title}>More about me</h2>
 				<p>Click the button below to read more.</p>
-				<Button onClick={buttonClickHandler}>About me</Button>
+				<Button variant='callToAction' onClick={buttonClickHandler}>
+					About me
+				</Button>
 			</div>
 		</div>
 	);

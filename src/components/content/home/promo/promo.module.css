@@ -1,27 +1,28 @@
 .root {
-	background-color: var(--color-secondary);
+	background-color: var(--bg-secondary);
 	margin-bottom: 8rem;
-	background-image: linear-gradient(43deg, #4159d038, #c850c03c, #ffcd7031);
-	background-repeat: repeat;
+	/* background-image: linear-gradient(43deg, #4159d038, #c850c03c, #ffcd7031); */
+	/* background-repeat: repeat; */
 }
 
 .list {
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
-	padding: min(5rem, 2vh);
+	padding: min(5rem, 2vh) 0;
 	flex-wrap: wrap;
-	max-width: var(--website-width);
+	max-width: min(var(--website-width), 90vw);
 	margin: auto;
 }
 
 .list li {
 	display: flex;
+	flex: 0 1 auto;
 }
 
 .cell {
 	flex-basis: calc(1200px / 3);
-	padding: 1rem;
+	/* padding: 1rem; */
 	display: flex;
 	flex-direction: column;
 	align-content: flex-start;
@@ -33,7 +34,8 @@
 }
 
 .number {
-	padding: 1rem;
+	/* padding: 1rem; */
+	margin-right: 1rem;
 	color: var(--color-primary);
 	font-size: 1.8rem;
 	font-weight: bold;

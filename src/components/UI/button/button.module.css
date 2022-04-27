@@ -3,7 +3,7 @@
 	padding: 1rem;
 	font-size: 1rem;
 	border: 2px white solid;
-	border-radius: var(--border-radius-sm);
+	border-radius: 5rem;
 	cursor: pointer;
 	transition: 0.1s;
 	font-weight: bold;
@@ -73,5 +73,12 @@
 }
 
 .callToAction {
+	padding: 1rem 2rem;
+	border: 0;
 	background-color: var(--btn-primary);
+	font-weight: bold;
+}
+
+.callToAction:hover {
+	background-color: var(--btn-primary-hover);
 }

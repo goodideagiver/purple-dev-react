@@ -15,11 +15,11 @@ const ProjectCard = ({ title, shortDesc, desc, link, color }) => {
 			<p className={styles.subTitle}>{shortDesc}</p>
 			<h3 className={styles.title}>{title}</h3>
 			<ul className={styles.desc}>
-				{desc.map(item => (
+				{desc.map((item) => (
 					<li key={item}>{item}</li>
 				))}
 			</ul>
-			<Button className={styles.button} variant='special'>
+			<Button className={styles.button} variant='callToAction'>
 				Check out
 			</Button>
 		</div>

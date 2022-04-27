@@ -4,10 +4,11 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-top: 3rem;
+	gap: 8rem;
 }
 
 .sectionWidth {
-	max-width: var(--website-width);
+	max-width: min(var(--website-width), 90vw);
 	margin: auto;
 	margin-bottom: 10rem;
 }
