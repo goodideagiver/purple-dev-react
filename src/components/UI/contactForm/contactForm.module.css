@@ -11,11 +11,12 @@ textarea {
 	color: var(--font-primary);
 	background-color: transparent;
 	padding: 1rem;
-	border: 1px var(--color-primary) solid;
+	border: 1px var(--bg-tertiary) solid;
 	font-family: inherit;
 	border-radius: var(--border-radius-sm);
-	flex: 1 1 240px;
 	resize: none;
+	display: block;
+	width: 100%;
 }
 
 .root input {
@@ -30,7 +31,7 @@ textarea {
 
 .formRow {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: space-between;
 	gap: 1rem;
 }
@@ -38,10 +39,6 @@ textarea {
 .formRow label {
 	opacity: 0.6;
 	padding: 1rem;
-}
-
-.formRow > * {
-	flex: 1 1 200px;
 }
 
 .form {

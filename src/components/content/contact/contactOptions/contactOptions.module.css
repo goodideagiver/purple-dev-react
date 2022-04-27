@@ -27,6 +27,8 @@
 
 .list a span {
 	font-size: 2rem;
+	display: grid;
+	place-items: center;
 }
 
 .list a p {

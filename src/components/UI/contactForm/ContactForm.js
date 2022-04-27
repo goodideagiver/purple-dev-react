@@ -20,8 +20,8 @@ const ContactForm = () => {
 		};
 	}, [name, message]);
 
-	const userInputNameHandler = ev => setName(ev.target.value);
-	const userInputMessageHandler = ev => setMessage(ev.target.value);
+	const userInputNameHandler = (ev) => setName(ev.target.value);
+	const userInputMessageHandler = (ev) => setMessage(ev.target.value);
 
 	const checkFormValid = () => {
 		if (name.trim().length > 0 && message.trim().length > 0) {
@@ -31,7 +31,7 @@ const ContactForm = () => {
 		}
 	};
 
-	const sendEmailHandler = ev => {
+	const sendEmailHandler = (ev) => {
 		ev.preventDefault();
 		checkFormValid();
 		if (isFormValid) {
@@ -77,7 +77,11 @@ const ContactForm = () => {
 						onInput={userInputMessageHandler}
 					></textarea>
 				</div>
-				<Button onClick={sendEmailHandler} type='send'>
+				<Button
+					variant='callToAction'
+					onClick={sendEmailHandler}
+					type='send'
+				>
 					Send
 				</Button>
 			</form>
