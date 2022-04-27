@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import NavTop from './components/UI/navTop/NavTop';
 import Content from './components/content/content';
 import Modal from './components/modal/Modal';
+import ScrollToTopBtn from './components/UI/scrollToTopBtn/ScrollToTopBtn';
 
 function App() {
 	const [visibleSection, setVisibleSection] = useState('home');
@@ -26,6 +27,7 @@ function App() {
 			>
 				<NavTop />
 				<Content />
+				<ScrollToTopBtn />
 				{modalVisible && (
 					<Modal
 						modalCloseHandler={toggleModal}
