@@ -6,7 +6,6 @@
 	right: 0;
 	bottom: 0;
 	margin: 2rem;
-	opacity: 0.6;
 }
 
 .button > * {
@@ -20,4 +19,9 @@
 	.button {
 		display: none;
 	}
+}
+
+.hidden {
+	transform: translate(100px);
+	visibility: hidden;
 }
