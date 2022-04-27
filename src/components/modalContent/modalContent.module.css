@@ -30,29 +30,35 @@
 
 .children {
 	padding: var(--padding-base);
+	overflow-y: auto;
 }
 
 .close {
 	background-color: transparent;
-	border: white solid 1px;
+	border: 0;
 	width: 2.5rem;
 	height: 2.5rem;
-	padding: 0.2rem;
+	padding: 0.2rem !important;
 	border-radius: var(--border-radius-base);
 	cursor: pointer;
 	transition: opacity 0s;
 	transition: transform 0.3s, box-shadow 0.3s;
 	font-size: 2rem;
-	display: grid;
-	align-items: center;
-	justify-items: center;
+	display: grid !important;
+	align-items: center !important;
+	justify-items: center !important;
 	opacity: 0.7;
+}
+
+.close svg {
+	filter: brightness(10) contrast(0.01);
+	margin: 1px;
 }
 
 .close:hover {
 	transform: scale(0.95);
-	box-shadow: var(--shadow-elevation-medium);
 	opacity: 1;
+	background-color: transparent;
 }
 
 @supports (backdrop-filter: blur(10px)) {

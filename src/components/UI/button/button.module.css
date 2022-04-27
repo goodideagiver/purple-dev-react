@@ -10,6 +10,7 @@
 	/* margin: 0.5rem; */
 	position: relative;
 	color: var(--font-primary);
+	display: block;
 }
 
 .button:disabled {

@@ -4,7 +4,9 @@ import closeIcon from './close_white_24dp.svg';
 
 import styles from './modalContent.module.css';
 
-const ModalContent = props => {
+import { GrClose } from 'react-icons/gr';
+
+const ModalContent = (props) => {
 	return (
 		<div className={styles.content}>
 			<header className={styles.header}>
@@ -14,7 +16,7 @@ const ModalContent = props => {
 					onClick={props.modalCloseHandler}
 					className={styles.close}
 				>
-					<img src={closeIcon} alt='close icon' />
+					<GrClose />
 				</Button>
 			</header>
 			<main className={styles.children}>{props.children}</main>
