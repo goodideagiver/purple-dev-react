@@ -5,12 +5,18 @@ import Button from '../../../UI/button/Button';
 
 import st from './welcome.module.css';
 
-const Welcome = props => {
+import { ActiveSectionContext } from '../../../../store/active-section';
+
+const Welcome = (props) => {
 	const [visitedBefore] = useState(window.localStorage.getItem('visited'));
+
+	const { setVisibleSection } = ActiveSectionContext();
 
 	useEffect(() => {
 		window.localStorage.setItem('visited', '1');
 	}, []);
+
+	const getInTouchClickHandler = () => setVisibleSection('contact');
 
 	return (
 		<div className={st.welcome} {...props}>
@@ -19,7 +25,11 @@ const Welcome = props => {
 				<h2 className={st.bigText}>
 					{visitedBefore ? 'Welcome back!' : 'purpleblack.dev'}
 				</h2>
-				<Button className={st.button} variant='special'>
+				<Button
+					onClick={getInTouchClickHandler}
+					className={st.button}
+					variant='special'
+				>
 					Get in touch
 				</Button>
 			</div>

@@ -1,6 +1,4 @@
-import { useContext } from 'react';
-
-import React from 'react';
+import React, { useContext } from 'react';
 
 const ActiveSection = React.createContext();
 

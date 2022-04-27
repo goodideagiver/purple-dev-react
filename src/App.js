@@ -2,7 +2,7 @@ import ActiveSection from './store/active-section';
 
 import './main.css';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import NavTop from './components/UI/navTop/NavTop';
 import Content from './components/content/content';
 import Modal from './components/modal/Modal';
@@ -14,6 +14,10 @@ function App() {
 	const toggleModal = () => {
 		setModalVisible(modalVisible ? false : true);
 	};
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [visibleSection]);
 
 	return (
 		<>

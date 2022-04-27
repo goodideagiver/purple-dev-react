@@ -11,7 +11,7 @@ const ContactOptions = () => {
 			<h2>Contact me</h2>
 			<ul className={styles.list}>
 				<li>
-					<a href='foo'>
+					<a href='https://discord.gg/kGsCDes7VU'>
 						<span>
 							<FaDiscord />
 						</span>
@@ -19,7 +19,7 @@ const ContactOptions = () => {
 					</a>
 				</li>
 				<li>
-					<a href='foo'>
+					<a href='mailto:contact@purpleblack.dev'>
 						<span>
 							<MdEmail />
 						</span>
@@ -27,7 +27,7 @@ const ContactOptions = () => {
 					</a>
 				</li>
 				<li>
-					<a href='foo'>
+					<a href='https://www.linkedin.com/in/karol-bartkiewicz'>
 						<span>
 							<FaLinkedin />
 						</span>

@@ -35,7 +35,9 @@ const ContactForm = () => {
 		ev.preventDefault();
 		checkFormValid();
 		if (isFormValid) {
-			//send email
+			window.location.href = `mailto:contact@purpleblack.dev?body=${
+				'Hello! My name is ' + name + ' \n' + message
+			}`;
 		}
 	};
 
