@@ -37,10 +37,7 @@ const NavTop = (props) => {
 			>
 				<MdMenu />
 			</Button>
-			{menuOpen && isMobile && <NavMenu onMenuClose={menuClose} />}
-			{menuOpen && !isMobile && (
-				<DesktopNavMenu onMenuClose={menuClose} />
-			)}
+			{menuOpen && <DesktopNavMenu onMenuClose={menuClose} />}
 		</nav>
 	);
 };

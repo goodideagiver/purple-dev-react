@@ -13,6 +13,7 @@ const EmploymentHistory = ({ className }) => {
 
 	return (
 		<div className={`${classes.history} ${className}`}>
+			<h3>Past career</h3>
 			<Button onClick={showModalHandler}>See employment history</Button>
 			{modalVisible && (
 				<Modal
