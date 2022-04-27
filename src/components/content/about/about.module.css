@@ -12,6 +12,7 @@
 	border-radius: var(--border-radius-sm);
 	padding: var(--padding-base);
 	background-color: var(--bg-secondary);
+	box-shadow: var(--shadow-elevation-medium);
 }
 
 .grid {
@@ -29,6 +30,7 @@
 	/* border: 1px solid var(--color-primary); */
 	border-radius: var(--border-radius-sm);
 	background-color: var(--bg-secondary);
+	box-shadow: var(--shadow-elevation-medium);
 }
 
 .cell a {
@@ -73,6 +75,7 @@
 		#c850c050 46%,
 		#ffcd7050 100%
 	);
+	box-shadow: var(--shadow-elevation-low);
 }
 
 .header .cell {
