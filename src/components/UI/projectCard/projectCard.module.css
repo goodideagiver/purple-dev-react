@@ -4,7 +4,7 @@
 	padding: 2rem;
 	/* border: 1px var(--color-primary) solid; */
 	border-radius: 1rem;
-	flex: 0 0 min(300px, 100%);
+	flex: 1 0 min(300px, 100%);
 	justify-content: flex-start;
 	background: var(--bg-secondary);
 	box-shadow: var(--shadow-elevation-medium);
