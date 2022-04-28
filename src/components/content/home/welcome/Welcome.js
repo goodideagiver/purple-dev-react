@@ -1,4 +1,4 @@
-import img from '../../../../img/home/forest.png';
+import img from '../../../../assets/img/home/forest.png';
 
 import React, { useEffect, useState } from 'react';
 import Button from '../../../UI/button/Button';
@@ -34,7 +34,11 @@ const Welcome = (props) => {
 				</Button>
 			</div>
 			<div className={`${st.programmer} ${st.overlay}`} />
-			<img className={st.programmer} src={img} alt='bad programmer' />
+			<img
+				className={st.programmer}
+				src={img}
+				alt='Karol mysteriously half faded overlayed by mountain hill with trees'
+			/>
 		</div>
 	);
 };

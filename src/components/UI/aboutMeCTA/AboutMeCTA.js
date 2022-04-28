@@ -1,4 +1,4 @@
-import programmer from '../../../img/programmer/proProgrammer.png';
+import programmer from '../../../assets/img/programmer/proProgrammer.png';
 import { ActiveSectionContext } from '../../../store/active-section';
 import Button from '../button/Button';
 
