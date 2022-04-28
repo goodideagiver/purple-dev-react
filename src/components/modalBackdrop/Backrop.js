@@ -1,5 +1,3 @@
-import { emptyProperty } from '../../helpers/errorHandling';
-
 import styles from './backdrop.module.css';
 
 const Backdrop = props => {
@@ -8,10 +6,6 @@ const Backdrop = props => {
 			props.modalCloseHandler();
 		}
 	};
-
-	// if (!props.modalCloseHandler) {
-	// 	emptyProperty('modalCloseHandler');
-	// }
 
 	return <div onClick={backdropClickHandler} className={styles.backdrop} />;
 };
