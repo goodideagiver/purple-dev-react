@@ -6,6 +6,7 @@
 	right: 0;
 	bottom: 0;
 	margin: 2rem;
+	transition: 0.5s;
 }
 
 .button > * {
@@ -22,6 +23,7 @@
 }
 
 .hidden {
-	transform: translate(100px);
+	opacity: 0;
+	transform: translate(0, 10px);
 	visibility: hidden;
 }
