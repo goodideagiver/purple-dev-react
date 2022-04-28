@@ -15,6 +15,7 @@
 	border: 1px var(--color-primary) solid;
 	box-shadow: var(--shadow-elevation-high);
 	max-height: 90%;
+	animation: show 0.2s forwards;
 }
 
 .header {
@@ -69,5 +70,14 @@
 	.content {
 		background-color: transparent;
 		backdrop-filter: blur(10px);
+	}
+}
+
+@keyframes show {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
