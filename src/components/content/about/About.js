@@ -1,7 +1,7 @@
-import git from './technologies/github.png';
-import react from './technologies/react.png';
-import sass from './technologies/sass.png';
-import parcel from './technologies/parcel.png';
+import git from '../../../assets/img/technologies/github.png';
+import react from '../../../assets/img/technologies/react.png';
+import sass from '../../../assets/img/technologies/sass.png';
+import parcel from '../../../assets/img/technologies/parcel.png';
 
 import styles from './about.module.css';
 
