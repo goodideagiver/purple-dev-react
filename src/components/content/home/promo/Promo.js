@@ -10,7 +10,7 @@ const Promo = () => {
 			<ul className={st.list}>
 				{cellData.map(({ name, desc, number }, id) => (
 					<li key={name}>
-						<p className={number}>{id + 1}</p>
+						<p className={st.number}>{id + 1}</p>
 						<div className={st.cell}>
 							<h3>{name}</h3>
 							<p className={st.desc}>{desc}</p>
