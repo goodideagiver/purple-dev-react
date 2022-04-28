@@ -2,10 +2,9 @@ import { RiDoubleQuotesL, RiDoubleQuotesR } from 'react-icons/ri';
 
 import classes from './FunnyQuote.module.css';
 
-const FunnyQuote = (props) => {
+const FunnyQuote = () => {
 	return (
 		<div className={classes.funnyQuote}>
-			{/* <p className={classes.comment}>That's about me! 😂</p> */}
 			<blockquote className={classes.blockQuote}>
 				<div className={classes.quoteTextContainer}>
 					<div className={classes.icon}>
