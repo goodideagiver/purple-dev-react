@@ -2,8 +2,8 @@ import styles from './button.module.css';
 
 import React from 'react';
 
-const Button = ({ link, variant, className, type, ...props }) => {
-	if (type === 'anchor' || (link && link.length)) {
+const Button = ({ link, variant, className, ...props }) => {
+	if (link && link.length) {
 		return (
 			<a
 				href={link}
