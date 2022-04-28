@@ -10,20 +10,31 @@ import ActiveSection from '../../store/active-section';
 const Content = () => {
 	const { visibleSection } = useContext(ActiveSection);
 
-	return (
-		<main className={styles.padding}>
-			{visibleSection === 'home' && <Home />}
-			{visibleSection === 'about' && (
-				<About
-					className={`${styles.maxWidth} ${styles['section-appear']}`}
-				/>
-			)}
-			{visibleSection === 'contact' && (
-				<Contact
-					className={`${styles.maxWidth} ${styles['section-appear']}`}
-				/>
-			)}
-		</main>
-	);
+	const returnedComponent = () => {
+		switch (visibleSection) {
+			case 'home':
+				return <Home />;
+			case 'about':
+				return (
+					<About
+						className={`${styles.maxWidth} ${styles['section-appear']}`}
+					/>
+				);
+			case 'contact':
+				return (
+					<Contact
+						className={`${styles.maxWidth} ${styles['section-appear']}`}
+					/>
+				);
+			default:
+				return (
+					<div>
+						<p>Something went wrong when choosing component</p>
+					</div>
+				);
+		}
+	};
+
+	return <main className={styles.padding}>{returnedComponent()}</main>;
 };
 export default Content;
