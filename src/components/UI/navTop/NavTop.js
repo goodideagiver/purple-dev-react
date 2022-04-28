@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 import { MdMenu } from 'react-icons/md';
 
 import styles from './navTop.module.css';
-import NavMenu from '../navMenu/NavMenu';
 import NavButtons from '../navButtons/NavButtons';
 import DesktopNavMenu from '../navMenu/desktopNavMenu/DesktopNavMenu';
 
