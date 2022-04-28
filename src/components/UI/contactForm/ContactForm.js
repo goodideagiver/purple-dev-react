@@ -31,8 +31,8 @@ const ContactForm = () => {
 		}
 	};
 
-	const sendEmailHandler = (ev) => {
-		ev.preventDefault();
+	const sendEmailHandler = (event) => {
+		event.preventDefault();
 		checkFormValid();
 		if (isFormValid) {
 			window.location.href = `mailto:contact@purpleblack.dev?body=${
@@ -53,6 +53,7 @@ const ContactForm = () => {
 				</div>
 			)}
 			<form
+				onSubmit={sendEmailHandler}
 				className={`${styles.form} ${
 					isFormValid === false && styles.invalid
 				}`}
@@ -70,7 +71,6 @@ const ContactForm = () => {
 				<div className={styles.formRow}>
 					<label htmlFor='message'>Your message</label>
 					<textarea
-						required
 						value={message}
 						placeholder='Type your message here'
 						id='message'
@@ -79,11 +79,7 @@ const ContactForm = () => {
 						onInput={userInputMessageHandler}
 					></textarea>
 				</div>
-				<Button
-					variant='callToAction'
-					onClick={sendEmailHandler}
-					type='send'
-				>
+				<Button variant='callToAction' type='send'>
 					Send
 				</Button>
 			</form>
