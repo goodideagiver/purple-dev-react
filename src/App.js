@@ -1,7 +1,5 @@
 import ActiveSection from './store/active-section';
 
-import './main.css';
-
 import { useEffect, useState } from 'react';
 import NavTop from './components/UI/navTop/NavTop';
 import Content from './components/content/Content';
