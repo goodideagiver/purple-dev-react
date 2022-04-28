@@ -45,31 +45,31 @@ const NavButtons = ({ visibleButtonNames, onClick }) => {
 						? visibleButtonNames.find((nam) => nam === el.name)
 						: el
 				)
-				.map((button) => {
-					if (button.type === 'anchor') {
+				.map(({ link, name, callback }) => {
+					if (link && link.length) {
 						return (
 							<a
-								key={button.name}
+								key={name}
 								className={styles.button}
-								onClick={button.callback}
-								href={button.link}
+								onClick={callback}
+								href={link}
 								target='_blank'
 								rel='noreferrer'
 							>
 								<span className={styles.icon}>
 									<AiOutlineLink />
 								</span>
-								<span>{button.name}</span>
+								<span>{name}</span>
 							</a>
 						);
 					}
 					return (
 						<button
-							key={button.name}
+							key={name}
 							className={styles.button}
-							onClick={button.callback}
+							onClick={callback}
 						>
-							{button.name}
+							{name}
 						</button>
 					);
 				})}
