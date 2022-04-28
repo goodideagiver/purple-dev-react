@@ -4,7 +4,7 @@ import './main.css';
 
 import { useEffect, useState } from 'react';
 import NavTop from './components/UI/navTop/NavTop';
-import Content from './components/content/content';
+import Content from './components/content/Content';
 import Modal from './components/modal/Modal';
 import ScrollToTopBtn from './components/UI/scrollToTopBtn/ScrollToTopBtn';
 
