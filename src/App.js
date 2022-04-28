@@ -21,25 +21,21 @@ function App() {
 	}, [visibleSection]);
 
 	return (
-		<>
-			<ActiveSection.Provider
-				value={{ visibleSection, setVisibleSection }}
-			>
-				<NavTop />
-				<Content />
-				<ScrollToTopBtn />
-				{modalVisible && (
-					<Modal
-						modalCloseHandler={toggleModal}
-						title='My GitHub profile'
-					>
-						You can check out more of my work on my{' '}
-						{<a href='https://github.com/goodideagiver'>GitHub</a>}{' '}
-						profile.
-					</Modal>
-				)}
-			</ActiveSection.Provider>
-		</>
+		<ActiveSection.Provider value={{ visibleSection, setVisibleSection }}>
+			<NavTop />
+			<Content />
+			<ScrollToTopBtn />
+			{modalVisible && (
+				<Modal
+					modalCloseHandler={toggleModal}
+					title='My GitHub profile'
+				>
+					You can check out more of my work on my{' '}
+					{<a href='https://github.com/goodideagiver'>GitHub</a>}{' '}
+					profile.
+				</Modal>
+			)}
+		</ActiveSection.Provider>
 	);
 }
 
