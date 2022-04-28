@@ -40,14 +40,12 @@ const NavButtons = ({ visibleButtonNames, onClick }) => {
 	return (
 		<>
 			{buttonsData
-				.filter(el => {
-					if (visibleButtonNames) {
-						return visibleButtonNames.find(nam => nam === el.name);
-					} else {
-						return el;
-					}
-				})
-				.map(button => {
+				.filter((el) =>
+					visibleButtonNames
+						? visibleButtonNames.find((nam) => nam === el.name)
+						: el
+				)
+				.map((button) => {
 					if (button.type === 'anchor') {
 						return (
 							<a
