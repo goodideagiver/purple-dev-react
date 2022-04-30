@@ -22,7 +22,7 @@ const TopMessage = ({
 			clearTimeout(hide);
 			clearTimeout(transitionDelay);
 		};
-	}, [duration, hidden, transition]);
+	}, [duration, hidden, transition, onHide]);
 
 	return ReactDOM.createPortal(
 		<div
