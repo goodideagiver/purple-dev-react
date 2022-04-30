@@ -11,9 +11,9 @@ const FunnyQuote = () => {
 						<RiDoubleQuotesL />
 					</div>
 					<div>
-						<p className={classes.quote}>Unga bunga fire!</p>
+						<p className={classes.quote}>Ooga booga fire!</p>
 						<p className={classes.author}>
-							- Somebody milion years ago
+							- Somebody 400000 - 700000 years ago
 						</p>
 					</div>
 					<div className={classes.icon}>
