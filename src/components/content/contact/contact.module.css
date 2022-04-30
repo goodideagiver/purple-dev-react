@@ -20,7 +20,7 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-size: clamp(2vw, 3rem, 6vw);
-	width: fit-content;
+	width: min(fit-content, 95%);
 	text-align: center;
 	z-index: 2;
 }
