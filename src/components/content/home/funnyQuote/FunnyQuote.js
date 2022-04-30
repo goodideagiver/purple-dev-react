@@ -1,8 +1,11 @@
 import { RiDoubleQuotesL, RiDoubleQuotesR } from 'react-icons/ri';
+import getRandomQuote from './data';
 
 import classes from './FunnyQuote.module.css';
 
 const FunnyQuote = () => {
+	const { quote, author } = getRandomQuote();
+
 	return (
 		<div className={classes.funnyQuote}>
 			<blockquote className={classes.blockQuote}>
@@ -11,10 +14,8 @@ const FunnyQuote = () => {
 						<RiDoubleQuotesL />
 					</div>
 					<div>
-						<p className={classes.quote}>Ooga booga fire!</p>
-						<p className={classes.author}>
-							- Somebody 400000 - 700000 years ago
-						</p>
+						<p className={classes.quote}>{quote}</p>
+						<p className={classes.author}>- {author}</p>
 					</div>
 					<div className={classes.icon}>
 						<RiDoubleQuotesR />
