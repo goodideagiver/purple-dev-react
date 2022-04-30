@@ -20,7 +20,7 @@ const Button = ({ link, variant, className, ...props }) => {
 	return (
 		<button
 			className={`${styles.button} ${
-				variant && styles[variant]
+				variant ? styles[variant] : ''
 			} ${className}`}
 			{...props}
 		/>

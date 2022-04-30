@@ -8,7 +8,8 @@
 	justify-content: center;
 }
 
-.list a {
+.list a,
+.list .option {
 	padding: 1rem;
 	display: block;
 	text-align: center;
@@ -23,6 +24,7 @@
 	align-items: center;
 	flex-wrap: wrap;
 	color: var(--font-primary);
+	width: 100%;
 }
 
 .list a span {

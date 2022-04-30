@@ -16,6 +16,11 @@ const ContactOptions = () => {
 		settopMessageVisible((prev) => !prev);
 	}, []);
 
+	const copyMail = () => {
+		navigator.clipboard.writeText('contact@purpleblack.dev');
+		topMessageToggle();
+	};
+
 	return (
 		<div>
 			<h2>Contact me</h2>
@@ -45,7 +50,7 @@ const ContactOptions = () => {
 					</a>
 				</li>
 				<li>
-					<Button onClick={topMessageToggle}>
+					<Button className={styles.option} onClick={copyMail}>
 						contact@purpleblack.dev
 					</Button>
 					{topMessageVisible && (
