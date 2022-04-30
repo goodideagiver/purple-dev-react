@@ -1,10 +1,6 @@
 .about-me {
-	/* border-radius: var(--border-radius-base); */
-	/* padding: 2rem; */
-	/* margin: var(--min-padding); */
 	gap: 2rem;
 	display: flex;
-	/* margin: 1rem auto; */
 	max-width: 90vw;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -14,17 +10,17 @@
 
 .image img {
 	max-height: min(250px, 13rem);
-	width: 100%;
 	object-fit: cover;
-	aspect-ratio: 1/1;
 	transform: scale(1.6);
+	aspect-ratio: 1/1;
 }
 
 .image {
-	border-radius: 50rem;
+	border-radius: 50%;
 	overflow: hidden;
 	filter: grayscale(0.5);
 	margin: auto;
+	aspect-ratio: 1/1;
 }
 
 .text {
@@ -47,4 +43,13 @@
 
 .button {
 	width: fit-content;
+}
+
+@media (max-width: 600px) {
+	.text {
+		text-align: center;
+	}
+	.button {
+		margin: auto;
+	}
 }
