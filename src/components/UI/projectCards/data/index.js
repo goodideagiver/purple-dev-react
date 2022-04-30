@@ -16,7 +16,7 @@ const cardData = [
 	{
 		title: 'Adot.pl',
 		shortDesc: 'Digital artist website',
-		desc: ['loremipsum'],
+		desc: ['SCSS', 'Vanilla JavaScript'],
 		link: 'https://www.adot.pl/',
 		color: '#ff00001f',
 	},
