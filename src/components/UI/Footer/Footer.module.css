@@ -1,0 +1,23 @@
+.footer {
+	background-color: var(--bg-secondary);
+	margin-top: 5rem;
+	padding: 2rem;
+}
+
+.list {
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+	max-width: var(--website-width);
+	margin: auto;
+	flex-wrap: wrap;
+}
+
+.title {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.link {
+	padding: 1rem;
+}

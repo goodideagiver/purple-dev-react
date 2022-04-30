@@ -23,7 +23,7 @@ const ContactOptions = () => {
 
 	return (
 		<div>
-			<h2>Contact options</h2>
+			<h3>Contact options</h3>
 			<ul className={styles.list}>
 				<li>
 					<a href='https://discord.gg/kGsCDes7VU'>

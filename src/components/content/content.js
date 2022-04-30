@@ -6,6 +6,7 @@ import Home from './home/Home';
 
 import { useContext } from 'react';
 import ActiveSection from '../../store/active-section';
+import Footer from '../UI/Footer/Footer';
 
 const Content = () => {
 	const { visibleSection } = useContext(ActiveSection);
@@ -35,6 +36,11 @@ const Content = () => {
 		}
 	};
 
-	return <main className={styles.padding}>{returnedComponent()}</main>;
+	return (
+		<>
+			<main className={styles.padding}>{returnedComponent()}</main>
+			<Footer />
+		</>
+	);
 };
 export default Content;
