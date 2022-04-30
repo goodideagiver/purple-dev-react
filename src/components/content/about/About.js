@@ -2,6 +2,7 @@ import git from '../../../assets/img/technologies/github.png';
 import react from '../../../assets/img/technologies/react.png';
 import sass from '../../../assets/img/technologies/sass.png';
 import parcel from '../../../assets/img/technologies/parcel.png';
+import profile from '../../../assets/img/about/proProgrammer.png'
 
 import styles from './about.module.css';
 
@@ -15,9 +16,9 @@ const About = ({ className }) => {
 		<div className={className}>
 			<header className={styles.header}>
 				<img
-					alt='furry'
+					alt='Karol face portrait with cat in the bottom'
 					className={styles.picture}
-					src='https://cdn.weasyl.com/~rowedahelicon/submissions/1864457/b444ac36096ebdfdf6a4eb7be914d686ee8e47ebac75d90438c8519e0450b196/rowedahelicon-pfp-for-awesomeguy117.png'
+					src={profile}
 				/>
 				<div>
 					<h2>Karol</h2>
