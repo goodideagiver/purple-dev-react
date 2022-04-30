@@ -65,11 +65,12 @@
 		background-color: rgba(20, 20, 20, 0.4);
 	}
 	.header {
-		background-color: rgba(80, 80, 80, 0.4);
+		background-color: rgba(20, 20, 20, 0.4);
+		border-bottom: var(--color-primary) 1px solid;
 	}
 	.content {
 		background-color: transparent;
-		backdrop-filter: blur(10px);
+		backdrop-filter: blur(15px);
 	}
 }
 
