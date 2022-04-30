@@ -4,8 +4,18 @@ import styles from './contactOptions.module.css';
 
 import { FaDiscord, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import Button from '../../../UI/button/Button';
+import TopMessage from '../../../UI/TopMessage/TopMessage';
+
+import { useState, useCallback } from 'react';
 
 const ContactOptions = () => {
+	const [topMessageVisible, settopMessageVisible] = useState(false);
+
+	const topMessageToggle = useCallback(() => {
+		settopMessageVisible((prev) => !prev);
+	}, []);
+
 	return (
 		<div>
 			<h2>Contact me</h2>
@@ -33,6 +43,20 @@ const ContactOptions = () => {
 						</span>
 						<p>Linkedin</p>
 					</a>
+				</li>
+				<li>
+					<Button onClick={topMessageToggle}>
+						contact@purpleblack.dev
+					</Button>
+					{topMessageVisible && (
+						<TopMessage
+							transition={0.2}
+							duration={2000}
+							onHide={topMessageToggle}
+						>
+							Copied to clipboard!
+						</TopMessage>
+					)}
 				</li>
 			</ul>
 		</div>

@@ -1,0 +1,35 @@
+.wrapper {
+	animation: appear 0.5s;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	position: fixed;
+	width: 100%;
+	transition: all 0.5s;
+	pointer-events: none;
+}
+
+.topMessage {
+	text-align: center;
+	padding: 1rem;
+	background-color: var(--color-primary);
+	margin: 1rem auto;
+	max-width: 90%;
+	border-radius: 1rem;
+	box-shadow: var(--shadow-elevation-high);
+	width: fit-content;
+}
+
+@keyframes appear {
+	from {
+		transform: translate(0, -100%);
+	}
+	to {
+		transform: none;
+	}
+}
+
+.hide {
+	opacity: 0;
+	transform: translate(0, -100%);
+}
