@@ -17,6 +17,7 @@ const Home = (props) => {
 			</section>
 			<section className={`${st.nextTo} ${st.sectionWidth}`}>
 				<FunnyQuote />
+				<div className={st.filler} />
 				<AboutMeCTA />
 			</section>
 		</>
