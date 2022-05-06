@@ -27,6 +27,7 @@
 	justify-content: center;
 	max-width: var(--website-width);
 	margin: auto;
+	flex-wrap: wrap;
 }
 
 .buttons a,
