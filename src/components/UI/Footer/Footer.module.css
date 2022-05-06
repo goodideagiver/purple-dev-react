@@ -21,3 +21,15 @@
 .link {
 	padding: 1rem;
 }
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	max-width: var(--website-width);
+	margin: auto;
+}
+
+.buttons a,
+.buttons button {
+	font-size: 1rem;
+}

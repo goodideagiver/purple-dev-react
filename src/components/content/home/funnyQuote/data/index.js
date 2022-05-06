@@ -8,10 +8,6 @@ const quotes = [
 		author: 'Linus Torvalds',
 	},
 	{
-		quote: `If you're familiar with Redux, you already know how this works.`,
-		author: 'React documentation - useReducer',
-	},
-	{
 		quote: `Let's see if it breaks...`,
 		author: 'Me',
 	},

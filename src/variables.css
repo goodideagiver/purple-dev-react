@@ -17,8 +17,8 @@
 	--padding-xxlarge: 5rem;
 
 	/* Project color palette */
-	--color-primary: #a66fff;
-	--color-secondary: #2a1c40;
+	--color-primary: hsl(263, 100%, 72%);
+	--color-secondary: hsl(263, 39%, 18%);
 	--color-complementary: #c1ea7f;
 
 	/* Bg color palette */
@@ -27,10 +27,10 @@
 	--bg-tertiary: #3f3f3f;
 
 	/* Buttons colors */
-	--btn-primary: #a66fff;
-	--btn-primary-hover: #8056c5;
+	--btn-primary: hsl(263, 100%, 72%);
+	--btn-primary-hover: hsl(263, 50%, 50%);
 	--btn-secondary: #6b6767;
-	--btn-danger: #d72222;
+	--btn-danger: hsl(0, 63%, 49%);
 
 	/* font colors */
 	--font-primary: #fff;
