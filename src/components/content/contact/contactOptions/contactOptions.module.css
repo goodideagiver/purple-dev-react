@@ -25,6 +25,8 @@
 	flex-wrap: wrap;
 	color: var(--font-primary);
 	width: 100%;
+	background-color: transparent;
+	transition: 0s;
 }
 
 .list a span {
@@ -37,19 +39,9 @@
 	flex-grow: 1;
 }
 
-.list a:hover {
-	background-color: var(--bg-secondary);
-	background: #0099f7; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #f11712, #0099f7);
-	background: linear-gradient(
-		to right,
-		var(--color-primary),
-		#651fc6,
-		var(--color-primary)
-	);
-	animation: 10s bg-scroll infinite linear;
-	background-size: 400%;
-	background-repeat: repeat-x;
+.list a:hover,
+.list .option:hover {
+	background-color: var(--btn-primary-hover);
 }
 
 @keyframes bg-scroll {
@@ -61,8 +53,9 @@
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
 	.list li {
 		flex-basis: 100%;
+		word-break: break-all;
 	}
 }
