@@ -1,0 +1,10 @@
+.foldContainer {
+	transition: 0.2s;
+	max-height: 100%;
+	overflow: hidden;
+	max-width: 100%;
+}
+
+.folded {
+	max-height: 0;
+}
