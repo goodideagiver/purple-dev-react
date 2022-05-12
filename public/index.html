@@ -7,11 +7,7 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1 maximum-scale=1"
 		/>
-		<meta name="theme-color" content="#000000" />
-		<meta
-			name="description"
-			content="PurpleBlack - frontend developer"
-		/>
+		<meta name="description" content="PurpleBlack - frontend developer" />
 		<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 		<title>purpleblack.dev</title>
@@ -20,5 +16,20 @@
 		<noscript>You need to enable JavaScript to run this app.</noscript>
 		<div id="root"></div>
 		<div id="overlay-root"></div>
-</body>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-XV8Q7M8G5F"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-XV8Q7M8G5F');
+		</script>
+	</body>
 </html>
