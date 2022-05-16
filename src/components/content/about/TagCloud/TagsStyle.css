@@ -1,0 +1,21 @@
+.tag-container {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+}
+
+@media (max-width: 600px) {
+	.tag-width {
+		width: 100px !important;
+	}
+}
+
+.list-style {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}

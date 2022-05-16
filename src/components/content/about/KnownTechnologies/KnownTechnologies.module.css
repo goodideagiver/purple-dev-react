@@ -1,0 +1,18 @@
+.button {
+	background: 0;
+	border: 0;
+	color: gray;
+	padding: 0.2rem;
+}
+
+.button:hover {
+	color: white;
+	cursor: pointer;
+}
+
+.next {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+  justify-content: space-between;
+}

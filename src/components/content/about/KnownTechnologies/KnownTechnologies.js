@@ -1,19 +1,23 @@
-import git from '../../../../assets/img/technologies/github.png';
-import sass from '../../../../assets/img/technologies/sass.png';
-import react from '../../../../assets/img/technologies/react.png';
-import parcel from '../../../../assets/img/technologies/parcel.png';
+import TagCloudComponent from './../TagCloud/TagCloudComponent';
+
+import classes from './KnownTechnologies.module.css';
+import { useState } from 'react';
 
 const KnownTechnologies = ({ styles }) => {
+	const [enabled, setEnabled] = useState(true);
+
+	const toggleHandler = () => setEnabled((state) => !state);
+
 	return (
 		<div className={styles.cell}>
-			<h3>Known Technologies</h3>
+			<div className={classes.next}>
+				<h3>Known Technologies</h3>
+				<button onClick={toggleHandler} className={classes.button}>Toggle</button>
+			</div>
 			<div
 				className={`${styles.technologies} ${styles.cardInnerPadding}`}
 			>
-				<img src={git} alt='GitHub' />
-				<img src={react} alt='react' />
-				<img src={sass} alt='sass' />
-				<img src={parcel} alt='parcel' />
+				<TagCloudComponent enabled={enabled} />
 			</div>
 		</div>
 	);
