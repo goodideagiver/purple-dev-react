@@ -11,7 +11,7 @@ const AboutMe = ({styles}) => {
 			<p className={styles.cardInnerPadding}>
 				I'm trying to commit daily to my{' '}
 				{<a href='https://github.com/goodideagiver'>GitHub</a>} in order
-				to recieve the best results.
+				to receive the best results.
 			</p>
 		</div>
   );
