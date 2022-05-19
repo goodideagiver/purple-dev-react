@@ -4,41 +4,37 @@ import About from './about/About';
 import Contact from './contact/Contact';
 import Home from './home/Home';
 
-import { useContext } from 'react';
-import ActiveSection from '../../store/active-section';
 import Footer from '../UI/Footer/Footer';
 
-const Content = () => {
-	const { visibleSection } = useContext(ActiveSection);
+import { Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import ScrollToTop from '../helpers/ScrollToTop';
 
-	const returnedComponent = () => {
-		switch (visibleSection) {
-			case 'home':
-				return <Home />;
-			case 'about':
-				return (
-					<About
-						className={`${styles.maxWidth} ${styles['section-appear']}`}
-					/>
-				);
-			case 'contact':
-				return (
-					<Contact
-						className={`${styles.maxWidth} ${styles['section-appear']}`}
-					/>
-				);
-			default:
-				return (
-					<div>
-						<p>Something went wrong when choosing component</p>
-					</div>
-				);
-		}
-	};
+const Content = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	});
 
 	return (
 		<>
-			<main className={styles.padding}>{returnedComponent()}</main>
+			<main className={styles.padding}>
+				<ScrollToTop>
+					<Route path='/' exact component={Home} />
+					<Route path='/home'>
+						<Home />
+					</Route>
+					<Route path='/about'>
+						<About
+							className={`${styles.maxWidth} ${styles['section-appear']}`}
+						/>
+					</Route>
+					<Route path='/contact'>
+						<Contact
+							className={`${styles.maxWidth} ${styles['section-appear']}`}
+						/>
+					</Route>
+				</ScrollToTop>
+			</main>
 			<Footer />
 		</>
 	);

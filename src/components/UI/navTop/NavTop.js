@@ -25,9 +25,16 @@ const NavTop = (props) => {
 		<nav className={styles.nav}>
 			<h1>purpleblack.dev</h1>
 			{!isMobile && (
-				<NavButtons
-					visibleButtonNames={['Home', 'GitHub', 'About', 'Contact']}
-				/>
+				<ul className={styles.btnList}>
+					<NavButtons
+						visibleButtonNames={[
+							'Home',
+							'GitHub',
+							'About',
+							'Contact',
+						]}
+					/>
+				</ul>
 			)}
 			<Button
 				aria-label='side menu toggle'
