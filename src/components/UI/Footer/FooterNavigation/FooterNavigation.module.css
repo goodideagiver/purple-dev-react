@@ -1,0 +1,15 @@
+.ul {
+	list-style: none;
+	display: flex;
+	gap: 1rem;
+}
+
+.ul a {
+	color: white;
+	text-decoration: none;
+	padding: 0.2rem;
+}
+
+.ul a:hover {
+	color: var(--color-primary);
+}

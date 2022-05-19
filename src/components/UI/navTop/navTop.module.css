@@ -21,3 +21,12 @@
 	justify-content: center;
 	align-items: center;
 }
+
+.btnList {
+	flex: 1;
+	list-style: none;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}

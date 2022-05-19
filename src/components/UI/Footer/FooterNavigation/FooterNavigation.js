@@ -1,10 +1,7 @@
-import React from 'react';
-
 import { Link } from 'react-router-dom';
+import styles from './FooterNavigation.module.css';
 
-import styles from './navButtons.module.css';
-
-const NavButtons = ({ visibleButtonNames }) => {
+const FooterNavigation = () => {
 	const pagesUrls = [
 		{ name: 'Home', url: '/' },
 		{ name: 'About', url: '/about' },
@@ -20,19 +17,15 @@ const NavButtons = ({ visibleButtonNames }) => {
 		return (
 			<li key={index}>
 				{page.type !== 'external' ? (
-					<Link className={styles.button} to={page.url}>
-						{page.name}
-					</Link>
+					<Link to={page.url}>{page.name}</Link>
 				) : (
-					<a className={styles.button} href={page.url}>
-						{page.name}
-					</a>
+					<a href={page.url}>{page.name}</a>
 				)}
 			</li>
 		);
 	});
 
-	return <>{linkElements}</>;
+	return <ul className={styles.ul}>{linkElements}</ul>;
 };
 
-export default NavButtons;
+export default FooterNavigation;

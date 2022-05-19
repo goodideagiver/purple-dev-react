@@ -10,6 +10,7 @@
 	justify-content: center;
 	gap: 0.2rem;
 	color: var(--font-primary);
+	text-decoration: none;
 }
 
 /* .button,
@@ -25,4 +26,9 @@
 .icon {
 	display: grid;
 	place-items: center;
+}
+
+.list {
+	list-style: none;
+	display: flex;
 }

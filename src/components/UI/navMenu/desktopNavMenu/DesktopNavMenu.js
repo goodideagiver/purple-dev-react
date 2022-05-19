@@ -28,9 +28,9 @@ const NavContent = ({ onMenuClose }) => {
 			</Button>
 			<h2 className={styles.title}>purpleblack.dev</h2>
 			<div className={styles.separator} />
-			<div className={styles.btnContainer}>
+			<ul className={styles.btnContainer}>
 				<NavButtons onClick={onMenuClose} />
-			</div>
+			</ul>
 		</nav>
 	);
 };
