@@ -1,4 +1,5 @@
-.card {
+.card,
+.cardWrapper {
 	display: flex;
 	flex-direction: column;
 	padding: 2rem;
@@ -7,7 +8,23 @@
 	flex: 1 0 min(300px, 100%);
 	justify-content: flex-start;
 	background: var(--bg-secondary);
+}
+
+.cardWrapper {
+	border-radius: 1.2rem;
 	box-shadow: var(--shadow-elevation-medium);
+	padding: 0.2rem;
+	background: #7b4397; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#dc2430,
+		#7b4397
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#dc2430,
+		#7b4397
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .subTitle {
