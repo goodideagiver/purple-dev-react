@@ -8,11 +8,21 @@ import cardData from './data';
 
 const ProjectCards = () => {
 	return (
-		<div className={styles.flex}>
-			{cardData.map((card) => (
-				<ProjectCard {...card} key={card.title} />
-			))}
-		</div>
+		<>
+			<div className={styles.flex}>
+				<div className={styles.title}>
+					<h2>Selected projects</h2>
+					<p className={styles.more}>
+						Visit my{' '}
+						<a href='https://github.com/goodideagiver'>GitHub</a> to
+						see more
+					</p>
+				</div>
+				{cardData.map((card) => (
+					<ProjectCard {...card} key={card.title} />
+				))}
+			</div>
+		</>
 	);
 };
 

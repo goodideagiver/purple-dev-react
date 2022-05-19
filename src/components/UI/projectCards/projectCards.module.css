@@ -6,3 +6,17 @@
 	align-items: stretch;
 	width: 100%;
 }
+
+.title {
+	flex: 0 0 100%;
+	text-align: center;
+}
+
+.more {
+	opacity: 0.6;
+}
+
+.more a {
+	color: var(--color-primary);
+	text-decoration: none;
+}
