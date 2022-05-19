@@ -5,18 +5,12 @@ import Button from '../../../UI/button/Button';
 
 import st from './welcome.module.css';
 
-import { ActiveSectionContext } from '../../../../store/active-section';
-
 const Welcome = (props) => {
 	const [visitedBefore] = useState(window.localStorage.getItem('visited'));
-
-	const { setVisibleSection } = ActiveSectionContext();
 
 	useEffect(() => {
 		window.localStorage.setItem('visited', '1');
 	}, [visitedBefore]);
-
-	const getInTouchClickHandler = () => setVisibleSection('contact');
 
 	return (
 		<div className={st.welcome} {...props}>
