@@ -7,18 +7,18 @@ const cardData = [
 		color: '#a66fff30',
 	},
 	{
-		title: 'Web app',
-		shortDesc: 'Polite email builder',
+		title: 'Polite email builder',
+		shortDesc: 'Web app',
 		desc: ['DOM manipulation', 'Vanilla JavaScript'],
 		link: 'https://goodideagiver.github.io/polite-email-builder/',
-		color: '#6284ff21',
+		color: '#FA640020',
 	},
 	{
 		title: 'Adot.pl',
 		shortDesc: 'Digital artist website',
 		desc: ['SCSS', 'Vanilla JavaScript'],
 		link: 'https://www.adot.pl/',
-		color: '#ff00001f',
+		color: '#6276D720',
 	},
 ];
 
