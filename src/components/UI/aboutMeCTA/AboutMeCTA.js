@@ -20,7 +20,7 @@ const AboutMeCTA = (props) => {
 				<Button
 					className={classes.button}
 					variant='callToAction'
-					onClick={buttonClickHandler}
+					route='/about'
 				>
 					About me
 				</Button>
