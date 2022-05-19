@@ -1,14 +1,9 @@
 import programmer from '../../../assets/img/programmer/proProgrammer.png';
-import { ActiveSectionContext } from '../../../store/active-section';
 import Button from '../button/Button';
 
 import classes from './AboutMeCTA.module.css';
 
 const AboutMeCTA = (props) => {
-	const { setVisibleSection } = ActiveSectionContext();
-
-	const buttonClickHandler = () => setVisibleSection('about');
-
 	return (
 		<div className={classes['about-me']}>
 			<div className={classes.image}>
