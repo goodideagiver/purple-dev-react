@@ -8,9 +8,7 @@ import st from './welcome.module.css';
 import { ActiveSectionContext } from '../../../../store/active-section';
 
 const Welcome = (props) => {
-	const [visitedBefore] = useState(
-		window.localStorage.getItem('visited')
-	);
+	const [visitedBefore] = useState(window.localStorage.getItem('visited'));
 
 	const { setVisibleSection } = ActiveSectionContext();
 
@@ -28,7 +26,7 @@ const Welcome = (props) => {
 					{visitedBefore ? 'Welcome back!' : 'purpleblack.dev'}
 				</h2>
 				<Button
-					onClick={getInTouchClickHandler}
+					route='/contact'
 					className={st.button}
 					variant='special'
 				>

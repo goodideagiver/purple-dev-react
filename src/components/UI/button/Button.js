@@ -1,8 +1,22 @@
 import styles from './button.module.css';
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Button = ({ link, variant, className, ...props }) => {
+const Button = ({ route, link, variant, className, ...props }) => {
+	if (route) {
+		return (
+			<Link
+				className={`${styles.button} ${
+					variant && styles[variant]
+				} ${className}`}
+				to={route}
+			>
+				{props.children}
+			</Link>
+		);
+	}
+
 	if (link && link.length) {
 		return (
 			<a

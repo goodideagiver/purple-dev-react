@@ -7,7 +7,7 @@ const FooterNavigation = () => {
 		{ name: 'About', url: '/about' },
 		{
 			name: 'GitHub',
-			url: 'https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout',
+			url: 'https://github.com/goodideagiver',
 			type: 'external',
 		},
 		{ name: 'Contact', url: '/contact' },
