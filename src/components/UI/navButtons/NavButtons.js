@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import styles from './navButtons.module.css';
 
-const NavButtons = ({ visibleButtonNames }) => {
+const NavButtons = ({ visibleButtonNames, onClick }) => {
 	const pagesUrls = [
 		{ name: 'Home', url: '/' },
 		{ name: 'About', url: '/about' },
@@ -20,11 +20,19 @@ const NavButtons = ({ visibleButtonNames }) => {
 		return (
 			<li key={index}>
 				{page.type !== 'external' ? (
-					<Link className={styles.button} to={page.url}>
+					<Link
+						onClick={onClick}
+						className={styles.button}
+						to={page.url}
+					>
 						{page.name}
 					</Link>
 				) : (
-					<a className={styles.button} href={page.url}>
+					<a
+						onClick={onClick}
+						className={styles.button}
+						href={page.url}
+					>
 						{page.name}
 					</a>
 				)}
