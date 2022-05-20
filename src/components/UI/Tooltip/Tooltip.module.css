@@ -1,0 +1,33 @@
+.tooltip {
+	position: relative;
+}
+
+.text {
+	--radius: 0.5rem;
+	visibility: hidden;
+	position: absolute;
+	bottom: -1rem;
+	left: 50%;
+	transform: translate(-50%, 90%);
+	padding: var(--radius);
+	background-color: var(--bg-primary);
+	border-radius: var(--radius);
+	transition: 0.1s 0.1s;
+	opacity: 0;
+	box-shadow: var(--shadow-elevation-high);
+	border: 1px solid rgba(211, 211, 211, 0.446);
+	text-align: center;
+}
+
+.tooltip:hover .text {
+	transform: translate(-50%, 100%);
+	opacity: 1;
+	transition: 0.1s 1s;
+	visibility: visible;
+}
+
+@media (max-width: 768px) {
+	.text {
+		display: none;
+	}
+}

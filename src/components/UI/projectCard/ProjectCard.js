@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './projectCard.module.css';
 
 import Button from '../button/Button';
+import Tooltip from '../Tooltip/Tooltip';
 
 const ProjectCard = ({ title, shortDesc, desc, link, color }) => {
 	return (
@@ -20,13 +21,15 @@ const ProjectCard = ({ title, shortDesc, desc, link, color }) => {
 						<li key={item}>{item}</li>
 					))}
 				</ul>
-				<Button
-					link={link}
-					className={styles.button}
-					variant='callToAction'
-				>
-					Check out
-				</Button>
+				<Tooltip text='View GitHub repository'>
+					<Button
+						link={link}
+						className={styles.button}
+						variant='callToAction'
+					>
+						Check out
+					</Button>
+				</Tooltip>
 			</div>
 		</div>
 	);

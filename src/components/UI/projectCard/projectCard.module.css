@@ -60,6 +60,8 @@
 .button {
 	margin: 0 auto 0 auto;
 	margin-top: 2rem;
+	text-align: center;
+	width: fit-content;
 }
 
 @media (min-width: 800px) {
