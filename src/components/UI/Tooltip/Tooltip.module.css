@@ -17,6 +17,7 @@
 	box-shadow: var(--shadow-elevation-high);
 	border: 1px solid rgba(211, 211, 211, 0.446);
 	text-align: center;
+	pointer-events: none;
 }
 
 .tooltip:hover .text {
