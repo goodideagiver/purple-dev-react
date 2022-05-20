@@ -15,7 +15,7 @@ const Contact = ({ className }) => {
 				</h2>
 				<img src={code} alt='' aria-hidden='true' />
 			</div>
-			<div className={`${styles.root} ${className}`}>
+			<div className={`${styles.root}`}>
 				<ContactOptions />
 				<ContactForm />
 			</div>
