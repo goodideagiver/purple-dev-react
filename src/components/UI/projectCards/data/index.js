@@ -23,7 +23,7 @@ const cardData = [
 	{
 		title: 'purpleblack.dev',
 		shortDesc: 'This website',
-		desc: ['REACT', 'ROUTER'],
+		desc: ['React', 'React Router'],
 		link: 'https://github.com/goodideagiver/purple-dev-react',
 		color: '#6276D720',
 	},
