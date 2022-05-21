@@ -37,7 +37,17 @@ const ProjectCards = () => {
 				{cardData.map(
 					(card, index) =>
 						index < cardOnMainSiteAmount && (
-							<ProjectCard {...card} key={card.title} />
+							<ProjectCard
+								delay={
+									index > 0
+										? (index -
+												defaultCardOnMainSiteAmount) /
+										  10
+										: 0
+								}
+								{...card}
+								key={card.title}
+							/>
 						)
 				)}
 			</div>

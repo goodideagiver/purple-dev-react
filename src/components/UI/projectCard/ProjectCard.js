@@ -1,13 +1,14 @@
+import Button from '../button/Button';
 import React from 'react';
-
+import Tooltip from '../Tooltip/Tooltip';
 import styles from './projectCard.module.css';
 
-import Button from '../button/Button';
-import Tooltip from '../Tooltip/Tooltip';
-
-const ProjectCard = ({ title, shortDesc, desc, link, color }) => {
+const ProjectCard = ({ title, shortDesc, desc, link, color, delay = 0 }) => {
 	return (
-		<div className={styles.cardWrapper}>
+		<div
+			style={{ animationDelay: delay + 's' }}
+			className={styles.cardWrapper}
+		>
 			<div
 				className={styles.card}
 				style={{
