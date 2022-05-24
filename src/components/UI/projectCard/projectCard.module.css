@@ -99,3 +99,8 @@
 		transform: translateY(0);
 	}
 }
+
+.commit {
+	opacity: 0.5;
+	font-size: 0.7rem;
+}

@@ -5,6 +5,8 @@ const cardData = [
 		desc: ['OOP', 'Custom Components', 'Async'],
 		link: 'https://github.com/goodideagiver/fakeinsta',
 		color: '#a66fff30',
+		commitsFetchUrl:
+			'https://api.github.com/repos/goodideagiver/fakeinsta/commits',
 	},
 	{
 		title: 'Polite email builder',
@@ -12,6 +14,8 @@ const cardData = [
 		desc: ['DOM manipulation', 'Vanilla JavaScript'],
 		link: 'https://goodideagiver.github.io/polite-email-builder/',
 		color: '#FA640020',
+		commitsFetchUrl:
+			'https://api.github.com/repos/goodideagiver/polite-email-builder/commits',
 	},
 	{
 		title: 'Adot.pl',
@@ -26,6 +30,7 @@ const cardData = [
 		desc: ['React', 'React Router'],
 		link: 'https://github.com/goodideagiver/purple-dev-react',
 		color: '#6276D720',
+		commitsFetchUrl: 'https://api.github.com/repos/goodideagiver/purple-dev-react/commits',
 	},
 	{
 		title: 'CLICK THE BUTTON',
@@ -33,6 +38,8 @@ const cardData = [
 		desc: ['Vanilla JavaScript', 'Clean code', 'Error handling'],
 		link: 'https://github.com/goodideagiver/click-the-button',
 		color: '#6276D720',
+		commitsFetchUrl:
+			'https://api.github.com/repos/goodideagiver/click-the-button/commits',
 	},
 	// {
 	// 	title: 'THE DOGAPP',
