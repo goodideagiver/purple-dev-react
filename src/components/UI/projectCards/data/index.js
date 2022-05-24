@@ -34,13 +34,13 @@ const cardData = [
 		link: 'https://github.com/goodideagiver/click-the-button',
 		color: '#6276D720',
 	},
-	{
-		title: 'THE DOGAPP',
-		shortDesc: 'React UI project',
-		desc: ['React', 'Redux', 'Conditional UI', 'API'],
-		link: 'https://github.com/goodideagiver/the-dogapp',
-		color: '#6276D720',
-	},
+	// {
+	// 	title: 'THE DOGAPP',
+	// 	shortDesc: 'React UI project',
+	// 	desc: ['React', 'Redux', 'Conditional UI', 'API'],
+	// 	link: 'https://github.com/goodideagiver/the-dogapp',
+	// 	color: '#6276D720',
+	// },
 ];
 
 export default cardData;
