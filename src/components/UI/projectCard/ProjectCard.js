@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 import Button from '../button/Button';
+import CardBtn from './components/CardBtn';
 import Tooltip from '../Tooltip/Tooltip';
 import styles from './projectCard.module.css';
 import { useState } from 'react';
@@ -54,15 +55,7 @@ const ProjectCard = ({
 						<li key={item}>{item}</li>
 					))}
 				</ul>
-				<Tooltip text={tooltip}>
-					<Button
-						link={link}
-						className={styles.button}
-						variant='callToAction'
-					>
-						Check out
-					</Button>
-				</Tooltip>
+				<CardBtn link={link} tooltip={tooltip} />
 			</div>
 		</div>
 	);
