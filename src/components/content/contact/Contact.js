@@ -1,10 +1,8 @@
-import React from 'react';
 import ContactForm from '../../UI/contactForm/ContactForm';
 import ContactOptions from './contactOptions/ContactOptions';
-
-import styles from './contact.module.css';
-
+import React from 'react';
 import code from '../../../assets/img/contact/code.jpg';
+import styles from './contact.module.css';
 
 const Contact = ({ className }) => {
 	return (
@@ -17,7 +15,7 @@ const Contact = ({ className }) => {
 			</div>
 			<div className={`${styles.root}`}>
 				<ContactOptions />
-				<ContactForm />
+				{/* <ContactForm /> */}
 			</div>
 		</div>
 	);
