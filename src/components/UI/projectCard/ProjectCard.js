@@ -13,6 +13,7 @@ const ProjectCard = ({
 	color,
 	delay = 0,
 	commitsFetchUrl,
+	tooltip = 'View repository',
 }) => {
 	const [commitCount, setCommitCount] = useState(null);
 
@@ -29,7 +30,7 @@ const ProjectCard = ({
 					);
 				});
 		}
-	}, []);
+	}, [commitsFetchUrl]);
 
 	return (
 		<div
@@ -53,7 +54,7 @@ const ProjectCard = ({
 						<li key={item}>{item}</li>
 					))}
 				</ul>
-				<Tooltip text='View GitHub repository'>
+				<Tooltip text={tooltip}>
 					<Button
 						link={link}
 						className={styles.button}

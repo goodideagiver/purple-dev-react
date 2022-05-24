@@ -16,6 +16,7 @@ const cardData = [
 		color: '#FA640020',
 		commitsFetchUrl:
 			'https://api.github.com/repos/goodideagiver/polite-email-builder/commits',
+		tooltip: 'Visit website',
 	},
 	{
 		title: 'Adot.pl',
@@ -23,6 +24,7 @@ const cardData = [
 		desc: ['SCSS', 'Vanilla JavaScript'],
 		link: 'https://www.adot.pl/',
 		color: '#6276D720',
+		tooltip: 'Visit website',
 	},
 	{
 		title: 'purpleblack.dev',
@@ -30,7 +32,8 @@ const cardData = [
 		desc: ['React', 'React Router'],
 		link: 'https://github.com/goodideagiver/purple-dev-react',
 		color: '#6276D720',
-		commitsFetchUrl: 'https://api.github.com/repos/goodideagiver/purple-dev-react/commits',
+		commitsFetchUrl:
+			'https://api.github.com/repos/goodideagiver/purple-dev-react/commits',
 	},
 	{
 		title: 'CLICK THE BUTTON',
