@@ -1,7 +1,7 @@
 .footer {
 	background-color: var(--bg-secondary);
 	margin-top: 5rem;
-	padding: 2rem;
+	padding: 3rem;
 }
 
 .list {
@@ -15,7 +15,7 @@
 
 .title {
 	text-align: center;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 }
 
 .link {
@@ -33,4 +33,10 @@
 .buttons a,
 .buttons button {
 	font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+	.footer {
+		padding-bottom: 15vh;
+	}
 }
