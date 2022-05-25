@@ -2,7 +2,6 @@ import React, { Suspense, useEffect } from 'react';
 
 import Footer from '../UI/Footer/Footer';
 import Home from './home/Home';
-import LoadingSpinner from '../UI/LoadingSpinner/LoadingSpinner';
 import LoadingSpinnerContent from './components/LoadingSpinnerContent/LoadingSpinnerContent';
 import { Route } from 'react-router-dom';
 import ScrollToTop from '../helpers/ScrollToTop';
