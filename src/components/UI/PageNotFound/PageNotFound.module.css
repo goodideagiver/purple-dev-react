@@ -1,0 +1,8 @@
+.empty {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 2rem;
+	height: min(300px, 50vh);
+}
