@@ -1,5 +1,6 @@
 import ContactForm from '../../UI/contactForm/ContactForm';
 import ContactOptions from './contactOptions/ContactOptions';
+import ImgSmoothLoad from './../../UI/ImgSmoothLoad/ImgSmoothLoad';
 import React from 'react';
 import code from '../../../assets/img/contact/code.jpg';
 import styles from './contact.module.css';
@@ -11,7 +12,7 @@ const Contact = ({ className }) => {
 				<h2 className={styles.title}>
 					Choose <span>your</span> way to <span>contact me</span>
 				</h2>
-				<img src={code} alt='' aria-hidden='true' />
+				<ImgSmoothLoad src={code} alt='' aria-hidden='true' />
 			</div>
 			<div className={`${styles.root}`}>
 				<ContactOptions />

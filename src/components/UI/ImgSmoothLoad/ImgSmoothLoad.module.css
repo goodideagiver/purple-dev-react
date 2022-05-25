@@ -1,0 +1,19 @@
+.loading {
+	opacity: 0;
+}
+
+.loaded {
+	display: block;
+	opacity: 1;
+	animation: fadeIn 0.5s both;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

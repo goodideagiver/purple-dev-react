@@ -1,10 +1,11 @@
+import ImgSmoothLoad from '../../../UI/ImgSmoothLoad/ImgSmoothLoad';
 import profile from '../../../../assets/img/about/proProgrammer.png';
 import timeSince from '../../../../helpers/timeSince';
 
 const Header = ({ styles }) => {
 	return (
 		<header className={styles.header}>
-			<img
+			<ImgSmoothLoad
 				alt='Karol face portrait with cat in the bottom'
 				className={styles.picture}
 				src={profile}

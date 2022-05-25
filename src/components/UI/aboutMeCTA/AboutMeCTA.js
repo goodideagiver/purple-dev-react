@@ -1,13 +1,13 @@
-import programmer from '../../../assets/img/programmer/proProgrammer.png';
 import Button from '../button/Button';
-
+import ImgSmoothLoad from './../ImgSmoothLoad/ImgSmoothLoad';
 import classes from './AboutMeCTA.module.css';
+import programmer from '../../../assets/img/programmer/proProgrammer.png';
 
 const AboutMeCTA = (props) => {
 	return (
 		<div className={classes['about-me']}>
 			<div className={classes.image}>
-				<img src={programmer} alt="Karol's face from shoulders up" />
+				<ImgSmoothLoad src={programmer} alt='Karol in long coat' />
 			</div>
 			<div className={classes.text}>
 				<h2 className={classes.title}>More about me</h2>
