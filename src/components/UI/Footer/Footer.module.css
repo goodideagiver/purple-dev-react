@@ -2,6 +2,8 @@
 	background-color: var(--bg-secondary);
 	margin-top: 5rem;
 	padding: 3rem;
+
+	animation: fadeIn 1s both;
 }
 
 .list {
@@ -38,5 +40,14 @@
 @media (max-width: 768px) {
 	.footer {
 		padding-bottom: 15vh;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }

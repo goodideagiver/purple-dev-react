@@ -1,8 +1,8 @@
-import img from '../../../../assets/img/home/forest.png';
-
 import React, { useEffect, useState } from 'react';
-import Button from '../../../UI/button/Button';
 
+import Button from '../../../UI/button/Button';
+import ImgSmoothLoad from './../../../UI/ImgSmoothLoad/ImgSmoothLoad';
+import img from '../../../../assets/img/home/forest.png';
 import st from './welcome.module.css';
 
 const Welcome = (props) => {
@@ -28,7 +28,7 @@ const Welcome = (props) => {
 				</Button>
 			</div>
 			<div className={`${st.programmer} ${st.overlay}`} />
-			<img
+			<ImgSmoothLoad
 				className={st.programmer}
 				src={img}
 				alt='Karol mysteriously half faded overlayed by mountain hill with trees'

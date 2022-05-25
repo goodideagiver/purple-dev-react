@@ -41,9 +41,9 @@ const Content = () => {
 							</Route>
 						</Switch>
 					</ScrollToTop>
+					<Footer />
 				</Suspense>
 			</main>
-			<Footer />
 		</>
 	);
 };
