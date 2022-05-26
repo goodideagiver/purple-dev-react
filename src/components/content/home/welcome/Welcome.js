@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import Button from '../../../UI/button/Button';
 import ImgSmoothLoad from './../../../UI/ImgSmoothLoad/ImgSmoothLoad';
-import img from '../../../../assets/img/home/forest.png';
+import img from '../../../../assets/img/home/forest.webp';
 import st from './welcome.module.css';
 
 const Welcome = (props) => {

@@ -1,5 +1,5 @@
 import ImgSmoothLoad from '../../../UI/ImgSmoothLoad/ImgSmoothLoad';
-import profile from '../../../../assets/img/about/proProgrammer.png';
+import profile from '../../../../assets/img/about/proProgrammer.webp';
 import timeSince from '../../../../helpers/timeSince';
 
 const Header = ({ styles }) => {

@@ -1,8 +1,7 @@
-import ContactForm from '../../UI/contactForm/ContactForm';
 import ContactOptions from './contactOptions/ContactOptions';
 import ImgSmoothLoad from './../../UI/ImgSmoothLoad/ImgSmoothLoad';
 import React from 'react';
-import code from '../../../assets/img/contact/code.jpg';
+import code from '../../../assets/img/contact/code.webp';
 import styles from './contact.module.css';
 
 const Contact = ({ className }) => {

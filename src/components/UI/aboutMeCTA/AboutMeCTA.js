@@ -1,7 +1,7 @@
 import Button from '../button/Button';
 import ImgSmoothLoad from './../ImgSmoothLoad/ImgSmoothLoad';
 import classes from './AboutMeCTA.module.css';
-import programmer from '../../../assets/img/programmer/proProgrammer.jpg';
+import programmer from '../../../assets/img/programmer/proProgrammer.webp';
 
 const AboutMeCTA = (props) => {
 	return (

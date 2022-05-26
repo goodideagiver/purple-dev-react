@@ -39,13 +39,14 @@
 }
 
 .programmer {
-	opacity: 0.3;
+	opacity: 0.4;
 	position: absolute;
 	top: 0;
 	height: 100%;
 	z-index: -1;
 	object-fit: cover;
 	width: 100%;
+	animation-duration: 1s;
 }
 
 .overlay {
