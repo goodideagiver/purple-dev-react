@@ -2,7 +2,6 @@ import React, { Suspense, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Footer from '../UI/Footer/Footer';
-import Home from './home/Home';
 import LoadingSpinnerContent from './components/LoadingSpinnerContent/LoadingSpinnerContent';
 import PageNotFound from '../UI/PageNotFound/PageNotFound';
 import ScrollToTop from '../helpers/ScrollToTop';
@@ -10,6 +9,7 @@ import styles from './content.module.css';
 
 const About = React.lazy(() => import('./about/About'));
 const Contact = React.lazy(() => import('./contact/Contact'));
+const Home = React.lazy(() => import('./home/Home'));
 
 const Content = () => {
 	useEffect(() => {
