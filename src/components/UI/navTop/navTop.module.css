@@ -3,7 +3,7 @@
 .nav {
 	width: 100%;
 	max-width: var(--website-width);
-	margin: auto;
+	/* margin: auto; */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

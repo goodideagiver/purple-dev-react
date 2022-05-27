@@ -1,5 +1,5 @@
 import ContactOptions from './contactOptions/ContactOptions';
-import ImgSmoothLoad from './../../UI/ImgSmoothLoad/ImgSmoothLoad';
+import ImgSmoothLoad from '../../UI/ImgSmoothLoad/ImgSmoothLoad';
 import React from 'react';
 import code from '../../../assets/img/contact/code.webp';
 import styles from './contact.module.css';
