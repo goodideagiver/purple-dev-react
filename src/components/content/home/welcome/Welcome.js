@@ -22,7 +22,7 @@ const Welcome = (props) => {
 				<Button
 					route='/contact'
 					className={st.button}
-					variant='special'
+					variant='glow'
 				>
 					Get in touch
 				</Button>
