@@ -1,9 +1,8 @@
-import { useState } from 'react';
-
 import Button from '../../../UI/button/Button';
-import classes from './EmploymentHistory.module.css';
-
+import ImgSmoothLoad from '../../../UI/ImgSmoothLoad/ImgSmoothLoad';
 import Modal from '../../../modal/Modal';
+import classes from './EmploymentHistory.module.css';
+import { useState } from 'react';
 
 const EmploymentHistory = ({ className }) => {
 	const [modalVisible, setModalVisible] = useState(false);
@@ -20,7 +19,7 @@ const EmploymentHistory = ({ className }) => {
 					modalCloseHandler={hideModalHandler}
 					title='You can be the first company to hire me'
 				>
-					<img
+					<ImgSmoothLoad
 						className={classes['man-pointing']}
 						alt='man pointing finger'
 						src='https://upload.wikimedia.org/wikipedia/commons/f/f3/Uncle_Sam_(pointing_finger).jpg'
