@@ -87,7 +87,6 @@
 .glow {
 	width: fit-content;
 	border: 0;
-	color: black;
 	background: var(--btn-primary);
 	cursor: pointer;
 	position: relative;
