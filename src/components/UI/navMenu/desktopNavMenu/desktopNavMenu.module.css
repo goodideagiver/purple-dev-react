@@ -10,6 +10,7 @@
 	gap: 1rem;
 	margin: 1rem;
 	border-radius: 2rem;
+	overflow: hidden;
 }
 
 .btnContainer {
@@ -24,16 +25,17 @@
 .btnContainer button,
 .btnContainer a {
 	width: 100%;
+	padding: 1rem 5rem;
+}
+
+.btnContainer li {
+	width: 100%;
 }
 
 .desktopNav * {
 	color: var(--font-primary);
 }
 
-.desktopNav button,
-.desktopNav a {
-	padding: 1rem 5rem;
-}
 
 .desktopNav button:hover,
 .desktopNav a:hover {
