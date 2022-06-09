@@ -36,12 +36,7 @@
 		var(--btn-primary) 0%,
 		var(--color-complementary) 100%
 	);
-	background-image: linear-gradient(
-		120deg,
-		#836a4c,
-		#723b80,
-		rgb(150, 32, 32)
-	);
+	background-image: linear-gradient(120deg, #836a4c, #723b80, rgb(150, 32, 32));
 	background-repeat: repeat;
 	background-position: left;
 	box-shadow: var(--shadow-elevation-high);
@@ -146,6 +141,11 @@
 	left: 0;
 	top: 0;
 	border-radius: 2rem;
+}
+
+.glow:hover::after,
+.glow:hover {
+	background-color: var(--btn-primary-hover);
 }
 
 @keyframes glowing {
