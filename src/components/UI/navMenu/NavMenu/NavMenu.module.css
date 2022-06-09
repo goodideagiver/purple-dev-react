@@ -1,0 +1,27 @@
+.open {
+	animation: openNav 0.3s ease-out forwards;
+}
+
+.closed {
+	animation: closeNav 0.3s ease-in-out forwards;
+}
+
+@keyframes openNav {
+	0% {
+		transform: translateX(+100%);
+    opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes closeNav {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(+100%);
+    opacity: 0;
+	}
+}

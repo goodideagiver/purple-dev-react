@@ -6,7 +6,7 @@ import { MdMenu } from 'react-icons/md';
 
 import styles from './navTop.module.css';
 import NavButtons from '../navButtons/NavButtons';
-import DesktopNavMenu from '../navMenu/desktopNavMenu/DesktopNavMenu';
+import NavMenu from '../navMenu/NavMenu/NavMenu';
 
 const NavTop = (props) => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -27,23 +27,14 @@ const NavTop = (props) => {
 			{!isMobile && (
 				<ul className={styles.btnList}>
 					<NavButtons
-						visibleButtonNames={[
-							'Home',
-							'GitHub',
-							'About',
-							'Contact',
-						]}
+						visibleButtonNames={['Home', 'GitHub', 'About', 'Contact']}
 					/>
 				</ul>
 			)}
-			<Button
-				aria-label='side menu toggle'
-				variant='nav'
-				onClick={menuToggle}
-			>
+			<Button aria-label='side menu toggle' variant='nav' onClick={menuToggle}>
 				<MdMenu />
 			</Button>
-			{menuOpen && <DesktopNavMenu onMenuClose={menuClose} />}
+			<NavMenu show={menuOpen} menuClose={menuClose} />
 		</nav>
 	);
 };

@@ -46,7 +46,7 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background-color: rgba(0, 0, 0, 0.709);
+	background-color: rgba(0, 0, 0, 0);
 	z-index: 5000;
 }
 
@@ -60,12 +60,8 @@
 	color: var(--btn-danger);
 }
 
-.show {
-	animation: appear 0.4s forwards;
-}
-
 .backdrop-show {
-	animation: backdrop-anim 0.6s forwards;
+	animation: backdrop-anim 0.3s forwards;
 }
 
 @keyframes backdrop-anim {
@@ -73,7 +69,7 @@
 		opacity: 0;
 	}
 	to {
-		opacity: 1;
+		opacity: 0;
 	}
 }
 

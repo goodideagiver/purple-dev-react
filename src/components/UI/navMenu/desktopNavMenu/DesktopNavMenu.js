@@ -5,7 +5,6 @@ import { MdClose } from 'react-icons/md';
 
 import ReactDOM from 'react-dom';
 import Button from '../../button/Button';
-import Tooltip from '../../Tooltip/Tooltip';
 
 const Backdrop = ({ backdropClickHandler }) => {
 	return (
