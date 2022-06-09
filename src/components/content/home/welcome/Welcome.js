@@ -15,15 +15,16 @@ const Welcome = (props) => {
 	return (
 		<div className={st.welcome} {...props}>
 			<div className={st.main}>
-				{visitedBefore && <p className={st.devText}>purpleblack.dev</p>}
+				{visitedBefore && (
+					<>
+						<p className={st.devText}>purpleblack.dev</p>{' '}
+						<p className={st.welcomeLowerText}>Frontend Developer</p>
+					</>
+				)}
 				<h2 className={st.bigText}>
 					{visitedBefore ? 'Welcome back!' : 'purpleblack.dev'}
 				</h2>
-				<Button
-					route='/contact'
-					className={st.button}
-					variant='glow'
-				>
+				<Button route='/contact' className={st.button} variant='glow'>
 					Get in touch
 				</Button>
 			</div>
