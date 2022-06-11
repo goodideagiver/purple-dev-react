@@ -14,18 +14,17 @@ const EmploymentHistory = ({ className }) => {
 		<div className={`${classes.history} ${className}`}>
 			<h3>Past career</h3>
 			<Button onClick={showModalHandler}>See employment history</Button>
-			{modalVisible && (
-				<Modal
-					modalCloseHandler={hideModalHandler}
-					title='You can be the first company to hire me'
-				>
-					<ImgSmoothLoad
-						className={classes['man-pointing']}
-						alt='man pointing finger'
-						src='https://upload.wikimedia.org/wikipedia/commons/f/f3/Uncle_Sam_(pointing_finger).jpg'
-					/>
-				</Modal>
-			)}
+			<Modal
+				visible={modalVisible}
+				modalCloseHandler={hideModalHandler}
+				title='You can be the first company to hire me'
+			>
+				<ImgSmoothLoad
+					className={classes['man-pointing']}
+					alt='man pointing finger'
+					src='https://upload.wikimedia.org/wikipedia/commons/f/f3/Uncle_Sam_(pointing_finger).jpg'
+				/>
+			</Modal>
 		</div>
 	);
 };

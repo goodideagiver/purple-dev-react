@@ -15,7 +15,6 @@
 	border: 1px var(--color-primary) solid;
 	box-shadow: var(--shadow-elevation-high);
 	max-height: 90%;
-	animation: show 0.2s forwards;
 }
 
 .header {
@@ -30,6 +29,8 @@
 .children {
 	padding: var(--padding-base);
 	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
 }
 
 .close {
@@ -74,11 +75,3 @@
 	}
 }
 
-@keyframes show {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
