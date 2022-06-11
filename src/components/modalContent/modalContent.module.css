@@ -12,7 +12,6 @@
 	transition: 0.3s;
 	color: var(--font-primary);
 	z-index: 1040;
-	border: 1px var(--color-primary) solid;
 	box-shadow: var(--shadow-elevation-high);
 	max-height: 90%;
 }
@@ -67,7 +66,7 @@
 	}
 	.header {
 		background-color: rgba(20, 20, 20, 0.4);
-		border-bottom: var(--color-primary) 1px solid;
+		border-bottom: var(--border-primary);
 	}
 	.content {
 		background-color: transparent;

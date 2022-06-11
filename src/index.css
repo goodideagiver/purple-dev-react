@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('./variables.css');
+@import url('./assets/css/acrylic.css');
 
 html {
 	overflow-y: scroll;
@@ -7,7 +8,7 @@ html {
 
 body {
 	font-family: 'Lato', sans-serif;
-	background: var(--bg-primary);
+	background-color: var(--bg-primary);
 	color: var(--font-primary);
 	min-height: 100vh;
 }

@@ -5,8 +5,12 @@ import styles from './modalContent.module.css';
 import { GrClose } from 'react-icons/gr';
 
 const ModalContent = (props) => {
+	const contentCssClasses = `${styles.content} ${
+		props.className ? props.className : ''
+	} acrylic`;
+
 	return (
-		<div className={styles.content}>
+		<div className={contentCssClasses}>
 			<header className={styles.header}>
 				<h2>{props.title}</h2>
 				<Button

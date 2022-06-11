@@ -17,12 +17,8 @@ const Backdrop = ({ backdropClickHandler }) => {
 
 const NavContent = ({ onMenuClose }) => {
 	return (
-		<nav className={`${styles.desktopNav} ${styles.show}`}>
-			<Button
-				className={styles.close}
-				onClick={onMenuClose}
-				variant='nav'
-			>
+		<nav className={`${styles.desktopNav} ${styles.show} ${'acrylic'}`}>
+			<Button className={styles.close} onClick={onMenuClose} variant='nav'>
 				<MdClose />
 			</Button>
 			<h2 className={styles.title}>purpleblack.dev</h2>
