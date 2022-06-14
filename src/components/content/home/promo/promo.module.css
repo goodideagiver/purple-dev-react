@@ -1,8 +1,6 @@
 .root {
 	background-color: var(--bg-secondary);
 	margin-bottom: 8rem;
-	/* background-image: linear-gradient(43deg, #4159d038, #c850c03c, #ffcd7031); */
-	/* background-repeat: repeat; */
 }
 
 .list {
@@ -34,16 +32,22 @@
 }
 
 .number {
-	/* padding: 1rem; */
 	margin-right: 1rem;
 	color: var(--color-primary);
-	font-size: 1.8rem;
+	font-size: 2.8rem;
 	font-weight: bold;
 }
 
-@media (max-width: 620px) {
+@media (max-width: 870px) {
 	.list li {
-		width: 100%;
+		align-items: center;
+		flex: 1 1 300px;
+	}
+
+	.list {
+		flex-direction: row;
+		gap: 3rem;
+		justify-content: center;
 	}
 }
 
