@@ -65,7 +65,7 @@
 }
 
 .skills li {
-	flex: 1 1 30%;
+	flex: 1 1 110px;
 	text-align: center;
 	background-color: var(--bg-secondary);
 	padding: 1rem;

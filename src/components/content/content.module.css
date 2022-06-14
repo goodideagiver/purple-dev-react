@@ -1,6 +1,5 @@
 .root {
 	padding-top: var(--padding-base);
-	/* margin: auto; */
 	min-height: 100%;
 	flex: 1;
 	display: flex;
