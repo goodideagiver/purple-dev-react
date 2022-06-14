@@ -3,10 +3,11 @@ import ImgSmoothLoad from '../../UI/ImgSmoothLoad/ImgSmoothLoad';
 import React from 'react';
 import code from '../../../assets/img/contact/code.webp';
 import styles from './contact.module.css';
+import { MainPageContainer } from '../../UI/MainPageContainer/MainPageContainer';
 
-const Contact = ({ className }) => {
+const Contact = () => {
 	return (
-		<div className={className}>
+		<MainPageContainer>
 			<div className={styles['header-image']}>
 				<h2 className={styles.title}>
 					Choose <span>your</span> way to <span>contact me</span>
@@ -17,7 +18,7 @@ const Contact = ({ className }) => {
 				<ContactOptions />
 				{/* <ContactForm /> */}
 			</div>
-		</div>
+		</MainPageContainer>
 	);
 };
 

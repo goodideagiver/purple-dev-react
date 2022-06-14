@@ -6,10 +6,11 @@ import Header from './Header/Header';
 import KnownTechnologies from './KnownTechnologies/KnownTechnologies';
 import AboutMe from './AboutMe/AboutMe';
 import Skills from './Skills/Skills';
+import { MainPageContainer } from '../../UI/MainPageContainer/MainPageContainer';
 
-const About = ({ className }) => {
+const About = () => {
 	return (
-		<div className={className}>
+		<MainPageContainer>
 			<Header styles={styles} />
 			<main className={`${styles.grid}`}>
 				<KnownTechnologies styles={styles} />
@@ -18,7 +19,7 @@ const About = ({ className }) => {
 				<Roadmap className={styles.cell} />
 				<EmploymentHistory className={styles.cell} />
 			</main>
-		</div>
+		</MainPageContainer>
 	);
 };
 

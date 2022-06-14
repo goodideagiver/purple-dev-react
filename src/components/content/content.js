@@ -20,7 +20,7 @@ const Content = () => {
 
 	return (
 		<>
-			<main className={styles.padding}>
+			<main className={styles.root}>
 				<Suspense fallback={<LoadingSpinnerContent />}>
 					<ScrollToTop>
 						<Switch>
@@ -29,14 +29,10 @@ const Content = () => {
 								<Home />
 							</Route>
 							<Route path='/about'>
-								<About
-									className={`${styles.maxWidth} ${styles['section-appear']}`}
-								/>
+								<About />
 							</Route>
 							<Route path='/contact'>
-								<Contact
-									className={`${styles.maxWidth} ${styles['section-appear']}`}
-								/>
+								<Contact />
 							</Route>
 							<Route path='/*'>
 								<PageNotFound />
