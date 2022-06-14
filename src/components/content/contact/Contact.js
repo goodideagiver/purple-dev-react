@@ -16,7 +16,6 @@ const Contact = () => {
 			</div>
 			<div className={`${styles.root}`}>
 				<ContactOptions />
-				{/* <ContactForm /> */}
 			</div>
 		</MainPageContainer>
 	);
