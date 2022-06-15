@@ -29,6 +29,7 @@ const ProjectCard = ({
 			fetch(commitsFetchUrl + '?per_page=1')
 				.then((response) => response.json())
 				.then((data) => {
+					console.log(data);
 					const lastCommitDate = new Date(data[0].commit.author.date);
 					setLastCommitDate(
 						lastCommitDate.toLocaleDateString() +
