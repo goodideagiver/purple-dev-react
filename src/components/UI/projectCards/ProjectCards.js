@@ -23,6 +23,20 @@ const ProjectCards = () => {
 			? 'Show more projects'
 			: 'Show less projects';
 
+			const cards = cardData.map(
+				(card, index) =>
+					index < cardOnMainSiteAmount && (
+						<ProjectCard
+							delay={index > 0 ? (index - defaultCardOnMainSiteAmount) / 10 : 0}
+							{...card}
+							key={card.title}
+						/>
+					)
+			);
+
+			const moreCardsToViewThanInitialVisible =
+				cardData.length > defaultCardOnMainSiteAmount;
+
 	return (
 		<>
 			<div className={styles.flex}>
@@ -34,24 +48,9 @@ const ProjectCards = () => {
 						see more
 					</p>
 				</div>
-				{cardData.map(
-					(card, index) =>
-						index < cardOnMainSiteAmount && (
-							<ProjectCard
-								delay={
-									index > 0
-										? (index -
-												defaultCardOnMainSiteAmount) /
-										  10
-										: 0
-								}
-								{...card}
-								key={card.title}
-							/>
-						)
-				)}
+				{cards}
 			</div>
-			{cardData.length > defaultCardOnMainSiteAmount && (
+			{moreCardsToViewThanInitialVisible && (
 				<Button variant='secondary' onClick={toggleAllCardsVisibility}>
 					{toggleButtonText}
 				</Button>
