@@ -4,6 +4,21 @@ import cardData from './data';
 import styles from './projectCards.module.css';
 import { useState } from 'react';
 
+const ProjectCardsHeader = () => (
+	<div className={styles.title}>
+		<h2>Selected projects</h2>
+		<p className={styles.more}>
+			Visit my <a href='https://github.com/goodideagiver'>GitHub</a> to see more
+		</p>
+	</div>
+);
+
+const ToggleVisibleCardsButton = (props) => (
+	<Button variant='secondary' onClick={props.toggleAllCardsVisibility}>
+		{props.toggleButtonText}
+	</Button>
+);
+
 const ProjectCards = () => {
 	const INITIAL_VISIBLE_CARDS = 3;
 	const [visibleCards, setVisibleCards] = useState(INITIAL_VISIBLE_CARDS);
@@ -11,9 +26,7 @@ const ProjectCards = () => {
 	const isVisibleCountInitial = visibleCards === INITIAL_VISIBLE_CARDS;
 
 	const toggleAllCardsVisibility = () => {
-		setVisibleCards(
-			isVisibleCountInitial ? Infinity : INITIAL_VISIBLE_CARDS
-		);
+		setVisibleCards(isVisibleCountInitial ? Infinity : INITIAL_VISIBLE_CARDS);
 	};
 
 	const toggleButtonText = isVisibleCountInitial
@@ -36,19 +49,14 @@ const ProjectCards = () => {
 	return (
 		<>
 			<div className={styles.flex}>
-				<div className={styles.title}>
-					<h2>Selected projects</h2>
-					<p className={styles.more}>
-						Visit my <a href='https://github.com/goodideagiver'>GitHub</a> to
-						see more
-					</p>
-				</div>
+				<ProjectCardsHeader />
 				{cards}
 			</div>
 			{hasHiddenCards && (
-				<Button variant='secondary' onClick={toggleAllCardsVisibility}>
-					{toggleButtonText}
-				</Button>
+				<ToggleVisibleCardsButton
+					toggleAllCardsVisibility={toggleAllCardsVisibility}
+					toggleButtonText={toggleButtonText}
+				/>
 			)}
 		</>
 	);
