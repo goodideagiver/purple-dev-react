@@ -25,9 +25,10 @@
 	flex-wrap: wrap;
 	color: var(--font-primary);
 	width: 100%;
-	background-color: transparent;
+	background-color: var(--color-secondary);
 	transition: 0s;
 	height: 100%;
+	transition: all 0.2s ease-in-out;
 }
 
 .list a span {
@@ -36,13 +37,35 @@
 	place-items: center;
 }
 
-.list a p {
+.list p {
 	flex-grow: 1;
+	transition: 0.5s;
 }
 
 .list a:hover,
 .list .option:hover {
 	background-color: var(--btn-primary-hover);
+}
+
+.list a:hover p,
+.list .option:hover p {
+	transform: scale(0.95);
+}
+
+.list a:hover span {
+	animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-5px);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 
 @keyframes bg-scroll {

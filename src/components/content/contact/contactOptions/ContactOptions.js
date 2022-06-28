@@ -51,7 +51,7 @@ const ContactOptions = () => {
 				</li>
 				<li>
 					<Button className={styles.option} onClick={copyMail}>
-						contact@purpleblack.dev
+						<p>contact@purpleblack.dev</p>
 					</Button>
 					{topMessageVisible && (
 						<TopMessage
