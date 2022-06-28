@@ -20,7 +20,7 @@
 
 .cell {
 	flex-basis: calc(1200px / 3);
-	/* padding: 1rem; */
+	padding: 1rem;
 	display: flex;
 	flex-direction: column;
 	align-content: flex-start;
@@ -36,6 +36,8 @@
 	color: var(--color-primary);
 	font-size: 2.8rem;
 	font-weight: bold;
+	display: grid;
+	place-items: center;
 }
 
 @media (max-width: 870px) {

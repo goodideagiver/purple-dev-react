@@ -1,0 +1,65 @@
+.wave {
+	position: relative;
+	overflow: hidden;
+	--animation-duration: 20s;
+	--wave-width: 50%;
+	--animation-end: calc(var(--wave-width) * 2);
+	--wave-height: 80%;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+		rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+	background-image: linear-gradient(
+		to top,
+		transparent,
+		hsla(263, 80%, 42%, 80%) 95%
+	);
+}
+
+.waveFirst {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png');
+	bottom: 0;
+	background-repeat: repeat no-repeat;
+	opacity: 0.05;
+	background-size: var(--wave-width) var(--wave-height);
+	animation: slide var(--animation-duration) infinite linear;
+}
+
+@keyframes slide {
+	0% {
+		background-position: 0% bottom;
+	}
+	100% {
+		background-position: var(--animation-end) bottom;
+	}
+}
+.waveSecond {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png');
+	bottom: 0;
+	background-repeat: repeat no-repeat;
+	opacity: 0.05;
+	background-size: var(--wave-width) calc(var(--wave-height) * 0.5);
+	animation: slide calc(var(--animation-duration) / 1.2) infinite linear;
+}
+.waveThird {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png');
+	bottom: 0;
+	background-repeat: repeat no-repeat;
+	opacity: 0.05;
+	background-size: var(--wave-width) calc(var(--wave-height) * 0.8);
+	animation: slide calc(var(--animation-duration) * 1.3) infinite linear;
+}
+
+@media screen and (max-width: 768px) {
+	.wave {
+		--wave-width: 350%;
+		--animation-duration: 100s;
+	}
+}
