@@ -8,22 +8,20 @@
 
 .header-image {
 	border-radius: 1rem;
-	/* max-height: 10vh; */
 	overflow: hidden;
 	position: relative;
-	height: 200px;
+	min-height: 200px;
 	margin-bottom: 2rem;
+	display: grid;
+	place-items: center;
 }
 
 .title {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: clamp(2vw, 3rem, 6vw);
-	width: min(fit-content, 95%);
+	font-size: 2rem;
+	/* width: min(fit-content, 95%); */
 	text-align: center;
 	z-index: 2;
+	padding: 2rem;
 }
 
 .title span {
@@ -31,6 +29,7 @@
 }
 
 .header-image img {
+	position: absolute;
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
