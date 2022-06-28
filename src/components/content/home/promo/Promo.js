@@ -19,9 +19,9 @@ const Promo = () => {
 	return (
 		<div className={`${st.root} ${classes.wave}`}>
 			<ul className={st.list}>{listElements}</ul>
-			<div className={classes.waveFirst}></div>
-			<div className={classes.waveSecond}></div>
-			<div className={classes.waveThird}></div>
+			<div className={`${classes.waveElement} ${classes.waveFirst}`}></div>
+			<div className={`${classes.waveElement} ${classes.waveSecond}`}></div>
+			<div className={`${classes.waveElement} ${classes.waveThird}`}></div>
 		</div>
 	);
 };
