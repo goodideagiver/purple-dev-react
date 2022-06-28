@@ -7,6 +7,7 @@ import { MdMenu } from 'react-icons/md';
 import styles from './navTop.module.css';
 import NavButtons from '../navButtons/NavButtons';
 import NavMenu from '../navMenu/NavMenu/NavMenu';
+import { Link } from 'react-router-dom';
 
 const NavTop = (props) => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -22,20 +23,22 @@ const NavTop = (props) => {
 	const menuClose = () => setMenuOpen(false);
 
 	return (
-		<nav className={styles.nav}>
-			<h1>purpleblack.dev</h1>
+		<div className={styles.nav}>
+			<Link className={styles.title} to='/'>
+				<h1>purpleblack.dev</h1>
+			</Link>
 			{!isMobile && (
-				<ul className={styles.btnList}>
-					<NavButtons
-						visibleButtonNames={['Home', 'GitHub', 'About', 'Contact']}
-					/>
-				</ul>
+				<nav className={styles.listWrapper}>
+					<ul className={styles.btnList}>
+						<NavButtons visibleButtonNames={['GitHub', 'About', 'Contact']} />
+					</ul>
+				</nav>
 			)}
 			<Button aria-label='side menu toggle' variant='nav' onClick={menuToggle}>
 				<MdMenu />
 			</Button>
 			<NavMenu show={menuOpen} menuClose={menuClose} />
-		</nav>
+		</div>
 	);
 };
 

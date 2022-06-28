@@ -17,16 +17,18 @@ const Backdrop = ({ backdropClickHandler }) => {
 
 const NavContent = ({ onMenuClose }) => {
 	return (
-		<nav className={`${styles.desktopNav} ${styles.show} ${'acrylic'}`}>
+		<div className={`${styles.desktopNav} ${styles.show} ${'acrylic'}`}>
 			<Button className={styles.close} onClick={onMenuClose} variant='nav'>
 				<MdClose />
 			</Button>
 			<h2 className={styles.title}>purpleblack.dev</h2>
 			{/* <div className={styles.separator} /> */}
-			<ul className={styles.btnContainer}>
-				<NavButtons onClick={onMenuClose} />
-			</ul>
-		</nav>
+			<nav>
+				<ul className={styles.btnContainer}>
+					<NavButtons onClick={onMenuClose} />
+				</ul>
+			</nav>
+		</div>
 	);
 };
 

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import styles from './navButtons.module.css';
 
 const NavButtons = ({ visibleButtonNames, onClick }) => {
-	const pagesUrls = [
+	let pagesUrls = [
 		{ name: 'Home', url: '/' },
 		{ name: 'About', url: '/about' },
 		{
@@ -15,6 +15,10 @@ const NavButtons = ({ visibleButtonNames, onClick }) => {
 		},
 		{ name: 'Contact', url: '/contact' },
 	];
+
+	if(visibleButtonNames) {
+		pagesUrls = pagesUrls.filter(page => visibleButtonNames.includes(page.name));
+	}
 
 	const linkElements = pagesUrls.map((page, index) => {
 		return (

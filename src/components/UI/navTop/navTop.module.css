@@ -1,5 +1,9 @@
 @import url('../../../variables.css');
 
+.title {
+	text-decoration: none;
+}
+
 .nav {
 	width: 100%;
 	align-self: center;
@@ -23,8 +27,11 @@
 	align-items: center;
 }
 
-.btnList {
+.listWrapper {
 	flex: 1;
+}
+
+.btnList {
 	list-style: none;
 
 	display: flex;
