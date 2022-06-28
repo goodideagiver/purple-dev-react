@@ -1,5 +1,5 @@
 .open {
-	animation: openNav 0.3s ease-in-out forwards;
+	animation: openNav 0.3s ease-out forwards;
 }
 
 .closed {
@@ -20,6 +20,7 @@
 		transform: translateX(0);
 	}
 	100% {
-		transform: translateX(+120%);
+		transform: scale(0.98);
+		opacity: 0;
 	}
 }

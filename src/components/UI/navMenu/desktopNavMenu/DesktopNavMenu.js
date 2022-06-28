@@ -22,7 +22,7 @@ const NavContent = ({ onMenuClose }) => {
 				<MdClose />
 			</Button>
 			<h2 className={styles.title}>purpleblack.dev</h2>
-			<div className={styles.separator} />
+			{/* <div className={styles.separator} /> */}
 			<ul className={styles.btnContainer}>
 				<NavButtons onClick={onMenuClose} />
 			</ul>
