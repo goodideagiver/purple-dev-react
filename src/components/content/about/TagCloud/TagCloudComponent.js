@@ -25,9 +25,11 @@ const TagCloudComponent = ({ enabled }) => {
 		if (enabled) {
 			const tagCloud = new TagCloud(tagDiv.current, knownTechnologies, {
 				maxSpeed: 'slow',
+				initSpeed: 'slow',
 				keep: false,
 				containerClass: 'tag-width',
 				radius: '150',
+				direction: Math.floor(Math.random() * 720 - 360),
 			});
 			return () => {
 				tagCloud.destroy();
