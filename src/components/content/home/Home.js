@@ -5,7 +5,7 @@ import Promo from './promo/Promo';
 import AboutMeCTA from '../../UI/aboutMeCTA/AboutMeCTA';
 import FunnyQuote from './funnyQuote/FunnyQuote';
 
-const Home = (props) => {
+const Home = () => {
 	return (
 		<>
 			<section className={`${st.sectionWidth} ${st.homeAnim}`}>

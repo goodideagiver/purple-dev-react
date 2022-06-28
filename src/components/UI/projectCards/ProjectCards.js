@@ -4,57 +4,59 @@ import cardData from './data';
 import styles from './projectCards.module.css';
 import { useState } from 'react';
 
+const ProjectCardsHeader = () => (
+	<div className={styles.title}>
+		<h2>Selected projects</h2>
+		<p className={styles.more}>
+			Visit my <a href='https://github.com/goodideagiver'>GitHub</a> to see more
+		</p>
+	</div>
+);
+
+const ToggleVisibleCardsButton = (props) => (
+	<Button variant='secondary' onClick={props.toggleAllCardsVisibility}>
+		{props.toggleButtonText}
+	</Button>
+);
+
 const ProjectCards = () => {
-	const defaultCardOnMainSiteAmount = 3;
-	const [cardOnMainSiteAmount, setCardOnMainSiteAmount] = useState(
-		defaultCardOnMainSiteAmount
-	);
+	const INITIAL_VISIBLE_CARDS = 3;
+	const [visibleCards, setVisibleCards] = useState(INITIAL_VISIBLE_CARDS);
+
+	const isVisibleCountInitial = visibleCards === INITIAL_VISIBLE_CARDS;
 
 	const toggleAllCardsVisibility = () => {
-		setCardOnMainSiteAmount(
-			cardOnMainSiteAmount === defaultCardOnMainSiteAmount
-				? Infinity
-				: defaultCardOnMainSiteAmount
-		);
+		setVisibleCards(isVisibleCountInitial ? Infinity : INITIAL_VISIBLE_CARDS);
 	};
 
-	const toggleButtonText =
-		cardOnMainSiteAmount === defaultCardOnMainSiteAmount
-			? 'Show more projects'
-			: 'Show less projects';
+	const toggleButtonText = isVisibleCountInitial
+		? 'Show more projects'
+		: 'Show less projects';
+
+	const cards = cardData.map(
+		(card, index) =>
+			index < visibleCards && (
+				<ProjectCard
+					delay={index > 0 ? (index - INITIAL_VISIBLE_CARDS) / 10 : 0}
+					{...card}
+					key={card.title}
+				/>
+			)
+	);
+
+	const hasHiddenCards = cardData.length > INITIAL_VISIBLE_CARDS;
 
 	return (
 		<>
 			<div className={styles.flex}>
-				<div className={styles.title}>
-					<h2>Selected projects</h2>
-					<p className={styles.more}>
-						Visit my{' '}
-						<a href='https://github.com/goodideagiver'>GitHub</a> to
-						see more
-					</p>
-				</div>
-				{cardData.map(
-					(card, index) =>
-						index < cardOnMainSiteAmount && (
-							<ProjectCard
-								delay={
-									index > 0
-										? (index -
-												defaultCardOnMainSiteAmount) /
-										  10
-										: 0
-								}
-								{...card}
-								key={card.title}
-							/>
-						)
-				)}
+				<ProjectCardsHeader />
+				{cards}
 			</div>
-			{cardData.length > defaultCardOnMainSiteAmount && (
-				<Button variant='secondary' onClick={toggleAllCardsVisibility}>
-					{toggleButtonText}
-				</Button>
+			{hasHiddenCards && (
+				<ToggleVisibleCardsButton
+					toggleAllCardsVisibility={toggleAllCardsVisibility}
+					toggleButtonText={toggleButtonText}
+				/>
 			)}
 		</>
 	);

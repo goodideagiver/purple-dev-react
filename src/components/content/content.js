@@ -25,18 +25,10 @@ const Content = () => {
 					<ScrollToTop>
 						<Switch>
 							<Route path='/' exact component={Home} />
-							<Route path='/home'>
-								<Home />
-							</Route>
-							<Route path='/about'>
-								<About />
-							</Route>
-							<Route path='/contact'>
-								<Contact />
-							</Route>
-							<Route path='/*'>
-								<PageNotFound />
-							</Route>
+							<Route path='/home' component={Home} />
+							<Route path='/about' component={About} />
+							<Route path='/contact' component={Contact} />
+							<Route path='/*' component={PageNotFound} />
 						</Switch>
 					</ScrollToTop>
 					<Footer />
