@@ -1,8 +1,10 @@
 .footer {
-	background-color: var(--bg-secondary);
 	margin-top: 5rem;
 	padding: 3rem;
 	animation: fadeIn 1s both;
+	background-image: url('./../../../assets/img/misc/layered-waves-haikei-purple.svg');
+	background-size: cover;
+	background-position: bottom;
 }
 
 .list {
@@ -15,8 +17,17 @@
 }
 
 .title {
+	display: block;
+	color: var(--font-primary);
+	text-decoration: none;
 	text-align: center;
-	margin-bottom: 2rem;
+	margin: auto;
+	margin-bottom: 3rem;
+	font-size: 1.8rem;
+	font-weight: bold;
+	width: fit-content;
+	padding: 1rem;
+	border-radius: 0.5rem;
 }
 
 .link {
