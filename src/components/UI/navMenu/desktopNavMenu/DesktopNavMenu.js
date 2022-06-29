@@ -5,6 +5,7 @@ import { MdClose } from 'react-icons/md';
 
 import ReactDOM from 'react-dom';
 import Button from '../../button/Button';
+import { useLockBodyScroll } from '../../../../hooks/useLockBodyScroll';
 
 const Backdrop = ({ backdropClickHandler }) => {
 	return (
@@ -16,6 +17,7 @@ const Backdrop = ({ backdropClickHandler }) => {
 };
 
 const NavContent = ({ onMenuClose }) => {
+	useLockBodyScroll();
 	return (
 		<div className={`${styles.desktopNav} ${styles.show} ${'acrylic'}`}>
 			<Button className={styles.close} onClick={onMenuClose} variant='nav'>
