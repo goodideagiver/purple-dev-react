@@ -1,6 +1,6 @@
 import ModalContent from '../modalContent/ModalContent';
 import { CSSTransition } from 'react-transition-group';
-import classes from './Modal.module.css';
+import transitions from './ModalContent.module.css';
 
 export function AnimatedModalContent({
 	visible,
@@ -14,7 +14,9 @@ export function AnimatedModalContent({
 			mountOnEnter
 			unmountOnExit
 			timeout={300}
-			classNames={{ enter: classes.modalEnter, exit: classes.modalExit }}
+			classNames={{
+				...transitions,
+			}}
 		>
 			<ModalContent modalCloseHandler={modalCloseHandler} title={title}>
 				{children}

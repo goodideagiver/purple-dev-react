@@ -1,6 +1,6 @@
 import Backdrop from '../modalBackdrop/Backrop';
 import { CSSTransition } from 'react-transition-group';
-import classes from './Modal.module.css';
+import transitions from './Backdrop.module.css';
 
 export function AnimatedModalBackdrop({ visible, modalCloseHandler }) {
 	return (
@@ -9,7 +9,7 @@ export function AnimatedModalBackdrop({ visible, modalCloseHandler }) {
 			mountOnEnter
 			unmountOnExit
 			timeout={300}
-			classNames={{ enter: classes.backdropEnter, exit: classes.backdropExit }}
+			classNames={{ ...transitions }}
 		>
 			<Backdrop modalCloseHandler={modalCloseHandler} />
 		</CSSTransition>
