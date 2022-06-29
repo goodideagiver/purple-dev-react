@@ -9,7 +9,7 @@
 @supports (backdrop-filter: blur(5px)) {
 	.acrylic {
 		--acrylic-bg: rgba(37, 37, 37, 0.672);
-		backdrop-filter: blur(5px);
+		backdrop-filter: blur(10px);
 		background-image: url('./../img/misc/noise5percent.webp') !important;
 	}
 }
