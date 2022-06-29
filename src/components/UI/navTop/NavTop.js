@@ -8,16 +8,12 @@ import styles from './navTop.module.css';
 import NavButtons from '../navButtons/NavButtons';
 import NavMenu from '../navMenu/NavMenu/NavMenu';
 import { Link } from 'react-router-dom';
+import { useMediaQuery } from '../../../hooks/useMediaQuery';
 
 const NavTop = (props) => {
 	const [menuOpen, setMenuOpen] = useState(false);
-	const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
 
-	useEffect(() => {
-		window.addEventListener('resize', () =>
-			setIsMobile(window.innerWidth < 800)
-		);
-	}, []);
+	const isMobile = useMediaQuery('(max-width: 900px)');
 
 	const menuToggle = () => setMenuOpen(menuOpen ? false : true);
 	const menuClose = () => setMenuOpen(false);
@@ -34,10 +30,16 @@ const NavTop = (props) => {
 					</ul>
 				</nav>
 			)}
-			<Button aria-label='side menu toggle' variant='nav' onClick={menuToggle}>
-				<MdMenu />
-			</Button>
-			<NavMenu show={menuOpen} menuClose={menuClose} />
+			{isMobile && (
+				<Button
+					aria-label='side menu toggle'
+					variant='nav'
+					onClick={menuToggle}
+				>
+					<MdMenu />
+				</Button>
+			)}
+			<NavMenu show={menuOpen && isMobile} menuClose={menuClose} />
 		</div>
 	);
 };

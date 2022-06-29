@@ -1,6 +1,6 @@
 .button {
 	font-size: 1.2rem;
-	padding: var(--min-padding);
+	padding: var(--min-padding) 0;
 	cursor: pointer;
 	background-color: transparent;
 	border: 0;
@@ -12,11 +12,6 @@
 	color: var(--font-primary);
 	text-decoration: none;
 }
-
-/* .button,
-.button * {
-	transition: color 0.2s;
-} */
 
 .button:hover,
 .button:hover * {
