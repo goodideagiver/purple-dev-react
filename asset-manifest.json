@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "./static/css/main.170a5db2.css",
-    "main.js": "./static/js/main.50df6e92.js",
-    "static/css/4.1c942af7.chunk.css": "./static/css/4.1c942af7.chunk.css",
-    "static/js/4.3062e795.chunk.js": "./static/js/4.3062e795.chunk.js",
-    "static/css/429.cb724fb3.chunk.css": "./static/css/429.cb724fb3.chunk.css",
-    "static/js/429.2e66d93b.chunk.js": "./static/js/429.2e66d93b.chunk.js",
-    "static/css/257.72aab3f7.chunk.css": "./static/css/257.72aab3f7.chunk.css",
-    "static/js/257.b816a918.chunk.js": "./static/js/257.b816a918.chunk.js",
-    "static/css/844.3300bb0b.chunk.css": "./static/css/844.3300bb0b.chunk.css",
-    "static/js/844.faa203c2.chunk.js": "./static/js/844.faa203c2.chunk.js",
+    "main.css": "./static/css/main.5358140e.css",
+    "main.js": "./static/js/main.8b53b48a.js",
+    "static/css/4.ab2f1342.chunk.css": "./static/css/4.ab2f1342.chunk.css",
+    "static/js/4.ed048ee3.chunk.js": "./static/js/4.ed048ee3.chunk.js",
+    "static/css/429.461481aa.chunk.css": "./static/css/429.461481aa.chunk.css",
+    "static/js/429.f9505d91.chunk.js": "./static/js/429.f9505d91.chunk.js",
+    "static/css/257.2592a6df.chunk.css": "./static/css/257.2592a6df.chunk.css",
+    "static/js/257.78eda08f.chunk.js": "./static/js/257.78eda08f.chunk.js",
+    "static/css/844.90a4cf58.chunk.css": "./static/css/844.90a4cf58.chunk.css",
+    "static/js/844.01f935f8.chunk.js": "./static/js/844.01f935f8.chunk.js",
     "static/js/27.0a6aed62.chunk.js": "./static/js/27.0a6aed62.chunk.js",
     "static/js/672.591f6aa6.chunk.js": "./static/js/672.591f6aa6.chunk.js",
     "static/media/forest.webp": "./static/media/forest.b08b57d8fa70e81332dc.webp",
     "static/media/proProgrammer.webp": "./static/media/proProgrammer.d7a7445f16950f1ea3e5.webp",
     "static/media/noise5percent.webp": "./static/media/noise5percent.7628f0db170636e37d30.webp",
     "static/media/code.webp": "./static/media/code.7aa8317d2fd811ce3efc.webp",
+    "static/media/layered-waves-haikei-purple.svg": "./static/media/layered-waves-haikei-purple.cb45ac8ea0ea11c325c7.svg",
     "index.html": "./index.html"
   },
   "entrypoints": [
-    "static/css/main.170a5db2.css",
-    "static/js/main.50df6e92.js"
+    "static/css/main.5358140e.css",
+    "static/js/main.8b53b48a.js"
   ]
 }
