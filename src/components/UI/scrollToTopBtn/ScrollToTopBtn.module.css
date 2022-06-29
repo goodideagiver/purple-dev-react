@@ -16,6 +16,10 @@
 	transform: translate(-50%, -50%);
 }
 
+.button:hover {
+	animation: flyUp 1s forwards;
+}
+
 @media (min-width: 500px) {
 	.button {
 		display: none;
@@ -26,4 +30,13 @@
 	opacity: 0;
 	transform: translate(0, 10px);
 	visibility: hidden;
+}
+
+@keyframes flyUp {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(0, -40vh);
+	}
 }
