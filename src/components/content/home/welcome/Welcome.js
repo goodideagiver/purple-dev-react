@@ -32,7 +32,8 @@ const Welcome = (props) => {
 			<ImgSmoothLoad
 				className={st.programmer}
 				src={img}
-				alt='Karol mysteriously half faded overlayed by mountain hill with trees'
+				alt=''
+				aria-hidden='true'
 			/>
 		</div>
 	);

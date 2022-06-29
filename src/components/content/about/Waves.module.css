@@ -1,0 +1,52 @@
+.waves {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.waves::before,
+.waves::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	min-width: 315vw;
+	min-height: 300vw;
+	background-color: var(--color-primary);
+	animation-name: rotate;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.waves::before {
+	bottom: 15vh;
+	border-radius: 45%;
+	animation-duration: 40s;
+	box-shadow: rgba(0, 0, 0, 0.269) 0 0 50px;
+	opacity: 0.4;
+}
+
+.waves::after {
+	box-shadow: rgba(0, 0, 0, 0.281) 0 0 50px;
+	bottom: 12vh;
+	opacity: 0.5;
+	border-radius: 47%;
+	animation-duration: 41s;
+}
+
+.waves * {
+	z-index: 1;
+}
+
+@keyframes rotate {
+	0% {
+		transform: translate(-50%, 0) rotateZ(0deg);
+	}
+	50% {
+		transform: translate(-50%, -2%) rotateZ(180deg);
+	}
+	100% {
+		transform: translate(-50%, 0%) rotateZ(360deg);
+	}
+}

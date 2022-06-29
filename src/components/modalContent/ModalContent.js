@@ -3,11 +3,14 @@ import Button from '../UI/button/Button';
 import styles from './modalContent.module.css';
 
 import { GrClose } from 'react-icons/gr';
+import { useLockBodyScroll } from '../../hooks/useLockBodyScroll';
 
 const ModalContent = (props) => {
 	const contentCssClasses = `${styles.content} ${
 		props.className ? props.className : ''
 	} acrylic`;
+
+	useLockBodyScroll();
 
 	return (
 		<div className={contentCssClasses}>

@@ -26,4 +26,14 @@
 	opacity: 0;
 	transform: translate(0, 10px);
 	visibility: hidden;
+	animation: flyUp 1s forwards;
+}
+
+@keyframes flyUp {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(0, -40vh);
+	}
 }

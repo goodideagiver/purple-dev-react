@@ -9,7 +9,6 @@
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	transition: 0.3s;
 	color: var(--font-primary);
 	z-index: 1040;
 	box-shadow: var(--shadow-elevation-high);
@@ -73,4 +72,3 @@
 		backdrop-filter: blur(15px);
 	}
 }
-
