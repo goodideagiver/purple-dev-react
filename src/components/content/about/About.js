@@ -13,9 +13,9 @@ const About = () => {
 		<MainPageContainer>
 			<Header styles={styles} />
 			<main className={`${styles.grid}`}>
-				<KnownTechnologies styles={styles} />
-				<AboutMe styles={styles} />
 				<Skills styles={styles} />
+				<AboutMe styles={styles} />
+				<KnownTechnologies styles={styles} />
 				<Roadmap className={styles.cell} />
 				<EmploymentHistory className={styles.cell} />
 			</main>
