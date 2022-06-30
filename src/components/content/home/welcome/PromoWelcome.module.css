@@ -1,8 +1,8 @@
 .devText {
 	align-self: flex-start;
 	font-size: 1.8rem;
-	color: var(--color-primary);
 	margin-bottom: 0.5rem;
+	color: var(--color-primary);
 }
 
 .bigText {
@@ -17,4 +17,10 @@
 
 .button {
 	margin-top: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+	.devText {
+		display: none;
+	}
 }

@@ -19,13 +19,15 @@ const Welcome = (props) => {
 				<PromoWelcome />
 				<WelcomeImages />
 			</div>
-			<div className={`${st.programmer} ${st.overlay}`} />
-			<ImgSmoothLoad
-				className={st.programmer}
-				src={img}
-				alt=''
-				aria-hidden='true'
-			/>
+			<div className={st.programmer}>
+				<div className={`${st.programmer} ${st.overlay}`} />
+				<ImgSmoothLoad
+					className={st.image}
+					src={img}
+					alt=''
+					aria-hidden='true'
+				/>
+			</div>
 		</div>
 	);
 };

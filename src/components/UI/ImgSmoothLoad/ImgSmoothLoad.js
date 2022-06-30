@@ -1,7 +1,7 @@
 import styles from './ImgSmoothLoad.module.css';
 import { useState } from 'react';
 
-const ImgSmoothLoad = ({ src, className, alt }) => {
+const ImgSmoothLoad = ({ src, className, alt, ...props }) => {
 	const [isLoaded, setIsLoaded] = useState(false);
 
 	return (
@@ -12,6 +12,7 @@ const ImgSmoothLoad = ({ src, className, alt }) => {
 			}}
 			className={`${!isLoaded ? styles.loading : styles.loaded} ${className}`}
 			alt={alt}
+			{...props}
 		/>
 	);
 };

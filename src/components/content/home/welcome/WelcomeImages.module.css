@@ -1,6 +1,7 @@
 .imagesWrapper {
 	position: relative;
 	z-index: 1;
+	animation: float 10s infinite cubic-bezier(0.63, 0.01, 0.36, 1);
 }
 
 .image {
@@ -32,6 +33,7 @@
 	object-fit: cover;
 	height: 100%;
 	width: 100%;
+	object-position: top;
 }
 
 .image:nth-child(1) {
@@ -40,5 +42,17 @@
 }
 .image:nth-child(2) {
 	position: absolute;
-	transform: scale(0.9);
+	transform: scale(0.8);
+}
+
+@keyframes float {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(0, -2%);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
 }

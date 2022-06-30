@@ -1,7 +1,7 @@
 import ImgSmoothLoad from '../../../UI/ImgSmoothLoad/ImgSmoothLoad';
 import classes from './WelcomeImages.module.css';
-import code2 from '../../../../assets/img/contact/code.webp';
-import programmer from '../../../../assets/img/programmer/proProgrammer.webp';
+import code2 from '../../../../assets/img/welcome/builder.png';
+import programmer from '../../../../assets/img/welcome/fetcher.png';
 
 export const WelcomeImages = () => (
 	<div className={classes.imagesWrapper}>
