@@ -9,7 +9,7 @@ export const PromoWelcome = () => (
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
 			laborum autem, necessitatibus obcaecati quam aspernatur assumenda fugit
 		</p>
-		<Button className={st.button} variant='glow'>
+		<Button route='/about' className={st.button} variant='glow'>
 			Contact me
 		</Button>
 	</div>

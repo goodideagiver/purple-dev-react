@@ -1,6 +1,6 @@
 .welcome {
 	background-size: cover;
-	height: min(85vh);
+	/* height: min(85vh); */
 
 	display: flex;
 	align-items: center;
@@ -22,10 +22,12 @@
 .main {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-auto-rows: auto;
 	position: relative;
 	width: 100%;
 	z-index: 1;
 	gap: 2rem;
+	align-items: center;
 }
 
 .programmer {
