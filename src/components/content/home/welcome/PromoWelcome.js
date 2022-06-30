@@ -6,8 +6,8 @@ export const PromoWelcome = () => (
 		<h2 className={st.devText}>purpleblack.dev</h2>
 		<p className={st.bigText}>Frontend developer</p>
 		<p className={st.info}>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-			laborum autem, necessitatibus obcaecati quam aspernatur assumenda fugit
+			Welcome to my website, here you can learn some usefull information about
+			me
 		</p>
 		<Button route='/about' className={st.button} variant='glow'>
 			Contact me
