@@ -1,5 +1,5 @@
 .open {
-	animation: openNav 0.3s ease-out forwards;
+	animation: openNav 0.3s ease-in-out forwards;
 }
 
 .closed {
@@ -8,10 +8,11 @@
 
 @keyframes openNav {
 	0% {
-		transform: translateX(+120%);
+		transform: translate(10%);
+		opacity: 0;
 	}
 	100% {
-		transform: translateX(0);
+		transform: translate(0);
 	}
 }
 
