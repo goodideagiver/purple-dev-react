@@ -26,7 +26,7 @@
 	flex-wrap: wrap;
 	color: var(--font-primary);
 	width: 100%;
-	/* background-color: var(--color-secondary); */
+
 	transition: 0s;
 	height: 100%;
 	transition: all 0.2s ease-in-out;
@@ -51,7 +51,7 @@
 }
 
 .list a:hover span {
-	animation: bounce 1s infinite;
+	animation: bounce 0.5s;
 }
 
 @keyframes bounce {
@@ -59,10 +59,10 @@
 		transform: translateY(0);
 	}
 	50% {
-		transform: translateY(-5px);
+		transform: translateY(-5px) rotateY(360deg);
 	}
 	100% {
-		transform: translateY(0);
+		transform: translateY(0) rotateY(360deg);
 	}
 }
 

@@ -3,7 +3,7 @@
 	grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
 	gap: 3rem;
 	width: 100%;
-	/* min-height: 70vh; */
+
 }
 
 .header-image {
@@ -21,7 +21,7 @@
 
 .title {
 	font-size: 2rem;
-	/* width: min(fit-content, 95%); */
+
 	text-align: center;
 	z-index: 2;
 	padding: 2rem 0;
