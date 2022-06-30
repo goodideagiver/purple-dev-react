@@ -3,7 +3,6 @@
 	grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
 	gap: 3rem;
 	width: 100%;
-
 }
 
 .header-image {
@@ -55,6 +54,8 @@
 		transparent,
 		var(--bg-primary)
 	);
+	font-size: 16px;
+	font-family: 'Courier New', Courier, monospace;
 	height: 16px;
 	left: 0;
 	bottom: 10px;
