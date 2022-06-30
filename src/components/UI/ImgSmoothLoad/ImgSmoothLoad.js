@@ -10,9 +10,7 @@ const ImgSmoothLoad = ({ src, className, alt }) => {
 			onLoad={() => {
 				setIsLoaded(true);
 			}}
-			className={`${
-				!isLoaded ? styles.loading : styles.loaded
-			} ${className}`}
+			className={`${!isLoaded ? styles.loading : styles.loaded} ${className}`}
 			alt={alt}
 		/>
 	);

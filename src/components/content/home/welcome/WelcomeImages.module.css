@@ -1,0 +1,24 @@
+.imagesWrapper {
+	position: relative;
+	z-index: 1;
+}
+
+.image {
+	width: 80%;
+	position: absolute;
+	overflow: hidden;
+	border-radius: 1rem;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	top: 0;
+	right: 0;
+}
+
+.image:nth-child(1) {
+	transform: scale(0.8) translate(0, 20%);
+	opacity: 0.5;
+}
+.image:nth-child(2) {
+	transform: scale(0.9) translate(-40%);
+}

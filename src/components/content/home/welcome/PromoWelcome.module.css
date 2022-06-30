@@ -1,0 +1,19 @@
+.devText {
+	align-self: flex-start;
+	font-size: 1.8rem;
+	color: var(--color-primary);
+	margin-bottom: 0.5rem;
+}
+
+.bigText {
+	font-size: 2.3rem;
+	margin-bottom: 2rem;
+}
+
+.info {
+	line-height: 2rem;
+}
+
+.button {
+	margin-top: 3rem;
+}

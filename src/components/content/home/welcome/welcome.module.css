@@ -1,5 +1,4 @@
 .welcome {
-	/* background-image: url('../../../../img/home/forest.png'); */
 	background-size: cover;
 	height: min(85vh);
 
@@ -7,12 +6,10 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	/* padding: min(8rem, 10%); */
-	/* animation: appear 1s forwards; */
+	width: 100%;
 }
 
 .welcome * {
-	/* color: black; */
 	display: block;
 }
 
@@ -22,21 +19,13 @@
 	text-decoration: none;
 }
 
-.devText {
-	align-self: flex-start;
-	font-size: clamp(10px, 2rem, 5vw);
-	color: var(--color-primary);
-}
-
-.bigText {
-	font-size: clamp(20px, 10rem, 10vw);
-	margin-bottom: 2rem;
-}
-
 .main {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	position: relative;
+	width: 100%;
+	z-index: 1;
+	gap: 2rem;
 }
 
 .programmer {
