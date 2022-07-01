@@ -30,7 +30,7 @@ export const WelcomeImages = () => {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setActiveImageIndex((activeImageIndex + 1) % images.length);
-		}, 5000);
+		}, 8000);
 
 		return () => clearInterval(interval);
 	}, [activeImageIndex]);

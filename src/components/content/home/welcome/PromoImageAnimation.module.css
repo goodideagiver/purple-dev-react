@@ -1,17 +1,24 @@
 .enterActive,
 .exitActive {
-	transition: 2s;
+	transition: 2s cubic-bezier(0.69, 0.08, 0.09, 0.98);
 }
 
 .enter {
 	opacity: 0;
+	transform: scale(0.8);
+	z-index: 5;
+	border-radius: 1rem;
 }
 .enterActive {
 	opacity: 1;
+	transform: scale(1);
+	z-index: 5;
 }
 .exit {
+	transform: scale(1);
 	opacity: 1;
 }
 .exitActive {
-	opacity: 0;
+	transform: scale(1.2);
+	/* opacity: 0; */
 }
