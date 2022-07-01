@@ -34,12 +34,18 @@
 	height: 100%;
 	width: 100%;
 	object-position: top;
+	position: absolute;
 }
 
 .image:nth-child(1) {
 	transform: scale(0.8) translate(25%, 20%);
 	opacity: 0.8;
 }
+
+.image:nth-child(1)::after {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #7140bfe6);
+}
+
 .image:nth-child(2) {
 	position: absolute;
 	transform: scale(0.8);
