@@ -1,5 +1,3 @@
-import styles from './AwesomeModal.module.css';
-
 import ReactDOM from 'react-dom/client';
 
 export const AwesomeModal = ({ children }) => {

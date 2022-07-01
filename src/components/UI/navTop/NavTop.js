@@ -1,6 +1,6 @@
 import Button from '../../UI/button/Button';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import { MdMenu } from 'react-icons/md';
 
@@ -10,7 +10,7 @@ import NavMenu from '../navMenu/NavMenu/NavMenu';
 import { Link } from 'react-router-dom';
 import { useMediaQuery } from '../../../hooks/useMediaQuery';
 
-const NavTop = (props) => {
+const NavTop = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	const isMobile = useMediaQuery('(max-width: 900px)');
