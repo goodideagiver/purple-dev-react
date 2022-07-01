@@ -1,25 +1,32 @@
 {
   "files": {
-    "main.css": "./static/css/main.5aa7c803.css",
-    "main.js": "./static/js/main.bfefe9b0.js",
-    "static/css/392.aed56670.chunk.css": "./static/css/392.aed56670.chunk.css",
-    "static/js/392.e144ad79.chunk.js": "./static/js/392.e144ad79.chunk.js",
-    "static/css/429.e23cd424.chunk.css": "./static/css/429.e23cd424.chunk.css",
-    "static/js/429.5baf267b.chunk.js": "./static/js/429.5baf267b.chunk.js",
-    "static/css/257.2592a6df.chunk.css": "./static/css/257.2592a6df.chunk.css",
-    "static/js/257.88f8c8f0.chunk.js": "./static/js/257.88f8c8f0.chunk.js",
-    "static/css/161.90a4cf58.chunk.css": "./static/css/161.90a4cf58.chunk.css",
-    "static/js/161.d2ba1599.chunk.js": "./static/js/161.d2ba1599.chunk.js",
-    "static/js/672.591f6aa6.chunk.js": "./static/js/672.591f6aa6.chunk.js",
+    "main.css": "./static/css/main.7675be87.css",
+    "main.js": "./static/js/main.45469858.js",
+    "static/css/392.6bb2793a.chunk.css": "./static/css/392.6bb2793a.chunk.css",
+    "static/js/392.af80ca3c.chunk.js": "./static/js/392.af80ca3c.chunk.js",
+    "static/css/429.a8973335.chunk.css": "./static/css/429.a8973335.chunk.css",
+    "static/js/429.8c2fe637.chunk.js": "./static/js/429.8c2fe637.chunk.js",
+    "static/css/984.88335aa0.chunk.css": "./static/css/984.88335aa0.chunk.css",
+    "static/js/984.18b05f0a.chunk.js": "./static/js/984.18b05f0a.chunk.js",
+    "static/css/161.3300bb0b.chunk.css": "./static/css/161.3300bb0b.chunk.css",
+    "static/js/161.412b2f37.chunk.js": "./static/js/161.412b2f37.chunk.js",
+    "static/js/672.0878c9e1.chunk.js": "./static/js/672.0878c9e1.chunk.js",
     "static/media/forest.webp": "./static/media/forest.b08b57d8fa70e81332dc.webp",
     "static/media/proProgrammer.webp": "./static/media/proProgrammer.d7a7445f16950f1ea3e5.webp",
     "static/media/noise5percent.webp": "./static/media/noise5percent.7628f0db170636e37d30.webp",
     "static/media/code.webp": "./static/media/code.7aa8317d2fd811ce3efc.webp",
+    "static/media/adotpl.webp": "./static/media/adotpl.86b4dab3053981478922.webp",
+    "static/media/adotpl2.webp": "./static/media/adotpl2.6a22ffd9acc16c5b50a0.webp",
+    "static/media/todo.webp": "./static/media/todo.5ec768806844306cc2cb.webp",
+    "static/media/fetcher.webp": "./static/media/fetcher.52b1dfb988da186e0593.webp",
+    "static/media/builder.webp": "./static/media/builder.5d789c783bf1b97aa92a.webp",
+    "static/media/fakeinsta.webp": "./static/media/fakeinsta.9fd0b03d24b3b6a72c48.webp",
+    "static/media/fetcher2.webp": "./static/media/fetcher2.ecdf79bb0b1480feec43.webp",
     "static/media/layered-waves-haikei-purple.svg": "./static/media/layered-waves-haikei-purple.cb45ac8ea0ea11c325c7.svg",
     "index.html": "./index.html"
   },
   "entrypoints": [
-    "static/css/main.5aa7c803.css",
-    "static/js/main.bfefe9b0.js"
+    "static/css/main.7675be87.css",
+    "static/js/main.45469858.js"
   ]
 }
