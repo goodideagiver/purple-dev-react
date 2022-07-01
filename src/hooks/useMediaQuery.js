@@ -4,10 +4,14 @@ export const useMediaQuery = (rule) => {
 	const [matches, setMatches] = useState(window.matchMedia(rule).matches);
 
 	useEffect(() => {
-		const mediaQueryList = window.matchMedia(rule);
-		const listener = () => setMatches(mediaQueryList.matches);
-		mediaQueryList.addEventListener('change', listener);
-		return () => mediaQueryList.removeEventListener('change', listener);
+		try {
+			const mediaQueryList = window.matchMedia(rule);
+			const listener = () => setMatches(mediaQueryList.matches);
+			mediaQueryList.addEventListener('change', listener);
+			return () => mediaQueryList.removeEventListener('change', listener);
+		} catch (error) {
+			setMatches(true);
+		}
 	}, [rule]);
 	return matches;
 };

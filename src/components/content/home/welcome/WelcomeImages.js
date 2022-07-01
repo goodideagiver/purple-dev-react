@@ -27,6 +27,19 @@ const images = [
 export const WelcomeImages = () => {
 	const [activeImageIndex, setActiveImageIndex] = useState(0);
 
+	let selectedImages;
+
+	try {
+		selectedImages = [
+			images.at(activeImageIndex),
+			images.at(activeImageIndex - 1),
+		];
+	} catch (error) {
+		const nextIndex =
+			activeImageIndex !== images.length - 1 ? activeImageIndex + 1 : 0;
+		selectedImages = [activeImageIndex, images[nextIndex]];
+	}
+
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setActiveImageIndex((activeImageIndex + 1) % images.length);
@@ -44,7 +57,7 @@ export const WelcomeImages = () => {
 						classNames={trans}
 						timeout={2000}
 					>
-						<ImgSmoothLoad animate={false} src={images.at(activeImageIndex)} />
+						<ImgSmoothLoad animate={false} src={selectedImages[0]} />
 					</CSSTransition>
 				</TransitionGroup>
 			</div>
@@ -55,10 +68,7 @@ export const WelcomeImages = () => {
 						classNames={trans}
 						timeout={2000}
 					>
-						<ImgSmoothLoad
-							animate={false}
-							src={images.at(activeImageIndex - 1)}
-						/>
+						<ImgSmoothLoad animate={false} src={selectedImages[1]} />
 					</CSSTransition>
 				</TransitionGroup>
 			</div>
