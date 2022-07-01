@@ -3,8 +3,9 @@ import st from './PromoWelcome.module.css';
 
 export const PromoWelcome = () => (
 	<div className={st.promo}>
-		<h2 className={st.devText}>purpleblack.dev</h2>
-		<p className={st.bigText}>Aspiring frontend developer</p>
+		<p className={st.bigText}>
+			Aspiring frontend <span className={st.devText}>developer</span>
+		</p>
 		<p className={st.info}>
 			This is my website, here you can learn some usefull information about me.
 			I am always trying to learn new things and I am always trying to improve
