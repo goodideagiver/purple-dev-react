@@ -7,12 +7,12 @@
 .nav {
 	width: 100%;
 	align-self: center;
-	max-width: var(--website-width);
+	max-width: min(var(--website-width), 90vw);
 	/* margin: auto; */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: var(--padding-base);
+	padding: var(--padding-base) 0;
 	border-radius: var(--border-radius-sm);
 	position: relative;
 	z-index: 2;

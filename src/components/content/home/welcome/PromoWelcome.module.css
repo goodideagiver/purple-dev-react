@@ -1,0 +1,17 @@
+.devText {
+	color: var(--color-primary);
+}
+
+.bigText {
+	font-size: 2.3rem;
+	margin-bottom: 2rem;
+}
+
+.info {
+	line-height: 2rem;
+	font-size: 1.2rem;
+}
+
+.button {
+	margin-top: 3rem;
+}

@@ -1,0 +1,64 @@
+.imagesWrapper {
+	position: relative;
+	z-index: 1;
+	animation: float 10s infinite cubic-bezier(0.63, 0.01, 0.36, 1);
+}
+
+.image {
+	width: 90%;
+	position: relative;
+	overflow: hidden;
+	border-radius: 1rem;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+		rgba(0, 0, 0, 0.482) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.512) 0px -3px 5px;
+	top: 0;
+	left: 0;
+	max-width: 80vw;
+	aspect-ratio: 1/1;
+}
+
+.image::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #7140bf86);
+	z-index: 1;
+}
+
+.image img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	object-position: top;
+	position: absolute;
+}
+
+.image:nth-child(1) {
+	transform: scale(0.8) translate(25%, 20%);
+	opacity: 0.8;
+}
+
+.image:nth-child(1)::after {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #7140bfe6);
+}
+
+.image:nth-child(2) {
+	position: absolute;
+	transform: scale(0.8);
+}
+
+@keyframes float {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(0, -2%);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
