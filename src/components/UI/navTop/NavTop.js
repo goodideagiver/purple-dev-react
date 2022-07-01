@@ -14,7 +14,6 @@ const NavTop = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	const isMobile = useMediaQuery('(max-width: 900px)');
-	// const isMobile = true;
 
 	const menuToggle = () => setMenuOpen(menuOpen ? false : true);
 	const menuClose = () => setMenuOpen(false);
