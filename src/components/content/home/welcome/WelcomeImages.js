@@ -9,10 +9,10 @@ import adotPl2 from '../../../../assets/img/welcome/adotpl2.webp';
 import fakeinsta from '../../../../assets/img/welcome/fakeinsta.webp';
 import todo from '../../../../assets/img/welcome/todo.webp';
 
-import { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import trans from './PromoImageAnimation.module.css';
+import { useWelcomeImages } from './useWelcomeImages';
 
 const images = [
 	adotPl2,
@@ -25,28 +25,11 @@ const images = [
 ];
 
 export const WelcomeImages = () => {
-	const [activeImageIndex, setActiveImageIndex] = useState(0);
-
-	let selectedImages;
-
-	try {
-		selectedImages = [
-			images.at(activeImageIndex),
-			images.at(activeImageIndex - 1),
-		];
-	} catch (error) {
-		const nextIndex =
-			activeImageIndex !== images.length - 1 ? activeImageIndex + 1 : 0;
-		selectedImages = [activeImageIndex, images[nextIndex]];
-	}
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setActiveImageIndex((activeImageIndex + 1) % images.length);
-		}, 8000);
-
-		return () => clearInterval(interval);
-	}, [activeImageIndex]);
+	const { selectedImages, activeImageIndex } = useWelcomeImages(
+		8000,
+		0,
+		images
+	);
 
 	return (
 		<div className={classes.imagesWrapper} aria-hidden='true'>
