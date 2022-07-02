@@ -39,7 +39,7 @@
 	text-decoration-style: wavy;
 	text-decoration-color: var(--color-primary);
 	text-decoration-line: underline;
-	animation: animate 2s linear infinite;
+	animation: animate 5s infinite;
 	width: 100%;
 }
 
@@ -56,17 +56,20 @@
 	);
 	font-size: 16px;
 	font-family: 'Courier New', Courier, monospace;
-	height: 16px;
+	height: 30px;
 	left: 0;
-	bottom: 10px;
+	bottom: 0px;
 }
 
 @keyframes animate {
-	from {
+	0% {
 		transform: translate(0);
 	}
-	to {
-		transform: translate(-16px);
+	50% {
+		transform: translate(-3%);
+	}
+	100% {
+		transform: translate(0%);
 	}
 }
 
