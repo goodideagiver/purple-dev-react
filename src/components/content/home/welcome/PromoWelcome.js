@@ -11,7 +11,7 @@ export const PromoWelcome = () => (
 			I am always trying to learn new things and I am always trying to improve
 			my skills.
 		</p>
-		<Button route='/about' className={st.button} variant='glow'>
+		<Button route='/contact' className={st.button} variant='glow'>
 			Contact me
 		</Button>
 	</div>
