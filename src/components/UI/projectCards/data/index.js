@@ -4,7 +4,8 @@ const cardData = [
 		shortDesc: 'Build a roadmap for your learning journey',
 		desc: ['React', 'TypeScript', 'React Transition Group', 'Redux'],
 		link: 'https://goodideagiver.github.io/roadmapper-ts/',
-		color: '#a66fff30',
+		color: '#4e6be130',
+		tooltip: 'Visit website',
 	},
 	{
 		title: 'Fakeinsta',
