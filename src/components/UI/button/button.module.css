@@ -7,10 +7,10 @@
 	cursor: pointer;
 	transition: 0.1s;
 	font-weight: bold;
-	/* margin: 0.5rem; */
 	position: relative;
 	color: var(--font-primary);
 	display: block;
+	text-decoration: none;
 }
 
 .button:disabled {
@@ -18,7 +18,6 @@
 	cursor: crosshair;
 }
 .button:hover {
-	/* transform: translate(0, 1px); */
 	background-color: var(--color-primary);
 	color: var(--font-primary);
 	background-size: (200%, 200%);
@@ -82,7 +81,7 @@
 .glow {
 	width: fit-content;
 	border: 0;
-	background: var(--btn-primary);
+	background-color: var(--btn-primary);
 	cursor: pointer;
 	position: relative;
 	z-index: 0;
@@ -106,16 +105,15 @@
 		#ff0000
 	);
 	position: absolute;
-	top: -2px;
-	left: -2px;
+	top: 0;
+	left: 0;
 	background-size: 400%;
-	z-index: -1;
-	filter: blur(15px);
-	width: calc(100% + 4px);
-	height: calc(100% + 4px);
-	animation: glowing 20s linear infinite;
-	opacity: 0;
+	z-index: -2;
+	width: 100%;
+	height: 100%;
+	animation: glowing 30s linear infinite;
 	transition: opacity 0.3s ease-in-out;
+	opacity: 0.6;
 	border-radius: 2rem;
 }
 
@@ -127,25 +125,28 @@
 	background: transparent;
 } */
 
-.glow:hover:before {
-	opacity: 0.5;
-}
-
 .glow:after {
 	z-index: -1;
 	content: '';
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: var(--btn-primary);
 	left: 0;
 	top: 0;
 	border-radius: 2rem;
+	backdrop-filter: blur(30px);
+	transform: scale(1);
+	pointer-events: none;
+	transition: 0.3s;
 }
 
 .glow:hover::after,
 .glow:hover {
 	background-color: var(--btn-primary-hover);
+}
+
+.glow:hover::before {
+	opacity: 0;
 }
 
 @keyframes glowing {
@@ -163,9 +164,5 @@
 @media (max-width: 768px) {
 	.glow {
 		font-size: 1rem;
-	}
-
-	.glow::before {
-		opacity: 0;
 	}
 }
