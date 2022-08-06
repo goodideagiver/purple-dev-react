@@ -3,6 +3,7 @@ const skillList = [
 	'CSS',
 	'HTML',
 	'RWD',
+	'React',
 	'Photoshop',
 	'English',
 	'Photography',

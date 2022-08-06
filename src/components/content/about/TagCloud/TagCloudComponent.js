@@ -5,18 +5,20 @@ import TagCloud from 'TagCloud';
 
 const TagCloudComponent = ({ enabled }) => {
 	const knownTechnologies = [
+		'axios',
+		'CSS',
+		'Git',
+		'HTML',
 		'JavaScript',
+		'NPM',
+		'Parcel',
+		'PS',
 		'React',
 		'Redux',
-		'Parcel',
-		'Git',
-		'Sass',
-		'PS',
-		'NPM',
+		'SCSS',
+		'SQL',
+		'TypeScript',
 		'VS Code',
-		'axios',
-		'HTML',
-		'CSS',
 	];
 
 	const tagDiv = useRef(null);
