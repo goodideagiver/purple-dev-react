@@ -16,4 +16,46 @@
 	object-fit: cover;
 	border-radius: 1rem;
 	box-shadow: var(--shadow-elevation-high);
+	z-index: 2;
+}
+
+.link {
+	color: var(--font-primary);
+	padding: 1rem 0;
+	font-size: 2rem;
+	text-align: center;
+	text-decoration: none;
+	transition: color 0.1s ease;
+	animation: linkReveal 1s 0.5s backwards, linkFlash 8s 1.5s infinite;
+}
+
+@keyframes linkReveal {
+	from {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes linkFlash {
+	0% {
+		color: var(--font-primary);
+	}
+	5% {
+		color: var(--btn-primary);
+		transform: scale(0.95);
+	}
+	20% {
+		transform: scale(1);
+		color: var(--font-primary);
+	}
+	100% {
+		color: var(--font-primary);
+	}
+}
+
+.link:hover {
+	color: var(--color-primary) !important;
 }
