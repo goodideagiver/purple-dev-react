@@ -27,9 +27,8 @@
 	color: var(--font-primary);
 	width: 100%;
 
-	transition: 0s;
 	height: 100%;
-	transition: all 0.2s ease-in-out;
+	transition: all 0.1s ease-in-out;
 }
 
 .list a span {
@@ -40,7 +39,6 @@
 
 .list p {
 	flex-grow: 1;
-	transition: 0.2s 0s;
 }
 
 .list a:hover,
