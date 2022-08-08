@@ -11,12 +11,23 @@
 
 .man-pointing {
 	width: 100%;
-	height: 100%;
+	height: min(100%, 400px) !important;
+	min-height: 400px;
 	overflow: hidden;
 	object-fit: cover;
 	border-radius: 1rem;
 	box-shadow: var(--shadow-elevation-high);
 	z-index: 2;
+	animation: manReveal 0.5s 0.5s both;
+}
+
+@keyframes manReveal {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 .link {
