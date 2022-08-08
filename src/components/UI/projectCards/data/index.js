@@ -22,13 +22,6 @@ const cardData = [
 		color: '#FA640020',
 		tooltip: 'Visit website',
 	},
-	{
-		title: 'CLICK THE BUTTON',
-		shortDesc: 'Mini fun project',
-		desc: ['Vanilla JavaScript', 'Clean code', 'Error handling'],
-		link: 'https://github.com/goodideagiver/click-the-button',
-		color: '#6276D720',
-	},
 ];
 
 export default cardData;
