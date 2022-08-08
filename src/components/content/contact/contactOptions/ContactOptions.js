@@ -26,7 +26,10 @@ const ContactOptions = () => {
 			<h3>Contact options</h3>
 			<ul className={styles.list}>
 				<li>
-					<a href='https://discord.gg/kGsCDes7VU'>
+					<a
+						style={{ animationDelay: '0.5s' }}
+						href='https://discord.gg/kGsCDes7VU'
+					>
 						<span>
 							<FaDiscord />
 						</span>
@@ -34,7 +37,10 @@ const ContactOptions = () => {
 					</a>
 				</li>
 				<li>
-					<a href='mailto:contact@purpleblack.dev'>
+					<a
+						style={{ animationDelay: '0.6s' }}
+						href='mailto:contact@purpleblack.dev'
+					>
 						<span>
 							<MdEmail />
 						</span>
@@ -42,7 +48,10 @@ const ContactOptions = () => {
 					</a>
 				</li>
 				<li>
-					<a href='https://www.linkedin.com/in/karol-bartkiewicz'>
+					<a
+						style={{ animationDelay: '0.7s' }}
+						href='https://www.linkedin.com/in/karol-bartkiewicz'
+					>
 						<span>
 							<FaLinkedin />
 						</span>
@@ -50,7 +59,11 @@ const ContactOptions = () => {
 					</a>
 				</li>
 				<li>
-					<Button className={styles.option} onClick={copyMail}>
+					<Button
+						style={{ animationDelay: '0.8s' }}
+						className={styles.option}
+						onClick={copyMail}
+					>
 						<p>contact@purpleblack.dev</p>
 					</Button>
 					{topMessageVisible && (
