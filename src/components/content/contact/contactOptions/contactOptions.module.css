@@ -8,77 +8,9 @@
 	justify-content: center;
 }
 
-.list a,
-.list .option {
-	padding: 1rem;
-	text-align: center;
-	border: 0;
-	border: white solid 1px;
-	font-size: 1.2rem;
-	font-weight: bold;
-	text-decoration: none;
-	display: flex;
-	justify-content: center;
-	gap: 1rem;
-	align-items: center;
-	flex-wrap: wrap;
-	color: var(--font-primary);
-	width: 100%;
-	height: 100%;
-	transition: all 0.1s ease-in-out;
-
-	border-radius: 50px;
-	padding: 1rem 2rem;
-	animation: revealOption 1.6s backwards;
-}
-
-.list a span {
-	font-size: 2rem;
-	display: grid;
-	place-items: center;
-}
-
-.list p {
-	flex-grow: 1;
-}
-
-.list a:hover,
-.list .option:hover {
-	border-color: var(--btn-primary);
-	color: var(--btn-primary);
-	background-color: transparent;
-}
-
-.list a:hover span {
-	animation: bounce 0.5s;
-}
-
-@keyframes bounce {
-	0% {
-		transform: translateY(0);
-	}
-	50% {
-		transform: translateY(-5px) rotateY(360deg);
-	}
-	100% {
-		transform: translateY(0) rotateY(360deg);
-	}
-}
-
 @media (max-width: 600px) {
 	.list li {
 		flex-basis: 100%;
 		word-break: break-all;
-	}
-}
-
-@keyframes revealOption {
-	from {
-		opacity: 0;
-		transform: scale(0.95) translate(0, 20px);
-	}
-	to {
-		transform: scale(1);
-		opacity: 1;
 	}
 }
