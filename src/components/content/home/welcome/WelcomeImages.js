@@ -25,15 +25,12 @@ const images = [
 ];
 
 export const WelcomeImages = () => {
-	const { selectedImages, activeImageIndex } = useWelcomeImages(
-		8000,
-		0,
-		images
-	);
+	const { selectedImages, activeImageIndex, nextImageHandler } =
+		useWelcomeImages(8000, 0, images);
 
 	return (
 		<div className={classes.imagesWrapper} aria-hidden='true'>
-			<div className={classes.image}>
+			<div onClick={nextImageHandler} className={classes.image}>
 				<TransitionGroup>
 					<CSSTransition
 						key={activeImageIndex}
@@ -54,6 +51,9 @@ export const WelcomeImages = () => {
 						<ImgSmoothLoad animate={false} src={selectedImages[1]} />
 					</CSSTransition>
 				</TransitionGroup>
+				<button onClick={nextImageHandler} className={classes.control}>
+					Next
+				</button>
 			</div>
 		</div>
 	);

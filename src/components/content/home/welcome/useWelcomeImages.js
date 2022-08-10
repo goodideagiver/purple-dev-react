@@ -24,5 +24,8 @@ export const useWelcomeImages = (delay, startingIndex, imagesArray) => {
 		return () => clearInterval(interval);
 	}, [activeImageIndex, imagesArray.length, delay]);
 
-	return { selectedImages, activeImageIndex };
+	const nextImageHandler = () =>
+		setActiveImageIndex((activeImageIndex + 1) % imagesArray.length);
+
+	return { selectedImages, activeImageIndex, nextImageHandler };
 };

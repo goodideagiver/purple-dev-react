@@ -62,3 +62,30 @@
 		transform: translate(0, 0);
 	}
 }
+
+.control {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	z-index: 15;
+	background-color: black;
+	padding: 1rem 2rem;
+	border-radius: 0.8rem;
+	font-size: 1rem;
+	background-color: var(--btn-primary);
+	box-shadow: var(--shadow-elevation-high);
+	cursor: pointer;
+	color: var(--font-primary);
+	border: 0;
+	transition: 0.2s;
+}
+
+.control:active {
+	background-color: var(--btn-primary-hover);
+}
+
+@media (min-width: 768px) {
+	.control:hover {
+		background-color: var(--btn-primary-hover);
+	}
+}
