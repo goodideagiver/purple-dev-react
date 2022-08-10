@@ -1,7 +1,5 @@
 import ContactOptions from './contactOptions/ContactOptions';
 
-import React from 'react';
-
 import styles from './contact.module.css';
 import { MainPageContainer } from '../../UI/MainPageContainer/MainPageContainer';
 
