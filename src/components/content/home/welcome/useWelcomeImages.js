@@ -1,7 +1,13 @@
 import { useEffect, useState } from 'react';
 
-export const useWelcomeImages = (delay, startingIndex, imagesArray) => {
+export const useWelcomeImages = (
+	delay,
+	startingIndex,
+	imagesArray,
+	transitionLengthMiliseconds
+) => {
 	const [activeImageIndex, setActiveImageIndex] = useState(startingIndex);
+	const [isInputBlocked, setisInputBlocked] = useState(false);
 
 	let selectedImages;
 
@@ -24,8 +30,14 @@ export const useWelcomeImages = (delay, startingIndex, imagesArray) => {
 		return () => clearInterval(interval);
 	}, [activeImageIndex, imagesArray.length, delay]);
 
-	const nextImageHandler = () =>
+	const nextImageHandler = () => {
+		if (isInputBlocked) return;
 		setActiveImageIndex((activeImageIndex + 1) % imagesArray.length);
+		setisInputBlocked(true);
+		setTimeout(() => {
+			setisInputBlocked(false);
+		}, transitionLengthMiliseconds);
+	};
 
 	return { selectedImages, activeImageIndex, nextImageHandler };
 };

@@ -25,8 +25,8 @@ const images = [
 ];
 
 export const WelcomeImages = () => {
-	const { selectedImages, activeImageIndex, nextImageHandler } =
-		useWelcomeImages(8000, 0, images);
+	const { selectedImages, activeImageIndex, nextImageHandler, isInputBlocked } =
+		useWelcomeImages(8000, 0, images, 2000);
 
 	return (
 		<div className={classes.imagesWrapper} aria-hidden='true'>
