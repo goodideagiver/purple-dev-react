@@ -30,7 +30,11 @@ export const WelcomeImages = () => {
 
 	return (
 		<div className={classes.imagesWrapper} aria-hidden='true'>
-			<div onClick={nextImageHandler} className={classes.image}>
+			<div
+				data-disabled={isInputBlocked}
+				onClick={nextImageHandler}
+				className={`${classes.image} ${classes.clickableImage}`}
+			>
 				<TransitionGroup>
 					<CSSTransition
 						key={activeImageIndex}

@@ -39,5 +39,5 @@ export const useWelcomeImages = (
 		}, transitionLengthMiliseconds);
 	};
 
-	return { selectedImages, activeImageIndex, nextImageHandler };
+	return { selectedImages, activeImageIndex, nextImageHandler, isInputBlocked };
 };
