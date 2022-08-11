@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import { AnimatedModalBackdrop } from './AnimatedModalBackdrop';
 import { AnimatedModalContent } from './AnimatedModalContent';
 
+/**
+ * @param {string} title
+ * @param children
+ * @param {function} modalCloseHandler
+ */
 const Modal = ({ visible, modalCloseHandler, title, children }) => {
 	return ReactDOM.createPortal(
 		<>

@@ -1,5 +1,8 @@
+import { useState } from 'react';
 import CardBtn from './components/CardBtn';
 import styles from './projectCard.module.css';
+
+import Modal from '../../modal/Modal';
 
 const ProjectCardFeaturesList = (props) => (
 	<ul className={styles.desc}>
@@ -17,22 +20,46 @@ const ProjectCard = ({
 	color,
 	delay = 0,
 	tooltip = 'View repository',
+	article,
 }) => {
+	const [articleModalVisible, setArticleModalVisible] = useState(false);
+
 	const cardGradientBg = {
 		backgroundImage: `linear-gradient(130deg,transparent 60%, ${color} 100%)`,
 	};
 
 	const cardRevealDelay = { animationDelay: delay + 's' };
 
+	const showArticleModalHandler = () => setArticleModalVisible(true);
+
+	const hideArticleModalHandler = () => setArticleModalVisible(false);
+
+	const cardButton = article ? (
+		<CardBtn onClick={showArticleModalHandler} tooltip='Learn more' />
+	) : (
+		<CardBtn link={link} tooltip={tooltip} />
+	);
+
 	return (
-		<div style={cardRevealDelay} className={styles.cardWrapper}>
-			<div className={styles.card} style={cardGradientBg}>
-				<p className={styles.subTitle}>{shortDesc}</p>
-				<h3 className={styles.title}>{title}</h3>
-				<ProjectCardFeaturesList desc={desc} />
-				<CardBtn link={link} tooltip={tooltip} />
+		<>
+			<div style={cardRevealDelay} className={styles.cardWrapper}>
+				<div className={styles.card} style={cardGradientBg}>
+					<h3 className={styles.title}>{title}</h3>
+					<p className={styles.subTitle}>{shortDesc}</p>
+					<ProjectCardFeaturesList desc={desc} />
+					{cardButton}
+				</div>
 			</div>
-		</div>
+			{article && (
+				<Modal
+					modalCloseHandler={hideArticleModalHandler}
+					visible={articleModalVisible}
+					title={title}
+				>
+					{article}
+				</Modal>
+			)}
+		</>
 	);
 };
 

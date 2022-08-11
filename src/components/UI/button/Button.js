@@ -3,7 +3,7 @@ import styles from './button.module.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Button = ({ route, link, variant, className, ...props }) => {
+const Button = ({ onClick, route, link, variant, className, ...props }) => {
 	if (route) {
 		return (
 			<Link
@@ -33,11 +33,14 @@ const Button = ({ route, link, variant, className, ...props }) => {
 
 	return (
 		<button
+			onClick={onClick}
 			className={`${styles.button} ${
 				variant ? styles[variant] : ''
 			} ${className}`}
 			{...props}
-		/>
+		>
+			{props.children}
+		</button>
 	);
 };
 

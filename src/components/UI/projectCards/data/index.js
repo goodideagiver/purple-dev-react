@@ -1,3 +1,5 @@
+import { Roadmapper } from './articles/Roadmapper';
+
 const cardData = [
 	{
 		title: 'Roadmapper.ts',
@@ -6,6 +8,7 @@ const cardData = [
 		link: 'https://goodideagiver.github.io/roadmapper-ts/',
 		color: '#4e6be130',
 		tooltip: 'Visit website',
+		article: <Roadmapper />,
 	},
 	{
 		title: 'Fakeinsta',

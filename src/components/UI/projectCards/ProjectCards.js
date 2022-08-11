@@ -40,6 +40,7 @@ const ProjectCards = () => {
 					delay={index > 0 ? (index - INITIAL_VISIBLE_CARDS) / 10 : 0}
 					{...card}
 					key={card.title}
+					article={card.article}
 				/>
 			)
 	);

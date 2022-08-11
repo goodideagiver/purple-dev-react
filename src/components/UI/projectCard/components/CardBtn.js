@@ -1,11 +1,20 @@
 import Button from './../../button/Button';
 import Tooltip from './../../Tooltip/Tooltip';
-import classes from './CardBtn.module.css'
+import classes from './CardBtn.module.css';
 
-const CardBtn = ({link,tooltip}) => {
-  return (
+const CardBtn = ({ link, tooltip, onClick }) => {
+	if (!tooltip) {
+		return (
+			<Button link={link} onClick={onClick} className={classes.btn}>
+				Check out
+			</Button>
+		);
+	}
+
+	return (
 		<Tooltip className={classes.tooltip} text={tooltip}>
 			<Button
+				onClick={onClick}
 				link={link}
 				className={classes.button}
 				variant='callToAction'
@@ -13,7 +22,7 @@ const CardBtn = ({link,tooltip}) => {
 				Check out
 			</Button>
 		</Tooltip>
-  );
-}
+	);
+};
 
-export default CardBtn
+export default CardBtn;
