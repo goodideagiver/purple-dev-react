@@ -8,6 +8,9 @@ import adotPl from '../../../../assets/img/welcome/adotpl.webp';
 import adotPl2 from '../../../../assets/img/welcome/adotpl2.webp';
 import fakeinsta from '../../../../assets/img/welcome/fakeinsta.webp';
 import todo from '../../../../assets/img/welcome/todo.webp';
+import roadmapper1 from '../../../../assets/img/welcome/roadmapper1.png';
+import roadmapper2 from '../../../../assets/img/welcome/roadmapper2.png';
+import roadmapper3 from '../../../../assets/img/welcome/roadmapper3.png';
 
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
@@ -16,6 +19,9 @@ import { useWelcomeImages } from './useWelcomeImages';
 
 const images = [
 	adotPl2,
+	roadmapper1,
+	roadmapper2,
+	roadmapper3,
 	todo,
 	politeEmailBuilder,
 	fetcher,
