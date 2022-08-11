@@ -19,6 +19,9 @@ const TagCloudComponent = ({ enabled }) => {
 		'SQL',
 		'TypeScript',
 		'VS Code',
+		'Jest',
+		'React Transition Group',
+		'React testing library',
 	];
 
 	const tagDiv = useRef(null);
