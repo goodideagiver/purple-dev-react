@@ -1,7 +1,7 @@
 import styles from './ImgSmoothLoad.module.css';
 import { useState } from 'react';
 
-const ImgSmoothLoad = ({ animate, src, className, alt, ...props }) => {
+export const ImgSmoothLoad = ({ animate, src, className, alt, ...props }) => {
 	const [isLoaded, setIsLoaded] = useState(animate === false);
 
 	const animationStyles = animate
