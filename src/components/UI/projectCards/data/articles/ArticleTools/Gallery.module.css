@@ -20,18 +20,3 @@
 	height: 100%;
 	max-width: 350px;
 }
-
-.button {
-	cursor: pointer;
-	border-radius: 1rem;
-	overflow: hidden;
-	transition: 0.1s 0s ease-out, transform 0.5s 0.1s;
-}
-
-@media (min-width: 768px) {
-	.button:hover {
-		outline: var(--btn-primary) 5px solid;
-		box-shadow: var(--btn-primary) 0 0 20px;
-		transform: scale(1.03);
-	}
-}
