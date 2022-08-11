@@ -24,6 +24,8 @@ const Button = ({ onClick, route, link, variant, className, ...props }) => {
 				className={`${styles.button} ${
 					variant && styles[variant]
 				} ${className}`}
+				target='_blank'
+				rel='noopener noreferrer'
 				{...props}
 			>
 				{props.children}

@@ -16,19 +16,17 @@ const NavButtons = ({ visibleButtonNames, onClick }) => {
 		{ name: 'Contact', url: '/contact' },
 	];
 
-	if(visibleButtonNames) {
-		pagesUrls = pagesUrls.filter(page => visibleButtonNames.includes(page.name));
+	if (visibleButtonNames) {
+		pagesUrls = pagesUrls.filter((page) =>
+			visibleButtonNames.includes(page.name)
+		);
 	}
 
 	const linkElements = pagesUrls.map((page, index) => {
 		return (
 			<li key={index}>
 				{page.type !== 'external' ? (
-					<Link
-						onClick={onClick}
-						className={styles.button}
-						to={page.url}
-					>
+					<Link onClick={onClick} className={styles.button} to={page.url}>
 						{page.name}
 					</Link>
 				) : (
@@ -36,6 +34,8 @@ const NavButtons = ({ visibleButtonNames, onClick }) => {
 						onClick={onClick}
 						className={styles.button}
 						href={page.url}
+						target='_blank'
+						rel='noopener noreferrer'
 					>
 						{page.name}
 					</a>

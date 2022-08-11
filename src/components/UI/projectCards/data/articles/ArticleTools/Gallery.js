@@ -1,6 +1,3 @@
-import { Suspense } from 'react';
-import ImgSmoothLoad from '../../../../ImgSmoothLoad/ImgSmoothLoad';
-
 import classes from './Gallery.module.css';
 import { GalleryImage } from './GalleryImage';
 
