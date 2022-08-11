@@ -61,7 +61,11 @@ export const WelcomeImages = () => {
 						<ImgSmoothLoad animate={false} src={selectedImages[1]} />
 					</CSSTransition>
 				</TransitionGroup>
-				<button onClick={nextImageHandler} className={classes.control}>
+				<button
+					disabled={isInputBlocked}
+					onClick={nextImageHandler}
+					className={classes.control}
+				>
 					Next
 				</button>
 			</div>

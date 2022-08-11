@@ -84,6 +84,11 @@
 	background-color: var(--btn-primary-hover);
 }
 
+.control:disabled {
+	opacity: 0.5;
+	transform: scale(0.9);
+}
+
 @media (min-width: 768px) {
 	.control:hover {
 		background-color: var(--btn-primary-hover);
