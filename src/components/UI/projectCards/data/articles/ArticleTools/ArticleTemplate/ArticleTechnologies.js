@@ -3,7 +3,7 @@ import classes from './ArticleTechnologies.module.css';
 export const ArticleTechnologies = ({ technologiesArray }) => {
 	return (
 		<section>
-			<h3>Technologies</h3>
+			<h3>⚙️ Technologies</h3>
 			<ul className={classes.list}>
 				{technologiesArray.map((technology, index) => (
 					<li

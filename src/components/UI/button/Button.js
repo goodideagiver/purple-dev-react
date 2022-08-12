@@ -3,7 +3,14 @@ import styles from './button.module.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Button = ({ onClick, route, link, variant, className, ...props }) => {
+export const Button = ({
+	onClick,
+	route,
+	link,
+	variant,
+	className,
+	...props
+}) => {
 	if (route) {
 		return (
 			<Link
