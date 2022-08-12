@@ -3,7 +3,13 @@ import { ArticleTechnologies } from './ArticleTechnologies';
 
 import classes from './ArticleTemplate.module.css';
 
-export const ArticleTemplate = ({ technologies, features, whatDidILearn }) => {
+export const ArticleTemplate = ({
+	technologies,
+	features,
+	whatDidILearn,
+	repoLink,
+	demoLink,
+}) => {
 	return (
 		<div className={classes.root}>
 			{whatDidILearn && (

@@ -11,6 +11,19 @@ const images = [
 	{ src: roadmapper3 },
 ];
 
+const Features = () => (
+	<>
+		<p>
+			This project was created in order to help people design their own roadmaps
+			to plan their learning process more thoroughly.
+		</p>
+		<p>
+			Other use case is for people that want to help others choosing what to
+			learn since there is a feature for roadmap sharing in the app.
+		</p>
+	</>
+);
+
 export const Roadmapper = () => {
 	return (
 		<>
@@ -24,6 +37,7 @@ export const Roadmapper = () => {
 					'Jest',
 					'Parcel',
 				]}
+				features={<Features />}
 			/>
 		</>
 	);

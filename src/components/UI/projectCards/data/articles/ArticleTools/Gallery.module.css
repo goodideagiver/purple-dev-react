@@ -1,7 +1,10 @@
 .root {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	grid-auto-rows: 1fr;
+	/* display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between; */
 	width: 100%;
 	gap: 1rem;
 	margin-bottom: 2rem;
@@ -18,5 +21,8 @@
 .root img {
 	width: 100%;
 	height: 100%;
-	max-width: 350px;
+}
+
+.title {
+	margin-bottom: 2rem;
 }

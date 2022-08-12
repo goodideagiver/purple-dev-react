@@ -1,6 +1,6 @@
 .list {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 	grid-auto-rows: 1fr;
 
 	justify-items: stretch;
@@ -14,4 +14,19 @@
 	display: grid;
 	place-items: center;
 	text-align: center;
+	animation: itemScale 1s ease-in-out both;
+}
+
+.item:nth-child(even) {
+	background-color: var(--color-secondary);
+}
+
+@keyframes itemScale {
+	from {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+	}
 }
