@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpurple_dev_react=self.webpackChunkpurple_dev_react||[]).push([[648],{8648:function(t,e,r){r.d(e,{nfZ:function(){return u}});var n=r(1260);function u(t){return(0,n.w_)({tag:"svg",attr:{viewBox:"0 0 24 24"},child:[{tag:"path",attr:{fill:"none",stroke:"#000",strokeWidth:"2",d:"M3,3 L21,21 M3,21 L21,3"}}]})(t)}}}]);
