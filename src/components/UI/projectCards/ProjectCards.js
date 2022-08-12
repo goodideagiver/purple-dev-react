@@ -8,7 +8,15 @@ const ProjectCardsHeader = () => (
 	<div className={styles.title}>
 		<h2>Selected projects</h2>
 		<p className={styles.more}>
-			Visit my <a href='https://github.com/goodideagiver'>GitHub</a> to see more
+			Visit my{' '}
+			<a
+				target='_blank'
+				rel='noopener noreferrer'
+				href='https://github.com/goodideagiver'
+			>
+				GitHub
+			</a>{' '}
+			to see more
 		</p>
 	</div>
 );
