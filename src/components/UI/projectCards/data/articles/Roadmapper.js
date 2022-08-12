@@ -1,6 +1,7 @@
 import roadmapper1 from '../../../../../assets/img/welcome/roadmapper1.png';
 import roadmapper2 from '../../../../../assets/img/welcome/roadmapper2.png';
 import roadmapper3 from '../../../../../assets/img/welcome/roadmapper3.png';
+import { ArticleTemplate } from './ArticleTools/ArticleTemplate/ArticleTemplate';
 
 import { Gallery } from './ArticleTools/Gallery';
 
@@ -14,12 +15,16 @@ export const Roadmapper = () => {
 	return (
 		<>
 			<Gallery images={images} />
-			<p>
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
-				architecto beatae, debitis commodi eum, voluptatum quia amet officiis
-				autem a voluptatibus iusto dolorum quaerat, necessitatibus deleniti
-				sequi quam aliquam eius!
-			</p>
+			<ArticleTemplate
+				technologies={[
+					'React',
+					'TypeScript',
+					'React Transition Group',
+					'Redux + toolkit',
+					'Jest',
+					'Parcel',
+				]}
+			/>
 		</>
 	);
 };

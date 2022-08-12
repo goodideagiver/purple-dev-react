@@ -1,0 +1,17 @@
+.list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	grid-auto-rows: 1fr;
+
+	justify-items: stretch;
+	gap: 1rem;
+	list-style: none;
+}
+
+.item {
+	padding: 1.5rem;
+	border-radius: 0.8rem;
+	display: grid;
+	place-items: center;
+	text-align: center;
+}
