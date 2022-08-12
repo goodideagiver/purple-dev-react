@@ -7,7 +7,9 @@ import Modal from '../../modal/Modal';
 const ProjectCardFeaturesList = (props) => (
 	<ul className={styles.desc}>
 		{props.desc.map((item) => (
-			<li key={item}>{item}</li>
+			<li className='acrylic' key={item}>
+				<span>{item}</span>
+			</li>
 		))}
 	</ul>
 );

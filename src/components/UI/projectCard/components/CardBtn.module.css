@@ -6,5 +6,6 @@
 }
 
 .tooltip {
-	margin: auto;
+	margin: 0 auto;
+	margin-top: auto;
 }
