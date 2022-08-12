@@ -29,10 +29,10 @@
 .links {
 	margin-top: 2rem;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
 	justify-items: stretch;
 	text-align: center;
-	gap: 2rem;
+	gap: 1rem;
 }
 
 .links a {
