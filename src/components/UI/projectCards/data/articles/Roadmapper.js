@@ -16,7 +16,7 @@ const images = [
 const WhatDidILearn = () => (
 	<>
 		<p>
-			This was my first app that was created using mobile first UI approach. I
+			This was my first app that was created using mobile first approach. I
 			tried my best to fit as many elements on iphone 5 screen and I think I
 			achieved very clean UI look that is still easy to use despite the amount
 			of the elements visible at once.
@@ -41,7 +41,7 @@ const WhatDidILearn = () => (
 			a great tool to use and I am very happy with the result. Developing this
 			app was becoming easier and easier as I learned more about TypeScript and
 			its features. Refactoring and reusing existing code was easier the more
-			code I wrote.
+			code and type definitions I wrote.
 		</p>
 		<p>
 			The thing I'm most proud of is{' '}
@@ -63,9 +63,9 @@ const WhatDidILearn = () => (
 			<li>Edit roadmap point</li>
 		</ul>
 		<p>
-			It was a great experience when I was trying to write this component in the
-			most abstract way in order for it to work with multiple uses. And
-			TypeScript was a great help.
+			Trying to write this component in the most abstract way in order for it to
+			work with multiple use cases was a great experience. And TypeScript was a
+			great help in that process.
 		</p>
 	</>
 );
