@@ -1,5 +1,4 @@
 .footer {
-	margin-top: 5rem;
 	padding: 3rem;
 	animation: fadeIn 1s both;
 	background-image: url('./../../../assets/img/misc/layered-waves-haikei-purple.svg');
@@ -11,7 +10,6 @@
 	.footer {
 		background-image: linear-gradient(to top, #1f1f1f61 25%, transparent 75%),
 			url('./../../../assets/img/misc/layered-waves-haikei-purple.svg');
-		/* background-size: cover 5%; */
 		background-repeat: repeat-x;
 		background-position: 100% 75%;
 		background-size: 100% 500%;

@@ -10,7 +10,6 @@
 .sectionWidth {
 	max-width: min(var(--website-width), 90vw);
 	margin: auto;
-	margin-bottom: 10rem;
 	width: 100%;
 }
 
