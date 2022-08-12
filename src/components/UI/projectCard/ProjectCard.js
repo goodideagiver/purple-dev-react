@@ -3,6 +3,7 @@ import CardBtn from './components/CardBtn';
 import styles from './projectCard.module.css';
 
 import Modal from '../../modal/Modal';
+import { useHistory, useRouteMatch } from 'react-router-dom';
 
 const ProjectCardFeaturesList = (props) => (
 	<ul className={styles.desc}>
@@ -24,20 +25,24 @@ const ProjectCard = ({
 	tooltip = 'View repository',
 	article,
 }) => {
-	const [articleModalVisible, setArticleModalVisible] = useState(false);
-
 	const cardGradientBg = {
 		backgroundImage: `linear-gradient(130deg,transparent 60%, ${color} 100%)`,
 	};
 
 	const cardRevealDelay = { animationDelay: delay + 's' };
 
-	const showArticleModalHandler = () => setArticleModalVisible(true);
+	const history = useHistory();
 
-	const hideArticleModalHandler = () => setArticleModalVisible(false);
+	const hideArticleModalHandler = () =>
+		history.push('/', { from: 'ProjectCard' });
+
+	const match = useRouteMatch({ path: `/${title}`, exact: false });
 
 	const cardButton = article ? (
-		<CardBtn onClick={showArticleModalHandler} tooltip='Learn more' />
+		<CardBtn
+			onClick={() => history.push(`/${title}`, { from: 'ProjectCard' })}
+			tooltip='Learn more'
+		/>
 	) : (
 		<CardBtn link={link} tooltip={tooltip} />
 	);
@@ -55,7 +60,7 @@ const ProjectCard = ({
 			{article && (
 				<Modal
 					modalCloseHandler={hideArticleModalHandler}
-					visible={articleModalVisible}
+					visible={match}
 					title={title}
 				>
 					{article}

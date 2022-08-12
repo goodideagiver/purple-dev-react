@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useLocation } from 'react-router-dom';
 
 import Footer from '../UI/Footer/Footer';
 import LoadingSpinnerContent from './components/LoadingSpinnerContent/LoadingSpinnerContent';
@@ -14,7 +14,10 @@ const PageNotFound = React.lazy(() =>
 );
 
 const Content = () => {
+	const location = useLocation();
+
 	useEffect(() => {
+		if (location?.state?.from === 'ProjectCard') return;
 		window.scrollTo(0, 0);
 	});
 
@@ -28,7 +31,8 @@ const Content = () => {
 							<Route path='/home' component={Home} />
 							<Route path='/about' component={About} />
 							<Route path='/contact' component={Contact} />
-							<Route path='/*' component={PageNotFound} />
+							<Route path='/*' component={Home} />
+							<Route path='/*/*' component={PageNotFound} />
 						</Switch>
 					</ScrollToTop>
 					<Footer />

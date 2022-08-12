@@ -2,10 +2,10 @@ import Button from './../../button/Button';
 import Tooltip from './../../Tooltip/Tooltip';
 import classes from './CardBtn.module.css';
 
-const CardBtn = ({ link, tooltip, onClick }) => {
+const CardBtn = ({ link, tooltip, to, onClick }) => {
 	if (!tooltip) {
 		return (
-			<Button link={link} onClick={onClick} className={classes.btn}>
+			<Button link={link} route={to} onClick={onClick} className={classes.btn}>
 				Check out
 			</Button>
 		);
@@ -15,6 +15,7 @@ const CardBtn = ({ link, tooltip, onClick }) => {
 		<Tooltip className={classes.tooltip} text={tooltip}>
 			<Button
 				onClick={onClick}
+				route={to}
 				link={link}
 				className={classes.button}
 				variant='callToAction'
