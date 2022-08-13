@@ -1,8 +1,23 @@
 import Button from '../../../../../button/Button';
+import { Gallery } from '../Gallery';
 import { ArticleSection } from './ArticleSection';
 import { ArticleTechnologies } from './ArticleTechnologies';
 
+import { motion } from 'framer-motion';
+
 import classes from './ArticleTemplate.module.css';
+
+const container = {
+	hidden: { opacity: 1, scale: 0 },
+	visible: {
+		opacity: 1,
+		scale: 1,
+		transition: {
+			delayChildren: 0.2,
+			staggerChildren: 0.2,
+		},
+	},
+};
 
 export const ArticleTemplate = ({
 	technologies,
@@ -10,9 +25,16 @@ export const ArticleTemplate = ({
 	whatDidILearn,
 	repoLink,
 	demoLink,
+	images,
 }) => {
 	return (
-		<div className={classes.root}>
+		<motion.div
+			variants={container}
+			initial='hidden'
+			animate='visible'
+			className={classes.root}
+		>
+			{images && <Gallery images={images} />}
 			{whatDidILearn && (
 				<ArticleSection
 					sectionName='🧠 What did I learn'
@@ -48,6 +70,6 @@ export const ArticleTemplate = ({
 					)}
 				</section>
 			)}
-		</div>
+		</motion.div>
 	);
 };

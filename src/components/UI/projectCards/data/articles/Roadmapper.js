@@ -86,8 +86,8 @@ const Features = () => (
 export const Roadmapper = () => {
 	return (
 		<>
-			<Gallery images={images} />
 			<ArticleTemplate
+				images={images}
 				technologies={[
 					'React',
 					'TypeScript',
