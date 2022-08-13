@@ -86,7 +86,7 @@
 
 .control:disabled {
 	opacity: 0.5;
-	transform: scale(0.9);
+	transform: scale(0.5);
 }
 
 @media (min-width: 768px) {
@@ -118,4 +118,35 @@
 		opacity: 0.7;
 		outline: 5px gray solid;
 	}
+}
+
+.dots {
+	z-index: 10;
+	left: 50%;
+	bottom: 0%;
+	display: flex;
+	max-width: 100%;
+	position: absolute;
+	transform: translate(-50%);
+}
+
+.dotsWrapper {
+	position: relative;
+	display: grid;
+	place-items: center;
+}
+
+.dots .control {
+	position: static;
+	padding: 0;
+	border-radius: 50%;
+	height: 15px;
+	width: 15px;
+	margin: 0 3px;
+	opacity: 0.5;
+}
+
+.dots .control[data-active='true'],
+.dots .control:hover {
+	opacity: 1;
 }

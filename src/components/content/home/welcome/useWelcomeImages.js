@@ -39,5 +39,19 @@ export const useWelcomeImages = (
 		}, transitionLengthMiliseconds);
 	};
 
-	return { selectedImages, activeImageIndex, nextImageHandler, isInputBlocked };
+	const changeToIndex = (index) => {
+		setisInputBlocked(true);
+		setActiveImageIndex(index);
+		setTimeout(() => {
+			setisInputBlocked(false);
+		}, transitionLengthMiliseconds);
+	};
+
+	return {
+		selectedImages,
+		activeImageIndex,
+		nextImageHandler,
+		isInputBlocked,
+		setActiveImageIndex: changeToIndex,
+	};
 };
