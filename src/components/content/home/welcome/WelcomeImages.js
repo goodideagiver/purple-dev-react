@@ -60,6 +60,7 @@ export const WelcomeImages = () => {
 				<div className={classes.dots}>
 					{images.map((el, index) => (
 						<button
+							key={index}
 							data-active={index === activeImageIndex}
 							onClick={() => setActiveImageIndex(index)}
 							disabled={isInputBlocked}

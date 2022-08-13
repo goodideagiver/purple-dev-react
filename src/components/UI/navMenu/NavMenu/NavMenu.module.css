@@ -21,7 +21,7 @@
 		transform: translateX(0);
 	}
 	100% {
-		transform: scale(0.98);
+		transform: translate(100%);
 		opacity: 0;
 	}
 }

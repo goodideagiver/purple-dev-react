@@ -14,7 +14,7 @@ const NavMenu = ({ menuClose, show }) => {
 				exitActive: styles.closed,
 			}}
 		>
-			<DesktopNavMenu onMenuClose={menuClose} />
+			<DesktopNavMenu onMenuClose={menuClose} show={show} />
 		</CSSTransition>
 	);
 };

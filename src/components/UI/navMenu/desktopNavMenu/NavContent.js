@@ -1,18 +1,15 @@
 import NavButtons from '../../navButtons/NavButtons';
 import styles from './desktopNavMenu.module.css';
 import { MdClose } from 'react-icons/md';
-import Button from '../../button/Button';
 import { useLockBodyScroll } from '../../../../hooks/useLockBodyScroll';
 
 export const NavContent = ({ onMenuClose }) => {
 	useLockBodyScroll();
 	return (
-		<div className={`${styles.desktopNav} ${styles.show} ${'acrylic'}`}>
-			<Button className={styles.close} onClick={onMenuClose} variant='nav'>
+		<div className={`${styles.desktopNav} ${'acrylic'}`}>
+			<button className={styles.close} onClick={onMenuClose}>
 				<MdClose />
-			</Button>
-			<h2 className={styles.title}>purpleblack.dev</h2>
-			{/* <div className={styles.separator} /> */}
+			</button>
 			<nav>
 				<ul className={styles.btnContainer}>
 					<NavButtons onClick={onMenuClose} />
