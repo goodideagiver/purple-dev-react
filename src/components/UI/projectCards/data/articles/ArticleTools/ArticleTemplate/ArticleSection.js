@@ -1,8 +1,10 @@
+import { AnimateSection } from './AnimateSection';
+
 export const ArticleSection = ({ sectionName, children }) => {
 	return (
-		<section>
+		<AnimateSection>
 			<h3>{sectionName}</h3>
 			{children}
-		</section>
+		</AnimateSection>
 	);
 };
