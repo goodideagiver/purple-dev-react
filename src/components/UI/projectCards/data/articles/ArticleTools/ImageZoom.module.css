@@ -19,7 +19,7 @@
 	max-height: min(80vh, 80%);
 	box-shadow: rgba(0, 0, 0, 0.8) 0px 30px 90px;
 	border-radius: var(--border-radius-base);
-	outline: 2px rgba(128, 128, 128, 0.227) solid;
+	border: 2px rgba(128, 128, 128, 0.227) solid;
 }
 
 .backdrop {
