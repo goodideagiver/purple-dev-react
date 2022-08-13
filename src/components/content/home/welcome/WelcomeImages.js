@@ -31,25 +31,42 @@ const images = [
 ];
 
 export const WelcomeImages = () => {
-	const { selectedImages, activeImageIndex, nextImageHandler, isInputBlocked } =
-		useWelcomeImages(8000, 0, images, 2000);
+	const {
+		selectedImages,
+		activeImageIndex,
+		nextImageHandler,
+		isInputBlocked,
+		setActiveImageIndex,
+	} = useWelcomeImages(8000, 0, images, 2000);
 
 	return (
 		<div className={classes.imagesWrapper} aria-hidden='true'>
-			<div
-				data-disabled={isInputBlocked}
-				onClick={nextImageHandler}
-				className={`${classes.image} ${classes.clickableImage}`}
-			>
-				<TransitionGroup>
-					<CSSTransition
-						key={activeImageIndex}
-						classNames={trans}
-						timeout={2000}
-					>
-						<ImgSmoothLoad animate={false} src={selectedImages[0]} />
-					</CSSTransition>
-				</TransitionGroup>
+			<div className={classes.dotsWrapper}>
+				<div
+					data-disabled={isInputBlocked}
+					onClick={nextImageHandler}
+					className={`${classes.image} ${classes.clickableImage}`}
+				>
+					<TransitionGroup>
+						<CSSTransition
+							key={activeImageIndex}
+							classNames={trans}
+							timeout={2000}
+						>
+							<ImgSmoothLoad animate={false} src={selectedImages[0]} />
+						</CSSTransition>
+					</TransitionGroup>
+				</div>
+				<div className={classes.dots}>
+					{images.map((el, index) => (
+						<button
+							data-active={index === activeImageIndex}
+							onClick={() => setActiveImageIndex(index)}
+							disabled={isInputBlocked}
+							className={classes.control}
+						></button>
+					))}
+				</div>
 			</div>
 			<div className={classes.image}>
 				<TransitionGroup>
@@ -61,13 +78,6 @@ export const WelcomeImages = () => {
 						<ImgSmoothLoad animate={false} src={selectedImages[1]} />
 					</CSSTransition>
 				</TransitionGroup>
-				<button
-					disabled={isInputBlocked}
-					onClick={nextImageHandler}
-					className={classes.control}
-				>
-					Next
-				</button>
 			</div>
 		</div>
 	);
