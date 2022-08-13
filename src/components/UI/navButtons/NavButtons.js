@@ -26,11 +26,17 @@ const NavButtons = ({ visibleButtonNames, onClick }) => {
 		return (
 			<li key={index}>
 				{page.type !== 'external' ? (
-					<Link onClick={onClick} className={styles.button} to={page.url}>
+					<Link
+						onClick={onClick}
+						className={styles.button}
+						style={{ animationDelay: index / 10 + 0.1 + 's' }}
+						to={page.url}
+					>
 						{page.name}
 					</Link>
 				) : (
 					<a
+						style={{ animationDelay: index / 10 + 0.1 + 's' }}
 						onClick={onClick}
 						className={styles.button}
 						href={page.url}
