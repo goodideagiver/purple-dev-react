@@ -1,8 +1,7 @@
 import React, { useEffect, Fragment } from 'react';
-import { useLocation, withRouter } from 'react-router-dom';
 
 function ScrollToTop({ history, children }) {
-	const location = useLocation();
+	const location = useRouter();
 
 	useEffect(() => {
 		const unlisten = history.listen(() => {
@@ -16,5 +15,3 @@ function ScrollToTop({ history, children }) {
 
 	return <Fragment>{children}</Fragment>;
 }
-
-export default withRouter(ScrollToTop);

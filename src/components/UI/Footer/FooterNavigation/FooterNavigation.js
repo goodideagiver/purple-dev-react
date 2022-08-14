@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import styles from './FooterNavigation.module.css';
 
 const FooterNavigation = () => {
@@ -16,7 +16,7 @@ const FooterNavigation = () => {
 		return (
 			<li key={index}>
 				{page.type !== 'external' ? (
-					<Link className='acrylic' to={page.url}>
+					<Link className='acrylic' href={page.url}>
 						{page.name}
 					</Link>
 				) : (

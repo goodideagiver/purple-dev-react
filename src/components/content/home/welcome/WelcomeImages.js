@@ -1,21 +1,21 @@
-import ImgSmoothLoad from '../../../UI/ImgSmoothLoad/ImgSmoothLoad';
 import classes from './WelcomeImages.module.css';
 
-import politeEmailBuilder from '../../../../assets/img/welcome/builder.webp';
-import fetcher from '../../../../assets/img/welcome/fetcher.webp';
-import fetcher2 from '../../../../assets/img/welcome/fetcher2.webp';
-import adotPl from '../../../../assets/img/welcome/adotpl.webp';
-import adotPl2 from '../../../../assets/img/welcome/adotpl2.webp';
-import fakeinsta from '../../../../assets/img/welcome/fakeinsta.webp';
-import todo from '../../../../assets/img/welcome/todo.webp';
-import roadmapper1 from '../../../../assets/img/welcome/roadmapper1.webp';
-import roadmapper2 from '../../../../assets/img/welcome/roadmapper2.webp';
-import roadmapper3 from '../../../../assets/img/welcome/roadmapper3.webp';
+import politeEmailBuilder from '../../../../../public/assets/img/welcome/builder.webp';
+import fetcher from '../../../../../public/assets/img/welcome/builder.webp';
+import fetcher2 from '../../../../../public/assets/img/welcome/builder.webp';
+import adotPl from '../../../../../public/assets/img/welcome/builder.webp';
+import adotPl2 from '../../../../../public/assets/img/welcome/builder.webp';
+import fakeinsta from '../../../../../public/assets/img/welcome/builder.webp';
+import todo from '../../../../../public/assets/img/welcome/builder.webp';
+import roadmapper1 from '../../../../../public/assets/img/welcome/builder.webp';
+import roadmapper2 from '../../../../../public/assets/img/welcome/builder.webp';
+import roadmapper3 from '../../../../../public/assets/img/welcome/builder.webp';
 
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import trans from './PromoImageAnimation.module.css';
 import { useWelcomeImages } from './useWelcomeImages';
+import ImgSmoothLoad from '../../../UI/ImgSmoothLoad/ImgSmoothLoad';
 
 const images = [
 	adotPl2,

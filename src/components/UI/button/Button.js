@@ -1,7 +1,6 @@
 import styles from './button.module.css';
 
-import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export const Button = ({
 	onClick,
@@ -17,7 +16,7 @@ export const Button = ({
 				className={`${styles.button} ${
 					variant && styles[variant]
 				} ${className}`}
-				to={route}
+				href={route}
 			>
 				{props.children}
 			</Link>

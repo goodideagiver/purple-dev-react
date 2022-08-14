@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import classes from './Footer.module.css';
 import FooterNavigation from './FooterNavigation/FooterNavigation';
 
 const Footer = () => {
 	return (
 		<footer className={classes.footer}>
-			<Link className={`${classes.title}`} to='/'>
+			<Link className={`${classes.title}`} href='/'>
 				purpleblack.dev
 			</Link>
 			<div className={classes.buttons}>

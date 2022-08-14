@@ -7,20 +7,22 @@ import { MdMenu } from 'react-icons/md';
 import styles from './navTop.module.css';
 import NavButtons from '../navButtons/NavButtons';
 import NavMenu from '../navMenu/NavMenu/NavMenu';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useMediaQuery } from '../../../hooks/useMediaQuery';
 
 const NavTop = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
-	const isMobile = useMediaQuery('(max-width: 900px)');
+	// const isMobile = useMediaQuery('(max-width: 900px)');
+	let isMobile = false;
+	// TODO - fix this - window is undefined
 
 	const menuToggle = () => setMenuOpen(menuOpen ? false : true);
 	const menuClose = () => setMenuOpen(false);
 
 	return (
 		<div className={styles.nav}>
-			<Link className={styles.title} to='/'>
+			<Link className={styles.title} href='/'>
 				<h1>purpleblack.dev</h1>
 			</Link>
 			{!isMobile && (

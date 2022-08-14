@@ -1,5 +1,5 @@
 import ImgSmoothLoad from '../../../UI/ImgSmoothLoad/ImgSmoothLoad';
-import profile from '../../../../assets/img/about/proProgrammer.webp';
+import profile from '/public/assets/img/about/proProgrammer.webp';
 import timeSince from '../../../../helpers/timeSince';
 import waves from './../Waves.module.css';
 import classes from './Header.module.css';
