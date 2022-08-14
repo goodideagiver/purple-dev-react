@@ -3,7 +3,7 @@ import NavTop from '../src/components/UI/navTop/NavTop';
 import '../src/variables.css';
 import '../src/index.css';
 import '../src/assets/css/acrylic.css';
-import { Content } from '../src/components/content/Content';
+import { Content } from '../src/components/content/content';
 
 function MyApp({ Component, pageProps }) {
 	return (
