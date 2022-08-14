@@ -3,7 +3,7 @@ import ContactOptions from './contactOptions/ContactOptions';
 import styles from './contact.module.css';
 import { MainPageContainer } from '../../UI/MainPageContainer/MainPageContainer';
 
-const Contact = () => {
+export const Contact = () => {
 	return (
 		<MainPageContainer>
 			<div className={styles['header-image']}>

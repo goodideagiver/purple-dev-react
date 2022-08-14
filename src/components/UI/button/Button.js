@@ -12,13 +12,14 @@ export const Button = ({
 }) => {
 	if (route) {
 		return (
-			<Link
-				className={`${styles.button} ${
-					variant && styles[variant]
-				} ${className}`}
-				href={route}
-			>
-				{props.children}
+			<Link passHref href={route}>
+				<a
+					className={`${styles.button} ${
+						variant && styles[variant]
+					} ${className}`}
+				>
+					{props.children}
+				</a>
 			</Link>
 		);
 	}

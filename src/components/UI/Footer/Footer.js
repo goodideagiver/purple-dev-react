@@ -5,8 +5,8 @@ import FooterNavigation from './FooterNavigation/FooterNavigation';
 const Footer = () => {
 	return (
 		<footer className={classes.footer}>
-			<Link className={`${classes.title}`} href='/'>
-				purpleblack.dev
+			<Link passHref href='/'>
+				<a className={`${classes.title}`}>purpleblack.dev</a>
 			</Link>
 			<div className={classes.buttons}>
 				<FooterNavigation />

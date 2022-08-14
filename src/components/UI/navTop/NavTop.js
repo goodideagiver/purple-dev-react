@@ -13,17 +13,17 @@ import { useMediaQuery } from '../../../hooks/useMediaQuery';
 const NavTop = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
-	// const isMobile = useMediaQuery('(max-width: 900px)');
-	let isMobile = false;
-	// TODO - fix this - window is undefined
+	const isMobile = useMediaQuery('(max-width: 900px)');
 
 	const menuToggle = () => setMenuOpen(menuOpen ? false : true);
 	const menuClose = () => setMenuOpen(false);
 
 	return (
 		<div className={styles.nav}>
-			<Link className={styles.title} href='/'>
-				<h1>purpleblack.dev</h1>
+			<Link passHref href='/'>
+				<a className={styles.title}>
+					<h1>purpleblack.dev</h1>
+				</a>
 			</Link>
 			{!isMobile && (
 				<nav className={styles.listWrapper}>

@@ -16,8 +16,8 @@ const FooterNavigation = () => {
 		return (
 			<li key={index}>
 				{page.type !== 'external' ? (
-					<Link className='acrylic' href={page.url}>
-						{page.name}
+					<Link href={page.url}>
+						<a className='acrylic'>{page.name}</a>
 					</Link>
 				) : (
 					<a className='acrylic' href={page.url}>
