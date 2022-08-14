@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 
-import './TagsStyle.css';
+import styles from './TagsStyle.module.css';
 import TagCloud from 'TagCloud';
 
 const TagCloudComponent = ({ enabled }) => {
@@ -32,7 +32,7 @@ const TagCloudComponent = ({ enabled }) => {
 				maxSpeed: 'slow',
 				initSpeed: 'slow',
 				keep: false,
-				containerClass: 'tag-width',
+				containerClass: styles['tag-width'],
 				radius: '150',
 				direction: Math.floor(Math.random() * 720 - 360),
 			});
@@ -44,7 +44,7 @@ const TagCloudComponent = ({ enabled }) => {
 
 	if (!enabled) {
 		return (
-			<ul className='list-style'>
+			<ul className={styles['list-style']}>
 				{knownTechnologies.map((el) => (
 					<li key={el}>{el}</li>
 				))}
@@ -52,7 +52,7 @@ const TagCloudComponent = ({ enabled }) => {
 		);
 	}
 
-	return <div className='tag-container' ref={tagDiv} />;
+	return <div className={styles['tag-container']} ref={tagDiv} />;
 };
 
 export default TagCloudComponent;

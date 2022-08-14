@@ -3,7 +3,9 @@ import ImgSmoothLoad from '../../../UI/ImgSmoothLoad/ImgSmoothLoad';
 import Modal from '../../../modal/Modal';
 import classes from './EmploymentHistory.module.css';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
+import uncleSam from '/public/assets/img/about/Uncle_Sam_(pointing_finger).jpg';
 
 const EmploymentHistory = ({ className }) => {
 	const [modalVisible, setModalVisible] = useState(false);
@@ -23,10 +25,10 @@ const EmploymentHistory = ({ className }) => {
 				<ImgSmoothLoad
 					className={classes['man-pointing']}
 					alt='man pointing finger'
-					src='https://upload.wikimedia.org/wikipedia/commons/f/f3/Uncle_Sam_(pointing_finger).jpg'
+					src={uncleSam}
 				/>
-				<Link className={classes.link} to='/contact'>
-					Contact me
+				<Link passHref href='/contact'>
+					<a className={classes.link}>Contact me</a>
 				</Link>
 			</Modal>
 		</div>

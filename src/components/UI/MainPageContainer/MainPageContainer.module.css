@@ -1,6 +1,5 @@
 .padding {
 	padding-top: var(--padding-base);
-	/* margin: auto; */
 	min-height: 100%;
 	flex: 1;
 	display: flex;
@@ -8,7 +7,6 @@
 }
 
 .maxWidth {
-	/* padding: 0 var(--padding-base); */
 	max-width: var(--website-width);
 	max-width: min(var(--website-width), 90vw);
 	margin: auto;
@@ -30,7 +28,5 @@
 }
 
 @media (max-width: 800px) {
-	:root {
-		--padding-base: 1.2rem;
-	}
+	--padding-base: 1.2rem;
 }

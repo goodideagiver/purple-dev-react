@@ -6,11 +6,11 @@ import { BrowserRouter } from 'react-router-dom';
 
 function App() {
 	return (
-		<BrowserRouter>
+		<>
 			<NavTop />
 			<Content />
 			<ScrollToTopBtn />
-		</BrowserRouter>
+		</>
 	);
 }
 
