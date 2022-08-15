@@ -5,7 +5,7 @@ import classes from './ScrollToTopBtn.module.css';
 import { RiRocketFill } from 'react-icons/ri';
 import { Button } from '../button/Button';
 
-const ScrollToTopBtn = () => {
+export const ScrollToTopBtn = () => {
 	const [isVisible, setIsVisible] = useState(false);
 
 	const buttonClickHandler = () => {
@@ -34,5 +34,3 @@ const ScrollToTopBtn = () => {
 		</>
 	);
 };
-
-export default ScrollToTopBtn;

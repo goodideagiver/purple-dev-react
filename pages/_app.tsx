@@ -4,6 +4,7 @@ import '../src/variables.css';
 import '../src/index.css';
 import '../src/assets/css/acrylic.css';
 import { Content } from '../src/components/content/content';
+import { ScrollToTopBtn } from '../src/components/UI/scrollToTopBtn/ScrollToTopBtn';
 
 type MyAppProps = {
 	Component: React.ComponentType<any>;
@@ -32,6 +33,7 @@ function MyApp({ Component, pageProps }: MyAppProps) {
 				<NavTop />
 				<Component {...pageProps} />
 				<Footer />
+				<ScrollToTopBtn />
 			</Content>
 		</>
 	);
