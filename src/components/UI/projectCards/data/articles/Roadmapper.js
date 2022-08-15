@@ -6,6 +6,7 @@ import { ArticleTemplate } from './ArticleTools/ArticleTemplate/ArticleTemplate'
 import { Gallery } from './ArticleTools/Gallery';
 
 import classes from './ArticleTools/ArticleTemplate/ArticleTemplate.module.css';
+import { ExternalLink } from '../../../ExternalLink/ExternalLink';
 
 const images = [
 	{ src: roadmapper1 },
@@ -24,15 +25,10 @@ const WhatDidILearn = () => (
 		<p>
 			Since this app is very interactive I researched the best way to design
 			button sizes and I was highly inspired by{' '}
-			<a
-				className={classes.externalLink}
-				target='_blank'
-				rel='noopener noreferrer'
-				href='https://uxmovement.com/mobile/optimal-size-and-spacing-for-mobile-buttons/'
-			>
-				this
-			</a>{' '}
-			article.{' '}
+			<ExternalLink href='https://uxmovement.com/mobile/optimal-size-and-spacing-for-mobile-buttons/'>
+				this article
+			</ExternalLink>{' '}
+			.{' '}
 		</p>
 		<p>
 			This was my first project written in TypeScript. At the beginning I
@@ -45,14 +41,9 @@ const WhatDidILearn = () => (
 		</p>
 		<p>
 			The thing I'm most proud of is{' '}
-			<a
-				className={classes.externalLink}
-				href='https://github.com/goodideagiver/roadmapper-ts/blob/master/src/components/AddPointModal/AddPointModal.tsx'
-				target='_blank'
-				rel='noopener noreferrer'
-			>
+			<ExternalLink href='https://github.com/goodideagiver/roadmapper-ts/blob/master/src/components/AddPointModal/AddPointModal.tsx'>
 				AddPointModal
-			</a>{' '}
+			</ExternalLink>{' '}
 			component. It is a modal that is used to add new points to the roadmap. At
 			least it was planned to use for it. Hovewer I realized at some point durng
 			development that this component could be used for other purposes as well.
