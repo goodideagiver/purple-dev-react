@@ -2,18 +2,32 @@ import CardBtn from './components/CardBtn';
 import styles from './projectCard.module.css';
 
 import Modal from '../../modal/Modal';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 
-const ProjectCardFeaturesList = (props) => (
+type ProjectCardFeaturesListProps = {
+	desc: string[];
+};
+
+const ProjectCardFeaturesList = ({ desc }: ProjectCardFeaturesListProps) => (
 	<ul className={styles.desc}>
-		{props.desc.map((item) => (
+		{desc.map((item) => (
 			<li className='acrylic' key={item}>
 				<span>{item}</span>
 			</li>
 		))}
 	</ul>
 );
+
+type ProjectCardProps = {
+	title: string;
+	desc: string[];
+	shortDesc: string;
+	color: string;
+	link: string;
+	delay: number;
+	tooltip: string;
+	article?: () => JSX.Element;
+};
 
 const ProjectCard = ({
 	title,
@@ -24,7 +38,7 @@ const ProjectCard = ({
 	delay = 0,
 	tooltip = 'View repository',
 	article,
-}) => {
+}: ProjectCardProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const cardGradientBg = {

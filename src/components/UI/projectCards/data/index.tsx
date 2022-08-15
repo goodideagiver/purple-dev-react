@@ -1,6 +1,17 @@
+import { ReactChild, ReactNode } from 'react';
 import { Roadmapper } from './articles/Roadmapper';
 
-const cardData = [
+type ProjectCardData = {
+	title: string;
+	shortDesc: string;
+	desc: string[];
+	link: string;
+	tooltip?: string;
+	color: string;
+	article?: JSX.Element;
+};
+
+const cardData: ProjectCardData[] = [
 	{
 		title: 'Roadmapper.ts',
 		shortDesc: 'Build a roadmap for your learning journey',

@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import ImgSmoothLoad from './../../../UI/ImgSmoothLoad/ImgSmoothLoad';
 import img from '/public/assets/img/home/forest.webp';
 import st from './welcome.module.css';
-import { PromoWelcome } from './PromoWelcome';
 import { WelcomeImages } from './WelcomeImages';
+import { PromoWelcome } from './PromoWelcome';
 
 const Welcome = (props) => {
 	return (
