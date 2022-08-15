@@ -8,7 +8,15 @@ import { AnimatedModalContent } from './AnimatedModalContent';
  * @param children
  * @param {function} modalCloseHandler
  */
-const Modal = ({ visible, modalCloseHandler, title, children }) => (
+
+type ModalProps = {
+	visible: boolean;
+	modalCloseHandler: () => void;
+	title: string;
+	children: React.ReactNode;
+};
+
+const Modal = ({ visible, modalCloseHandler, title, children }: ModalProps) => (
 	<Portal>
 		<AnimatedModalBackdrop
 			visible={visible}

@@ -7,7 +7,11 @@ import Link from 'next/link';
 import uncleSam from '/public/assets/img/about/Uncle_Sam_(pointing_finger).jpg';
 import { Button } from '../../../UI/button/Button';
 
-const EmploymentHistory = ({ className }) => {
+type EmploymentHistoryProps = {
+	className: string;
+};
+
+const EmploymentHistory = ({ className }: EmploymentHistoryProps) => {
 	const [modalVisible, setModalVisible] = useState(false);
 
 	const showModalHandler = () => setModalVisible(true);

@@ -6,7 +6,7 @@ import { UniversalButtonProps } from './Button.types';
 export const Button = ({
 	children,
 	className,
-	purpose,
+	purpose = 'button',
 	variant,
 	href,
 	onClick,
@@ -40,11 +40,13 @@ export const Button = ({
 		);
 	}
 
-	if (purpose === 'button') {
+	if (purpose === 'button' && onClick) {
 		return (
 			<button onClick={onClick} className={chosenClassName} {...props}>
 				{children}
 			</button>
 		);
 	}
+
+	return null;
 };

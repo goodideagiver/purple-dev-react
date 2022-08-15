@@ -2,8 +2,22 @@ import styles from './ImgSmoothLoad.module.css';
 import { useState } from 'react';
 
 import Image from 'next/future/image';
+import { StaticImageData } from 'next/image';
 
-export const ImgSmoothLoad = ({ animate, src, className, alt, ...props }) => {
+type ImgSmoothLoadProps = {
+	src: string | StaticImageData;
+	alt: string;
+	className?: string;
+	animate?: boolean;
+};
+
+export const ImgSmoothLoad = ({
+	animate,
+	src,
+	className,
+	alt,
+	...props
+}: ImgSmoothLoadProps) => {
 	const [isLoaded, setIsLoaded] = useState(animate === false);
 
 	const animationStyles = animate
