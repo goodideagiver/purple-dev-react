@@ -17,17 +17,17 @@ export const Button = ({
 		className || ''
 	}`;
 
-	if (purpose === 'route') {
+	if (purpose === 'route' && href) {
 		return (
-			<Link style={style} passHref href={href}>
-				<a className={chosenClassName} {...props}>
+			<Link passHref href={href}>
+				<a style={style} className={chosenClassName} {...props}>
 					{children}
 				</a>
 			</Link>
 		);
 	}
 
-	if (purpose === 'externalLink') {
+	if (purpose === 'externalLink' && href) {
 		return (
 			<a
 				style={style}
