@@ -1,4 +1,9 @@
-const cellData = [
+type CellData = {
+	name: string;
+	desc: string;
+};
+
+const cellData: CellData[] = [
 	{
 		name: 'Interfaces',
 		desc: 'As user friendly as possible',
@@ -13,4 +18,4 @@ const cellData = [
 	},
 ];
 
-export default cellData
+export default cellData;

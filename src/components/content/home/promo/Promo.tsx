@@ -1,12 +1,10 @@
-import React from 'react';
-
 import st from './promo.module.css';
 import classes from './wave.module.css';
 
 import cellData from './data';
 
 const Promo = () => {
-	const listElements = cellData.map(({ name, desc, number }, id) => (
+	const listElements = cellData.map(({ name, desc }, id) => (
 		<li key={name}>
 			<p className={st.number}>{id + 1}</p>
 			<div className={st.cell}>
