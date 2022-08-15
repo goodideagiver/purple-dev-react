@@ -1,9 +1,8 @@
-import Button from '../UI/button/Button';
-
 import styles from './modalContent.module.css';
 
 import { GrClose } from 'react-icons/gr';
 import { useLockBodyScroll } from '../../hooks/useLockBodyScroll';
+import { Button } from '../UI/button/Button';
 
 const ModalContent = (props) => {
 	const contentCssClasses = `${styles.content} ${
@@ -20,6 +19,7 @@ const ModalContent = (props) => {
 					variant='danger'
 					onClick={props.modalCloseHandler}
 					className={styles.close}
+					purpose='button'
 				>
 					<GrClose />
 				</Button>

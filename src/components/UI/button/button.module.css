@@ -110,14 +110,6 @@
 		inset 5px 10px 15px rgba(255, 255, 255, 0.123);
 }
 
-/* .glow:active {
-	color: #000;
-}
-
-.glow:active:after {
-	background: transparent;
-} */
-
 .glow:after {
 	z-index: -1;
 	content: '';

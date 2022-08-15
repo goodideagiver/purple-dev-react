@@ -1,8 +1,8 @@
-import Button from '../button/Button';
 import ProjectCard from '../projectCard/ProjectCard';
 import cardData from './data';
 import styles from './projectCards.module.css';
 import { useState } from 'react';
+import { Button } from '../button/Button';
 
 const ProjectCardsHeader = () => (
 	<div className={styles.title}>
@@ -22,7 +22,11 @@ const ProjectCardsHeader = () => (
 );
 
 const ToggleVisibleCardsButton = (props) => (
-	<Button variant='secondary' onClick={props.toggleAllCardsVisibility}>
+	<Button
+		purpose='button'
+		variant='secondary'
+		onClick={props.toggleAllCardsVisibility}
+	>
 		{props.toggleButtonText}
 	</Button>
 );

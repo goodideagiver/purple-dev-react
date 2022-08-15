@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Button from '../button/Button';
 
 import classes from './ScrollToTopBtn.module.css';
 
 import { RiRocketFill } from 'react-icons/ri';
+import { Button } from '../button/Button';
 
 const ScrollToTopBtn = () => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -25,10 +25,9 @@ const ScrollToTopBtn = () => {
 	return (
 		<>
 			<Button
+				purpose='button'
 				onClick={buttonClickHandler}
-				className={`${classes.button} ${
-					isVisible ? '' : classes.hidden
-				}`}
+				className={`${classes.button} ${isVisible ? '' : classes.hidden}`}
 			>
 				<RiRocketFill />
 			</Button>

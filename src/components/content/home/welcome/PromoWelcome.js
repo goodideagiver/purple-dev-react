@@ -1,4 +1,4 @@
-import Button from '../../../UI/button/Button';
+import { Button } from '../../../UI/button/Button';
 import st from './PromoWelcome.module.css';
 
 export const PromoWelcome = () => (
@@ -11,7 +11,12 @@ export const PromoWelcome = () => (
 			me. I am always trying to learn new things and I am always trying to
 			improve my skills.
 		</p>
-		<Button route='/contact' className={st.button} variant='glow'>
+		<Button
+			purpose='route'
+			href='/contact'
+			className={st.button}
+			variant='glow'
+		>
 			Contact me
 		</Button>
 	</div>

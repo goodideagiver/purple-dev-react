@@ -1,4 +1,3 @@
-import Button from '../../../../../button/Button';
 import { Gallery } from '../Gallery';
 import { ArticleSection } from './ArticleSection';
 import { ArticleTechnologies } from './ArticleTechnologies';
@@ -6,6 +5,7 @@ import { ArticleTechnologies } from './ArticleTechnologies';
 import { motion } from 'framer-motion';
 
 import classes from './ArticleTemplate.module.css';
+import { Button } from '../../../../../button/Button';
 
 const container = {
 	hidden: { opacity: 1, scale: 0 },
@@ -50,21 +50,15 @@ export const ArticleTemplate = ({
 					{repoLink && (
 						<Button
 							variant='callToAction'
-							link={repoLink}
-							target='_blank'
-							rel='noopener noreferrer'
+							href={repoLink}
+							purpose='externalLink'
 						>
 							{' '}
 							📦 Repo
 						</Button>
 					)}{' '}
 					{demoLink && (
-						<Button
-							variant='glow'
-							target='_blank'
-							rel='noopener noreferrer'
-							link={demoLink}
-						>
+						<Button variant='glow' purpose='externalLink' href={demoLink}>
 							🎬 Demo
 						</Button>
 					)}

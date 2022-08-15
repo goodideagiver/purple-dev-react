@@ -1,4 +1,3 @@
-import Button from '../../../UI/button/Button';
 import ImgSmoothLoad from '../../../UI/ImgSmoothLoad/ImgSmoothLoad';
 import Modal from '../../../modal/Modal';
 import classes from './EmploymentHistory.module.css';
@@ -6,6 +5,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 import uncleSam from '/public/assets/img/about/Uncle_Sam_(pointing_finger).jpg';
+import { Button } from '../../../UI/button/Button';
 
 const EmploymentHistory = ({ className }) => {
 	const [modalVisible, setModalVisible] = useState(false);
@@ -16,7 +16,9 @@ const EmploymentHistory = ({ className }) => {
 	return (
 		<div className={`${classes.history} ${className}`}>
 			<h3>Past career</h3>
-			<Button onClick={showModalHandler}>See employment history</Button>
+			<Button purpose='button' onClick={showModalHandler}>
+				See employment history
+			</Button>
 			<Modal
 				visible={modalVisible}
 				modalCloseHandler={hideModalHandler}

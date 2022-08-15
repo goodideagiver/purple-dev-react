@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Button from '../button/Button';
 
 import classes from './Foldable.module.css';
 
 import st from '../navButtons/navButtons.module.css';
+import { Button } from '../button/Button';
 
 const Foldable = (props) => {
 	const [isFolded, setIsFolded] = useState(true);
@@ -18,13 +18,15 @@ const Foldable = (props) => {
 
 	return (
 		<div onBlur={foldOnBlurHandler}>
-			<Button className={st.button} onClick={foldToggleButtonHandler}>
+			<Button
+				purpose='button'
+				className={st.button}
+				onClick={foldToggleButtonHandler}
+			>
 				Show {isFolded ? 'more' : 'less'}
 			</Button>
 			<div
-				className={`${isFolded ? classes.folded : ''} ${
-					classes.foldContainer
-				}`}
+				className={`${isFolded ? classes.folded : ''} ${classes.foldContainer}`}
 			>
 				{props.children}
 			</div>

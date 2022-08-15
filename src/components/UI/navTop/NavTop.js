@@ -1,5 +1,3 @@
-import Button from '../../UI/button/Button';
-
 import { useState } from 'react';
 
 import { MdMenu } from 'react-icons/md';
@@ -9,6 +7,7 @@ import NavButtons from '../navButtons/NavButtons';
 import NavMenu from '../navMenu/NavMenu/NavMenu';
 import Link from 'next/link';
 import { useMediaQuery } from '../../../hooks/useMediaQuery';
+import { Button } from '../button/Button';
 
 const NavTop = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -37,6 +36,7 @@ const NavTop = () => {
 					aria-label='side menu toggle'
 					variant='nav'
 					onClick={menuToggle}
+					purpose='button'
 				>
 					<MdMenu />
 				</Button>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Button } from '../button/Button';
 
-import Button from '../button/Button';
+//TODO remove this component
 
 import styles from './contactForm.module.css';
 
@@ -47,16 +48,12 @@ const ContactForm = () => {
 				<div className={styles.invalidMsg}>
 					<p>Oh no! There is something wrong with your input 🤨</p>
 					{!name.trim().length && <p>❌ Name field is empty.</p>}
-					{!message.trim().length && (
-						<p>❌ Message field is empty.</p>
-					)}
+					{!message.trim().length && <p>❌ Message field is empty.</p>}
 				</div>
 			)}
 			<form
 				onSubmit={sendEmailHandler}
-				className={`${styles.form} ${
-					isFormValid === false && styles.invalid
-				}`}
+				className={`${styles.form} ${isFormValid === false && styles.invalid}`}
 			>
 				<div className={styles.formRow}>
 					<label htmlFor='name'>Your name</label>

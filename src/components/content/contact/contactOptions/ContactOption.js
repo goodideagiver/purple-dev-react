@@ -1,5 +1,4 @@
-import Button from '../../../UI/button/Button';
-
+import { Button } from '../../../UI/button/Button';
 import classes from './ContactOption.module.css';
 
 export const ContactOption = ({ icon, text, link, onClick, delay }) => {
@@ -25,6 +24,7 @@ export const ContactOption = ({ icon, text, link, onClick, delay }) => {
 				className={classes.option}
 				style={{ animationDelay: delay }}
 				onClick={onClick}
+				purpose='button'
 			>
 				{icon && <span>{icon}</span>}
 				<p>{text}</p>

@@ -1,4 +1,4 @@
-import Button from '../button/Button';
+import { Button } from '../button/Button';
 import ImgSmoothLoad from './../ImgSmoothLoad/ImgSmoothLoad';
 import classes from './AboutMeCTA.module.css';
 import programmer from '/public/assets/img/programmer/proProgrammer.webp';
@@ -15,7 +15,8 @@ const AboutMeCTA = () => {
 				<Button
 					className={classes.button}
 					variant='callToAction'
-					route='/about'
+					href='/about'
+					purpose='route'
 				>
 					About me
 				</Button>
