@@ -1,4 +1,4 @@
-import { ReactChild, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { Roadmapper } from './articles/Roadmapper';
 
 type ProjectCardData = {
@@ -8,7 +8,7 @@ type ProjectCardData = {
 	link: string;
 	tooltip?: string;
 	color: string;
-	article?: JSX.Element;
+	article?: ReactNode;
 };
 
 const cardData: ProjectCardData[] = [

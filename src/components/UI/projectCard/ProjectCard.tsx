@@ -26,7 +26,7 @@ type ProjectCardProps = {
 	link: string;
 	delay: number;
 	tooltip: string;
-	article?: () => JSX.Element;
+	article?: ReactNode;
 };
 
 const ProjectCard = ({
