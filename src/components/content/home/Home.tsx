@@ -24,7 +24,7 @@ const HomeComponents: HomeComponent[] = [
 	{ component: <Welcome />, css: st.homeAnim },
 	{ component: <Promo />, sectionWidth: false },
 	{ component: <ProjectCards />, css: st.nextTo },
-	{ component: <ContactCTASection />, css: st.nextTo },
+	{ component: <ContactCTASection />, css: st.nextTo + ' ' + st.contactCTA },
 ];
 
 export const Home = () => {

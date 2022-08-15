@@ -1,5 +1,6 @@
 .root {
 	background-color: var(--bg-secondary);
+	margin: 4rem 0;
 }
 
 .list {
@@ -47,7 +48,6 @@
 
 	.list {
 		flex-direction: row;
-		gap: 3rem;
 		justify-content: center;
 	}
 }
