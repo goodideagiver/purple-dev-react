@@ -85,7 +85,6 @@ export const Roadmapper = () => {
 					'React Transition Group',
 					'Redux + toolkit',
 					'Jest',
-					'Parcel',
 				]}
 				features={<Features />}
 				whatDidILearn={<WhatDidILearn />}
