@@ -1,6 +1,4 @@
-import React from 'react';
-
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 import styles from './navButtons.module.css';
 
@@ -26,13 +24,14 @@ const NavButtons = ({ visibleButtonNames, onClick }) => {
 		return (
 			<li key={index}>
 				{page.type !== 'external' ? (
-					<Link
-						onClick={onClick}
-						className={styles.button}
-						style={{ animationDelay: index / 10 + 0.1 + 's' }}
-						to={page.url}
-					>
-						{page.name}
+					<Link href={page.url}>
+						<a
+							onClick={onClick}
+							className={styles.button}
+							style={{ animationDelay: index / 10 + 0.1 + 's' }}
+						>
+							{page.name}
+						</a>
 					</Link>
 				) : (
 					<a

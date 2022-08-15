@@ -1,6 +1,8 @@
 import styles from './ImgSmoothLoad.module.css';
 import { useState } from 'react';
 
+import Image from 'next/future/image';
+
 export const ImgSmoothLoad = ({ animate, src, className, alt, ...props }) => {
 	const [isLoaded, setIsLoaded] = useState(animate === false);
 
@@ -11,7 +13,7 @@ export const ImgSmoothLoad = ({ animate, src, className, alt, ...props }) => {
 		: '';
 
 	return (
-		<img
+		<Image
 			src={src}
 			onLoad={() => {
 				setIsLoaded(true);

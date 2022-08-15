@@ -6,7 +6,7 @@ import { useLockBodyScroll } from '../../../../hooks/useLockBodyScroll';
 export const NavContent = ({ onMenuClose }) => {
 	useLockBodyScroll();
 	return (
-		<div className={`${styles.desktopNav} ${'acrylic'}`}>
+		<div className={`${styles.desktopNav} `}>
 			<button className={styles.close} onClick={onMenuClose}>
 				<MdClose />
 			</button>

@@ -1,6 +1,6 @@
-import roadmapper1 from '../../../../../assets/img/welcome/roadmapper1.webp';
-import roadmapper2 from '../../../../../assets/img/welcome/roadmapper2.webp';
-import roadmapper3 from '../../../../../assets/img/welcome/roadmapper3.webp';
+import roadmapper1 from '/public/assets/img/welcome/roadmapper1.webp';
+import roadmapper2 from '/public/assets/img/welcome/roadmapper2.webp';
+import roadmapper3 from '/public/assets/img/welcome/roadmapper3.webp';
 import { ArticleTemplate } from './ArticleTools/ArticleTemplate/ArticleTemplate';
 
 import { Gallery } from './ArticleTools/Gallery';

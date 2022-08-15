@@ -19,9 +19,7 @@ const KnownTechnologies = ({ styles }) => {
 					</button>
 				</Tooltip>
 			</div>
-			<div
-				className={`${styles.technologies} ${styles.cardInnerPadding}`}
-			>
+			<div className={`${styles.technologies} ${styles.cardInnerPadding}`}>
 				<TagCloudComponent enabled={enabled} />
 			</div>
 		</div>

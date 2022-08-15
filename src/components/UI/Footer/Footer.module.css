@@ -1,7 +1,7 @@
 .footer {
 	padding: 3rem;
 	animation: fadeIn 1s both;
-	background-image: url('./../../../assets/img/misc/layered-waves-haikei-purple.svg');
+	background-image: url('../../../../public/assets/img/misc/layered-waves-haikei-purple.svg');
 	background-size: cover;
 	background-position: bottom;
 }
@@ -9,7 +9,7 @@
 @media screen and (min-width: 1920px) {
 	.footer {
 		background-image: linear-gradient(to top, #1f1f1f61 25%, transparent 75%),
-			url('./../../../assets/img/misc/layered-waves-haikei-purple.svg');
+			url('../../../../public/assets/img/misc/layered-waves-haikei-purple.svg');
 		background-repeat: repeat-x;
 		background-position: 100% 75%;
 		background-size: 100% 500%;

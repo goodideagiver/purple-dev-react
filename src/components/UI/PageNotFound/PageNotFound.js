@@ -1,5 +1,5 @@
 import ImgSmoothLoad from '../ImgSmoothLoad/ImgSmoothLoad';
-import img from '../../../assets/img/contact/code.webp';
+import img from '/public/assets/img/contact/code.webp';
 import styles from './PageNotFound.module.css';
 
 const PageNotFound = () => {

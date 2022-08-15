@@ -1,5 +1,3 @@
-@import url('../../../variables.css');
-
 .title {
 	text-decoration: none;
 }
@@ -8,7 +6,6 @@
 	width: 100%;
 	align-self: center;
 	max-width: min(var(--website-width), 90vw);
-	/* margin: auto; */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

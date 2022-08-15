@@ -7,7 +7,7 @@ import { MdMenu } from 'react-icons/md';
 import styles from './navTop.module.css';
 import NavButtons from '../navButtons/NavButtons';
 import NavMenu from '../navMenu/NavMenu/NavMenu';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useMediaQuery } from '../../../hooks/useMediaQuery';
 
 const NavTop = () => {
@@ -20,8 +20,10 @@ const NavTop = () => {
 
 	return (
 		<div className={styles.nav}>
-			<Link className={styles.title} to='/'>
-				<h1>purpleblack.dev</h1>
+			<Link passHref href='/'>
+				<a className={styles.title}>
+					<h1>purpleblack.dev</h1>
+				</a>
 			</Link>
 			{!isMobile && (
 				<nav className={styles.listWrapper}>
