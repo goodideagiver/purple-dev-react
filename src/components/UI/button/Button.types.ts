@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 
 type Variants = 'special' | 'danger' | 'nav' | 'callToAction' | 'glow';
 
@@ -11,4 +11,5 @@ export interface UniversalButtonProps {
 	onClick?: () => void;
 	href?: string;
 	purpose: Purpose;
+	style?: React.CSSProperties;
 }

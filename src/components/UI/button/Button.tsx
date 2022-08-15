@@ -10,6 +10,7 @@ export const Button = ({
 	variant,
 	href,
 	onClick,
+	style,
 	...props
 }: UniversalButtonProps) => {
 	const chosenClassName = `${styles.button} ${variant ? styles[variant] : ''} ${
@@ -18,7 +19,7 @@ export const Button = ({
 
 	if (purpose === 'route') {
 		return (
-			<Link passHref href={href}>
+			<Link style={style} passHref href={href}>
 				<a className={chosenClassName} {...props}>
 					{children}
 				</a>
@@ -29,6 +30,7 @@ export const Button = ({
 	if (purpose === 'externalLink') {
 		return (
 			<a
+				style={style}
 				href={href}
 				className={chosenClassName}
 				target='_blank'
@@ -42,7 +44,12 @@ export const Button = ({
 
 	if (purpose === 'button' && onClick) {
 		return (
-			<button onClick={onClick} className={chosenClassName} {...props}>
+			<button
+				style={style}
+				onClick={onClick}
+				className={chosenClassName}
+				{...props}
+			>
 				{children}
 			</button>
 		);
