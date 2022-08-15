@@ -33,6 +33,7 @@
 	justify-items: stretch;
 	text-align: center;
 	gap: 1rem;
+	padding: 2rem 0;
 }
 
 .links a {
