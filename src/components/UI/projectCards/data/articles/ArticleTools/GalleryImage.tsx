@@ -3,8 +3,9 @@ import ImgSmoothLoad from '../../../../ImgSmoothLoad/ImgSmoothLoad';
 import { ImageZoom } from './ImageZoom';
 
 import classes from './GalleryImage.module.css';
+import { GalleryImageProps } from './GalleryImage.types';
 
-export const GalleryImage = ({ image }) => {
+export const GalleryImage = ({ image }: GalleryImageProps) => {
 	const [imageZoomVisible, setImageZoomVisible] = useState(false);
 
 	return (
@@ -13,7 +14,7 @@ export const GalleryImage = ({ image }) => {
 				onClick={() => setImageZoomVisible(true)}
 				className={classes.button}
 			>
-				<ImgSmoothLoad src={image.src} />
+				<ImgSmoothLoad src={image.src} alt={image.alt || ''} />
 			</button>
 			{imageZoomVisible && (
 				<ImageZoom

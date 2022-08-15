@@ -9,9 +9,18 @@ import classes from './ArticleTools/ArticleTemplate/ArticleTemplate.module.css';
 import { ExternalLink } from '../../../ExternalLink/ExternalLink';
 
 const images = [
-	{ src: roadmapper1 },
-	{ src: roadmapper2 },
-	{ src: roadmapper3 },
+	{
+		src: roadmapper1,
+		alt: 'Screenshot of the roadmapper app - main view with 3 blocks in the middle',
+	},
+	{
+		src: roadmapper2,
+		alt: 'Screenshot of the roadmapper app - suggestion explain modal',
+	},
+	{
+		src: roadmapper3,
+		alt: 'Screenshot of the roadmapper app - edit roadmap point modal',
+	},
 ];
 
 const WhatDidILearn = () => (

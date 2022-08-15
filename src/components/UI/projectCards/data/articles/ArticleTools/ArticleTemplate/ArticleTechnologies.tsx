@@ -1,6 +1,12 @@
 import classes from './ArticleTechnologies.module.css';
 
-export const ArticleTechnologies = ({ technologiesArray }) => {
+type ArticleTechnologiesProps = {
+	technologiesArray: string[];
+};
+
+export const ArticleTechnologies = ({
+	technologiesArray,
+}: ArticleTechnologiesProps) => {
 	return (
 		<section>
 			<h3>⚙️ Technologies</h3>

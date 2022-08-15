@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 
 import classes from './ArticleTemplate.module.css';
 import { Button } from '../../../../../button/Button';
+import { Image } from '../GalleryImage.types';
+import { ReactNode } from 'react';
 
 const container = {
 	hidden: { opacity: 1, scale: 0 },
@@ -19,6 +21,15 @@ const container = {
 	},
 };
 
+type ArticleTemplateProps = {
+	technologies: string[];
+	images: Image[];
+	features: ReactNode;
+	whatDidILearn: ReactNode;
+	demoLink: string;
+	repoLink: string;
+};
+
 export const ArticleTemplate = ({
 	technologies,
 	features,
@@ -26,7 +37,7 @@ export const ArticleTemplate = ({
 	repoLink,
 	demoLink,
 	images,
-}) => {
+}: ArticleTemplateProps) => {
 	return (
 		<motion.div
 			variants={container}

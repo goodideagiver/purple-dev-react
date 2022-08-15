@@ -9,7 +9,11 @@ const item = {
 	},
 };
 
-export const AnimateSection = ({ children }) => {
+type AnimateSectionProps = {
+	children: React.ReactNode;
+};
+
+export const AnimateSection = ({ children }: AnimateSectionProps) => {
 	return (
 		<motion.section
 			transition={{
