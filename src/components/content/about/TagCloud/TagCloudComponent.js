@@ -22,6 +22,8 @@ const TagCloudComponent = ({ enabled }) => {
 		'Jest',
 		'React Transition Group',
 		'React testing library',
+		'Next.js',
+		'React Router',
 	];
 
 	const tagDiv = useRef(null);

@@ -1,10 +1,10 @@
 const skillList = [
 	'JavaScript',
+	'TypeScript',
+	'React',
 	'CSS',
 	'HTML',
 	'RWD',
-	'React',
-	'Photoshop',
 	'English',
 	'Photography',
 ];
