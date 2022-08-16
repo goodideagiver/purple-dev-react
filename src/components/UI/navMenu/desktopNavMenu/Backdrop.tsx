@@ -1,7 +1,12 @@
 import { CSSTransition } from 'react-transition-group';
 import styles from './desktopNavMenu.module.css';
 
-export const Backdrop = ({ backdropClickHandler, show }) => {
+type Props = {
+	backdropClickHandler: () => void;
+	show: boolean;
+};
+
+export const Backdrop = ({ backdropClickHandler, show }: Props) => {
 	return (
 		<CSSTransition
 			in={show}

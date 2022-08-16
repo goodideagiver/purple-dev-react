@@ -3,7 +3,11 @@ import styles from './desktopNavMenu.module.css';
 import { MdClose } from 'react-icons/md';
 import { useLockBodyScroll } from '../../../../hooks/useLockBodyScroll';
 
-export const NavContent = ({ onMenuClose }) => {
+type Props = {
+	onMenuClose: () => void;
+};
+
+export const NavContent = ({ onMenuClose }: Props) => {
 	useLockBodyScroll();
 	return (
 		<div className={`${styles.desktopNav} `}>
