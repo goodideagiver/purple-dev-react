@@ -20,7 +20,8 @@
     "start": "next start",
     "build": "next build",
     "dev": "next dev",
-    "deploy": "next build && gh-pages -d build"
+    "deploy": "next build && gh-pages -d build",
+    "ts-check": "tsc --noEmit"
   },
   "eslintConfig": {
     "extends": [

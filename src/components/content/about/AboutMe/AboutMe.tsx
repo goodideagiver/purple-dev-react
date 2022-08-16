@@ -1,10 +1,10 @@
 import { ExternalLink } from '../../../UI/ExternalLink/ExternalLink';
 
-type Props {
-	styles: {[key: string]: string};
-}
+type Props = {
+	styles: { [key: string]: string };
+};
 
-const AboutMe = ({ styles }:Props) => {
+const AboutMe = ({ styles }: Props) => {
 	return (
 		<div className={styles.cell}>
 			<h3>About me</h3>
