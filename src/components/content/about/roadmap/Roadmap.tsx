@@ -1,10 +1,12 @@
-import React from 'react';
-
 import timeSince from '../../../../helpers/timeSince';
 import goals from './data';
 import styles from './roadmap.module.css';
 
-const Roadmap = ({ className }) => {
+type Props = {
+	className?: string;
+};
+
+const Roadmap = ({ className }: Props) => {
 	return (
 		<div className={`${className} ${styles.root}`}>
 			<h3>Writing bad code since:</h3>
