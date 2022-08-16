@@ -16,6 +16,7 @@ const Welcome = (props: React.FC) => {
 			<div className={st.programmer}>
 				<div className={`${st.programmer} ${st.overlay}`} />
 				<ImgSmoothLoad
+					priority={true}
 					className={st.image}
 					src={img}
 					alt=''

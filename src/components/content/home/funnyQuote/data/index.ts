@@ -1,4 +1,9 @@
-const quotes = [
+type Quote = {
+	quote: string;
+	author: string;
+};
+
+const quotes: Quote[] = [
 	{
 		quote: 'Whatever you are, be a good one.',
 		author: 'Abraham Lincoln',
@@ -17,6 +22,9 @@ const quotes = [
 	},
 ];
 
-const getRandomQuote = () => quotes[parseInt(Math.random() * quotes.length)];
+const getRandomQuotesIndex = (): number =>
+	parseInt((Math.random() * quotes.length).toString());
+
+const getRandomQuote = () => quotes[getRandomQuotesIndex()];
 
 export default getRandomQuote;

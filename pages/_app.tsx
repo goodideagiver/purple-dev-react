@@ -5,6 +5,7 @@ import '../src/index.css';
 import '../src/assets/css/acrylic.css';
 import { Content } from '../src/components/content/content';
 import { ScrollToTopBtn } from '../src/components/UI/scrollToTopBtn/ScrollToTopBtn';
+import Script from 'next/script';
 
 type MyAppProps = {
 	Component: React.ComponentType<any>;
@@ -14,12 +15,12 @@ type MyAppProps = {
 function MyApp({ Component, pageProps }: MyAppProps) {
 	return (
 		<>
-			<script
+			<Script
 				strategy='lazyOnload'
 				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
 			/>
 
-			<script strategy='lazyOnload'>
+			<Script strategy='lazyOnload'>
 				{`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
@@ -28,7 +29,7 @@ function MyApp({ Component, pageProps }: MyAppProps) {
                     page_path: window.location.pathname,
                     });
                 `}
-			</script>
+			</Script>
 			<Content>
 				<NavTop />
 				<Component {...pageProps} />

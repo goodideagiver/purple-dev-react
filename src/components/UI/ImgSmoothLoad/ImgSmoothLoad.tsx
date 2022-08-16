@@ -9,6 +9,7 @@ type ImgSmoothLoadProps = {
 	alt: string;
 	className?: string;
 	animate?: boolean;
+	priority?: boolean;
 };
 
 export const ImgSmoothLoad = ({
@@ -16,6 +17,7 @@ export const ImgSmoothLoad = ({
 	src,
 	className,
 	alt,
+	priority,
 	...props
 }: ImgSmoothLoadProps) => {
 	const [isLoaded, setIsLoaded] = useState(animate === false);
@@ -34,6 +36,7 @@ export const ImgSmoothLoad = ({
 			}}
 			className={`${animationStyles} ${className ? className : ''}`}
 			alt={alt}
+			priority={priority}
 			{...props}
 		/>
 	);

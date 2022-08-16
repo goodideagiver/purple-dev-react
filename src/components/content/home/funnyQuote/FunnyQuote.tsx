@@ -1,10 +1,16 @@
+import { useEffect, useState } from 'react';
 import { RiDoubleQuotesL, RiDoubleQuotesR } from 'react-icons/ri';
 import getRandomQuote from './data';
 
 import classes from './FunnyQuote.module.css';
 
 const FunnyQuote = () => {
-	const { quote, author } = getRandomQuote();
+	const [quoteObj, setQuoteObj] = useState({ quote: '', author: '' });
+
+	useEffect(() => {
+		const quoteObj = getRandomQuote();
+		setQuoteObj(quoteObj);
+	}, []);
 
 	return (
 		<div className={classes.funnyQuote}>
@@ -14,8 +20,8 @@ const FunnyQuote = () => {
 						<RiDoubleQuotesL />
 					</div>
 					<div>
-						<p className={classes.quote}>{quote}</p>
-						<p className={classes.author}>- {author}</p>
+						<p className={classes.quote}>{quoteObj.quote}</p>
+						<p className={classes.author}>- {quoteObj.author}</p>
 					</div>
 					<div className={classes.icon}>
 						<RiDoubleQuotesR />

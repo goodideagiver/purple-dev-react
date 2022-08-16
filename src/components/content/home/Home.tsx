@@ -4,7 +4,7 @@ import Welcome from './welcome/Welcome';
 import Promo from './promo/Promo';
 import AboutMeCTA from '../../UI/aboutMeCTA/AboutMeCTA';
 import FunnyQuote from './funnyQuote/FunnyQuote';
-import { ReactNode } from 'react';
+import { ReactNode, useId } from 'react';
 
 const ContactCTASection = () => (
 	<>
@@ -31,6 +31,7 @@ export const Home = () => {
 	const HomeComponentsWithSection = HomeComponents.map((component) => {
 		return (
 			<section
+				key={useId()}
 				className={`${
 					component.sectionWidth === false ? '' : st.sectionWidth
 				} ${component.css ? component.css : ''}`}

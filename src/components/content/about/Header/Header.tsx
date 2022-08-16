@@ -16,6 +16,7 @@ const Header = ({ styles }: Props) => {
 					alt='Karol face portrait with cat in the bottom'
 					className={styles.picture}
 					src={profile}
+					priority={true}
 				/>
 				<div className={classes.info}>
 					<h2>Karol</h2>
