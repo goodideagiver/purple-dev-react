@@ -1,6 +1,17 @@
+import { ReactNode } from 'react';
 import styles from './Tooltip.module.css';
 
-const Tooltip = ({ text = 'default tooltip text', children, className }) => {
+type Props = {
+	text: string;
+	children: ReactNode;
+	className?: string;
+};
+
+const Tooltip = ({
+	text = 'default tooltip text',
+	children,
+	className,
+}: Props) => {
 	return (
 		<div className={`${styles.tooltip} ${className ? className : ''}`}>
 			{children}

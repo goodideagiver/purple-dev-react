@@ -1,4 +1,4 @@
-import LoadingSpinner from './../../../UI/LoadingSpinner/LoadingSpinner';
+import LoadingSpinner from '../../../UI/LoadingSpinner/LoadingSpinner';
 import styles from './LoadingSpinnerContent.module.css';
 
 const LoadingSpinnerContent = () => {

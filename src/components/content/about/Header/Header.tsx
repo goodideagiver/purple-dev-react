@@ -4,7 +4,11 @@ import timeSince from '../../../../helpers/timeSince';
 import waves from './../Waves.module.css';
 import classes from './Header.module.css';
 
-const Header = ({ styles }) => {
+type Props = {
+	styles: { [key: string]: string };
+};
+
+const Header = ({ styles }: Props) => {
 	return (
 		<header className={`${styles.header} ${waves.waves}`}>
 			<div className={`${classes.card} acrylic`}>

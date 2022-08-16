@@ -1,10 +1,14 @@
-import TagCloudComponent from './../TagCloud/TagCloudComponent';
+import TagCloudComponent from '../TagCloud/TagCloudComponent';
 
 import classes from './KnownTechnologies.module.css';
 import { useState } from 'react';
-import Tooltip from './../../../UI/Tooltip/Tooltip';
+import Tooltip from '../../../UI/Tooltip/Tooltip';
 
-const KnownTechnologies = ({ styles }) => {
+type Props = {
+	styles: { [key: string]: string };
+};
+
+const KnownTechnologies = ({ styles }: Props) => {
 	const [enabled, setEnabled] = useState(true);
 
 	const toggleHandler = () => setEnabled((state) => !state);

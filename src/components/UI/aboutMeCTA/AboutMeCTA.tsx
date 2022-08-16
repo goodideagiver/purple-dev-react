@@ -1,5 +1,5 @@
 import { Button } from '../button/Button';
-import ImgSmoothLoad from './../ImgSmoothLoad/ImgSmoothLoad';
+import ImgSmoothLoad from '../ImgSmoothLoad/ImgSmoothLoad';
 import classes from './AboutMeCTA.module.css';
 import programmer from '/public/assets/img/programmer/proProgrammer.webp';
 
