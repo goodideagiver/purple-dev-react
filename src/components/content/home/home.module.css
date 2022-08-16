@@ -17,6 +17,10 @@
 	animation: fade-in 1s forwards;
 }
 
+.contactCTA {
+	margin-top: 3rem;
+}
+
 @keyframes fade-in {
 	from {
 		opacity: 0;

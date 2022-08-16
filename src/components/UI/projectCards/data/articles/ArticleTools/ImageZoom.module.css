@@ -4,22 +4,23 @@
 	align-items: center;
 	position: fixed;
 	width: min(100%, 100vw);
-	height: min(100vh, 100%);
 	top: 0;
 	left: 0;
 	z-index: 2000;
-
+	height: 100%;
 	pointer-events: none;
 
 	animation: appearImg 0.2s 0.1s both;
 }
 
 .imgContainer img {
-	max-width: 80%;
-	max-height: min(80vh, 80%);
+	height: auto;
+	width: auto;
 	box-shadow: rgba(0, 0, 0, 0.8) 0px 30px 90px;
 	border-radius: var(--border-radius-base);
 	border: 2px rgba(128, 128, 128, 0.227) solid;
+	aspect-ratio: 1/1;
+	object-fit: cover;
 }
 
 .backdrop {
