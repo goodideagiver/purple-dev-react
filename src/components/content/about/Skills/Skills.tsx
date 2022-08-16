@@ -1,6 +1,10 @@
 import skillList from './data';
 
-const Skills = ({ styles }) => {
+type Props = {
+	styles: { [key: string]: string };
+};
+
+const Skills = ({ styles }: Props) => {
 	return (
 		<div className={styles.cell}>
 			<h3>Skills</h3>
