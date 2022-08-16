@@ -1,6 +1,10 @@
 import { ExternalLink } from '../../../UI/ExternalLink/ExternalLink';
 
-const AboutMe = ({ styles }) => {
+type Props {
+	styles: {[key: string]: string};
+}
+
+const AboutMe = ({ styles }:Props) => {
 	return (
 		<div className={styles.cell}>
 			<h3>About me</h3>
