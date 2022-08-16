@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './navButtons.module.css';
 
 type Props = {
-	visibleButtonNames: string[];
+	visibleButtonNames?: string[];
 	onClick: () => void;
 };
 
