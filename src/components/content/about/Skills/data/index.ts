@@ -1,4 +1,4 @@
-const skillList = [
+const skillList: string[] = [
 	'JavaScript',
 	'TypeScript',
 	'React',
