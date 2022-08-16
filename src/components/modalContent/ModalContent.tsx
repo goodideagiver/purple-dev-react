@@ -6,7 +6,6 @@ import { Button } from '../UI/button/Button';
 import { ReactNode } from 'react';
 
 type Props = {
-	visible: boolean;
 	modalCloseHandler: () => void;
 	title: string;
 	children: ReactNode;
