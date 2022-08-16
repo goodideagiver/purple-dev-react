@@ -1,7 +1,11 @@
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
-export const Portal = ({ children }) => {
+type Props = {
+	children: ReactNode;
+};
+
+export const Portal = ({ children }: Props) => {
 	const [mounted, setMounted] = useState(false);
 
 	useEffect(() => {
@@ -11,7 +15,7 @@ export const Portal = ({ children }) => {
 	}, []);
 
 	return mounted
-		? createPortal(children, document.querySelector('#overlay-root'))
+		? createPortal(children, document.querySelector('#overlay-root')!)
 		: null;
 };
 
