@@ -1,11 +1,9 @@
 import { motion } from 'framer-motion';
 
 const item = {
-	hidden: { opacity: 0, scale: 0.95, y: 50 },
+	hidden: { opacity: 0 },
 	visible: {
-		y: 0,
 		opacity: 1,
-		scale: 1,
 	},
 };
 
