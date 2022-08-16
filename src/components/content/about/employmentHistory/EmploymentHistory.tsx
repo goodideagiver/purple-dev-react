@@ -27,6 +27,7 @@ const EmploymentHistory = ({ className }: EmploymentHistoryProps) => {
 				visible={modalVisible}
 				modalCloseHandler={hideModalHandler}
 				title='You can be the first company to hire me'
+				className={classes.modalContent}
 			>
 				<ImgSmoothLoad
 					className={classes['man-pointing']}

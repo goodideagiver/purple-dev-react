@@ -3,10 +3,24 @@ import styles from './modalContent.module.css';
 import { GrClose } from 'react-icons/gr';
 import { useLockBodyScroll } from '../../hooks/useLockBodyScroll';
 import { Button } from '../UI/button/Button';
+import { ReactNode } from 'react';
 
-const ModalContent = (props) => {
+type Props = {
+	visible: boolean;
+	modalCloseHandler: () => void;
+	title: string;
+	children: ReactNode;
+	className?: string;
+};
+
+const ModalContent = ({
+	title,
+	modalCloseHandler,
+	className,
+	children,
+}: Props) => {
 	const contentCssClasses = `${styles.content} ${
-		props.className ? props.className : ''
+		className ? className : ''
 	} acrylic`;
 
 	useLockBodyScroll();
@@ -14,17 +28,17 @@ const ModalContent = (props) => {
 	return (
 		<div className={contentCssClasses}>
 			<header className={styles.header}>
-				<h2>{props.title}</h2>
+				<h2>{title}</h2>
 				<Button
 					variant='danger'
-					onClick={props.modalCloseHandler}
+					onClick={modalCloseHandler}
 					className={styles.close}
 					purpose='button'
 				>
 					<GrClose />
 				</Button>
 			</header>
-			<main className={styles.children}>{props.children}</main>
+			<main className={styles.children}>{children}</main>
 		</div>
 	);
 };

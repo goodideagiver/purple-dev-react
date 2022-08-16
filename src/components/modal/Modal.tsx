@@ -14,15 +14,23 @@ type ModalProps = {
 	modalCloseHandler: () => void;
 	title: string;
 	children: React.ReactNode;
+	className?: string;
 };
 
-const Modal = ({ visible, modalCloseHandler, title, children }: ModalProps) => (
+const Modal = ({
+	visible,
+	modalCloseHandler,
+	title,
+	children,
+	className,
+}: ModalProps) => (
 	<Portal>
 		<AnimatedModalBackdrop
 			visible={visible}
 			modalCloseHandler={modalCloseHandler}
 		/>
 		<AnimatedModalContent
+			className={className}
 			visible={visible}
 			children={children}
 			title={title}
