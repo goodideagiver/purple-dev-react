@@ -2,12 +2,12 @@ import CSSTransition from 'react-transition-group/CSSTransition';
 import DesktopNavMenu from '../desktopNavMenu/DesktopNavMenu';
 import styles from './NavMenu.module.css';
 
-type Props {
+type Props = {
 	show: boolean;
 	menuClose: () => void;
-}
+};
 
-const NavMenu = ({ menuClose, show }:Props) => {
+const NavMenu = ({ menuClose, show }: Props) => {
 	return (
 		<CSSTransition
 			mountOnEnter

@@ -2,7 +2,12 @@ import Link from 'next/link';
 
 import styles from './navButtons.module.css';
 
-const NavButtons = ({ visibleButtonNames, onClick }) => {
+type Props = {
+	visibleButtonNames: string[];
+	onClick: () => void;
+};
+
+const NavButtons = ({ visibleButtonNames, onClick }: Props) => {
 	let pagesUrls = [
 		{ name: 'Home', url: '/' },
 		{ name: 'About', url: '/about' },
