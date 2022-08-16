@@ -1,5 +1,4 @@
 .root {
-	padding-top: var(--padding-base);
 	min-height: 100vh;
 	flex: 1;
 	display: flex;
