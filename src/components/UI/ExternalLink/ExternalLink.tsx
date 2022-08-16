@@ -1,6 +1,12 @@
+import { ReactNode } from 'react';
 import classes from './ExternalLink.module.css';
 
-export const ExternalLink = ({ href, children, ...props }) => {
+type Props = {
+	href: string;
+	children: ReactNode;
+};
+
+export const ExternalLink = ({ href, children, ...props }: Props) => {
 	return (
 		<a
 			className={classes.link}
