@@ -12,8 +12,10 @@ const Tooltip = ({
 	children,
 	className,
 }: Props) => {
+	const tooltipClasses = `${styles.tooltip} ${className ? className : ''}`;
+
 	return (
-		<div className={`${styles.tooltip} ${className ? className : ''}`}>
+		<div className={tooltipClasses}>
 			{children}
 			<p className={styles.text}>{text}</p>
 		</div>
