@@ -1,9 +1,13 @@
-import ReactDOM from 'react-dom';
 import Portal from '../../../../../HOC/Portal';
 import { Backdrop } from './Backdrop';
 import { NavContent } from './NavContent';
 
-const DesktopNavMenu = ({ onMenuClose, show }) => (
+type Props = {
+	onMenuClose: () => void;
+	show: boolean;
+};
+
+const DesktopNavMenu = ({ onMenuClose, show }: Props) => (
 	<Portal>
 		<NavContent onMenuClose={onMenuClose} />
 		<Backdrop backdropClickHandler={onMenuClose} show={show} />
