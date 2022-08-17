@@ -26,7 +26,6 @@ export const useWelcomeImages = (
 
 	useEffect(() => {
 		if (!animate) return;
-		console.count('render');
 		const interval = setInterval(() => {
 			setActiveImageIndex((activeImageIndex + 1) % imagesArray.length);
 		}, delay);
