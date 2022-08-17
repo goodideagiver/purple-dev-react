@@ -3,8 +3,6 @@ import roadmapper2 from '/public/assets/img/welcome/roadmapper2.webp';
 import roadmapper3 from '/public/assets/img/welcome/roadmapper3.webp';
 import { ArticleTemplate } from './ArticleTools/ArticleTemplate/ArticleTemplate';
 
-import { Gallery } from './ArticleTools/Gallery';
-
 import classes from './ArticleTools/ArticleTemplate/ArticleTemplate.module.css';
 import { ExternalLink } from '../../../ExternalLink/ExternalLink';
 
@@ -49,7 +47,7 @@ const WhatDidILearn = () => (
 			code and type definitions I wrote.
 		</p>
 		<p>
-			The thing I'm most proud of is{' '}
+			The code I{`'`}m most proud of is{' '}
 			<ExternalLink href='https://github.com/goodideagiver/roadmapper-ts/blob/master/src/components/AddPointModal/AddPointModal.tsx'>
 				AddPointModal
 			</ExternalLink>{' '}
