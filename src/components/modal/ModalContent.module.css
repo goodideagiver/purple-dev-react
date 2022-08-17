@@ -1,12 +1,12 @@
 .enter {
 	opacity: 0;
-	transform: translate(-50%, -50%) scale(0.9) !important;
+	transform: translate3d(-50%, -50%, 0) scale(0.98);
 }
 
 .enterActive {
 	opacity: 1;
 	transition: all 300ms ease-in-out;
-	transform: translate(-50%, -50%) scale(1) !important;
+	transform: translate3d(-50%, -50%, 0) scale(1) !important;
 }
 
 .exit {
@@ -16,5 +16,5 @@
 .exitActive {
 	opacity: 0;
 	transition: all 300ms;
-	transform: translate3d(-50%, -48%, 0) scale(0.9);
+	transform: translate3d(-50%, -48%, 0) scale(0.98);
 }

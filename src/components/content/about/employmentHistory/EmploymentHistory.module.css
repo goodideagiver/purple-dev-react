@@ -44,6 +44,9 @@
 	text-decoration: none;
 	transition: color 0.1s ease;
 	animation: linkReveal 1s 0.5s backwards, linkFlash 8s 1.5s infinite;
+	margin: 0 auto;
+	margin-top: 2rem;
+	padding: 1rem 2rem;
 }
 
 @keyframes linkReveal {
@@ -61,7 +64,7 @@
 		color: var(--font-primary);
 	}
 	5% {
-		color: var(--btn-primary);
+		color: var(--color-secondary);
 		transform: scale(0.95);
 	}
 	20% {
@@ -74,5 +77,5 @@
 }
 
 .link:hover {
-	color: var(--color-primary) !important;
+	color: white !important;
 }

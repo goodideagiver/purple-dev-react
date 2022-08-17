@@ -34,9 +34,14 @@ const EmploymentHistory = ({ className }: EmploymentHistoryProps) => {
 					alt='man pointing finger'
 					src={uncleSam}
 				/>
-				<Link passHref href='/contact'>
-					<a className={classes.link}>Contact me</a>
-				</Link>
+				<Button
+					variant='glow'
+					href='/contact'
+					purpose='route'
+					className={classes.link}
+				>
+					Contact me
+				</Button>
 			</Modal>
 		</div>
 	);

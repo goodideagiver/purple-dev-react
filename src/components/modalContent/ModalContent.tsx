@@ -1,6 +1,6 @@
 import styles from './modalContent.module.css';
 
-import { GrClose } from 'react-icons/gr';
+import { IoMdClose } from 'react-icons/io';
 import { useLockBodyScroll } from '../../hooks/useLockBodyScroll';
 import { Button } from '../UI/button/Button';
 import { ReactNode } from 'react';
@@ -18,9 +18,7 @@ const ModalContent = ({
 	className,
 	children,
 }: Props) => {
-	const contentCssClasses = `${styles.content} ${
-		className ? className : ''
-	} acrylic`;
+	const contentCssClasses = `${styles.content} ${className ? className : ''} `;
 
 	useLockBodyScroll();
 
@@ -34,7 +32,7 @@ const ModalContent = ({
 					className={styles.close}
 					purpose='button'
 				>
-					<GrClose />
+					<IoMdClose />
 				</Button>
 			</header>
 			<main className={styles.children}>{children}</main>
