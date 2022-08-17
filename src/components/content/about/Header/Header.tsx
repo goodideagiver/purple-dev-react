@@ -11,6 +11,9 @@ type Props = {
 const Header = ({ styles }: Props) => {
 	return (
 		<header className={`${styles.header} ${waves.waves}`}>
+			<div>
+				<div aria-hidden='true' className={waves.wave} />
+			</div>
 			<div className={`${classes.card} acrylic`}>
 				<ImgSmoothLoad
 					alt='Karol face portrait with cat in the bottom'
