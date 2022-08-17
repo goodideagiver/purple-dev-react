@@ -32,10 +32,11 @@ const Modal = ({
 		<AnimatedModalContent
 			className={className}
 			visible={visible}
-			children={children}
 			title={title}
 			modalCloseHandler={modalCloseHandler}
-		/>
+		>
+			{children}
+		</AnimatedModalContent>
 	</Portal>
 );
 

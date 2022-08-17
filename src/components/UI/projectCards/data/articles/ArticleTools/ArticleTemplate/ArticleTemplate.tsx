@@ -47,13 +47,12 @@ export const ArticleTemplate = ({
 		>
 			{images && <Gallery images={images} />}
 			{whatDidILearn && (
-				<ArticleSection
-					sectionName='🧠 What did I learn'
-					children={whatDidILearn}
-				/>
+				<ArticleSection sectionName='🧠 What did I learn'>
+					{whatDidILearn}
+				</ArticleSection>
 			)}
 			{features && (
-				<ArticleSection sectionName='✨ Features' children={features} />
+				<ArticleSection sectionName='✨ Features'>{features}</ArticleSection>
 			)}
 			{technologies && <ArticleTechnologies technologiesArray={technologies} />}
 			{(!!repoLink || !!demoLink) && (

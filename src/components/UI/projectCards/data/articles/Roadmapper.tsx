@@ -49,7 +49,7 @@ const WhatDidILearn = () => (
 			code and type definitions I wrote.
 		</p>
 		<p>
-			The thing I'm most proud of is{' '}
+			The thing I&aposm most proud of is{' '}
 			<ExternalLink href='https://github.com/goodideagiver/roadmapper-ts/blob/master/src/components/AddPointModal/AddPointModal.tsx'>
 				AddPointModal
 			</ExternalLink>{' '}

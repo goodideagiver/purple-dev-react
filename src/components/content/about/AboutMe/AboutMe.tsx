@@ -22,7 +22,7 @@ const AboutMe = ({ styles }: Props) => {
 				development.
 			</p>
 			<p className={styles.cardInnerPadding}>
-				I'm trying to commit daily to my{' '}
+				I&aposm trying to commit daily to my{' '}
 				{
 					<ExternalLink href='https://github.com/goodideagiver'>
 						GitHub

@@ -1,4 +1,3 @@
-import { useId } from 'react';
 import timeSince from '../../../../helpers/timeSince';
 import goals from './data';
 import styles from './roadmap.module.css';
@@ -12,8 +11,8 @@ const Roadmap = ({ className }: Props) => {
 		<div className={`${className} ${styles.root}`}>
 			<h3>Writing bad code since:</h3>
 			<ul>
-				{goals.map((goal) => (
-					<li className={styles.item} key={useId()}>
+				{goals.map((goal, index) => (
+					<li className={styles.item} key={index}>
 						<p className={styles.name}>{goal.name}</p>
 						<p className={styles.date}>
 							{goal.date !== 'TBD' ? timeSince(goal.date) : 'TBD'}

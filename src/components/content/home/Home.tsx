@@ -4,7 +4,7 @@ import Welcome from './welcome/Welcome';
 import Promo from './promo/Promo';
 import AboutMeCTA from '../../UI/aboutMeCTA/AboutMeCTA';
 import FunnyQuote from './funnyQuote/FunnyQuote';
-import { ReactNode, useId } from 'react';
+import { ReactNode } from 'react';
 
 const ContactCTASection = () => (
 	<>
@@ -28,10 +28,10 @@ const HomeComponents: HomeComponent[] = [
 ];
 
 export const Home = () => {
-	const HomeComponentsWithSection = HomeComponents.map((component) => {
+	const HomeComponentsWithSection = HomeComponents.map((component, index) => {
 		return (
 			<section
-				key={useId()}
+				key={index}
 				className={`${
 					component.sectionWidth === false ? '' : st.sectionWidth
 				} ${component.css ? component.css : ''}`}

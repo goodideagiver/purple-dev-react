@@ -21,13 +21,8 @@
     "build": "next build",
     "dev": "next dev",
     "deploy": "next build && gh-pages -d build",
-    "ts-check": "tsc --noEmit"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "ts-check": "tsc --noEmit",
+    "lint": "next lint"
   },
   "browserslist": {
     "production": [
@@ -45,6 +40,7 @@
     "@types/node": "^18.7.4",
     "@types/react-transition-group": "^4.4.5",
     "eslint": "^8.22.0",
+    "eslint-config-next": "12.2.5",
     "typescript": "^4.7.4"
   }
 }
