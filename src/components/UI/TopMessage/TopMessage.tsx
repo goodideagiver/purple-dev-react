@@ -3,12 +3,18 @@ import ReactDOM from 'react-dom';
 
 import classes from './TopMessage.module.css';
 
+type Props = {
+	duration?: number;
+	transition?: number;
+	onHide?: () => void;
+};
+
 const TopMessage = ({
 	duration = 1000,
 	transition = 0.5,
 	onHide,
 	...props
-}) => {
+}: Props) => {
 	const [hidden, sethidden] = useState(false);
 
 	useEffect(() => {
