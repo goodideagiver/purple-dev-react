@@ -11,12 +11,12 @@
 	align-items: center;
 	gap: 1rem;
 	border-radius: 6rem;
-	padding: 1rem;
+
 	background-color: var(--bg-secondary);
 	box-shadow: var(--shadow-elevation-medium);
-	box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-		rgba(17, 17, 32, 0.25) 0px 20px 50px -20px,
-		rgba(0, 0, 0, 0.8) 0px 10px 50px -30px;
+	box-shadow: rgba(255, 255, 255, 0.1) 0 1px 1px 0 inset,
+		rgba(17, 17, 32, 0.25) 0 20px 50px -20px,
+		rgba(0, 0, 0, 0.8) 0 10px 50px -30px;
 }
 
 .grid {
@@ -25,9 +25,6 @@
 	margin: auto;
 	margin-top: 2rem;
 	flex-wrap: wrap;
-	/* background-color: var(--bg-secondary); */
-	/* border-radius: 6rem; */
-	/* padding: 1rem; */
 }
 
 .cell {
@@ -91,4 +88,10 @@
 .developer {
 	color: var(--color-primary);
 	margin-bottom: 0.25rem;
+}
+
+@media (max-width: 768px) {
+	.header {
+		padding: 0;
+	}
 }

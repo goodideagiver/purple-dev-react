@@ -7,3 +7,13 @@
 	align-items: center;
 	border: 0;
 }
+
+@media (max-width: 768px) {
+	.card {
+		background-color: transparent;
+		width: 100%;
+		backdrop-filter: none;
+		box-shadow: none;
+		background-image: none;
+	}
+}

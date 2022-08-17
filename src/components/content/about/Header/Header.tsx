@@ -12,9 +12,9 @@ const Header = ({ styles }: Props) => {
 	return (
 		<header className={`${styles.header} ${waves.waves}`}>
 			<div className={waves.wavesWrapper}>
-				<div aria-hidden='true' className={waves.wave} />
+				<div aria-hidden='true' className={waves.wave}></div>
 			</div>
-			<div className={`${classes.card} acrylic`}>
+			<div className={`${classes.card}`}>
 				<ImgSmoothLoad
 					alt='Karol face portrait with cat in the bottom'
 					className={styles.picture}
