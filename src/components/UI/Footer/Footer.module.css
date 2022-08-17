@@ -1,7 +1,12 @@
 .footer {
 	padding: 3rem;
 	animation: fadeIn 1s both;
-	background-image: url('../../../../public/assets/img/misc/layered-waves-haikei-purple.svg');
+	background-image: linear-gradient(
+			to top,
+			var(--bg-primary) 15%,
+			transparent 125%
+		),
+		url('../../../../public/assets/img/misc/layered-waves-haikei-purple.svg');
 	background-size: cover;
 	background-position: bottom;
 }
@@ -17,6 +22,19 @@
 		background-repeat: repeat-x;
 		background-position: 100% 75%;
 		background-size: 100% 500%;
+	}
+}
+
+@media screen and (min-width: 2500px) {
+	.footer {
+		background-image: linear-gradient(
+				to top,
+				var(--bg-primary) 0%,
+				transparent 600%
+			),
+			url('../../../../public/assets/img/misc/layered-waves-haikei-purple.svg');
+		background-size: 100% auto;
+		background-position: 100% 78%;
 	}
 }
 
