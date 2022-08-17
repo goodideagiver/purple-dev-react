@@ -10,6 +10,6 @@
 	.acrylic {
 		--acrylic-bg: rgba(37, 37, 37, 0.672);
 		backdrop-filter: blur(10px);
-		background-image: url('/public/assets/img/misc/noise5percent.webp') !important;
+		background-image: url('/assets/img/misc/noise5percent.webp');
 	}
 }
