@@ -1,18 +1,21 @@
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
+import Portal from '../../../../HOC/Portal';
 
 import classes from './TopMessage.module.css';
 
 type Props = {
 	duration?: number;
 	transition?: number;
-	onHide?: () => void;
+	onHide: () => void;
+	children: ReactNode;
 };
 
 const TopMessage = ({
 	duration = 1000,
 	transition = 0.5,
 	onHide,
+	children,
 	...props
 }: Props) => {
 	const [hidden, sethidden] = useState(false);
@@ -30,17 +33,18 @@ const TopMessage = ({
 		};
 	}, [duration, hidden, transition, onHide]);
 
-	return ReactDOM.createPortal(
-		<div
-			style={{
-				transitionDuration: transition + 's',
-				animationDuration: transition + 's',
-			}}
-			className={`${classes.wrapper} ${hidden ? classes.hide : ''}`}
-		>
-			<div className={classes.topMessage}>{props.children}</div>
-		</div>,
-		document.getElementById('overlay-root')
+	return (
+		<Portal>
+			<div
+				style={{
+					transitionDuration: transition + 's',
+					animationDuration: transition + 's',
+				}}
+				className={`${classes.wrapper} ${hidden ? classes.hide : ''}`}
+			>
+				<div className={classes.topMessage}>{children}</div>
+			</div>
+		</Portal>
 	);
 };
 

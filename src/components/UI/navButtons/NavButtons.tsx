@@ -4,7 +4,7 @@ import styles from './navButtons.module.css';
 
 type Props = {
 	visibleButtonNames?: string[];
-	onClick: () => void;
+	onClick?: () => void;
 };
 
 const NavButtons = ({ visibleButtonNames, onClick }: Props) => {

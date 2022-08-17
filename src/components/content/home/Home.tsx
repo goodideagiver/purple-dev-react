@@ -15,7 +15,7 @@ const ContactCTASection = () => (
 );
 
 type HomeComponent = {
-	component: ReactNode;
+	component: ReactNode | JSX.Element;
 	css?: string;
 	sectionWidth?: boolean;
 };

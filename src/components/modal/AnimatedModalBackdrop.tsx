@@ -2,7 +2,15 @@ import Backdrop from '../modalBackdrop/Backrop';
 import { CSSTransition } from 'react-transition-group';
 import transitions from './Backdrop.module.css';
 
-export function AnimatedModalBackdrop({ visible, modalCloseHandler }) {
+type Props = {
+	visible: boolean;
+	modalCloseHandler: () => void;
+};
+
+export const AnimatedModalBackdrop = ({
+	visible,
+	modalCloseHandler,
+}: Props) => {
 	return (
 		<CSSTransition
 			in={visible}
@@ -14,4 +22,4 @@ export function AnimatedModalBackdrop({ visible, modalCloseHandler }) {
 			<Backdrop modalCloseHandler={modalCloseHandler} />
 		</CSSTransition>
 	);
-}
+};

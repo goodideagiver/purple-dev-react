@@ -3,7 +3,11 @@ import { useRef, useEffect } from 'react';
 import styles from './TagsStyle.module.css';
 import TagCloud from 'TagCloud';
 
-const TagCloudComponent = ({ enabled }) => {
+type Props = {
+	enabled: boolean;
+};
+
+const TagCloudComponent = ({ enabled }: Props) => {
 	const knownTechnologies = [
 		'axios',
 		'CSS',

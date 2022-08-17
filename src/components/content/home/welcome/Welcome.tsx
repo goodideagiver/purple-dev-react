@@ -6,9 +6,9 @@ import st from './welcome.module.css';
 import { WelcomeImages } from './WelcomeImages';
 import { PromoWelcome } from './PromoWelcome';
 
-const Welcome = (props: React.FC) => {
+const Welcome = () => {
 	return (
-		<div className={st.welcome} {...props}>
+		<div className={st.welcome}>
 			<div className={st.main}>
 				<PromoWelcome />
 				<WelcomeImages />

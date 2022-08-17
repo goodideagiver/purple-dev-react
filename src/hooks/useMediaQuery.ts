@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export const useMediaQuery = (rule) => {
+export const useMediaQuery = (rule: string) => {
 	const [matches, setMatches] = useState(
 		typeof window !== 'undefined' ? window.matchMedia(rule).matches : null
 	);

@@ -1,9 +1,10 @@
-//time since date
+const addPluralFormEnding = (number: number) => (number > 1 ? 's' : '');
 
-const addPluralFormEnding = (number) => (number > 1 ? 's' : '');
+const timeSince = (date: Date) => {
+	const dateDiff = +new Date() - +date;
 
-const timeSince = (date) => {
-	const seconds = Math.floor((new Date() - date) / 1000);
+	const seconds = Math.floor(dateDiff / 1000);
+
 	let interval = Math.floor(seconds / 31536000);
 	if (interval > 1) {
 		return interval + ' year' + addPluralFormEnding(interval);

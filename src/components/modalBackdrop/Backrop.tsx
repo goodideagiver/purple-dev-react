@@ -1,9 +1,16 @@
+import { MouseEvent } from 'react';
 import styles from './backdrop.module.css';
 
-const Backdrop = props => {
-	const backdropClickHandler = e => {
-		if (e.target.className === styles.backdrop) {
-			props.modalCloseHandler();
+type Props = {
+	modalCloseHandler: () => void;
+};
+
+const Backdrop = ({ modalCloseHandler }: Props) => {
+	const backdropClickHandler = (e: MouseEvent<HTMLDivElement>) => {
+		const target = e.target as HTMLDivElement;
+
+		if (target.className === styles.backdrop) {
+			modalCloseHandler();
 		}
 	};
 

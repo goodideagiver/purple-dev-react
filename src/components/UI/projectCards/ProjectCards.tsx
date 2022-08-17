@@ -21,13 +21,21 @@ const ProjectCardsHeader = () => (
 	</div>
 );
 
-const ToggleVisibleCardsButton = (props) => (
+type Props = {
+	toggleAllCardsVisibility: () => void;
+	toggleButtonText: string;
+};
+
+const ToggleVisibleCardsButton = ({
+	toggleAllCardsVisibility,
+	toggleButtonText,
+}: Props) => (
 	<Button
 		purpose='button'
 		variant='secondary'
-		onClick={props.toggleAllCardsVisibility}
+		onClick={toggleAllCardsVisibility}
 	>
-		{props.toggleButtonText}
+		{toggleButtonText}
 	</Button>
 );
 
@@ -50,9 +58,14 @@ const ProjectCards = () => {
 			index < visibleCards && (
 				<ProjectCard
 					delay={index > 0 ? (index - INITIAL_VISIBLE_CARDS) / 10 : 0}
-					{...card}
 					key={card.title}
 					article={card.article}
+					color={card.color}
+					desc={card.desc}
+					link={card.link}
+					shortDesc={card.shortDesc}
+					title={card.title}
+					tooltip={card.tooltip || 'View repository'}
 				/>
 			)
 	);

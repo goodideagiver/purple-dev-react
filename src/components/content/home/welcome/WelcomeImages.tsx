@@ -53,7 +53,11 @@ export const WelcomeImages = () => {
 							classNames={trans}
 							timeout={2000}
 						>
-							<ImgSmoothLoad animate={false} src={selectedImages[0]} />
+							<ImgSmoothLoad
+								animate={false}
+								alt=''
+								src={selectedImages[0] || ''}
+							/>
 						</CSSTransition>
 					</TransitionGroup>
 				</div>
@@ -76,7 +80,11 @@ export const WelcomeImages = () => {
 						classNames={trans}
 						timeout={2000}
 					>
-						<ImgSmoothLoad animate={false} src={selectedImages[1]} />
+						<ImgSmoothLoad
+							animate={false}
+							alt=''
+							src={selectedImages[1] || ''}
+						/>
 					</CSSTransition>
 				</TransitionGroup>
 			</div>

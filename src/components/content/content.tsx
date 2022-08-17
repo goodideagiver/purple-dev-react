@@ -1,5 +1,10 @@
+import { ReactNode } from 'react';
 import styles from './content.module.css';
 
-export const Content = ({ children }) => {
+type Props = {
+	children: ReactNode;
+};
+
+export const Content = ({ children }: Props) => {
 	return <main className={styles.root}>{children}</main>;
 };

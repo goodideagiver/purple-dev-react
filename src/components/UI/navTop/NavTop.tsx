@@ -41,7 +41,7 @@ const NavTop = () => {
 					<MdMenu />
 				</Button>
 			)}
-			<NavMenu show={menuOpen && isMobile} menuClose={menuClose} />
+			<NavMenu show={!!menuOpen && !!isMobile} menuClose={menuClose} />
 		</div>
 	);
 };
