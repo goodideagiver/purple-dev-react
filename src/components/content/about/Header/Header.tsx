@@ -11,7 +11,7 @@ type Props = {
 const Header = ({ styles }: Props) => {
 	return (
 		<header className={`${styles.header} ${waves.waves}`}>
-			<div>
+			<div className={waves.wavesWrapper}>
 				<div aria-hidden='true' className={waves.wave} />
 			</div>
 			<div className={`${classes.card} acrylic`}>

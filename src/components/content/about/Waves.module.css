@@ -73,3 +73,7 @@
 		opacity: 1;
 	}
 }
+
+.wavesWrapper {
+	position: absolute;
+}
