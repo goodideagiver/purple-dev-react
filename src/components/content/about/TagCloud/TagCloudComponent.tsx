@@ -1,6 +1,7 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useMemo } from 'react';
 
 import styles from './TagsStyle.module.css';
+//@ts-ignore
 import TagCloud from 'TagCloud';
 
 type Props = {
@@ -8,27 +9,30 @@ type Props = {
 };
 
 const TagCloudComponent = ({ enabled }: Props) => {
-	const knownTechnologies = [
-		'axios',
-		'CSS',
-		'Git',
-		'HTML',
-		'JavaScript',
-		'NPM',
-		'Parcel',
-		'PS',
-		'React',
-		'Redux',
-		'SCSS',
-		'SQL',
-		'TypeScript',
-		'VS Code',
-		'Jest',
-		'React Transition Group',
-		'React testing library',
-		'Next.js',
-		'React Router',
-	];
+	const knownTechnologies = useMemo(
+		() => [
+			'axios',
+			'CSS',
+			'Git',
+			'HTML',
+			'JavaScript',
+			'NPM',
+			'Parcel',
+			'PS',
+			'React',
+			'Redux',
+			'SCSS',
+			'SQL',
+			'TypeScript',
+			'VS Code',
+			'Jest',
+			'React Transition Group',
+			'React testing library',
+			'Next.js',
+			'React Router',
+		],
+		[]
+	);
 
 	const tagDiv = useRef(null);
 
@@ -46,7 +50,7 @@ const TagCloudComponent = ({ enabled }: Props) => {
 				tagCloud.destroy();
 			};
 		}
-	}, [enabled]);
+	}, [enabled, knownTechnologies]);
 
 	if (!enabled) {
 		return (
