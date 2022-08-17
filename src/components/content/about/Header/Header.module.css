@@ -1,6 +1,7 @@
 .card {
 	padding: 1rem;
-	border-radius: var(--border-radius-sm);
+	padding-right: 2.5rem;
+	border-radius: 4rem;
 	display: flex;
 	gap: 1rem;
 	align-items: center;

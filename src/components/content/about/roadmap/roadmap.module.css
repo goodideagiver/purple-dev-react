@@ -18,8 +18,8 @@
 .item {
 	text-align: center;
 	padding: 1.2rem 1.5rem;
-	background: var(--bg-tertiary);
-	border-radius: 1rem;
+	background: var(--bg-secondary);
+	border-radius: 3rem;
 	flex-grow: 1;
 }
 

@@ -8,7 +8,11 @@
 
 @media screen and (min-width: 1920px) {
 	.footer {
-		background-image: linear-gradient(to top, #1f1f1f61 25%, transparent 75%),
+		background-image: linear-gradient(
+				to top,
+				var(--bg-primary) 15%,
+				transparent 75%
+			),
 			url('../../../../public/assets/img/misc/layered-waves-haikei-purple.svg');
 		background-repeat: repeat-x;
 		background-position: 100% 75%;
