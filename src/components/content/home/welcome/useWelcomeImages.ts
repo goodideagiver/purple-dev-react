@@ -1,12 +1,12 @@
 import { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
-import { Image } from '../../../UI/projectCards/data/articles/ArticleTools/GalleryImage.types';
 
 export const useWelcomeImages = (
 	delay: number,
 	startingIndex: number,
 	imagesArray: string[] | StaticImageData[],
-	transitionLengthMiliseconds: number
+	transitionLengthMiliseconds: number,
+	animate: boolean = true
 ) => {
 	const [activeImageIndex, setActiveImageIndex] = useState(startingIndex);
 	const [isInputBlocked, setisInputBlocked] = useState(false);
@@ -25,12 +25,14 @@ export const useWelcomeImages = (
 	}
 
 	useEffect(() => {
+		if (!animate) return;
+		console.count('render');
 		const interval = setInterval(() => {
 			setActiveImageIndex((activeImageIndex + 1) % imagesArray.length);
 		}, delay);
 
 		return () => clearInterval(interval);
-	}, [activeImageIndex, imagesArray.length, delay]);
+	}, [activeImageIndex, imagesArray.length, delay, animate]);
 
 	const nextImageHandler = () => {
 		if (isInputBlocked) return;

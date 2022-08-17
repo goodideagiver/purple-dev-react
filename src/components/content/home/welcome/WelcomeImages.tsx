@@ -16,6 +16,8 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import trans from './PromoImageAnimation.module.css';
 import { useWelcomeImages } from './useWelcomeImages';
 import ImgSmoothLoad from '../../../UI/ImgSmoothLoad/ImgSmoothLoad';
+import { useIsInViewport } from '../../../../hooks/useIsInViewport';
+import { useRef } from 'react';
 
 const images = [
 	adotPl2,
@@ -31,16 +33,24 @@ const images = [
 ];
 
 export const WelcomeImages = () => {
+	const imagesWrapperRef = useRef<HTMLDivElement>(null);
+
+	const animate = useIsInViewport(imagesWrapperRef);
+
 	const {
 		selectedImages,
 		activeImageIndex,
 		nextImageHandler,
 		isInputBlocked,
 		setActiveImageIndex,
-	} = useWelcomeImages(8000, 0, images, 2000);
+	} = useWelcomeImages(8000, 0, images, 2000, animate);
 
 	return (
-		<div className={classes.imagesWrapper} aria-hidden='true'>
+		<div
+			ref={imagesWrapperRef}
+			className={classes.imagesWrapper}
+			aria-hidden='true'
+		>
 			<div className={classes.dotsWrapper}>
 				<div
 					data-disabled={isInputBlocked}

@@ -13,8 +13,8 @@ const AboutMe = ({ styles }: Props) => {
 				In the past I used to create{' '}
 				<ExternalLink href='https://www.youtube.com/watch?v=_051iYYVj1Y'>
 					2D animation
-				</ExternalLink>{' '}
-				,design 2D graphics and shoot{' '}
+				</ExternalLink>
+				, design 2D graphics and shoot{' '}
 				<ExternalLink href='https://www.instagram.com/prplblck/'>
 					portrait photography
 				</ExternalLink>
@@ -22,7 +22,7 @@ const AboutMe = ({ styles }: Props) => {
 				development.
 			</p>
 			<p className={styles.cardInnerPadding}>
-				I&aposm trying to commit daily to my{' '}
+				{`I'm trying to commit daily to my`}
 				{
 					<ExternalLink href='https://github.com/goodideagiver'>
 						GitHub
