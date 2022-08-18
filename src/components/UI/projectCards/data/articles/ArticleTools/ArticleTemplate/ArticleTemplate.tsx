@@ -2,8 +2,6 @@ import { Gallery } from '../Gallery';
 import { ArticleSection } from './ArticleSection';
 import { ArticleTechnologies } from './ArticleTechnologies';
 
-import { motion } from 'framer-motion';
-
 import classes from './ArticleTemplate.module.css';
 import { Button } from '../../../../../button/Button';
 import { Image } from '../GalleryImage.types';
@@ -39,12 +37,7 @@ export const ArticleTemplate = ({
 	images,
 }: ArticleTemplateProps) => {
 	return (
-		<motion.div
-			variants={container}
-			initial='hidden'
-			animate='visible'
-			className={classes.root}
-		>
+		<div className={classes.root}>
 			{images && <Gallery images={images} />}
 			{whatDidILearn && (
 				<ArticleSection sectionName='🧠 What did I learn'>
@@ -74,6 +67,6 @@ export const ArticleTemplate = ({
 					)}
 				</section>
 			)}
-		</motion.div>
+		</div>
 	);
 };
