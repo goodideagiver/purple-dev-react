@@ -12,7 +12,7 @@ const Analitycs = () => (
 	<>
 		<Script
 			strategy='lazyOnload'
-			src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+			src={`https://www.googletagmanager.com/gtag/js?id=G-XV8Q7M8G5F`}
 		/>
 
 		<Script id='g-script' strategy='lazyOnload'>
@@ -20,7 +20,7 @@ const Analitycs = () => (
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                    gtag('config', 'G-XV8Q7M8G5F', {
                     page_path: window.location.pathname,
                     });
                 `}
