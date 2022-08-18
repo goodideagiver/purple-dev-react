@@ -8,7 +8,7 @@ export const PromoWelcome = () => (
 				Frontend <span className={st.devText}>developer</span>
 			</h2>
 			<p className={st.upperTextSub}>
-				<span>Never</span> <span>stop</span> <span>learning</span>
+				<span>Never stop learning</span>
 			</p>
 		</div>
 		<p className={st.info}>
