@@ -9,7 +9,6 @@ import { ReactNode } from 'react';
 const ContactCTASection = () => (
 	<>
 		<FunnyQuote />
-		<div className={st.filler} />
 		<AboutMeCTA />
 	</>
 );
@@ -24,7 +23,7 @@ const HomeComponents: HomeComponent[] = [
 	{ component: <Welcome />, css: st.homeAnim },
 	{ component: <Promo />, sectionWidth: false },
 	{ component: <ProjectCards />, css: st.nextTo },
-	{ component: <ContactCTASection />, css: st.nextTo + ' ' + st.contactCTA },
+	{ component: <ContactCTASection />, css: st.contactCTA },
 ];
 
 export const Home = () => {

@@ -1,7 +1,8 @@
 .funnyQuote {
-	/* flex: 1 1 350px; */
-	/* width: 100px; */
-	/* margin: 0 auto; */
+	background-color: var(--bg-secondary);
+	padding: 2rem;
+	border-radius: 2rem;
+	box-shadow: var(--shadow-elevation-xl);
 }
 
 .blockQuote {

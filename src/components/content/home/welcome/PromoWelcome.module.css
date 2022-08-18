@@ -3,8 +3,29 @@
 }
 
 .bigText {
-	font-size: 2.3rem;
+	font-size: 4rem;
+	font-weight: bold;
 	margin-bottom: 2rem;
+}
+
+.upperText {
+	margin-bottom: 2.5rem;
+}
+
+.upperTextSub {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+	gap: 1rem;
+}
+
+.upperTextSub > span {
+	padding: 1rem 0.2rem;
+	text-align: center;
+	background-color: var(--bg-secondary);
+	border-radius: 2rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+	box-shadow: var(--shadow-elevation-xl);
 }
 
 .info {

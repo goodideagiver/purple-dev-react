@@ -57,4 +57,6 @@
 		9.1px 8.4px 13.8px -1.7px hsl(var(--shadow-color) / 0.12),
 		14.9px 13.8px 22.7px -2.1px hsl(var(--shadow-color) / 0.12),
 		23.6px 21.7px 35.8px -2.5px hsl(var(--shadow-color) / 0.11);
+	--shadow-elevation-xl: rgb(255 255 255 / 10%) 0 1px 1px 0 inset,
+		rgb(17 17 32 / 25%) 0 20px 50px -20px, rgb(0 0 0 / 80%) 0 10px 50px -30px;
 }

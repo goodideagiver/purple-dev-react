@@ -11,7 +11,7 @@ type ProjectCardFeaturesListProps = {
 const ProjectCardFeaturesList = ({ desc }: ProjectCardFeaturesListProps) => (
 	<ul className={styles.desc}>
 		{desc.map((item) => (
-			<li className='acrylic' key={item}>
+			<li key={item}>
 				<span>{item}</span>
 			</li>
 		))}

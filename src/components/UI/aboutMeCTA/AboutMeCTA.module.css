@@ -13,12 +13,53 @@
 	width: 200px;
 	object-fit: cover;
 	object-position: bottom;
+	filter: grayscale(1);
+}
+
+.image::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: linear-gradient(
+		120deg,
+		var(--btn-danger),
+		transparent,
+		var(--btn-primary)
+	);
+	background-size: 150%;
+	animation: bgFlow 10s infinite, bgSpin 40s infinite linear;
+}
+
+@keyframes bgFlow {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes bgSpin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 .image {
+	z-index: 1;
+	position: relative;
 	border-radius: 50%;
 	overflow: hidden;
-	filter: grayscale(0.5);
+
 	margin: auto;
 	aspect-ratio: 1/1;
 }
