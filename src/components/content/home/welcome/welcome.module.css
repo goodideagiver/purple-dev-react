@@ -5,6 +5,8 @@
 	justify-content: center;
 	flex-direction: column;
 	width: 100%;
+	position: relative;
+	z-index: 1;
 }
 
 .main {
@@ -21,12 +23,12 @@
 .programmer {
 	animation-duration: 1s;
 	height: 100%;
-	opacity: 0.8;
 	width: 100%;
 	z-index: -2;
 	position: absolute;
-	top: 0;
-	transform: scale(0.5) translate(-450px, -150px);
+	bottom: 0;
+	left: 0;
+	transform: translate(-20%, 20%);
 }
 
 .programmer::after {
@@ -38,33 +40,35 @@
 	height: 100%;
 	background-image: linear-gradient(
 		to bottom,
-		rgba(0, 0, 0, 0),
-		var(--bg-primary)
+		transparent 30%,
+		var(--bg-primary) 90%
 	);
 	z-index: 1;
 }
 
 .programmer .image {
-	position: absolute;
-	z-index: -3;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 
-.overlay {
-	opacity: 1;
-	z-index: 0;
-	background: linear-gradient(to bottom, transparent 80%, var(--bg-primary));
-	pointer-events: none;
-	position: absolute;
-	z-index: 1;
-	display: none;
-}
-
-@media (max-width: 1050px) {
+@media (max-width: 580px) {
 	.programmer {
-		display: none;
+		transform: scale(1) translate(0, 50%);
+		height: auto;
+		bottom: 50%;
+	}
+	.programmer .image {
+		object-fit: none;
+		overflow: hidden;
+	}
+
+	.programmer::after {
+		background-image: linear-gradient(
+			to bottom,
+			transparent 50%,
+			var(--bg-primary) 98%
+		);
 	}
 }
 
@@ -81,8 +85,4 @@
 		opacity: 1;
 		transform: none;
 	}
-}
-
-.welcomeLowerText {
-	opacity: 0.7;
 }

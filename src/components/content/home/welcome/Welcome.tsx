@@ -13,7 +13,7 @@ const Welcome = () => {
 				<PromoWelcome />
 				<WelcomeImages />
 			</div>
-			<div className={st.programmer}>
+			<div className={st.programmer} aria-hidden='true'>
 				<div className={`${st.programmer} ${st.overlay}`} />
 				<ImgSmoothLoad
 					priority={true}
