@@ -11,18 +11,19 @@
 
 .modalContent {
 	width: min(800px, 90%);
+	overflow-x: hidden !important;
 }
 
 .man-pointing {
-	width: 100%;
+	width: 90%;
 	height: min(100%, 400px) !important;
 	min-height: 400px;
 	overflow: hidden;
-	object-fit: cover;
+	object-fit: contain;
 	border-radius: 1rem;
-	box-shadow: var(--shadow-elevation-high);
+
 	z-index: 2;
-	animation: manReveal 0.5s 0.5s both;
+	animation: manReveal 1.5s 0.5s both, floatingMan 20s 2s infinite;
 	max-width: 800px;
 	margin: 0 auto;
 }
@@ -30,9 +31,29 @@
 @keyframes manReveal {
 	from {
 		opacity: 0;
+		transform: scale(0.8);
 	}
 	to {
+		transform: scale(1) rotate(-2deg);
 		opacity: 1;
+	}
+}
+
+@keyframes floatingMan {
+	0% {
+		transform: translate3d(0, 0, 0) rotate(-2deg);
+	}
+	30% {
+		transform: rotate(5deg);
+	}
+	50% {
+		transform: translate3d(0, 10px, 0) rotate(-2deg);
+	}
+	60% {
+		transform: rotate(5deg);
+	}
+	100% {
+		transform: translate3d(0, 0, 0) rotate(-2deg);
 	}
 }
 

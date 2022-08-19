@@ -9,10 +9,10 @@
 }
 
 .image img {
-	transform: scale(1);
-	width: 200px;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
-	object-position: bottom;
+	object-position: center;
 	filter: grayscale(1);
 }
 
@@ -23,14 +23,16 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-image: linear-gradient(
-		120deg,
+	background-image: radial-gradient(
+		circle,
+		transparent,
 		var(--btn-danger),
 		transparent,
 		var(--btn-primary)
 	);
-	background-size: 150%;
-	animation: bgFlow 10s infinite, bgSpin 40s infinite linear;
+	background-size: 500%;
+	animation: bgFlow 20s infinite, bgSpin 40s infinite linear;
+	opacity: 0.5;
 }
 
 @keyframes bgFlow {
@@ -38,7 +40,7 @@
 		background-position: 0% 50%;
 	}
 	50% {
-		background-position: 100% 50%;
+		background-position: 20% 50%;
 	}
 	100% {
 		background-position: 0% 50%;
@@ -62,6 +64,7 @@
 
 	margin: auto;
 	aspect-ratio: 1/1;
+	width: 200px;
 }
 
 .text {
