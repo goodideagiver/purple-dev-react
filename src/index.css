@@ -25,19 +25,29 @@ body {
 /* width */
 ::-webkit-scrollbar {
 	width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-	background: #f1f1f1;
+	height: 12px;
+	width: 0.3rem;
+	background: transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #888;
+	background: var(--btn-primary) !important;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: #555;
+	background: var(--btn-primary-hover) !important;
+}
+
+/* CHROME */
+
+::-webkit-scrollbar-thumb {
+	background: transparent;
+	-webkit-border-radius: 1rem;
+	border-radius: 1rem;
+}
+
+::-webkit-scrollbar-corner {
+	background: transparent;
 }
