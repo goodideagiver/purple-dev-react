@@ -6,3 +6,9 @@
 	left: 0;
 	z-index: 10;
 }
+
+@media (max-width: 768px) {
+	.backdrop {
+		background-color: rgba(0, 0, 0, 0.447);
+	}
+}

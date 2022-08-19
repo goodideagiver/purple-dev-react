@@ -58,18 +58,23 @@
 	opacity: 1;
 }
 
-@supports (backdrop-filter: blur(10px)) {
-	.children {
-		background-color: hsla(215, 40%, 12%, 0.4);
-	}
-	.header {
-		background-color: hsla(215, 40%, 12%, 0.4);
-		border-bottom: var(--border-primary);
-	}
+.children {
+	background-color: hsla(215, 40%, 12%, 0.4);
+}
+.header {
+	background-color: hsla(215, 40%, 12%, 0.4);
+	border-bottom: var(--border-primary);
+}
+.content {
+	background-color: transparent;
+	backdrop-filter: blur(50px) saturate(1.5);
+	contain: content;
+	background-image: url('/assets/img/misc/noise.webp');
+}
+
+@media (max-width: 768px) {
 	.content {
-		background-color: transparent;
-		backdrop-filter: blur(50px) saturate(1.5);
-		contain: content;
-		background-image: url('/assets/img/misc/noise.webp');
+		border: 1px solid rgba(128, 128, 128, 0.503);
+		box-shadow: none;
 	}
 }
