@@ -4,7 +4,7 @@ import classes from './EmploymentHistory.module.css';
 import { useState } from 'react';
 import Link from 'next/link';
 
-import uncleSam from '/public/assets/img/about/Uncle_Sam_(pointing_finger).jpg';
+import uncleSam from '/public/assets/img/about/Uncle_Sam_(pointing_finger).webp';
 import { Button } from '../../../UI/button/Button';
 
 type EmploymentHistoryProps = {

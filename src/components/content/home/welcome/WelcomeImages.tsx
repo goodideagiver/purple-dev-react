@@ -5,7 +5,7 @@ import fetcher from '../../../../../public/assets/img/welcome/fetcher.webp';
 import fetcher2 from '../../../../../public/assets/img/welcome/fetcher2.webp';
 import adotPl from '../../../../../public/assets/img/welcome/adotpl.webp';
 import adotPl2 from '../../../../../public/assets/img/welcome/adotpl2.webp';
-import fakeinsta from '../../../../../public/assets/img/welcome/fakeinsta.webp';
+
 import todo from '../../../../../public/assets/img/welcome/todo.webp';
 import roadmapper1 from '../../../../../public/assets/img/welcome/roadmapper1.webp';
 import roadmapper2 from '../../../../../public/assets/img/welcome/roadmapper2.webp';
@@ -28,7 +28,6 @@ const images = [
 	politeEmailBuilder,
 	fetcher,
 	fetcher2,
-	fakeinsta,
 	adotPl,
 ];
 
