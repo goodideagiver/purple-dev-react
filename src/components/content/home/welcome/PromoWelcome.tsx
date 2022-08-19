@@ -7,9 +7,7 @@ export const PromoWelcome = () => (
 			<h2 className={st.bigText}>
 				Frontend <span className={st.devText}>developer</span>
 			</h2>
-			<p className={st.upperTextSub}>
-				<span>Never stop learning</span>
-			</p>
+			<p className={st.upperTextSub}>Never stop learning</p>
 		</div>
 		<p className={st.info}>
 			Welcome to my website, here you can learn some useful information about
