@@ -1,0 +1,21 @@
+.root {
+	max-width: min(var(--website-width), 90vw);
+	margin: 0 auto;
+	width: 100%;
+	flex: 1;
+
+	a {
+		color: var(--btn-primary);
+		&:hover {
+			color: var(--btn-primary-hover);
+		}
+	}
+
+	p {
+		margin: 2rem 0;
+	}
+
+	h1 {
+		margin-bottom: 2rem;
+	}
+}

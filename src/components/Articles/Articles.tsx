@@ -1,12 +1,16 @@
 import { Button } from '../UI/button/Button';
 
-export const Articles = ({ articles }) => {
+type Props = {
+	articles: any;
+};
+
+export const Articles = ({ articles }: Props) => {
 	console.log(articles);
 
 	return (
 		<div>
 			{articles?.length &&
-				articles.map((article) => (
+				articles.map((article: any) => (
 					<Button
 						variant='special'
 						key={article.attributes.slug}

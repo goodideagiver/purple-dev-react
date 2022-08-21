@@ -1,7 +1,13 @@
 import { Articles } from '../../src/components/Articles/Articles';
 import { fetchAPI } from '../../src/lib/api';
 
-const Posts = ({ articles, categories, homepage }) => {
+type Props = {
+	articles: any;
+	categories: any;
+	homepage: any;
+};
+
+const Posts = ({ articles, categories, homepage }: Props) => {
 	return <Articles articles={articles} />;
 };
 

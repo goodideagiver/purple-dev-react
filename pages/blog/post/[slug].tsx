@@ -1,13 +1,15 @@
-import { useRouter } from 'next/router';
+import { Article } from '../../../src/components/Articles/Article/Article';
 import { fetchAPI } from '../../../src/lib/api';
 
-const Post = ({ article, categories }) => {
-	const router = useRouter();
-	const { slug } = router.query;
+type Props = {
+	article: any;
+	categories: any;
+};
 
+const Post = ({ article, categories }: Props) => {
 	console.log(article);
 
-	return <div>Post ID = {slug}</div>;
+	return <Article article={article} categories={categories} />;
 };
 
 export const getStaticPaths = async () => {

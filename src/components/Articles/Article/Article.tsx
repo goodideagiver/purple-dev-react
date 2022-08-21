@@ -1,4 +1,9 @@
+import Image from 'next/future/image';
 import ReactMarkdown from 'react-markdown';
+import Moment from 'react-moment';
+import { fetchAPI } from '../../../lib/api';
+import { getStrapiMedia } from '../../../lib/media';
+
 import { Layout } from './Layout/Layout';
 
 type Props = {
@@ -7,10 +12,24 @@ type Props = {
 };
 
 export const Article = ({ article, categories }: Props) => {
+	console.log(
+		article.attributes.author.data.attributes.picture.data.attributes.url
+	);
+
 	return (
 		<Layout>
-			<h2>{article.attributes.title}</h2>
-			<ReactMarkdown>{article.attributes.content}</ReactMarkdown>
+			<h1>{article.attributes.title}</h1>
+			<ReactMarkdown disallowedElements={['iframe', 'h1']}>
+				{article.attributes.content}
+			</ReactMarkdown>
+			<div>
+				<p>Author: {article.attributes.author.data.attributes.name}</p>
+				<p>
+					<Moment format='DD MMM YYYY'>
+						{article.attributes.published_at}
+					</Moment>
+				</p>
+			</div>
 		</Layout>
 	);
 };
