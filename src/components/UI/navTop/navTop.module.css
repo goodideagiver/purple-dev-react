@@ -35,3 +35,13 @@
 	align-items: center;
 	justify-content: flex-end;
 }
+
+.menuBtn {
+	margin-left: 2rem;
+	padding: 0.6rem;
+	border-radius: 0.6rem;
+}
+
+.menuBtn:hover {
+	background-color: var(--btn-primary-hover);
+}

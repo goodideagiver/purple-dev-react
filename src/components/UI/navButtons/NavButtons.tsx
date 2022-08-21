@@ -5,9 +5,16 @@ import styles from './navButtons.module.css';
 type Props = {
 	visibleButtonNames?: string[];
 	onClick?: () => void;
+	onOverflow: () => void;
+	onNoOverflow: () => void;
 };
 
-const NavButtons = ({ visibleButtonNames, onClick }: Props) => {
+const NavButtons = ({
+	visibleButtonNames,
+	onClick,
+	onOverflow,
+	onNoOverflow,
+}: Props) => {
 	let pagesUrls = [
 		{ name: 'Home', url: '/' },
 		{ name: 'About', url: '/about' },
@@ -16,6 +23,7 @@ const NavButtons = ({ visibleButtonNames, onClick }: Props) => {
 			url: 'https://github.com/goodideagiver',
 			type: 'external',
 		},
+		{ name: 'Blog', url: '/blog' },
 		{ name: 'Contact', url: '/contact' },
 	];
 

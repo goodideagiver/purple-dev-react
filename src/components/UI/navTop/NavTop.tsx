@@ -11,6 +11,7 @@ import { Button } from '../button/Button';
 
 const NavTop = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
+	const [hasLinksOverflow, setHasLinksOverflow] = useState(false);
 
 	const isMobile = useMediaQuery('(max-width: 900px)');
 
@@ -27,12 +28,17 @@ const NavTop = () => {
 			{!isMobile && (
 				<nav className={styles.listWrapper}>
 					<ul className={styles.btnList}>
-						<NavButtons visibleButtonNames={['GitHub', 'About', 'Contact']} />
+						<NavButtons
+							onOverflow={() => setHasLinksOverflow(true)}
+							onNoOverflow={() => setHasLinksOverflow(false)}
+							visibleButtonNames={['GitHub', 'About', 'Contact', 'Blog']}
+						/>
 					</ul>
 				</nav>
 			)}
-			{isMobile && (
+			{(isMobile || hasLinksOverflow) && (
 				<Button
+					className={styles.menuBtn}
 					aria-label='side menu toggle'
 					variant='nav'
 					onClick={menuToggle}
@@ -41,7 +47,10 @@ const NavTop = () => {
 					<MdMenu />
 				</Button>
 			)}
-			<NavMenu show={!!menuOpen && !!isMobile} menuClose={menuClose} />
+			<NavMenu
+				show={!!menuOpen && (!!isMobile || hasLinksOverflow)}
+				menuClose={menuClose}
+			/>
 		</div>
 	);
 };
