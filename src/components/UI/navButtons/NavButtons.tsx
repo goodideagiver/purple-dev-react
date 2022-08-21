@@ -5,16 +5,9 @@ import styles from './navButtons.module.css';
 type Props = {
 	visibleButtonNames?: string[];
 	onClick?: () => void;
-	onOverflow: () => void;
-	onNoOverflow: () => void;
 };
 
-const NavButtons = ({
-	visibleButtonNames,
-	onClick,
-	onOverflow,
-	onNoOverflow,
-}: Props) => {
+const NavButtons = ({ visibleButtonNames, onClick }: Props) => {
 	let pagesUrls = [
 		{ name: 'Home', url: '/' },
 		{ name: 'About', url: '/about' },
