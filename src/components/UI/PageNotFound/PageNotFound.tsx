@@ -6,7 +6,7 @@ export const PageNotFound = () => {
 	return (
 		<div className={styles.empty}>
 			<h2 className={styles.bigText}>Oh no!</h2>
-			<p className={styles.smallText}>This page doesn&apost exist</p>
+			<p className={styles.smallText}>This page doesn{`'`}t exist</p>
 			<ImgSmoothLoad
 				alt=''
 				src={img}

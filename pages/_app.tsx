@@ -7,6 +7,12 @@ import { Content } from '../src/components/content/content';
 import { ScrollToTopBtn } from '../src/components/UI/scrollToTopBtn/ScrollToTopBtn';
 import Script from 'next/script';
 import Head from 'next/head';
+import App from 'next/app';
+import { createContext } from 'react';
+import { fetchAPI } from '../src/lib/api';
+import { getStrapiMedia } from '../src/lib/media';
+
+export const GlobalContext = createContext({});
 
 const Analitycs = () => (
 	<>
@@ -34,21 +40,43 @@ type MyAppProps = {
 };
 
 function MyApp({ Component, pageProps }: MyAppProps) {
+	const { global } = pageProps;
+
 	return (
 		<>
 			<Head>
-				<link rel='shortcut icon' href='/favicon.ico' />
+				<link
+					rel='shortcut icon'
+					href={getStrapiMedia(global.attributes.favicon) || '/favicon.ico'}
+				/>
 				<link rel='manifest' href='/manifest.json' />
 			</Head>
-			<Analitycs />
-			<Content>
-				<NavTop />
-				<Component {...pageProps} />
-				<Footer />
-				<ScrollToTopBtn />
-			</Content>
+			<GlobalContext.Provider value={global.attributes}>
+				<Analitycs />
+				<Content>
+					<NavTop />
+					<Component {...pageProps} />
+					<Footer />
+					<ScrollToTopBtn />
+				</Content>
+			</GlobalContext.Provider>
 		</>
 	);
 }
+
+MyApp.getInitialProps = async (appContext: any) => {
+	const appProps = await App.getInitialProps(appContext);
+
+	const globalRes = await fetchAPI('/global', {
+		populate: {
+			favicon: '*',
+			defaultSeo: {
+				populate: '*',
+			},
+		},
+	});
+
+	return { ...appProps, pageProps: { global: globalRes.data } };
+};
 
 export default MyApp;
