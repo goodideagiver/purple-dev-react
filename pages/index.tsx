@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { Home } from '../src/components/content/home/Home';
 
-const index = () => {
+export const index = () => {
 	return (
 		<>
 			<Head>
