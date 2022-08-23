@@ -7,7 +7,9 @@ type Props = {
 };
 
 const Post = ({ article, categories }: Props) => {
-	console.log(article);
+	if (!article || !categories) {
+		return <div>Something went wrong ...</div>;
+	}
 
 	return <Article article={article} categories={categories} />;
 };

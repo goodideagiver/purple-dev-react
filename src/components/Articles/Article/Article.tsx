@@ -12,10 +12,6 @@ type Props = {
 };
 
 export const Article = ({ article, categories }: Props) => {
-	console.log(
-		article.attributes.author.data.attributes.picture.data.attributes.url
-	);
-
 	return (
 		<Layout>
 			<h1>{article.attributes.title}</h1>
