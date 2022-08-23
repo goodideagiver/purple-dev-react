@@ -47,11 +47,13 @@ function MyApp({ Component, pageProps }: MyAppProps) {
 			<Head>
 				<link
 					rel='shortcut icon'
-					href={getStrapiMedia(global.attributes.favicon) || '/favicon.ico'}
+					href={
+						getStrapiMedia(global?.attributes?.favicon || '') || '/favicon.ico'
+					}
 				/>
 				<link rel='manifest' href='/manifest.json' />
 			</Head>
-			<GlobalContext.Provider value={global.attributes}>
+			<GlobalContext.Provider value={global.attributes || null}>
 				<Analitycs />
 				<Content>
 					<NavTop />

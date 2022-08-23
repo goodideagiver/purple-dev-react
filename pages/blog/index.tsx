@@ -5,9 +5,14 @@ type Props = {
 	articles: any;
 	categories: any;
 	homepage: any;
+	hasError?: boolean;
 };
 
-const Posts = ({ articles, categories, homepage }: Props) => {
+const Posts = ({ articles, categories, homepage, hasError }: Props) => {
+	if (hasError) {
+		return <div>Something went wrong ...</div>;
+	}
+
 	return <Articles articles={articles} />;
 };
 
@@ -15,23 +20,30 @@ export default Posts;
 
 export async function getStaticProps() {
 	// Run API calls in parallel
-	const [articlesRes, categoriesRes, homepageRes] = await Promise.all([
-		fetchAPI('/articles', { populate: ['image', 'category'] }),
-		fetchAPI('/categories', { populate: '*' }),
-		fetchAPI('/homepage', {
-			populate: {
-				hero: '*',
-				seo: { populate: '*' },
+	try {
+		const [articlesRes, categoriesRes, homepageRes] = await Promise.all([
+			fetchAPI('/articles', { populate: ['image', 'category'] }),
+			fetchAPI('/categories', { populate: '*' }),
+			fetchAPI('/homepage', {
+				populate: {
+					hero: '*',
+					seo: { populate: '*' },
+				},
+			}),
+		]);
+		return {
+			props: {
+				articles: articlesRes.data,
+				categories: categoriesRes.data,
+				homepage: homepageRes.data,
 			},
-		}),
-	]);
-
-	return {
-		props: {
-			articles: articlesRes.data,
-			categories: categoriesRes.data,
-			homepage: homepageRes.data,
-		},
-		revalidate: 1,
-	};
+			revalidate: 1,
+		};
+	} catch (err) {
+		return {
+			props: {
+				hasError: true,
+			},
+		};
+	}
 }
