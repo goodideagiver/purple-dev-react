@@ -14,12 +14,15 @@ type Props = {
 export const Article = ({ article, categories }: Props) => {
 	return (
 		<Layout>
-			<h1>{article.attributes.title}</h1>
+			<h1>{article?.attributes?.title || 'Title not entered'}</h1>
 			<ReactMarkdown disallowedElements={['iframe', 'h1']}>
-				{article.attributes.content}
+				{article?.attributes?.content}
 			</ReactMarkdown>
 			<div>
-				<p>Author: {article.attributes.author.data.attributes.name}</p>
+				<p>
+					Author:{' '}
+					{article?.attributes?.author?.data?.attributes?.name || 'not entered'}
+				</p>
 				<p>
 					<Moment format='DD MMM YYYY'>
 						{article.attributes.published_at}
