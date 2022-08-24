@@ -14,12 +14,13 @@ export const Articles = ({ articles }: Props) => {
 			{articles?.length &&
 				articles.map((article: any) => (
 					<ArticlePrev
+						publishedAt={article.published_at}
 						category={article.attributes.category.data.attributes.name}
 						href={`/blog/post/${article.attributes.slug}`}
 						title={article.attributes.title}
 						key={article.attributes.id}
 						description={article.attributes.description}
-					></ArticlePrev>
+					/>
 				))}
 		</div>
 	);
