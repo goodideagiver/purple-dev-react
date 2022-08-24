@@ -1,6 +1,4 @@
 import classes from './Articles.module.css';
-
-import { Button } from '../UI/button/Button';
 import { ArticlePrev } from './ArticlePrev/ArticlePrev';
 
 type Props = {

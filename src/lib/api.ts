@@ -2,7 +2,8 @@ import qs from 'qs';
 
 export function getStrapiURL(path: string = ''): string {
 	return `${
-		process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337'
+		process.env.NEXT_PUBLIC_STRAPI_API_URL ||
+		'https://sheltered-refuge-85276.herokuapp.com'
 	}${path}`;
 }
 
