@@ -1,0 +1,40 @@
+.root {
+	cursor: pointer;
+	padding: 2rem;
+	background-color: var(--bg-secondary);
+	border-radius: 2rem;
+	background-image: linear-gradient(
+		to bottom,
+		hsla(215, 100%, 20%, 0.279),
+		transparent
+	);
+}
+
+.header {
+	display: flex;
+	gap: 5px;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.type {
+	background-color: var(--bg-tertiary);
+	padding: 0.5rem 0.8rem;
+	border-radius: 0.5rem;
+}
+
+.date {
+	margin-top: 0.5rem;
+	text-align: end;
+	width: 100%;
+	display: block;
+	font-style: italic;
+	opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+	.root:hover {
+		filter: brightness(1.2);
+	}
+}

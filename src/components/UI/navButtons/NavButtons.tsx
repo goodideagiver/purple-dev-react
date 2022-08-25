@@ -16,6 +16,7 @@ const NavButtons = ({ visibleButtonNames, onClick }: Props) => {
 			url: 'https://github.com/goodideagiver',
 			type: 'external',
 		},
+		{ name: 'Blog', url: '/blog' },
 		{ name: 'Contact', url: '/contact' },
 	];
 

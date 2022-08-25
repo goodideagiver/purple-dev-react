@@ -4,4 +4,8 @@ module.exports = {
 			allowFutureImage: true,
 		},
 	},
+	images: {
+		loader: 'default',
+		domains: ['localhost'],
+	},
 };

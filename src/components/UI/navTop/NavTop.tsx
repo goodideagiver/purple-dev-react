@@ -27,12 +27,15 @@ const NavTop = () => {
 			{!isMobile && (
 				<nav className={styles.listWrapper}>
 					<ul className={styles.btnList}>
-						<NavButtons visibleButtonNames={['GitHub', 'About', 'Contact']} />
+						<NavButtons
+							visibleButtonNames={['GitHub', 'About', 'Contact', 'Blog']}
+						/>
 					</ul>
 				</nav>
 			)}
 			{isMobile && (
 				<Button
+					className={styles.menuBtn}
 					aria-label='side menu toggle'
 					variant='nav'
 					onClick={menuToggle}

@@ -35,7 +35,6 @@
 	border-radius: 38% 42%;
 	box-shadow: inset 0 0 10vw rgba(255, 0, 0, 0.4);
 	animation: spin 46s infinite linear, wavesAppear 5s backwards ease-out;
-	mix-blend-mode: multiply;
 	z-index: 1;
 }
 
