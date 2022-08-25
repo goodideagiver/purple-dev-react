@@ -6,7 +6,6 @@ type Props = {
 };
 
 export const Articles = ({ articles }: Props) => {
-	console.log(articles);
 	return (
 		<div className={classes.root}>
 			<h1 className={classes.title}>

@@ -95,3 +95,9 @@
 		padding: 0;
 	}
 }
+
+@media (max-width: 768px) {
+	.header {
+		padding: 0;
+	}
+}
