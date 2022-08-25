@@ -1,7 +1,15 @@
-import Home from '../index';
+import Head from 'next/head';
+import { Home } from '../../src/components/content/home/Home';
 
 const Job = () => {
-	return <Home />;
+	return (
+		<>
+			<Head>
+				<title>purpleblack.dev - Job</title>
+			</Head>
+			<Home />
+		</>
+	);
 };
 
 export default Job;
