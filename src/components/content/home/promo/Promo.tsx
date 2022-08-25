@@ -8,7 +8,7 @@ const Promo = () => {
 		<li key={name}>
 			<p className={st.number}>{id + 1}</p>
 			<div className={st.cell}>
-				<h3>{name}</h3>
+				<h2>{name}</h2>
 				<p className={st.desc}>{desc}</p>
 			</div>
 		</li>

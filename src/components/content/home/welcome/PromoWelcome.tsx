@@ -4,9 +4,9 @@ import st from './PromoWelcome.module.css';
 export const PromoWelcome = () => (
 	<div className={st.promo}>
 		<div className={st.upperText}>
-			<h2 className={st.bigText}>
+			<h1 className={st.bigText}>
 				Frontend <span className={st.devText}>developer</span>
-			</h2>
+			</h1>
 			<p className={st.upperTextSub}>Never stop learning</p>
 		</div>
 		<p className={st.info}>

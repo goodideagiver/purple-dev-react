@@ -1,7 +1,20 @@
 .root {
+	width: min(var(--website-width), 90vw);
+	margin: auto;
+}
+
+.title {
+	text-align: center;
+	margin-bottom: 2rem;
+	font-size: 3rem;
+}
+
+.title > span {
+	color: var(--color-primary);
+}
+
+.articlesGrid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 	gap: 1rem;
-	width: min(var(--website-width), 90vw);
-	margin: auto;
 }

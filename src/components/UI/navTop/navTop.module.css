@@ -1,5 +1,16 @@
 .title {
 	text-decoration: none;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.title p,
+.menuBtn {
+	transition: 0.2s;
+}
+
+.title:hover p {
+	color: var(--color-primary);
 }
 
 .nav {

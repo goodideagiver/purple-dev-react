@@ -21,7 +21,7 @@ const NavTop = () => {
 		<div className={styles.nav}>
 			<Link passHref href='/'>
 				<a className={styles.title}>
-					<h1>purpleblack.dev</h1>
+					<p>purpleblack.dev</p>
 				</a>
 			</Link>
 			{!isMobile && (

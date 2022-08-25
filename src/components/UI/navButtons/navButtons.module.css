@@ -12,6 +12,8 @@
 	color: var(--font-primary);
 	text-decoration: none;
 	animation: showButton 0.6s cubic-bezier(0.21, 0.19, 0.11, 0.96) backwards;
+	transition: 0.2s;
+	font-weight: bold;
 }
 
 .button:hover,
