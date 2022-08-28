@@ -8,6 +8,11 @@
 		hsla(215, 100%, 20%, 0.279),
 		transparent
 	);
+
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: space-between;
 }
 
 .header {
@@ -16,6 +21,7 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 2rem;
+	flex-wrap: wrap;
 }
 
 .type {
