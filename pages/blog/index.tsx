@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { Articles } from '../../src/components/Articles/Articles';
 import { fetchAPI } from '../../src/lib/api';
 
@@ -13,7 +14,16 @@ const Posts = ({ articles, categories, homepage, hasError }: Props) => {
 		return <div>Something went wrong ...</div>;
 	}
 
-	return <Articles articles={articles} />;
+	return (
+		<>
+			<Head>
+				<title>
+					purpleblack.dev - Blog, articles about Frontend Development and news
+				</title>
+			</Head>
+			<Articles articles={articles} />
+		</>
+	);
 };
 
 export default Posts;
