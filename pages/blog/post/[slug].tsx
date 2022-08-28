@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { Article } from '../../../src/components/Articles/Article/Article';
 import { fetchAPI } from '../../../src/lib/api';
 
@@ -16,7 +17,22 @@ const Post = ({ article, categories, hasError }: Props) => {
 		return <div>Something went wrong ...</div>;
 	}
 
-	return <Article article={article} categories={categories} />;
+	return (
+		<>
+			<Head>
+				<title>{article.attributes.title}</title>
+				<meta name='title' content={article.attributes.title} />
+				<meta name='description' content={article.attributes.description} />
+				<meta property='og:title' content={article.attributes.title} />
+				<meta
+					property='og:description'
+					content={article.attributes.description}
+				/>
+				<meta property='og:type' content='article' />
+			</Head>
+			<Article article={article} categories={categories} />
+		</>
+	);
 };
 
 export const getStaticPaths = async () => {
