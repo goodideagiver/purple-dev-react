@@ -44,7 +44,7 @@ export const getStaticPaths = async () => {
 				slug: article.attributes.slug,
 			},
 		})),
-		fallback: false,
+		fallback: 'blocking',
 	};
 };
 
@@ -66,6 +66,7 @@ export const getStaticProps = async ({ params }: { params: any }) => {
 	} catch (error) {
 		return {
 			props: { hasError: true },
+			revalidate: 10,
 		};
 	}
 };
