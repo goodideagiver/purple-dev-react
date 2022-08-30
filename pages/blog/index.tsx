@@ -47,7 +47,7 @@ export async function getStaticProps() {
 				categories: categoriesRes.data,
 				homepage: homepageRes.data,
 			},
-			revalidate: 1,
+			revalidate: 10,
 		};
 	} catch (err) {
 		return {
