@@ -15,7 +15,7 @@ export const Articles = ({ articles }: Props) => {
 				{articles?.length &&
 					articles.map((article: any) => (
 						<ArticlePrev
-							publishedAt={article.published_at}
+							publishedAt={article.attributes.publishedAt}
 							category={
 								article?.attributes?.category?.data?.attributes?.name || ''
 							}

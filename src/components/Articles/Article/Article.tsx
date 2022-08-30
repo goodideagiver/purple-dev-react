@@ -24,9 +24,7 @@ export const Article = ({ article, categories }: Props) => {
 					{article?.attributes?.author?.data?.attributes?.name || 'not entered'}
 				</p>
 				<p>
-					<Moment format='DD MMM YYYY'>
-						{article.attributes.published_at}
-					</Moment>
+					<Moment format='DD MMM YYYY'>{article.attributes.publishedAt}</Moment>
 				</p>
 			</div>
 		</Layout>
