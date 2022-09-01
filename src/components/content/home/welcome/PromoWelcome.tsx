@@ -11,8 +11,7 @@ export const PromoWelcome = () => (
 		</div>
 		<p className={st.info}>
 			Welcome to my website, here you can learn some useful information about
-			me. I am always trying to learn new things and I am always trying to
-			improve my skills.
+			me.
 		</p>
 		<Button
 			purpose='route'
