@@ -59,6 +59,15 @@ export const getStaticProps = async ({ params }: { params: any }) => {
 
 		const categoriesRes = await fetchAPI('/categories');
 
+		if (
+			!articlesRes ||
+			!categoriesRes ||
+			articlesRes.data[0] === undefined ||
+			articlesRes.data[0].attributes === undefined
+		) {
+			throw new Error('Something went wrong ...');
+		}
+
 		return {
 			props: { article: articlesRes.data[0], categories: categoriesRes },
 			revalidate: 1,
