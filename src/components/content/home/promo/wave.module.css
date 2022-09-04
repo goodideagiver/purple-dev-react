@@ -39,11 +39,11 @@
 }
 .waveSecond {
 	background-size: var(--wave-width) calc(var(--wave-height) * 0.5);
-	animation: slide calc(var(--animation-duration) / 1.2) infinite linear;
+	animation: slide calc(var(--animation-duration) / 1.2) infinite linear -5s;
 }
 .waveThird {
 	background-size: var(--wave-width) calc(var(--wave-height) * 0.8);
-	animation: slide calc(var(--animation-duration) * 1.3) infinite linear;
+	animation: slide calc(var(--animation-duration) * 1.3) infinite linear -8s;
 }
 
 @media screen and (max-width: 768px) {
