@@ -9,6 +9,15 @@ const AboutMe = ({ styles }: Props) => {
 		<div className={styles.cell}>
 			<h3>About me</h3>
 			<p className={styles.cardInnerPadding}>Hello, my name is Karol.</p>
+
+			<p className={styles.cardInnerPadding}>
+				So far I{`'`}ve been coding almost every day for many months already and
+				it{`'`}s reflected on my{' '}
+				<ExternalLink href='https://github.com/goodideagiver'>
+					GitHub
+				</ExternalLink>{' '}
+				profile.
+			</p>
 			<p className={styles.cardInnerPadding}>
 				In the past I used to create{' '}
 				<ExternalLink href='https://www.youtube.com/watch?v=_051iYYVj1Y'>
@@ -20,13 +29,6 @@ const AboutMe = ({ styles }: Props) => {
 				</ExternalLink>
 				, the skills developped while doing that helped me a lot in learning web
 				development.
-			</p>
-			<p className={styles.cardInnerPadding}>
-				I{`'`}m trying to commit daily to my{' '}
-				<ExternalLink href='https://github.com/goodideagiver'>
-					GitHub
-				</ExternalLink>{' '}
-				in order to receive the best results.
 			</p>
 		</div>
 	);
