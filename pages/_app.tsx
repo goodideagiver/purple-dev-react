@@ -9,6 +9,7 @@ import Script from 'next/script';
 import Head from 'next/head';
 
 import { createContext } from 'react';
+import { useRouter } from 'next/router';
 
 export const GlobalContext = createContext({});
 
@@ -32,12 +33,15 @@ const Analitycs = () => (
 	</>
 );
 
-type MyAppProps = {
+type Props = {
 	Component: React.ComponentType<any>;
 	pageProps: any;
 };
 
-function MyApp({ Component, pageProps }: MyAppProps) {
+function MyApp({ Component, pageProps }: Props) {
+	const router = useRouter();
+	const isOnMainPage = router.pathname === '/';
+
 	return (
 		<>
 			<Head>
@@ -46,7 +50,7 @@ function MyApp({ Component, pageProps }: MyAppProps) {
 			</Head>
 			<Analitycs />
 			<Content>
-				<NavTop />
+				<NavTop mainPage={isOnMainPage} />
 				<Component {...pageProps} />
 				<Footer />
 				<ScrollToTopBtn />

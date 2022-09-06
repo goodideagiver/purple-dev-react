@@ -14,12 +14,18 @@ const Promo = () => {
 		</li>
 	));
 
+	const waves = ['waveFirst', 'waveSecond', 'waveThird'].map((wave, id) => (
+		<div
+			aria-hidden='true'
+			key={id}
+			className={`${classes[wave]} ${classes.waveElement}`}
+		/>
+	));
+
 	return (
 		<div className={`${st.root} ${classes.wave}`}>
 			<ul className={st.list}>{listElements}</ul>
-			<div className={`${classes.waveElement} ${classes.waveFirst}`}></div>
-			<div className={`${classes.waveElement} ${classes.waveSecond}`}></div>
-			<div className={`${classes.waveElement} ${classes.waveThird}`}></div>
+			{waves}
 		</div>
 	);
 };

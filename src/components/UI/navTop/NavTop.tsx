@@ -9,7 +9,11 @@ import Link from 'next/link';
 import { useMediaQuery } from '../../../hooks/useMediaQuery';
 import { Button } from '../button/Button';
 
-const NavTop = () => {
+type Props = {
+	mainPage?: boolean;
+};
+
+const NavTop = ({ mainPage = false }: Props) => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	const isMobile = useMediaQuery('(max-width: 900px)');
@@ -17,12 +21,12 @@ const NavTop = () => {
 	const menuToggle = () => setMenuOpen(menuOpen ? false : true);
 	const menuClose = () => setMenuOpen(false);
 
+	const title = mainPage ? <h1>purpleblack.dev</h1> : <p>purpleblack.dev</p>;
+
 	return (
 		<div className={styles.nav}>
 			<Link passHref href='/'>
-				<a className={styles.title}>
-					<p>purpleblack.dev</p>
-				</a>
+				<a className={styles.title}>{title}</a>
 			</Link>
 			{!isMobile && (
 				<nav className={styles.listWrapper}>
