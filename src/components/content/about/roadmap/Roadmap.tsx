@@ -9,7 +9,7 @@ type Props = {
 const Roadmap = ({ className }: Props) => {
 	return (
 		<div className={`${className} ${styles.root}`}>
-			<h3>Writing bad code since:</h3>
+			<h3>Coding since:</h3>
 			<ul>
 				{goals.map((goal, index) => (
 					<li className={styles.item} key={index}>

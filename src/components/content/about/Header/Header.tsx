@@ -25,7 +25,7 @@ const Header = ({ styles }: Props) => {
 					<h2>Karol</h2>
 					<p className={styles.developer}>Frontend Developer</p>
 					<p className={styles.learning}>
-						{timeSince(new Date(2021, 9, 10))} of learning frontend{' '}
+						{timeSince(new Date(2021, 9, 10))} of coding{' '}
 					</p>
 				</div>
 			</div>

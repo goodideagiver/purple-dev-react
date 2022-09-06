@@ -5,7 +5,7 @@ const goals: Goal[] = [
 	{ name: 'JavaScript', date: new Date(2022, 0, 7) },
 	{ name: 'React', date: new Date(2022, 3, 6) },
 	{ name: 'TypeScript', date: new Date(2022, 5, 13) },
-	{ name: 'Next.js', date: 'TBD' },
+	{ name: 'Next.js', date: new Date(2022, 7, 13) },
 ];
 
 export default goals;
