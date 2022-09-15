@@ -20,6 +20,8 @@
 	background: #7b4397;
 
 	background: linear-gradient(to top, var(--btn-primary) 10%, transparent 10%);
+
+	transition: 1s !important;
 }
 
 .subTitle {
@@ -44,6 +46,10 @@
 
 	list-style: none;
 	padding-right: 1rem;
+}
+
+.outsideView {
+	scale: 0.9;
 }
 
 .desc li {

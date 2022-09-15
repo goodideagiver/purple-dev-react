@@ -2,7 +2,8 @@ import CardBtn from './components/CardBtn';
 import styles from './projectCard.module.css';
 
 import Modal from '../../modal/Modal';
-import { ReactNode, useState } from 'react';
+import { ReactNode, useRef, useState } from 'react';
+import { useCardReveal } from './useCardReveal';
 
 type ProjectCardFeaturesListProps = {
 	desc: string[];
@@ -54,10 +55,17 @@ const ProjectCard = ({
 	) : (
 		<CardBtn link={link} tooltip={tooltip} />
 	);
+	const cardRef = useRef(null);
+
+	const cardStyles = useCardReveal(
+		cardRef,
+		styles.cardWrapper,
+		styles.outsideView
+	);
 
 	return (
 		<>
-			<div style={cardRevealDelay} className={styles.cardWrapper}>
+			<div ref={cardRef} style={cardRevealDelay} className={cardStyles}>
 				<div className={styles.card} style={cardGradientBg}>
 					<h3 className={styles.title}>{title}</h3>
 					<p className={styles.subTitle}>{shortDesc}</p>
