@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { HowToAskGoodQuestions } from './articles/HowToAskGoodQuestions';
 import { Roadmapper } from './articles/Roadmapper';
 
 type ProjectCardData = {
@@ -22,15 +23,17 @@ const cardData: ProjectCardData[] = [
 		article: <Roadmapper />,
 	},
 	{
-		title: 'Fakeinsta',
-		shortDesc: 'Instagram copy',
-		desc: ['OOP', 'Custom Components', 'Async'],
-		link: 'https://github.com/goodideagiver/fakeinsta',
+		title: 'How to ask good questions?',
+		shortDesc: 'Generate accurate questions that are easier to answer.',
+		desc: ['React', 'TypeScript', 'react-testing-library', 'i18next'],
+		tooltip: 'Learn more',
+		link: 'https://goodideagiver.github.io/how-to-ask-good-questions/',
 		color: '#a66fff30',
+		article: <HowToAskGoodQuestions />,
 	},
 	{
 		title: 'Polite email builder',
-		shortDesc: 'Web app',
+		shortDesc: 'Create polite emails with ease',
 		desc: ['DOM manipulation', 'Vanilla JavaScript'],
 		link: 'https://goodideagiver.github.io/polite-email-builder/',
 		color: '#FA640020',

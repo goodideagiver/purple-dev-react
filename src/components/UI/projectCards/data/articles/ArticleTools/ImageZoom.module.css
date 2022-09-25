@@ -3,7 +3,7 @@
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	width: min(100%, 100vw);
+	width: 100%;
 	top: 0;
 	left: 0;
 	z-index: 2000;
@@ -21,6 +21,8 @@
 	border: 2px rgba(128, 128, 128, 0.227) solid;
 	aspect-ratio: 1/1;
 	object-fit: cover;
+	max-height: 95vh;
+	max-width: 95vw;
 }
 
 .backdrop {

@@ -83,21 +83,19 @@ const Features = () => (
 
 export const Roadmapper = () => {
 	return (
-		<>
-			<ArticleTemplate
-				images={images}
-				technologies={[
-					'React',
-					'TypeScript',
-					'React Transition Group',
-					'Redux + toolkit',
-					'Jest',
-				]}
-				features={<Features />}
-				whatDidILearn={<WhatDidILearn />}
-				demoLink='https://goodideagiver.github.io/roadmapper-ts/'
-				repoLink='https://github.com/goodideagiver/roadmapper-ts'
-			/>
-		</>
+		<ArticleTemplate
+			images={images}
+			technologies={[
+				'React',
+				'TypeScript',
+				'React Transition Group',
+				'Redux + toolkit',
+				'Jest',
+			]}
+			features={<Features />}
+			whatDidILearn={<WhatDidILearn />}
+			demoLink='https://goodideagiver.github.io/roadmapper-ts/'
+			repoLink='https://github.com/goodideagiver/roadmapper-ts'
+		/>
 	);
 };

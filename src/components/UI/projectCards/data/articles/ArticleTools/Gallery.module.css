@@ -1,7 +1,6 @@
 .root {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-	grid-auto-rows: 1fr;
+	display: flex;
+	flex-wrap: wrap;
 	width: 100%;
 	gap: 1rem;
 	margin-bottom: 2rem;
@@ -13,6 +12,7 @@
 	border: 0;
 	aspect-ratio: 1/1;
 	object-fit: cover;
+	width: min(39%, 20rem);
 }
 
 .root img {
