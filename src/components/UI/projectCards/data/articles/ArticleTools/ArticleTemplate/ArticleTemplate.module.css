@@ -22,10 +22,6 @@
 	color: var(--btn-primary-hover);
 }
 
-.list {
-	padding-left: 1rem;
-}
-
 .links {
 	margin-top: 2rem;
 	display: grid;

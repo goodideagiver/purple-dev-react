@@ -3,8 +3,8 @@ import roadmapper2 from '/public/assets/img/welcome/roadmapper2.webp';
 import roadmapper3 from '/public/assets/img/welcome/roadmapper3.webp';
 import { ArticleTemplate } from './ArticleTools/ArticleTemplate/ArticleTemplate';
 
-import classes from './ArticleTools/ArticleTemplate/ArticleTemplate.module.css';
 import { ExternalLink } from '../../../ExternalLink/ExternalLink';
+import { SimpleList } from './ArticleTools/SimpleList/SimpleList';
 
 const images = [
 	{
@@ -56,10 +56,10 @@ const WhatDidILearn = () => (
 			development that this component could be used for other purposes as well.
 		</p>
 		<p>This component was also reused for these features:</p>
-		<ul className={classes.list}>
+		<SimpleList>
 			<li>Add roadmap midpoint</li>
 			<li>Edit roadmap point</li>
-		</ul>
+		</SimpleList>
 		<p>
 			Trying to write this component in the most abstract way in order for it to
 			work with multiple use cases was a great experience. And TypeScript was a
