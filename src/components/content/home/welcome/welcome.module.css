@@ -20,58 +20,6 @@
 	align-items: center;
 }
 
-.programmer {
-	animation-duration: 1s;
-	height: 100%;
-	width: 100%;
-	z-index: -2;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	transform: translate(-20%, 20%);
-}
-
-.programmer::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-image: linear-gradient(
-		to bottom,
-		transparent 30%,
-		var(--bg-primary) 90%
-	);
-	z-index: 1;
-}
-
-.programmer .image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-@media (max-width: 580px) {
-	.programmer {
-		transform: scale(1) translate(0, 50%);
-		height: auto;
-		bottom: 50%;
-	}
-	.programmer .image {
-		object-fit: none;
-		overflow: hidden;
-	}
-
-	.programmer::after {
-		background-image: linear-gradient(
-			to bottom,
-			transparent 50%,
-			var(--bg-primary) 98%
-		);
-	}
-}
-
 .section-appear {
 	animation: appear 1s forwards;
 }
