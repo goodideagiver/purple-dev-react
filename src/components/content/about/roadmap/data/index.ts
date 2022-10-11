@@ -1,4 +1,4 @@
-type Goal = { name: String; date: Date | 'TBD' };
+export type Goal = { name: String; date: Date | 'TBD' }
 
 const goals: Goal[] = [
 	{ name: 'HTML + CSS', date: new Date(2021, 9, 10) },
@@ -6,6 +6,6 @@ const goals: Goal[] = [
 	{ name: 'React', date: new Date(2022, 3, 6) },
 	{ name: 'TypeScript', date: new Date(2022, 5, 13) },
 	{ name: 'Next.js', date: new Date(2022, 7, 13) },
-];
+]
 
-export default goals;
+export default goals

@@ -1,0 +1,17 @@
+.item {
+  text-align: center;
+  padding: 1.2rem 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: 3rem;
+  flex-grow: 1;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  color: var(--color-primary);
+}
+
+.date {
+  opacity: 0.5;
+}

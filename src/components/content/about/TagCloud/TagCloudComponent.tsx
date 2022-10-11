@@ -1,12 +1,12 @@
-import { useRef, useEffect, useMemo } from 'react';
+import { useRef, useEffect, useMemo } from 'react'
 
-import styles from './TagsStyle.module.css';
+import styles from './TagsStyle.module.css'
 //@ts-ignore
-import TagCloud from 'TagCloud';
+import TagCloud from 'TagCloud'
 
 type Props = {
-	enabled: boolean;
-};
+	enabled: boolean
+}
 
 const TagCloudComponent = ({ enabled }: Props) => {
 	const knownTechnologies = useMemo(
@@ -32,9 +32,9 @@ const TagCloudComponent = ({ enabled }: Props) => {
 			'React Router',
 		],
 		[]
-	);
+	)
 
-	const tagDiv = useRef(null);
+	const tagDiv = useRef(null)
 
 	useEffect(() => {
 		if (enabled) {
@@ -45,12 +45,12 @@ const TagCloudComponent = ({ enabled }: Props) => {
 				containerClass: styles['tag-width'],
 				radius: '150',
 				direction: Math.floor(Math.random() * 720 - 360),
-			});
+			})
 			return () => {
-				tagCloud.destroy();
-			};
+				tagCloud.destroy()
+			}
 		}
-	}, [enabled, knownTechnologies]);
+	}, [enabled, knownTechnologies])
 
 	if (!enabled) {
 		return (
@@ -59,10 +59,10 @@ const TagCloudComponent = ({ enabled }: Props) => {
 					<li key={el}>{el}</li>
 				))}
 			</ul>
-		);
+		)
 	}
 
-	return <div className={styles['tag-container']} ref={tagDiv} />;
-};
+	return <div className={styles['tag-container']} ref={tagDiv} />
+}
 
-export default TagCloudComponent;
+export default TagCloudComponent

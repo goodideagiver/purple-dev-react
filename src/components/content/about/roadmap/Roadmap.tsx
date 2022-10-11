@@ -1,10 +1,10 @@
-import timeSince from '../../../../helpers/timeSince';
-import goals from './data';
-import styles from './roadmap.module.css';
+import goals from './data'
+import styles from './roadmap.module.css'
+import { RoadmapGoal } from './RoadmapGoal'
 
 type Props = {
-	className?: string;
-};
+	className?: string
+}
 
 const Roadmap = ({ className }: Props) => {
 	return (
@@ -12,16 +12,11 @@ const Roadmap = ({ className }: Props) => {
 			<h3>Coding since:</h3>
 			<ul>
 				{goals.map((goal, index) => (
-					<li className={styles.item} key={index}>
-						<p className={styles.name}>{goal.name}</p>
-						<p className={styles.date}>
-							{goal.date !== 'TBD' ? timeSince(goal.date) : 'TBD'}
-						</p>
-					</li>
+					<RoadmapGoal key={goal.name + index.toString()} goal={goal} />
 				))}
 			</ul>
 		</div>
-	);
-};
+	)
+}
 
-export default Roadmap;
+export default Roadmap
