@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  background-color: var(--bg-primary);
+  padding: 1.2rem 1.5rem;
+  border-radius: 16px;
+  width: fit-content;
+  margin: auto;
+  transition: box-shadow 0.2s;
+}
+
+.root:hover {
+  box-shadow: rgba(4, 4, 4, 0.2) 0 7px 29px 0;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.link {
+  color: unset;
+  text-decoration: unset;
+}

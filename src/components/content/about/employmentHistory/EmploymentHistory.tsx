@@ -1,50 +1,48 @@
-import ImgSmoothLoad from '../../../UI/ImgSmoothLoad/ImgSmoothLoad';
-import Modal from '../../../modal/Modal';
-import classes from './EmploymentHistory.module.css';
-import { useState } from 'react';
-import Link from 'next/link';
+import { useState } from 'react'
+import Modal from '../../../modal/Modal'
+import classes from './EmploymentHistory.module.css'
 
-import uncleSam from '/public/assets/img/about/Uncle_Sam_(pointing_finger).webp';
-import { Button } from '../../../UI/button/Button';
+import ReactConfetti from 'react-confetti'
+import { Button } from '../../../UI/button/Button'
+import { CareerHistoryBlock } from './CareerHistoryBlock/CareerHistoryBlock'
 
 type EmploymentHistoryProps = {
-	className: string;
-};
+  className: string
+}
 
 const EmploymentHistory = ({ className }: EmploymentHistoryProps) => {
-	const [modalVisible, setModalVisible] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false)
 
-	const showModalHandler = () => setModalVisible(true);
-	const hideModalHandler = () => setModalVisible(false);
+  const showModalHandler = () => setModalVisible(true)
+  const hideModalHandler = () => setModalVisible(false)
 
-	return (
-		<div className={`${classes.history} ${className}`}>
-			<h3>Past career</h3>
-			<Button purpose='button' onClick={showModalHandler}>
-				See employment history
-			</Button>
-			<Modal
-				visible={modalVisible}
-				modalCloseHandler={hideModalHandler}
-				title='You can be the first company to hire me'
-				className={classes.modalContent}
-			>
-				<ImgSmoothLoad
-					className={classes['man-pointing']}
-					alt='man pointing finger'
-					src={uncleSam}
-				/>
-				<Button
-					variant='glow'
-					href='/contact'
-					purpose='route'
-					className={classes.link}
-				>
-					Contact me
-				</Button>
-			</Modal>
-		</div>
-	);
-};
+  return (
+    <div className={`${classes.history} ${className}`}>
+      <h3>Past career</h3>
+      <Button purpose='button' onClick={showModalHandler}>
+        See employment history
+      </Button>
+      <Modal
+        visible={modalVisible}
+        modalCloseHandler={hideModalHandler}
+        title='Career history'
+        className={classes.modalContent}
+      >
+        <ReactConfetti
+          width={800}
+          height={1000}
+          gravity={0.01}
+          recycle={false}
+          numberOfPieces={600}
+        />
+        <CareerHistoryBlock
+          companyTitle='AppUnite'
+          linkToCompany='https://appunite.com/'
+          startDate={new Date(2022, 11, 1)}
+        />
+      </Modal>
+    </div>
+  )
+}
 
-export default EmploymentHistory;
+export default EmploymentHistory
