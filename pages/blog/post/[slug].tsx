@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Article } from '../../../src/components/Articles/Article/Article'
+import { StrapiError } from '../../../src/components/StrapiError/StrapiError'
 import { fetchAPI } from '../../../src/lib/api'
 
 type Props = {
@@ -9,12 +10,8 @@ type Props = {
 }
 
 const Post = ({ article, categories, hasError }: Props) => {
-  if (hasError) {
-    return <div>Something went wrong ...</div>
-  }
-
-  if (!article || !categories) {
-    return <div>Something went wrong ...</div>
+  if (hasError || !article || !categories) {
+    return <StrapiError />
   }
 
   return (
