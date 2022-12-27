@@ -1,16 +1,19 @@
 .root ul {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	align-content: center;
-	justify-content: space-evenly;
-	width: min(50vw, 100%);
-	gap: 1rem;
-	list-style: none;
-	width: 100%;
-	margin-top: 1rem;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+
+  gap: 1rem;
+  list-style: none;
+
+  margin-top: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: 1fr;
+  grid-gap: 1rem;
 }
 
 .root ul li {
-	flex-basis: 140px;
+  flex-basis: 140px;
 }
