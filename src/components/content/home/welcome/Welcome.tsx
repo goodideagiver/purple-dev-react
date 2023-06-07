@@ -1,20 +1,20 @@
-import st from './welcome.module.css';
+import st from './welcome.module.css'
 
-import { PromoWelcome } from './PromoWelcome';
+import { PromoWelcome } from './PromoWelcome'
 
-import { WelcomeImages } from './WelcomeImages';
-import ProgrammerBackground from './ProgrammerBackground';
+import { WelcomeImages } from './WelcomeImages'
+import ProgrammerBackground from './ProgrammerBackground'
 
 const Welcome = () => {
-	return (
-		<div className={st.welcome}>
-			<div className={st.main}>
-				<PromoWelcome />
-				<WelcomeImages />
-			</div>
-			<ProgrammerBackground />
-		</div>
-	);
-};
+  return (
+    <section className={st.welcome}>
+      <div className={st.main}>
+        <PromoWelcome />
+        <WelcomeImages />
+      </div>
+      <ProgrammerBackground />
+    </section>
+  )
+}
 
-export default Welcome;
+export default Welcome

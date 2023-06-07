@@ -1,74 +1,89 @@
-import { ArticleTemplate } from './ArticleTools/ArticleTemplate/ArticleTemplate';
-import { SimpleList } from './ArticleTools/SimpleList/SimpleList';
+import { ArticleTemplate } from './ArticleTools/ArticleTemplate/ArticleTemplate'
 
-import filledApp from '/public/assets/img/articles/HowToAskGoodQuestions/filledApp.png';
-import emptyApp from '/public/assets/img/articles/HowToAskGoodQuestions/emptyApp.png';
-import { ExternalLink } from '../../../ExternalLink/ExternalLink';
-
-const Features = () => (
-	<SimpleList>
-		<li>Language switcher: [PLEN]</li>{' '}
-		<li>
-			Copy generated question to clipboard (formatted for markdown or discord)
-		</li>{' '}
-		<li>Step by step question generation</li>{' '}
-		<li>
-			Subtle eye candy progress bar to keep you motivated when filling the
-			fields
-		</li>
-	</SimpleList>
-);
+import foto1 from '/public/assets/img/articles/Bewebdev/1.png'
+import foto2 from '/public/assets/img/articles/Bewebdev/2.png'
+import foto3 from '/public/assets/img/articles/Bewebdev/3.png'
 
 const images = [
-	{
-		src: filledApp,
-		alt: 'Screenshot of the app with filled fields',
-	},
-	{
-		src: emptyApp,
-		alt: 'Screenshot of the app with empty fields',
-	},
-];
+  {
+    src: foto1,
+    alt: `The best way to learn web development
+Carefully selected, verified, up to date`,
+  },
+  {
+    src: foto2,
+    alt: 'We record code reviews',
+  },
+  {
+    src: foto3,
+    alt: 'Find what you need to learn',
+  },
+]
 
 const technologies = [
-	'React',
-	'TypeScript',
-	'react-testing-library',
-	'i18next',
-];
+  'React',
+  'TypeScript',
+  'Playwright',
+  'SASS',
+  'Astro',
+  'GitHub Actions',
+]
 
 const WhatDidILearn = () => (
-	<>
-		<p>
-			This app was created in order to help people on a discord server to ask
-			better questions.
-		</p>
-		<p>
-			When creating new projects I always select new technologies that I don
-			{`'`}t know yet to learn them in practice. This time I wanted to check out
-			Vite and testing library for React. I also wanted to try out i18next for
-			translations, because this app was supposed to be available for people
-			that speak different languages.
-		</p>
-		<p>
-			During its development I watched a tutorial{' '}
-			<ExternalLink href='https://www.youtube.com/watch?v=l9qr3EuLE_8&list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ&index=8'>
-				React Testing Library Tutorial by The Net Ninja
-			</ExternalLink>{' '}
-			and implemented tests for the app. I am thankful that vitest supports jest
-			and chai assertions out of the box and I could watch the tutorial for Jest
-			and just adjust minor things to make it compatibile with vitest.
-		</p>
-	</>
-);
+  <>
+    <h4>Working in a team</h4>
+    <p>
+      During my involvement in the bewebdev.tech project, I gained valuable
+      experience working collaboratively in a team setting. We followed a
+      structured workflow using pull requests and issues, ensuring that each
+      contribution was thoroughly reviewed by both myself and other
+      contributors. This process allowed for constructive feedback and
+      improvements to be incorporated into the project.
+    </p>
+    <p>
+      Being part of the review process for pull requests made by others enabled
+      me to develop a critical eye and provided an opportunity to offer valuable
+      insights and suggestions. It fostered a culture of collaboration and
+      continuous improvement within our team.
+    </p>
+    <h4>Handling user feedback</h4>
+    <p>
+      I learned the importance of considering user feedback when developing the
+      project. By actively listening to the needs and suggestions of our users,
+      we were able to iterate and enhance the platform, making it more
+      user-friendly and effective in meeting their requirements.
+    </p>
+    <p>
+      Working in such a dynamic and collaborative environment taught me the
+      significance of effective communication, teamwork, and adaptability. These
+      skills have not only contributed to the success of the bewebdev.tech
+      project but have also prepared me to excel in future team-oriented
+      endeavors.
+    </p>
+    <h4>Testing and GitHub actions</h4>
+    <p>
+      I integrated E2E tests and unit tests into GitHub Actions, automating the
+      testing process for every pull request. This streamlined the development
+      workflow, allowing for quicker identification of any regressions or issues
+      introduced by code changes. By ensuring that tests ran automatically, we
+      maintained a high standard of code quality and minimized the risk of bugs
+      reaching production.
+    </p>
+    <p>
+      {` By automating the testing process, we could validate the platform's
+      performance and functionality consistently. It saved us valuable time and
+      allowed us to focus on other aspects of development, knowing that our code
+      was thoroughly tested.`}
+    </p>
+  </>
+)
 
-export const HowToAskGoodQuestions = () => (
-	<ArticleTemplate
-		demoLink='https://goodideagiver.github.io/how-to-ask-good-questions/'
-		features={<Features />}
-		images={images}
-		repoLink='https://github.com/goodideagiver/how-to-ask-good-questions'
-		technologies={technologies}
-		whatDidILearn={<WhatDidILearn />}
-	/>
-);
+export const Bewebdevtech = () => (
+  <ArticleTemplate
+    images={images}
+    demoLink='https://bewebdev.tech/'
+    repoLink='https://github.com/NowYouKnowProgramming/webdev-learning-materials'
+    technologies={technologies}
+    whatDidILearn={<WhatDidILearn />}
+  />
+)
