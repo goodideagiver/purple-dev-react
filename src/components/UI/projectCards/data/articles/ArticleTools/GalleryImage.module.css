@@ -1,12 +1,16 @@
 .button {
-	cursor: pointer;
-	border-radius: 1rem;
-	overflow: hidden;
-	transition: 0.1s 0s ease-out, transform 0.5s 0.1s;
+  cursor: pointer;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: 0.1s 0s ease-out, transform 0.5s 0.1s;
+}
+
+.image {
+  object-fit: cover;
 }
 
 @media (min-width: 768px) {
-	.button:hover {
-		outline: var(--btn-primary) 5px solid;
-	}
+  .button:hover {
+    outline: var(--btn-primary) 5px solid;
+  }
 }
