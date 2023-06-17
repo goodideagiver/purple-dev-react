@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import { HowToAskGoodQuestions } from './articles/HowToAskGoodQuestions'
-import { Roadmapper } from './articles/Roadmapper'
+import { MobiloApp } from './articles/MobiloApp'
 import { Bewebdevtech } from './articles/Bewebdevtech'
 
 type ProjectCardData = {
@@ -15,13 +15,14 @@ type ProjectCardData = {
 
 const cardData: ProjectCardData[] = [
   {
-    title: 'Roadmapper.ts',
-    shortDesc: 'Build a roadmap for your learning journey',
-    desc: ['React', 'TypeScript', 'React Transition Group', 'Redux'],
-    link: 'https://goodideagiver.github.io/roadmapper-ts/',
+    title: 'Mobility calculator',
+    shortDesc:
+      ' My engineering thesis - An application for calculating the cost of transport services for insurance companies ',
+    desc: ['React', 'TypeScript', 'Zustand', 'Chakra UI'],
+    link: 'https://github.com/goodideagiver/mobilo-app',
     color: '#4e6be130',
     tooltip: 'Visit website',
-    article: <Roadmapper />,
+    article: <MobiloApp />,
   },
   {
     title: 'How to ask good questions?',
