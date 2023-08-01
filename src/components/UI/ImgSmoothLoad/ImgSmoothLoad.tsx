@@ -1,45 +1,47 @@
-import styles from './ImgSmoothLoad.module.css';
-import { useState } from 'react';
+import styles from './ImgSmoothLoad.module.css'
+import { useState } from 'react'
 
-import Image from 'next/future/image';
-import { StaticImageData } from 'next/image';
+import Image, { ImageProps } from 'next/future/image'
+import { StaticImageData } from 'next/image'
 
 type ImgSmoothLoadProps = {
-	src: string | StaticImageData;
-	alt: string;
-	className?: string;
-	animate?: boolean;
-	priority?: boolean;
-};
+  src: string | StaticImageData
+  alt: string
+  className?: string
+  animate?: boolean
+  priority?: boolean
+} & ImageProps
 
 export const ImgSmoothLoad = ({
-	animate,
-	src,
-	className,
-	alt,
-	priority,
-	...props
+  animate,
+  src,
+  className,
+  alt,
+  priority,
+  style,
+  ...props
 }: ImgSmoothLoadProps) => {
-	const [isLoaded, setIsLoaded] = useState(animate === false);
+  const [isLoaded, setIsLoaded] = useState(animate === false)
 
-	const animationStyles = animate
-		? !isLoaded
-			? styles.loading
-			: styles.loaded
-		: '';
+  const animationStyles = animate
+    ? !isLoaded
+      ? styles.loading
+      : styles.loaded
+    : ''
 
-	return (
-		<Image
-			src={src}
-			onLoad={() => {
-				setIsLoaded(true);
-			}}
-			className={`${animationStyles} ${className ? className : ''}`}
-			alt={alt}
-			priority={priority}
-			{...props}
-		/>
-	);
-};
+  return (
+    <Image
+      style={style}
+      src={src}
+      onLoad={() => {
+        setIsLoaded(true)
+      }}
+      className={`${animationStyles} ${className ? className : ''}`}
+      alt={alt}
+      priority={priority}
+      {...props}
+    />
+  )
+}
 
-export default ImgSmoothLoad;
+export default ImgSmoothLoad
