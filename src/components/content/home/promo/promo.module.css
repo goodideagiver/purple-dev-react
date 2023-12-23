@@ -1,6 +1,7 @@
 .root {
 	background-color: var(--bg-secondary);
 	margin: 4rem 0;
+	z-index: 2;
 }
 
 .list {
